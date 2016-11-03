@@ -1,11 +1,14 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import io.thp.pyotherside 1.3
+
 
 
 Page {
     id: page
 
     property int lastLineCount: 0
+    property string filePath: "/home/nemo/Documents/test.txt"
 
     function numberOfLines() {
         var count = (myTextArea.text.match(/\n/g) || []).length;
@@ -15,19 +18,19 @@ Page {
 
     }
 
-//    function lineNumberChanged(){
-//        lineNumbers.text = "";
-////        for (var i = 1; i < (myTextArea._editor.lineCount+1); i++) {
-////            lineNumbers.text += i + "\n";
-////        }
+    //    function lineNumberChanged(){
+    //        lineNumbers.text = "";
+    ////        for (var i = 1; i < (myTextArea._editor.lineCount+1); i++) {
+    ////            lineNumbers.text += i + "\n";
+    ////        }
 
-//        var count = (myTextArea.text.match(/\n/g) || []).length;
-//        console.log(count);
+    //        var count = (myTextArea.text.match(/\n/g) || []).length;
+    //        console.log(count);
 
-//        for (var i = 1; i < (count+2); i++) {
-//            lineNumbers.text += i + "\n";
-//        }
-//    }
+    //        for (var i = 1; i < (count+2); i++) {
+    //            lineNumbers.text += i + "\n";
+    //        }
+    //    }
 
     function lineNumberChanged() {
         if (myTextArea._editor.lineCount > lastLineCount) {
@@ -37,7 +40,7 @@ Page {
                 lineNumbers.text += "\n"
             }
             else {
-              lineNumbers.text += numberOfLines() + "\n";
+                lineNumbers.text += numberOfLines() + "\n";
             }
 
             lastLineCount = myTextArea._editor.lineCount;
@@ -62,7 +65,7 @@ Page {
             }
             MenuItem {
                 text: qsTr("Save as")
-                //onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                onClicked: py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
             }
             MenuItem {
                 text: qsTr("Select all text")
@@ -138,4 +141,22 @@ Page {
         VerticalScrollDecorator { flickable: view }
 
     }
+    Python {
+        id: py
+
+        Component.onCompleted: {
+            addImportPath(Qt.resolvedUrl('../.'));
+            importModule('editFile', function () {
+                py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
+                    myTextArea.text = result;
+                });
+            });
+        }
+        onError: {
+            // when an exception is raised, this error handler will be called
+            console.log('python error: ' + traceback);
+        }
+        onReceived: console.log('Unhandled event: ' + data)
+    }
 }
+
