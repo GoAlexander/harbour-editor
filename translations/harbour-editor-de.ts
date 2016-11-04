@@ -2,13 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
-    <name>CoverPage</name>
-    <message>
-        <source>My Cover</source>
-        <translation>Mein Cover</translation>
-    </message>
-</context>
-<context>
     <name>FirstPage</name>
     <message>
         <source>About</source>
@@ -28,6 +21,10 @@
     </message>
     <message>
         <source>Turn off read-only mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
