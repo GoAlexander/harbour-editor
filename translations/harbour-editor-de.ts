@@ -2,6 +2,61 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <source>&quot;Editor.&quot; is feature-rich text/code editor!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>License: GPLv3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You can find the source code at the:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GitHub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If you want to support this app star the repository at the github ☺</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Special thanks:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Eetu K for save/load function and feedback</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-osanwe for consultations about qml code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-coderus for various tips</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Russian community for feed back and help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tips:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Write about select all...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>Settings</source>
@@ -41,14 +96,26 @@
     </message>
 </context>
 <context>
-    <name>SecondPage</name>
+    <name>SettingsPage</name>
     <message>
-        <source>Nested Page</source>
-        <translation>Unterseite</translation>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Item</source>
-        <translation>Element</translation>
+        <source>Appearance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

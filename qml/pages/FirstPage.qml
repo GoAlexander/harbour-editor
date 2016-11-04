@@ -14,8 +14,6 @@ Page {
         var count = (myTextArea.text.match(/\n/g) || []).length;
         count += 1;
         return count;
-
-
     }
 
     function lineNumberChanged() {
@@ -34,7 +32,6 @@ Page {
             lineNumbers.text = lineNumbers.text.slice(0, -2);
             lastLineCount = myTextArea._editor.lineCount;
         }
-
     }
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
@@ -46,7 +43,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("Settings")
-                onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
             MenuItem {
                 text: qsTr("Select all")
@@ -71,7 +68,6 @@ Page {
                         Row {
                             anchors.centerIn: parent
                             spacing: Theme.paddingSmall
-
                             Image {
                                 width: Theme.iconSizeSmallPlus
                                 height: Theme.iconSizeSmallPlus
@@ -132,7 +128,6 @@ Page {
                         Row {
                             anchors.centerIn: parent
                             spacing: Theme.paddingSmall
-
                             Image {
                                 width: Theme.iconSizeSmallPlus
                                 height: Theme.iconSizeSmallPlus
@@ -159,7 +154,6 @@ Page {
                         Row {
                             anchors.centerIn: parent
                             spacing: Theme.paddingSmall
-
                             Image {
                                 width: Theme.iconSizeSmallPlus
                                 height: Theme.iconSizeSmallPlus
@@ -184,7 +178,6 @@ Page {
                         Row {
                             anchors.centerIn: parent
                             spacing: Theme.paddingSmall
-
                             Image {
                                 width: Theme.iconSizeSmallPlus
                                 height: Theme.iconSizeSmallPlus
@@ -206,7 +199,6 @@ Page {
                         Row {
                             anchors.centerIn: parent
                             spacing: Theme.paddingSmall
-
                             Image {
                                 width: Theme.iconSizeSmallPlus
                                 height: Theme.iconSizeSmallPlus
@@ -251,7 +243,6 @@ Page {
                     Row {
                         anchors.centerIn: parent
                         spacing: Theme.paddingSmall
-
                         Image {
                             width: Theme.iconSizeSmallPlus
                             height: Theme.iconSizeSmallPlus
@@ -278,7 +269,6 @@ Page {
                     Row {
                         anchors.centerIn: parent
                         spacing: Theme.paddingSmall
-
                         Image {
                             width: Theme.iconSizeSmallPlus
                             height: Theme.iconSizeSmallPlus
@@ -303,7 +293,6 @@ Page {
                     Row {
                         anchors.centerIn: parent
                         spacing: Theme.paddingSmall
-
                         Image {
                             width: Theme.iconSizeSmallPlus
                             height: Theme.iconSizeSmallPlus
@@ -325,7 +314,6 @@ Page {
                     Row {
                         anchors.centerIn: parent
                         spacing: Theme.paddingSmall
-
                         Image {
                             width: Theme.iconSizeSmallPlus
                             height: Theme.iconSizeSmallPlus
@@ -356,7 +344,6 @@ Page {
                     Row {
                         anchors.centerIn: parent
                         spacing: Theme.paddingSmall
-
                         Image {
                             width: Theme.iconSizeSmallPlus
                             height: Theme.iconSizeSmallPlus
@@ -392,7 +379,6 @@ Page {
 
             Label {
                 id: lineNumbers
-                //y: Theme.horizontalPageMargin
                 y: 8
                 height: myTextArea.height //???
                 color: Theme.secondaryHighlightColor
@@ -425,7 +411,6 @@ Page {
                 onRotationChanged: {
                     //TODO пересчитать label
                 }
-
             }
             VerticalScrollDecorator { flickable: editorView }
         }
