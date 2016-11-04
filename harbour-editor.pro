@@ -24,7 +24,8 @@ OTHER_FILES += qml/harbour-editor.qml \
     rpm/harbour-editor.spec \
     rpm/harbour-editor.yaml \
     translations/*.ts \
-    harbour-editor.desktop
+    harbour-editor.desktop \
+    qml/editFile.py #You can find better place :)
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
 
