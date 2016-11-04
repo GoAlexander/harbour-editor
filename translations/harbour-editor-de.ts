@@ -4,7 +4,23 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>About</source>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R-only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -12,19 +28,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Select all text</source>
+        <source>Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Turn on read-only mode</source>
+        <source>Select all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Turn off read-only mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Test</source>
+        <source>Save   </source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1,14 +1,14 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-//import io.thp.pyotherside 1.3
-
-
+import io.thp.pyotherside 1.3
 
 Page {
     id: editorPage
 
     property int lastLineCount: 0
-    property string filePath: "/home/nemo/Documents/test.txt"
+    property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
+    property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
+    property string filePath: "" //"/home/nemo/Documents/test.txt"
 
     function numberOfLines() {
         var count = (myTextArea.text.match(/\n/g) || []).length;
@@ -45,29 +45,190 @@ Page {
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
             MenuItem {
-                text: qsTr("About")
+                text: qsTr("Settings")
                 onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
             }
             MenuItem {
-                text: qsTr("Save as")
-                //onClicked: py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
-            }
-            MenuItem {
-                text: qsTr("Select all text")
+                text: qsTr("Select all")
                 onClicked: {
                     myTextArea.selectAll();
                 }
             }
-            MenuItem {
-                text: qsTr("Turn on read-only mode")
-                onClicked: {
-                    if (myTextArea.readOnly == false) {
-                        text = qsTr("Turn off read-only mode");
-                        myTextArea.readOnly = true;
+
+            Column {
+                width: parent.width
+                height: childrenRect.height
+
+                Row {
+                    id: pullMenu2
+                    width: parent.width
+                    height: childrenRect.height
+
+                    BackgroundItem {
+                        width: sizeBackgroundItemMainMenu
+                        height: Theme.itemSizeSmall //height: Theme.itemSizeExtraSmall
+
+                        Row {
+                            anchors.centerIn: parent
+                            spacing: Theme.paddingSmall
+
+                            Image {
+                                width: Theme.iconSizeSmallPlus
+                                height: Theme.iconSizeSmallPlus
+                                source: "image://theme/icon-m-acknowledge"
+                            }
+                            Label {
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: contentWidth
+                                font.pixelSize: Theme.fontSizeTiny
+                                text: qsTr("Save as")
+                            }
+                        }
+                        onClicked: {
+
+                            //TODO вызвать диалог ввода пути
+
+                            if (filePath!=="") {
+                                py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
+                            }
+                        }
                     }
-                    else {
-                        text = qsTr("Turn on read-only mode");
-                        myTextArea.readOnly = false;
+
+                    BackgroundItem {
+                        width: sizeBackgroundItemMainMenu
+                        height: Theme.itemSizeSmall
+
+                        Row {
+                            anchors.centerIn: parent
+                            spacing: Theme.paddingSmall
+
+                            Image {
+                                width: Theme.iconSizeSmallPlus
+                                height: Theme.iconSizeSmallPlus
+                                source: "image://theme/icon-m-folder"
+                            }
+                            Label {
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: contentWidth
+                                font.pixelSize: Theme.fontSizeTiny
+                                text: qsTr("Open")
+                            }
+                        }
+                        onClicked:  {
+                        }
+                    }
+                }
+
+
+                Row {
+                    id: pullMenu
+                    width: parent.width
+                    height: childrenRect.height
+
+                    BackgroundItem {
+                        width: sizeBackgroundItemMainMenu
+                        height: Theme.itemSizeSmall //height: Theme.itemSizeExtraSmall
+
+                        Row {
+                            anchors.centerIn: parent
+                            spacing: Theme.paddingSmall
+
+                            Image {
+                                width: Theme.iconSizeSmallPlus
+                                height: Theme.iconSizeSmallPlus
+                                source: "image://theme/icon-m-acknowledge"
+                            }
+                            Label {
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: contentWidth
+                                font.pixelSize: Theme.fontSizeTiny
+                                text: qsTr("Save   ")
+                            }
+                        }
+                        onClicked: {
+                            if (filePath!=="") {
+                                py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
+                            }
+                        }
+                    }
+
+                    BackgroundItem {
+                        width: sizeBackgroundItemMainMenu
+                        height: Theme.itemSizeSmall
+
+                        Row {
+                            anchors.centerIn: parent
+                            spacing: Theme.paddingSmall
+
+                            Image {
+                                width: Theme.iconSizeSmallPlus
+                                height: Theme.iconSizeSmallPlus
+                                source: "image://theme/icon-m-rotate-left"
+                            }
+                            Label {
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: contentWidth
+                                font.pixelSize: Theme.fontSizeTiny
+                                text: qsTr("Undo")
+                            }
+                        }
+                        onClicked:  {
+                            //                            myTextArea.undo();
+                        }
+                    }
+
+                    BackgroundItem {
+                        width: sizeBackgroundItemMainMenu
+                        height: Theme.itemSizeSmall
+
+                        Row {
+                            anchors.centerIn: parent
+                            spacing: Theme.paddingSmall
+
+                            Image {
+                                width: Theme.iconSizeSmallPlus
+                                height: Theme.iconSizeSmallPlus
+                                source: "image://theme/icon-m-rotate-right"
+                            }
+                            Label {
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: contentWidth
+                                font.pixelSize: Theme.fontSizeTiny
+                                text: qsTr("Redo")
+                            }
+                        }
+                    }
+
+                    BackgroundItem {
+                        width: sizeBackgroundItemMainMenu
+                        height: Theme.itemSizeSmall
+
+                        Row {
+                            anchors.centerIn: parent
+                            spacing: Theme.paddingSmall
+
+                            Image {
+                                width: Theme.iconSizeSmallPlus
+                                height: Theme.iconSizeSmallPlus
+                                source: "image://theme/icon-m-keyboard"
+                            }
+                            Label {
+                                id: labelReadOnly
+                                anchors.verticalCenter: parent.verticalCenter
+                                width: contentWidth
+                                font.pixelSize: Theme.fontSizeTiny
+                                text: qsTr("R-only")
+                                wrapMode: Text.WordWrap
+                            }
+                        }
+                        onClicked: {
+                            if (myTextArea.readOnly == false) {
+                                myTextArea.readOnly = true;
+                            }
+                            else {
+                                myTextArea.readOnly = false;
+                            }
+                        }
                     }
                 }
             }
@@ -84,7 +245,7 @@ Page {
                 height: childrenRect.height
 
                 BackgroundItem {
-                    width: parent.width / 6
+                    width: sizeBackgroundItem
                     height: Theme.itemSizeSmall //height: Theme.itemSizeExtraSmall
 
                     Row {
@@ -100,13 +261,18 @@ Page {
                             anchors.verticalCenter: parent.verticalCenter
                             width: contentWidth
                             font.pixelSize: Theme.fontSizeTiny
-                            text: qsTr("Test")
+                            text: qsTr("Save")
+                        }
+                    }
+                    onClicked: {
+                        if (filePath!=="") {
+                            py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
                         }
                     }
                 }
 
                 BackgroundItem {
-                    width: parent.width / 6
+                    width: sizeBackgroundItem
                     height: Theme.itemSizeSmall
 
                     Row {
@@ -122,17 +288,16 @@ Page {
                             anchors.verticalCenter: parent.verticalCenter
                             width: contentWidth
                             font.pixelSize: Theme.fontSizeTiny
-                            text: qsTr("Test")
+                            text: qsTr("Undo")
                         }
                     }
-
                     onClicked:  {
-                        //                            myTextArea.redo();
+                        //                            myTextArea.undo();
                     }
                 }
 
                 BackgroundItem {
-                    width: parent.width / 6
+                    width: sizeBackgroundItem
                     height: Theme.itemSizeSmall
 
                     Row {
@@ -148,7 +313,65 @@ Page {
                             anchors.verticalCenter: parent.verticalCenter
                             width: contentWidth
                             font.pixelSize: Theme.fontSizeTiny
-                            text: qsTr("Test")
+                            text: qsTr("Redo")
+                        }
+                    }
+                }
+
+                BackgroundItem {
+                    width: sizeBackgroundItem
+                    height: Theme.itemSizeSmall
+
+                    Row {
+                        anchors.centerIn: parent
+                        spacing: Theme.paddingSmall
+
+                        Image {
+                            width: Theme.iconSizeSmallPlus
+                            height: Theme.iconSizeSmallPlus
+                            source: "image://theme/icon-m-keyboard"
+                        }
+                        Label {
+                            anchors.verticalCenter: parent.verticalCenter
+                            width: contentWidth
+                            font.pixelSize: Theme.fontSizeTiny
+                            text: qsTr("R-only")
+                            wrapMode: Text.WordWrap
+                        }
+                    }
+                    onClicked: {
+                        if (myTextArea.readOnly == false) {
+                            myTextArea.readOnly = true;
+                        }
+                        else {
+                            myTextArea.readOnly = false;
+                        }
+                    }
+                }
+
+                BackgroundItem {
+                    width: sizeBackgroundItem
+                    height: Theme.itemSizeSmall
+
+                    Row {
+                        anchors.centerIn: parent
+                        spacing: Theme.paddingSmall
+
+                        Image {
+                            width: Theme.iconSizeSmallPlus
+                            height: Theme.iconSizeSmallPlus
+                            source: "image://theme/icon-m-acknowledge"
+                        }
+                        Label {
+                            anchors.verticalCenter: parent.verticalCenter
+                            width: contentWidth
+                            font.pixelSize: Theme.fontSizeTiny
+                            text: qsTr("Save")
+                        }
+                    }
+                    onClicked: {
+                        if (filePath!=="") {
+                            py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
                         }
                     }
                 }
@@ -167,9 +390,6 @@ Page {
             contentHeight: myTextArea.height
             clip: true
 
-
-
-
             Label {
                 id: lineNumbers
                 //y: Theme.horizontalPageMargin
@@ -182,12 +402,10 @@ Page {
 
             TextArea {
                 id: myTextArea
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - 2 * Theme.horizontalPageMargin
-
-
-                //x: 30  // TODO фактически компоненты друга на друге :( Нормально?
-                //width: parent.width
+                //anchors.horizontalCenter: parent.horizontalCenter
+                //width: parent.width - 2 * Theme.horizontalPageMargin
+                x: 30  // TODO фактически компоненты друга на друге :( Нормально?
+                width: parent.width
 
                 //font.family: "Helvetica" //TODO implements in SettingsPage!
                 //font.pointSize: 30 //TODO implements in SettingsPage!
@@ -208,37 +426,27 @@ Page {
                     //TODO пересчитать label
                 }
 
-
-
-
             }
-
-
             VerticalScrollDecorator { flickable: editorView }
-
-
-            //}
         }
-
-
-
     }
-    //    Python {
-    //        id: py
 
-    //        Component.onCompleted: {
-    //            addImportPath(Qt.resolvedUrl('../.'));
-    //            importModule('editFile', function () {
-    //                py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
-    //                    myTextArea.text = result;
-    //                });
-    //            });
-    //        }
-    //        onError: {
-    //            // when an exception is raised, this error handler will be called
-    //            console.log('python error: ' + traceback);
-    //        }
-    //        onReceived: console.log('Unhandled event: ' + data)
-    //    }
+
+    Python {
+        id: py
+
+        Component.onCompleted: {
+            addImportPath(Qt.resolvedUrl('../.'));
+            importModule('editFile', function () {
+                py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
+                    myTextArea.text = result;
+                });
+            });
+        }
+        onError: {
+            // when an exception is raised, this error handler will be called
+            console.log('python error: ' + traceback);
+        }
+        onReceived: console.log('Unhandled event: ' + data)
+    }
 }
-
