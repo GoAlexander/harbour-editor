@@ -67,7 +67,7 @@ Page {
                 "<br/>" +
                 "<br/>" +
                 qsTr("Special thanks:") +
-                "<br/>" + qsTr("-Eetu K for save/load function and feedback") +
+                "<br/>" + qsTr("-eekkelund for save/load function and feedback") +
                 "<br/>" + qsTr("-osanwe for consultations about qml code") +
                 "<br/>" + qsTr("-coderus for various tips") +
                 "<br/>" + qsTr("-Russian community for feed back and help") +
