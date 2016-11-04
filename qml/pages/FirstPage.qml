@@ -73,23 +73,19 @@ Page {
             }
         }
 
-        // Tell SilicaFlickable the height of its content.
-        contentHeight: myTextArea.height
 
+        PageHeader {
+            id: header
+            height: hotActionsMenu.height
 
-        Column {
-            width: parent.width
-            //height: childrenRect.height
-
-            PageHeader {
-
-                Row {
-                    width: parent.width
-                    //height: childrenRect.height
+            Row {
+                id: hotActionsMenu
+                width: parent.width
+                height: childrenRect.height
 
                 BackgroundItem {
                     width: parent.width / 6
-                    height: Theme.itemSizeSmall
+                    height: Theme.itemSizeSmall //height: Theme.itemSizeExtraSmall
 
                     Row {
                         anchors.centerIn: parent
@@ -157,65 +153,71 @@ Page {
                     }
                 }
 
+            }
+        }
+
+
+
+
+
+        SilicaFlickable {
+            id: editorView
+            anchors.fill: parent
+            anchors.topMargin: header.height
+            contentHeight: myTextArea.height
+            clip: true
+
+
+
+
+            Label {
+                id: lineNumbers
+                //y: Theme.horizontalPageMargin
+                y: 8
+                height: myTextArea.height //???
+                color: Theme.secondaryHighlightColor
+                font.pixelSize: Theme.fontSizeMedium
+                text: "1"
+            }
+
+            TextArea {
+                id: myTextArea
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: parent.width - 2 * Theme.horizontalPageMargin
+
+
+                //x: 30  // TODO фактически компоненты друга на друге :( Нормально?
+                //width: parent.width
+
+                //font.family: "Helvetica" //TODO implements in SettingsPage!
+                //font.pointSize: 30 //TODO implements in SettingsPage!
+                font.pixelSize: Theme.fontSizeMedium //use variable for that because of Label (to toggle this parameter)
+                background: null
+                selectionMode: TextEdit.SelectCharacters
+                focus: true
+
+                //+при смене ориентации автоматически не переписывает номера строк
+                //Хм, считать во всем тексте количество символов переноса строки (а не lineCount)?!
+                onTextChanged: { //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
+                    console.log(myTextArea._editor.lineCount);
+                    console.log(font.pixelSize);
+                    lineNumberChanged();
                 }
+
+                onRotationChanged: {
+                    //TODO пересчитать label
+                }
+
+
+
+
             }
 
 
+            VerticalScrollDecorator { flickable: editorView }
 
 
-
-
-
-
-            Row {
-                width: parent.width
-                //height: childrenRect.height
-                height: myTextArea.height
-
-                Label {
-                    id: lineNumbers
-                    //y: Theme.horizontalPageMargin
-                    y: 8
-                    height: myTextArea.height //???
-                    color: Theme.secondaryHighlightColor
-                    font.pixelSize: Theme.fontSizeMedium
-                    text: "1"
-                }
-
-                TextArea {
-                    id: myTextArea
-
-                    //x: 30  // TODO фактически компоненты друга на друге :( Нормально?
-                    width: parent.width
-
-                    //font.family: "Helvetica" //TODO implements in SettingsPage!
-                    //font.pointSize: 30 //TODO implements in SettingsPage!
-                    font.pixelSize: Theme.fontSizeMedium //use variable for that because of Label (to toggle this parameter)
-                    background: null
-                    selectionMode: TextEdit.SelectCharacters
-                    focus: true
-
-                    //+при смене ориентации автоматически не переписывает номера строк
-                    //Хм, считать во всем тексте количество символов переноса строки (а не lineCount)?!
-                    onTextChanged: { //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
-                        console.log(myTextArea._editor.lineCount);
-                        console.log(font.pixelSize);
-                        lineNumberChanged();
-                    }
-
-                    onRotationChanged: {
-                        //TODO пересчитать label
-                    }
-
-
-
-
-                }
-
-
-                VerticalScrollDecorator { flickable: myTextArea }
-
-            }
+            //}
         }
 
 
