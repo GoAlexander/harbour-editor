@@ -43,6 +43,8 @@ Page {
                 //checked: !context.backgrounddisabled
             }
 
+            SectionHeader { text: qsTr("Fonts and size") }
+
         }
     }
 
