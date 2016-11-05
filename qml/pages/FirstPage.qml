@@ -9,6 +9,8 @@ Page {
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
     property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
     property string filePath: "" //TODO сделать предзагрузку последнего открытого
+    property bool headerVisible: true //TODO set it in settings!
+    property bool lineNumbersVisible: true //TODO set it in settings!
 
     function setFilePath(filePathFromChooser) {
         filePath = filePathFromChooser;
@@ -40,7 +42,6 @@ Page {
         }
     }
 
-    // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {
         id: view
         anchors.fill: parent
@@ -236,6 +237,7 @@ Page {
         PageHeader {
             id: header
             height: hotActionsMenu.height
+            visible: headerVisible
 
             Row {
                 id: hotActionsMenu
@@ -373,28 +375,41 @@ Page {
         }
 
 
-
-
-
         SilicaFlickable {
             id: editorView
             anchors.fill: parent
-            anchors.topMargin: header.height
+            anchors.topMargin:  {
+                if (header.visible === true) {
+                     editorView.anchors.topMargin=header.height;
+                }
+                else {
+                    editorView.anchors.topMargin=page.height;
+                }
+            }
+
             contentHeight: myTextArea.height
             clip: true
 
             Label {
                 id: lineNumbers
                 y: 8
-                height: myTextArea.height //???
+                height: myTextArea.height
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeMedium
                 text: "1"
+                visible: lineNumbersVisible
             }
 
             TextArea {
                 id: myTextArea
-                x: 30  // TODO фактически компоненты друга на друге :( Нормально?
+                x: {  // TODO фактически компоненты друга на друге :( Нормально?
+                    if (lineNumbersVisible === true) {
+                        myTextArea.x = 30;
+                    }
+                    else {
+                        myTextArea.x = 0;
+                    }
+                }
                 width: parent.width
 
                 //font.family: "Helvetica" //TODO implements in SettingsPage!
