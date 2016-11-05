@@ -44,8 +44,7 @@ Page {
             title: qsTr("About")
         }
 
-        Text
-        {
+        Text {
             id: titleLabel
             anchors { horizontalCenter: parent.horizontalCenter }
             width: parent.width
@@ -68,26 +67,19 @@ Page {
                 "<br/>" +
                 qsTr("Special thanks:") +
                 "<br/>" + qsTr("-eekkelund for save/load function and feedback") +
-                "<br/>" + qsTr("-osanwe for consultations about qml code") +
-                "<br/>" + qsTr("-coderus for various tips") +
+                "<br/>" + qsTr("-osanwe for very often consultations about qml code") +
+                "<br/>" + qsTr("-coderus for various tips and code") +
                 "<br/>" + qsTr("-Russian community for feed back and help") +
                 "<br/>" +
                 "<br/>" +
                 qsTr("Tips:")+
                 "<br/>" +
-                qsTr("Write about select all...");
+                qsTr("-To 'Select all text' hold your finger until 3 vibrations");
 
-            onLinkActivated:
-            {
+            onLinkActivated: {
                 Qt.openUrlExternally("https://github.com/GoAlexander/harbour-editor");
             }
-
         }
+        VerticalScrollDecorator {}
     }
-
 }
-
-
-
-
-

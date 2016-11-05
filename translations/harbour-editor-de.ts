@@ -2,6 +2,18 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name></name>
+    <message id="filemanager-la-file_details">
+        <source>%1, %2</source>
+        <extracomment>Shows size and modification date, e.g. &quot;15.5MB, 02/03/2016&quot;</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="filemanager-la-no_files">
+        <source>No files</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>AboutPage</name>
     <message>
         <source>&quot;Editor.&quot; is feature-rich text/code editor!</source>
@@ -28,18 +40,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>-Eetu K for save/load function and feedback</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>-osanwe for consultations about qml code</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>-coderus for various tips</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>-Russian community for feed back and help</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48,11 +48,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Write about select all...</source>
+        <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>About</source>
+        <source>-eekkelund for save/load function and feedback</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-coderus for various tips and code</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-To &apos;Select all text&apos; hold your finger until 3 vibrations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-osanwe for very often consultations about qml code</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -84,10 +96,6 @@
     </message>
     <message>
         <source>Open</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Select all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

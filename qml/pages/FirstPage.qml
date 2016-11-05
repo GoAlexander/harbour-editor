@@ -8,7 +8,13 @@ Page {
     property int lastLineCount: 0
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
     property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
-    property string filePath: "" //"/home/nemo/Documents/test.txt"
+    property string filePath: "" //TODO сделать предзагрузку последнего открытого
+
+    function setFilePath(filePathFromChooser) {
+        filePath = filePathFromChooser;
+        pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePathFromChooser}, PageStackAction.Animated);
+        pageStack.nextPage();
+    }
 
     function numberOfLines() {
         var count = (myTextArea.text.match(/\n/g) || []).length;
@@ -44,12 +50,6 @@ Page {
             MenuItem {
                 text: qsTr("Settings")
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
-            }
-            MenuItem {
-                text: qsTr("Select all")
-                onClicked: {
-                    myTextArea.selectAll();
-                }
             }
 
             Column {
@@ -110,7 +110,13 @@ Page {
                                 text: qsTr("Open")
                             }
                         }
-                        onClicked:  {
+                        onClicked: {
+                            pageStack.push(Qt.resolvedUrl("FileChooserPage.qml"), {
+                                               homePath: "/home/nemo",
+                                               showFormat: true,
+                                               title: "Select file",
+                                               callback: setFilePath
+                                           })
                         }
                     }
                 }
@@ -282,7 +288,7 @@ Page {
                         }
                     }
                     onClicked:  {
-                        //                            myTextArea.undo();
+                        myTextArea.undo(); //TODO test it!
                     }
                 }
 
@@ -388,8 +394,6 @@ Page {
 
             TextArea {
                 id: myTextArea
-                //anchors.horizontalCenter: parent.horizontalCenter
-                //width: parent.width - 2 * Theme.horizontalPageMargin
                 x: 30  // TODO фактически компоненты друга на друге :( Нормально?
                 width: parent.width
 
