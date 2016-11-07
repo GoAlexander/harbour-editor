@@ -43,4 +43,4 @@ DISTFILES += \
     qml/pages/SettingsPage.qml \
     qml/pages/FileChooserPage.qml \
     qml/models/Context.qml \
-    qml/components/OwnComponents.qml
+    qml/components/MenuButton.qml
