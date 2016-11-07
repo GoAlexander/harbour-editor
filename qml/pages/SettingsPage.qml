@@ -1,8 +1,12 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import "../models"
 
 Page {
     id: page
+
+    //property Context context
+
 
     SilicaFlickable {
         id: view
@@ -29,18 +33,20 @@ Page {
 
             TextSwitch
             {
-                id: test1
+                id: headerVisibleSwitch
                 anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
-                text: qsTr("Test1")
-                //checked: !context.backgrounddisabled
+                text: qsTr("Quick menu enabled")
+                checked: context.headerVisible
+                onCheckedChanged: Context.headerVisible = headerVisibleSwitch.checked;
             }
 
             TextSwitch
             {
-                id: test2
+                id: lineNumbersVisibleSwitch
                 anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
-                text: qsTr("Test2")
-                //checked: !context.backgrounddisabled
+                text: qsTr("Line numeration enabled")
+                checked: context.lineNumbersVisible
+                onCheckedChanged: Context.lineNumbersVisible = lineNumbersVisibleSwitch.checked;
             }
 
             SectionHeader { text: qsTr("Fonts and size") }

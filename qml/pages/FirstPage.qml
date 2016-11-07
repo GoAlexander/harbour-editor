@@ -1,16 +1,19 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.3
+import "../models"
 
 Page {
     id: editorPage
+
+    //property Context context
 
     property int lastLineCount: 0
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
     property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
     property string filePath: "" //TODO сделать предзагрузку последнего открытого
-    property bool headerVisible: true //TODO set it in settings!
-    property bool lineNumbersVisible: true //TODO set it in settings!
+    property bool headerVisible: Context.headerVisible//true //TODO set it in settings!
+    property bool lineNumbersVisible: Context.lineNumbersVisible//true //TODO set it in settings!
 
     function setFilePath(filePathFromChooser) {
         filePath = filePathFromChooser;

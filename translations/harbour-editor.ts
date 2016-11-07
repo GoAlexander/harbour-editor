@@ -114,15 +114,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Test1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Test2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fonts and size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quick menu enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Line numeration enabled</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
