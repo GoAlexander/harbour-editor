@@ -1,21 +1,31 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-//import io.thp.pyotherside 1.3
-
-
+import io.thp.pyotherside 1.3
+import "../models"
+import "../components"
 
 Page {
     id: editorPage
 
+    //property Context context
+
     property int lastLineCount: 0
-    property string filePath: "/home/nemo/Documents/test.txt"
+    property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
+    property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
+    property string filePath: "" //TODO сделать предзагрузку последнего открытого
+    property bool headerVisible: Context.headerVisible//true //TODO set it in settings!
+    property bool lineNumbersVisible: Context.lineNumbersVisible//true //TODO set it in settings!
+
+    function setFilePath(filePathFromChooser) {
+        filePath = filePathFromChooser;
+        pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePathFromChooser}, PageStackAction.Animated);
+        pageStack.nextPage();
+    }
 
     function numberOfLines() {
         var count = (myTextArea.text.match(/\n/g) || []).length;
         count += 1;
         return count;
-
-
     }
 
     function lineNumberChanged() {
@@ -34,10 +44,8 @@ Page {
             lineNumbers.text = lineNumbers.text.slice(0, -2);
             lastLineCount = myTextArea._editor.lineCount;
         }
-
     }
 
-    // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {
         id: view
         anchors.fill: parent
@@ -45,29 +53,101 @@ Page {
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
             MenuItem {
-                text: qsTr("About")
-                onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                text: qsTr("Settings")
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
-            MenuItem {
-                text: qsTr("Save as")
-                //onClicked: py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
-            }
-            MenuItem {
-                text: qsTr("Select all text")
-                onClicked: {
-                    myTextArea.selectAll();
-                }
-            }
-            MenuItem {
-                text: qsTr("Turn on read-only mode")
-                onClicked: {
-                    if (myTextArea.readOnly == false) {
-                        text = qsTr("Turn off read-only mode");
-                        myTextArea.readOnly = true;
+
+            Column {
+                width: parent.width
+                height: childrenRect.height
+
+                Row {
+                    id: pullMenu2
+                    width: parent.width
+                    height: childrenRect.height
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        mySource: "image://theme/icon-m-acknowledge";
+                        myText: qsTr("Save as")
+
+                        onClicked: {
+
+                            //TODO вызвать диалог ввода пути
+                            if (filePath!=="") {
+                                py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
+                            }
+                        }
                     }
-                    else {
-                        text = qsTr("Turn on read-only mode");
-                        myTextArea.readOnly = false;
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        mySource: "image://theme/icon-m-folder";
+                        myText: qsTr("Open")
+
+                        onClicked: {
+                            pageStack.push(Qt.resolvedUrl("FileChooserPage.qml"), {
+                                               homePath: "/home/nemo",
+                                               showFormat: true,
+                                               title: "Select file",
+                                               callback: setFilePath
+                                           })
+                        }
+                    }
+                }
+
+
+                Row {
+                    id: pullMenu
+                    width: parent.width
+                    height: childrenRect.height
+
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        mySource: "image://theme/icon-m-acknowledge";
+                        myText: qsTr("Save   ")
+
+                        onClicked: {
+                            if (filePath!=="") {
+                                py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
+                            }
+                        }
+                    }
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        mySource: "image://theme/icon-m-rotate-left";
+                        myText: qsTr("Undo")
+
+                        onClicked: {
+                            //myTextArea.undo();
+                        }
+                    }
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        mySource: "image://theme/icon-m-rotate-right";
+                        myText: qsTr("Redo")
+
+                        onClicked: {
+                            //myTextArea.redo();
+                        }
+                    }
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        mySource: "image://theme/icon-m-keyboard";
+                        myText: qsTr("R-only")
+
+                        onClicked: {
+                            if (myTextArea.readOnly == false) {
+                                myTextArea.readOnly = true;
+                            }
+                            else {
+                                myTextArea.readOnly = false;
+                            }
+                        }
                     }
                 }
             }
@@ -77,117 +157,112 @@ Page {
         PageHeader {
             id: header
             height: hotActionsMenu.height
+            visible: headerVisible
 
             Row {
                 id: hotActionsMenu
                 width: parent.width
                 height: childrenRect.height
 
-                BackgroundItem {
-                    width: parent.width / 6
-                    height: Theme.itemSizeSmall //height: Theme.itemSizeExtraSmall
 
-                    Row {
-                        anchors.centerIn: parent
-                        spacing: Theme.paddingSmall
+                MenuButton {
+                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+                    mySource: "image://theme/icon-m-acknowledge";
+                    myText: qsTr("Save")
 
-                        Image {
-                            width: Theme.iconSizeSmallPlus
-                            height: Theme.iconSizeSmallPlus
-                            source: "image://theme/icon-m-acknowledge"
-                        }
-                        Label {
-                            anchors.verticalCenter: parent.verticalCenter
-                            width: contentWidth
-                            font.pixelSize: Theme.fontSizeTiny
-                            text: qsTr("Test")
+                    onClicked: {
+                        if (filePath!=="") {
+                            py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
                         }
                     }
                 }
 
-                BackgroundItem {
-                    width: parent.width / 6
-                    height: Theme.itemSizeSmall
+                MenuButton {
+                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+                    mySource: "image://theme/icon-m-rotate-left";
+                    myText: qsTr("Undo")
 
-                    Row {
-                        anchors.centerIn: parent
-                        spacing: Theme.paddingSmall
-
-                        Image {
-                            width: Theme.iconSizeSmallPlus
-                            height: Theme.iconSizeSmallPlus
-                            source: "image://theme/icon-m-rotate-left"
-                        }
-                        Label {
-                            anchors.verticalCenter: parent.verticalCenter
-                            width: contentWidth
-                            font.pixelSize: Theme.fontSizeTiny
-                            text: qsTr("Test")
-                        }
-                    }
-
-                    onClicked:  {
-                        //                            myTextArea.redo();
+                    onClicked: {
+                        //myTextArea.undo();
                     }
                 }
 
-                BackgroundItem {
-                    width: parent.width / 6
-                    height: Theme.itemSizeSmall
+                MenuButton {
+                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+                    mySource: "image://theme/icon-m-rotate-right";
+                    myText: qsTr("Redo")
 
-                    Row {
-                        anchors.centerIn: parent
-                        spacing: Theme.paddingSmall
+                    onClicked: {
+                        //myTextArea.redo();
+                    }
+                }
 
-                        Image {
-                            width: Theme.iconSizeSmallPlus
-                            height: Theme.iconSizeSmallPlus
-                            source: "image://theme/icon-m-rotate-right"
+                MenuButton {
+                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+                    mySource: "image://theme/icon-m-keyboard";
+                    myText: qsTr("R-only")
+
+                    onClicked: {
+                        if (myTextArea.readOnly == false) {
+                            myTextArea.readOnly = true;
                         }
-                        Label {
-                            anchors.verticalCenter: parent.verticalCenter
-                            width: contentWidth
-                            font.pixelSize: Theme.fontSizeTiny
-                            text: qsTr("Test")
+                        else {
+                            myTextArea.readOnly = false;
                         }
                     }
                 }
 
+                MenuButton {
+                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+                    mySource: "image://theme/icon-m-acknowledge";
+                    myText: qsTr("Save")
+
+                    onClicked: {
+                        if (filePath!=="") {
+                            py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
+                        }
+                    }
+                }
             }
         }
-
-
-
 
 
         SilicaFlickable {
             id: editorView
             anchors.fill: parent
-            anchors.topMargin: header.height
+            anchors.topMargin:  {
+                if (header.visible === true) {
+                     editorView.anchors.topMargin=header.height;
+                }
+                else {
+                    editorView.anchors.topMargin=page.height;
+                }
+            }
+
             contentHeight: myTextArea.height
             clip: true
 
-
-
-
             Label {
                 id: lineNumbers
-                //y: Theme.horizontalPageMargin
                 y: 8
-                height: myTextArea.height //???
+                height: myTextArea.height
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeMedium
                 text: "1"
+                visible: lineNumbersVisible
             }
 
             TextArea {
                 id: myTextArea
-                anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - 2 * Theme.horizontalPageMargin
-
-
-                //x: 30  // TODO фактически компоненты друга на друге :( Нормально?
-                //width: parent.width
+                x: {  // TODO фактически компоненты друга на друге :( Нормально?
+                    if (lineNumbersVisible === true) {
+                        myTextArea.x = 30;
+                    }
+                    else {
+                        myTextArea.x = 0;
+                    }
+                }
+                width: parent.width
 
                 //font.family: "Helvetica" //TODO implements in SettingsPage!
                 //font.pointSize: 30 //TODO implements in SettingsPage!
@@ -207,38 +282,29 @@ Page {
                 onRotationChanged: {
                     //TODO пересчитать label
                 }
-
-
-
-
             }
-
-
             VerticalScrollDecorator { flickable: editorView }
-
-
-            //}
         }
-
-
-
     }
-    //    Python {
-    //        id: py
 
-    //        Component.onCompleted: {
-    //            addImportPath(Qt.resolvedUrl('../.'));
-    //            importModule('editFile', function () {
-    //                py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
-    //                    myTextArea.text = result;
-    //                });
-    //            });
-    //        }
-    //        onError: {
-    //            // when an exception is raised, this error handler will be called
-    //            console.log('python error: ' + traceback);
-    //        }
-    //        onReceived: console.log('Unhandled event: ' + data)
-    //    }
+
+    Python {
+        id: py
+
+        Component.onCompleted: {
+            if (filePath!=="") {
+                addImportPath(Qt.resolvedUrl('../.'));
+                importModule('editFile', function () {
+                    py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
+                        myTextArea.text = result;
+                    });
+                });
+            }
+        }
+        onError: {
+            // when an exception is raised, this error handler will be called
+            console.log('python error: ' + traceback);
+        }
+        onReceived: console.log('Unhandled event: ' + data)
+    }
 }
-
