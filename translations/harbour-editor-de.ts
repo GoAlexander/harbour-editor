@@ -69,6 +69,17 @@
     </message>
 </context>
 <context>
+    <name>CoverPage</name>
+    <message>
+        <source>Number of lines: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number of charactes: </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>Settings</source>
