@@ -38,5 +38,16 @@ ApplicationWindow
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
-}
 
+
+    //TODO write .conf file and functions in C++/Python
+    //These variables are in: FirstPage + SettingsPage + Cover
+    property bool headerVisible: true
+    property bool lineNumbersVisible: true
+
+    property string font
+    property string fontSize
+
+    property int charNumber: 0
+    property int linesNumber: 0
+}

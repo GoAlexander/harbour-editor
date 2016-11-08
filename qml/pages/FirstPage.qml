@@ -1,20 +1,16 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.3
-import "../models"
 import "../components"
 
 Page {
     id: editorPage
 
-    //property Context context
-
     property int lastLineCount: 0
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
     property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
     property string filePath: "" //TODO сделать предзагрузку последнего открытого
-    property bool headerVisible: Context.headerVisible//true //TODO set it in settings!
-    property bool lineNumbersVisible: Context.lineNumbersVisible//true //TODO set it in settings!
+
 
     function setFilePath(filePathFromChooser) {
         filePath = filePathFromChooser;
@@ -277,6 +273,10 @@ Page {
                     console.log(myTextArea._editor.lineCount);
                     console.log(font.pixelSize);
                     lineNumberChanged();
+
+                    //For cover:
+                    //charNumber = myTextArea.length;
+                    linesNumber = numberOfLines();
                 }
 
                 onRotationChanged: {
