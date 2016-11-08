@@ -6,21 +6,27 @@ CoverBackground {
     Label {
         id: label
         anchors.centerIn: parent
-        text: "Test"
-//        text: qsTr("Number of lines: ") + FirstPage.editorPage.numberOfLines() + "\n" +
-//              qsTr("Number of charactes: ") + FirstPage.editorPage.myTextArea.length
+        horizontalAlignment: Text.Center
+        width: parent.width
+
+        text: "Editor." + "\n" + "\n" +
+              qsTr("Number of lines: ") + linesNumber + "\n" +
+              qsTr("Number of charactes: ") + charNumber
+
+        wrapMode: Text.WordWrap
+
     }
 
-    CoverActionList {
-        id: coverAction
+//    CoverActionList {
+//        id: coverAction
 
-        CoverAction {
-            iconSource: "image://theme/icon-cover-next"
-        }
+//        CoverAction {
+//            iconSource: "image://theme/icon-cover-next"
+//        }
 
-        CoverAction {
-            iconSource: "image://theme/icon-cover-pause"
-        }
-    }
+//        CoverAction {
+//            iconSource: "image://theme/icon-cover-pause"
+//        }
+//    }
 }
 
