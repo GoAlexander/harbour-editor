@@ -51,7 +51,7 @@ Page {
                 "<br/>" +
                 qsTr("-To 'Select all text' hold your finger until 3 vibrations") +
                 "<br/>" +
-                qsTr("-Unsaved changes are saved in the file ending with '~' in the same dir where you placed ");
+                qsTr("-Unsaved changes are saved in the file ending with '~' in the same dir where you placed your original file");
 
             onLinkActivated: {
                 Qt.openUrlExternally("https://github.com/GoAlexander/harbour-editor");

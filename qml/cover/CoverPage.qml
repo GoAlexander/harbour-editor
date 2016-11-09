@@ -23,7 +23,7 @@ CoverBackground {
             onTriggered: {
                 label.text = "Editor." + "\n" + "\n" +
                         qsTr("Lines: ") + linesNumber + "\n" +
-                        qsTr("Chars with \\n: ") + charNumber
+                        qsTr("Chars: ") + charNumber
             }
         }
 
