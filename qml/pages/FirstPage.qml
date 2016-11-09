@@ -9,7 +9,7 @@ Page {
     property int lastLineCount: 0
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
     property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
-    property string filePath: "" //TODO сделать предзагрузку последнего открытого
+    property string filePath: "" //"autosave" //TODO сделать предзагрузку последнего открытого
 
 
     function setFilePath(filePathFromChooser) {
@@ -111,25 +111,25 @@ Page {
                         }
                     }
 
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
-                        mySource: "image://theme/icon-m-rotate-left";
-                        myText: qsTr("Undo")
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+//                        mySource: "image://theme/icon-m-rotate-left";
+//                        myText: qsTr("Undo")
 
-                        onClicked: {
-                            //myTextArea.undo();
-                        }
-                    }
+//                        onClicked: {
+//                            //myTextArea.undo();
+//                        }
+//                    }
 
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
-                        mySource: "image://theme/icon-m-rotate-right";
-                        myText: qsTr("Redo")
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+//                        mySource: "image://theme/icon-m-rotate-right";
+//                        myText: qsTr("Redo")
 
-                        onClicked: {
-                            //myTextArea.redo();
-                        }
-                    }
+//                        onClicked: {
+//                            //myTextArea.redo();
+//                        }
+//                    }
 
                     MenuButton {
                         width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
@@ -173,25 +173,25 @@ Page {
                     }
                 }
 
-                MenuButton {
-                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
-                    mySource: "image://theme/icon-m-rotate-left";
-                    myText: qsTr("Undo")
+//                MenuButton {
+//                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+//                    mySource: "image://theme/icon-m-rotate-left";
+//                    myText: qsTr("Undo")
 
-                    onClicked: {
-                        //myTextArea.undo();
-                    }
-                }
+//                    onClicked: {
+//                        //myTextArea.undo();
+//                    }
+//                }
 
-                MenuButton {
-                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
-                    mySource: "image://theme/icon-m-rotate-right";
-                    myText: qsTr("Redo")
+//                MenuButton {
+//                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+//                    mySource: "image://theme/icon-m-rotate-right";
+//                    myText: qsTr("Redo")
 
-                    onClicked: {
-                        //myTextArea.redo();
-                    }
-                }
+//                    onClicked: {
+//                        //myTextArea.redo();
+//                    }
+//                }
 
                 MenuButton {
                     width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
@@ -208,17 +208,17 @@ Page {
                     }
                 }
 
-                MenuButton {
-                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
-                    mySource: "image://theme/icon-m-acknowledge";
-                    myText: qsTr("Save")
+//                MenuButton {
+//                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+//                    mySource: "image://theme/icon-m-acknowledge";
+//                    myText: qsTr("Save")
 
-                    onClicked: {
-                        if (filePath!=="") {
-                            py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
-                        }
-                    }
-                }
+//                    onClicked: {
+//                        if (filePath!=="") {
+//                            py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
+//                        }
+//                    }
+//                }
             }
         }
 
@@ -243,7 +243,7 @@ Page {
                 y: 8
                 height: myTextArea.height
                 color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeMedium
+                font.pixelSize: fontSize //Theme.fontSizeMedium
                 text: "1"
                 visible: lineNumbersVisible
             }
@@ -261,8 +261,7 @@ Page {
                 width: parent.width
 
                 //font.family: "Helvetica" //TODO implements in SettingsPage!
-                //font.pointSize: 30 //TODO implements in SettingsPage!
-                font.pixelSize: Theme.fontSizeMedium //use variable for that because of Label (to toggle this parameter)
+                font.pixelSize: fontSize //Theme.fontSizeMedium
                 background: null
                 selectionMode: TextEdit.SelectCharacters
                 focus: true
@@ -270,12 +269,12 @@ Page {
                 //+при смене ориентации автоматически не переписывает номера строк
                 //Хм, считать во всем тексте количество символов переноса строки (а не lineCount)?!
                 onTextChanged: { //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
-                    console.log(myTextArea._editor.lineCount);
-                    console.log(font.pixelSize);
+                    //For line numeration:
+                    console.log(font.pixelSize, myTextArea._editor.lineCount);
                     lineNumberChanged();
 
                     //For cover:
-                    //charNumber = myTextArea.length;
+                    charNumber = myTextArea.text.length;
                     linesNumber = numberOfLines();
 
                     //Autosave
@@ -297,7 +296,7 @@ Page {
         id: py
 
         Component.onCompleted: {
-            if (filePath!=="") {
+            if (filePath!=="") { // || filePath !== "autosave"
                 addImportPath(Qt.resolvedUrl('../.'));
                 importModule('editFile', function () {
                     py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is

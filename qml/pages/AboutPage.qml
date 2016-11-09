@@ -31,7 +31,13 @@ Page {
                 qsTr("GitHub") + "</a>" +
                 "<br/>" +
                 "<br/>" +
-                qsTr("If you want to support this app star the repository at the github \u263a") +
+                "<b>" + qsTr("If you want to support the developer:") +
+                "<br/>" +
+                qsTr("Make a donation:  (in progress...)") +
+                "<br/>" +
+                qsTr("or") +
+                "<br/>" +
+                qsTr("Star the repository at the github \u263a") + "</b>" +
                 "<br/>" +
                 "<br/>" +
                 qsTr("Special thanks:") +
@@ -43,7 +49,9 @@ Page {
                 "<br/>" +
                 qsTr("Tips:")+
                 "<br/>" +
-                qsTr("-To 'Select all text' hold your finger until 3 vibrations");
+                qsTr("-To 'Select all text' hold your finger until 3 vibrations") +
+                "<br/>" +
+                qsTr("-Unsaved changes are saved in the file ending with '~' in the same dir where you placed ");
 
             onLinkActivated: {
                 Qt.openUrlExternally("https://github.com/GoAlexander/harbour-editor");

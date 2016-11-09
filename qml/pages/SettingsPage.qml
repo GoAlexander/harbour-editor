@@ -40,12 +40,27 @@ Page {
             {
                 id: lineNumbersVisibleSwitch
                 anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
-                text: qsTr("Line numeration enabled")
+                text: qsTr("Line numeration enabled") + "\n" + "(experimental, brokean)"
                 checked: lineNumbersVisible
                 onCheckedChanged: lineNumbersVisible = lineNumbersVisibleSwitch.checked;
             }
 
-            SectionHeader { text: qsTr("Fonts and size") }
+//            SectionHeader { text: qsTr("Fonts and size") }
+
+//            ComboBox {
+//                label: "Font size"
+
+
+//                menu: ContextMenu {
+//                    MenuItem { text: "fontSizeMedium" }
+//                    MenuItem { text: "fontSizeSmall" }
+//                    MenuItem { text: "fontSizeLarge" }
+//                }
+
+//                onActiveFocusChanged:  {
+//                    fontSize = "Theme." + value;
+//                }
+//            }
 
         }
     }

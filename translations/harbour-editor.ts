@@ -32,10 +32,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>If you want to support this app star the repository at the github ☺</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Special thanks:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -67,15 +63,35 @@
         <source>-osanwe for very often consultations about qml code</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Make a donation:  (in progress...)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>or</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Star the repository at the github ☺</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If you want to support the developer:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Unsaved changes are saved in the file ending with &apos;~&apos; in the same dir where you placed </source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
-        <source>Number of lines: </source>
+        <source>Lines: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Number of charactes: </source>
+        <source>Chars with \n: </source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -87,14 +103,6 @@
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Undo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -126,10 +134,6 @@
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fonts and size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

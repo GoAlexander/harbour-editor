@@ -8,25 +8,24 @@ CoverBackground {
         anchors.centerIn: parent
         horizontalAlignment: Text.Center
         width: parent.width
-
-        text: "Editor." + "\n" + "\n" +
-              qsTr("Number of lines: ") + linesNumber + "\n" +
-              qsTr("Number of charactes: ") + charNumber
-
+        color: Theme.highlightColor
         wrapMode: Text.WordWrap
+        x: Theme.horizontalPageMargin
 
+        text: "Editor."
     }
 
-//    CoverActionList {
-//        id: coverAction
+    CoverActionList {
+        id: coverAction
 
-//        CoverAction {
-//            iconSource: "image://theme/icon-cover-next"
-//        }
+        CoverAction {
+            iconSource: "image://theme/icon-cover-sync"
+            onTriggered: {
+                label.text = "Editor." + "\n" + "\n" +
+                        qsTr("Lines: ") + linesNumber + "\n" +
+                        qsTr("Chars with \\n: ") + charNumber
+            }
+        }
 
-//        CoverAction {
-//            iconSource: "image://theme/icon-cover-pause"
-//        }
-//    }
+    }
 }
-
