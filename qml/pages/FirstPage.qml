@@ -277,6 +277,11 @@ Page {
                     //For cover:
                     //charNumber = myTextArea.length;
                     linesNumber = numberOfLines();
+
+                    //Autosave
+                    if (filePath!=="") {
+                        py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
+                    }
                 }
 
                 onRotationChanged: {
