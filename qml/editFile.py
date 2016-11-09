@@ -6,8 +6,11 @@ import os
 
 def openings(filepath):
     if os.path.exists(filepath):
-        file = open(filepath, 'r')
-    else:
+        if os.path.exists(filepath + "~"):
+            file = open(filepath + "~", 'r')
+        else:
+            file = open(filepath, 'r')
+    else: # For what? :)
         file = open(filepath, 'a+')
     txt = file.read()
     file.close()
