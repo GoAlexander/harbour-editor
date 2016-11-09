@@ -40,7 +40,7 @@ Page {
             {
                 id: lineNumbersVisibleSwitch
                 anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
-                text: qsTr("Line numeration enabled") + "\n" + "(experimental, brokean)"
+                text: qsTr("Line numeration enabled") + "\n" + "(experimental, broken)"
                 checked: lineNumbersVisible
                 onCheckedChanged: lineNumbersVisible = lineNumbersVisibleSwitch.checked;
             }
