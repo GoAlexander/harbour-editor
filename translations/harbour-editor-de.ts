@@ -48,10 +48,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>-eekkelund for save/load function and feedback</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>-coderus for various tips and code</source>
         <translation type="unfinished"></translation>
     </message>
@@ -80,7 +76,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>-Unsaved changes are saved in the file ending with &apos;~&apos; in the same dir where you placed </source>
+        <source>-eekkelund for save/load/autosave functions and feedback</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Unsaved changes are saved in the file ending with &apos;~&apos; in the same dir where you placed your original file</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -91,7 +91,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Chars with \n: </source>
+        <source>Chars: </source>
         <translation type="unfinished"></translation>
     </message>
 </context>
