@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import org.nemomobile.notifications 1.0
 import io.thp.pyotherside 1.3
 import "../components"
 
@@ -12,10 +13,33 @@ Page {
     property string filePath: "" //"autosave" //TODO сделать предзагрузку последнего открытого
 
 
+    Notification {
+        id: outputNotifications
+        category: "Editor."
+    }
+
+
     function setFilePath(filePathFromChooser) {
         filePath = filePathFromChooser;
         pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePathFromChooser}, PageStackAction.Animated);
         pageStack.nextPage();
+    }
+
+    //TODO rewrite (delete)
+    function saveAsSetFilePath(filePathFromChooser) {
+        filePath = filePathFromChooser;
+        pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePathFromChooser}, PageStackAction.Animated);
+        pageStack.nextPage();
+        if (filePath!=="") { //TODO delete if
+            py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
+        }
+        py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
+            myTextArea.text = result;
+        });
+
+        outputNotifications.close()
+        outputNotifications.previewBody = qsTr("Document saved!")
+        outputNotifications.publish()
     }
 
     function numberOfLines() {
@@ -68,11 +92,12 @@ Page {
                         myText: qsTr("Save as")
 
                         onClicked: {
-
-                            //TODO вызвать диалог ввода пути
-                            if (filePath!=="") {
-                                py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
-                            }
+                            pageStack.push(Qt.resolvedUrl("SaveAsPage.qml"), {
+                                               homePath: "/home/nemo",
+                                               showFormat: true,
+                                               title: "Select file",
+                                               callback: saveAsSetFilePath
+                                           })
                         }
                     }
 
@@ -108,6 +133,10 @@ Page {
                             if (filePath!=="") {
                                 py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
                             }
+
+                            outputNotifications.close()
+                            outputNotifications.previewBody = qsTr("Document saved!")
+                            outputNotifications.publish()
                         }
                     }
 
@@ -170,6 +199,10 @@ Page {
                         if (filePath!=="") {
                             py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
                         }
+
+                        outputNotifications.close()
+                        outputNotifications.previewBody = qsTr("Document saved!")
+                        outputNotifications.publish()
                     }
                 }
 
@@ -271,6 +304,7 @@ Page {
                 onTextChanged: { //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
                     //For line numeration:
                     console.log(font.pixelSize, myTextArea._editor.lineCount);
+                    console.log("filePath = " + filePath);
                     lineNumberChanged();
 
                     //For cover:

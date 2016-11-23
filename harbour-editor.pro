@@ -42,4 +42,5 @@ DISTFILES += \
     qml/pages/AboutPage.qml \
     qml/pages/SettingsPage.qml \
     qml/pages/FileChooserPage.qml \
-    qml/components/MenuButton.qml
+    qml/components/MenuButton.qml \
+    qml/pages/SaveAsPage.qml

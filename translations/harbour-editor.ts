@@ -36,10 +36,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>-Russian community for feed back and help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Tips:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,10 +56,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Make a donation:  (in progress...)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>or</source>
         <translation type="unfinished"></translation>
     </message>
@@ -81,6 +73,18 @@
     </message>
     <message>
         <source>-Unsaved changes are saved in the file ending with &apos;~&apos; in the same dir where you placed your original file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paypal donation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Make a donation (button above)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Russian community for feedback and help</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -119,6 +123,10 @@
     </message>
     <message>
         <source>Save   </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Document saved!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

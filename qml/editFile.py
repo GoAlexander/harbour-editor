@@ -32,3 +32,9 @@ def autosave(filepath, text):
     file.write(text)
     file.close()
     return
+
+def isSaved(filepath):
+    if os.path.exists(filepath + "~"):
+        return false
+    else:
+        return true
