@@ -45,8 +45,8 @@ ApplicationWindow
     property bool headerVisible: true
     property bool lineNumbersVisible: false
 
-    property string font
-    property string fontSize: Theme.fontSizeMedium
+    property string fontType: Theme.fontFamily
+    property int fontSize: Theme.fontSizeMedium
 
     property int charNumber: 0
     property int linesNumber: 0

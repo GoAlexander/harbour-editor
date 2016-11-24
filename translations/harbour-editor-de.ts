@@ -160,5 +160,9 @@
         <source>Line numeration enabled</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Fonts and size</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

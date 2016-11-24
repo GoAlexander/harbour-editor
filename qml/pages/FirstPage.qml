@@ -90,7 +90,6 @@ Page {
                         width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
                         mySource: "image://theme/icon-m-acknowledge";
                         myText: qsTr("Save as")
-
                         onClicked: {
                             pageStack.push(Qt.resolvedUrl("SaveAsPage.qml"), {
                                                homePath: "/home/nemo",
@@ -105,7 +104,6 @@ Page {
                         width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
                         mySource: "image://theme/icon-m-folder";
                         myText: qsTr("Open")
-
                         onClicked: {
                             pageStack.push(Qt.resolvedUrl("FileChooserPage.qml"), {
                                                homePath: "/home/nemo",
@@ -120,7 +118,6 @@ Page {
                         width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
                         mySource: "image://theme/icon-m-note";
                         myText: qsTr("New")
-
                         onClicked: {
                             //TODO ask:Are you sure?
                             filePath = "";
@@ -140,7 +137,6 @@ Page {
                         width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
                         mySource: "image://theme/icon-m-acknowledge";
                         myText: qsTr("Save   ")
-
                         onClicked: {
                             if (filePath!=="") {
                                 py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
@@ -163,7 +159,6 @@ Page {
                         width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
                         mySource: "image://theme/icon-m-keyboard";
                         myText: qsTr("R-only")
-
                         onClicked: {
                             if (myTextArea.readOnly == false) {
                                 myTextArea.readOnly = true;
@@ -192,7 +187,6 @@ Page {
                     width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
                     mySource: "image://theme/icon-m-acknowledge";
                     myText: qsTr("Save")
-
                     onClicked: {
                         if (filePath!=="") {
                             py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
@@ -215,7 +209,6 @@ Page {
                     width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
                     mySource: "image://theme/icon-m-keyboard";
                     myText: qsTr("R-only")
-
                     onClicked: {
                         if (myTextArea.readOnly == false) {
                             myTextArea.readOnly = true;
@@ -279,20 +272,20 @@ Page {
                     }
                 }
                 width: parent.width
-
-                //font.family: "Helvetica" //TODO implements in SettingsPage!
-                font.pixelSize: fontSize //Theme.fontSizeMedium
+                font.family: fontType //"Helvetica" //TODO implements in SettingsPage!
+                font.pixelSize: fontSize
                 background: null
                 selectionMode: TextEdit.SelectCharacters
                 focus: true
 
-                //+при смене ориентации автоматически не переписывает номера строк
-                //Хм, считать во всем тексте количество символов переноса строки (а не lineCount)?!
-                onTextChanged: { //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
+                onTextChanged: {
+                    console.log("filePath = " + filePath);
+                    console.log(font.family);
+                    console.log(fontSize);
                     saveFlag.text = "*";
 
-                    //For line numeration:
-                    console.log("filePath = " + filePath); //console.log(font.pixelSize, myTextArea._editor.lineCount);
+                    //For line numeration: //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
+                     //console.log(font.pixelSize, myTextArea._editor.lineCount);
                     lineNumberChanged();
 
                     //For cover:

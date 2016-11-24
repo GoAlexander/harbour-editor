@@ -34,6 +34,14 @@ Page {
                 text: qsTr("Quick menu enabled")
                 checked: headerVisible
                 onCheckedChanged: headerVisible = headerVisibleSwitch.checked;
+//                onCheckedChanged: {
+//                    if (headerVisibleSwitch.checked === true) {
+//                        headerVisible = headerVisibleSwitch.checked;
+//                    }
+//                    else {
+//                        headerVisible = null;
+//                    }
+//                }
             }
 
             TextSwitch
@@ -43,24 +51,74 @@ Page {
                 text: qsTr("Line numeration enabled") + "\n" + "(experimental, broken)"
                 checked: lineNumbersVisible
                 onCheckedChanged: lineNumbersVisible = lineNumbersVisibleSwitch.checked;
+//                onCheckedChanged: {
+//                    if (lineNumbersVisibleSwitch.checked === true) {
+//                        lineNumbersVisible = lineNumbersVisibleSwitch.checked;
+//                    }
+//                    else {
+//                        lineNumbersVisible = null;
+//                    }
+//                }
             }
 
-//            SectionHeader { text: qsTr("Fonts and size") }
+            SectionHeader { text: qsTr("Fonts and size") }
 
-//            ComboBox {
-//                label: "Font size"
+            ComboBox {
+                label: "Font size"
+                value: fontSize
 
+                menu: ContextMenu {
+                    MenuItem {
+                        text: "fontSizeMedium (default)"
+                        onClicked: fontSize = Theme.fontSizeMedium;
+                    }
+                    MenuItem {
+                        text: "fontSizeSmall"
+                        onClicked: fontSize = Theme.fontSizeSmall;
+                    }
+                    MenuItem {
+                        text: "fontSizeLarge"
+                        onClicked: fontSize = Theme.fontSizeLarge;
+                    }
+                }
+            }
 
-//                menu: ContextMenu {
-//                    MenuItem { text: "fontSizeMedium" }
-//                    MenuItem { text: "fontSizeSmall" }
-//                    MenuItem { text: "fontSizeLarge" }
-//                }
+            ComboBox {
+                label: "Font"
+                value: fontType
+                //font.family: fontType //TODO implement!
 
-//                onActiveFocusChanged:  {
-//                    fontSize = "Theme." + value;
-//                }
-//            }
+                menu: ContextMenu {
+                    MenuItem {
+                        text: "Sail Sans Pro Light (default)"
+                        onClicked: fontType = Theme.fontFamily;
+                    }
+                    MenuItem {
+                        text: "Open Sans"
+                        onClicked: fontType = "Open Sans";
+                    }
+                    MenuItem {
+                        text: "Helvetica"
+                        onClicked: fontType = "Helvetica";
+                    }
+                    MenuItem {
+                        text: "Droid Sans Mono"
+                        onClicked: fontType = "Droid Sans Mono";
+                    }
+                    MenuItem {
+                        text: "Comic Sans"
+                        onClicked: fontType = "Comic Sans";
+                    }
+                    MenuItem {
+                        text: "Ubuntu"
+                        onClicked: fontType = "Ubuntu";
+                    }
+                    MenuItem {
+                        text: "DejaVu Sans Mono"
+                        onClicked: fontType = "DejaVu Sans Mono";
+                   }
+                }
+            }
 
         }
     }
