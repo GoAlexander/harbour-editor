@@ -25,7 +25,6 @@ Page {
         pageStack.nextPage();
     }
 
-
     //TODO rewrite (delete)
     function saveAsSetFilePath(filePathFromChooser) {
         filePath = filePathFromChooser;
@@ -116,6 +115,19 @@ Page {
                                            })
                         }
                     }
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        mySource: "image://theme/icon-m-note";
+                        myText: qsTr("New")
+
+                        onClicked: {
+                            //TODO ask:Are you sure?
+                            filePath = "";
+                            myTextArea.text = "";
+                        }
+                    }
+
                 }
 
 
@@ -133,33 +145,20 @@ Page {
                         onClicked: {
                             if (filePath!=="") {
                                 py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
-                            }
 
-                            outputNotifications.close()
-                            outputNotifications.previewBody = qsTr("Document saved!")
-                            outputNotifications.publish()
+                                outputNotifications.close()
+                                outputNotifications.previewBody = qsTr("Document saved!")
+                                outputNotifications.publish()
+
+                                saveFlag.text = "";
+                            }
+                            if (filePath==="") {
+                                outputNotifications.close()
+                                outputNotifications.previewBody = qsTr("Document can`t be saved!")
+                                outputNotifications.publish()
+                            }
                         }
                     }
-
-//                    MenuButton {
-//                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
-//                        mySource: "image://theme/icon-m-rotate-left";
-//                        myText: qsTr("Undo")
-
-//                        onClicked: {
-//                            //myTextArea.undo();
-//                        }
-//                    }
-
-//                    MenuButton {
-//                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
-//                        mySource: "image://theme/icon-m-rotate-right";
-//                        myText: qsTr("Redo")
-
-//                        onClicked: {
-//                            //myTextArea.redo();
-//                        }
-//                    }
 
                     MenuButton {
                         width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
@@ -199,33 +198,22 @@ Page {
                     onClicked: {
                         if (filePath!=="") {
                             py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
+
+                            outputNotifications.close()
+                            outputNotifications.previewBody = qsTr("Document saved!")
+                            outputNotifications.publish()
+
+                            saveFlag.text = "";
+
+                        }
+                        if (filePath==="") {
+                            outputNotifications.close()
+                            outputNotifications.previewBody = qsTr("Document can`t be saved!")
+                            outputNotifications.publish()
                         }
 
-                        outputNotifications.close()
-                        outputNotifications.previewBody = qsTr("Document saved!")
-                        outputNotifications.publish()
                     }
                 }
-
-//                MenuButton {
-//                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
-//                    mySource: "image://theme/icon-m-rotate-left";
-//                    myText: qsTr("Undo")
-
-//                    onClicked: {
-//                        //myTextArea.undo();
-//                    }
-//                }
-
-//                MenuButton {
-//                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
-//                    mySource: "image://theme/icon-m-rotate-right";
-//                    myText: qsTr("Redo")
-
-//                    onClicked: {
-//                        //myTextArea.redo();
-//                    }
-//                }
 
                 MenuButton {
                     width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
@@ -242,17 +230,19 @@ Page {
                     }
                 }
 
-//                MenuButton {
-//                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
-//                    mySource: "image://theme/icon-m-acknowledge";
-//                    myText: qsTr("Save")
+                Label {
+                    width: sizeBackgroundItem
+                }
+                Label {
+                    width: sizeBackgroundItem
+                }
 
-//                    onClicked: {
-//                        if (filePath!=="") {
-//                            py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
-//                        }
-//                    }
-//                }
+                Label {
+                    id: saveFlag
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: sizeBackgroundItem
+                    horizontalAlignment: Text.Center
+                }
             }
         }
 
@@ -316,6 +306,8 @@ Page {
                     if (filePath!=="") {
                         py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
                     }
+
+                    saveFlag.text = "*";
                 }
 
                 onRotationChanged: {
