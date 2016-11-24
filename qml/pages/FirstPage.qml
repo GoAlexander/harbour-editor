@@ -25,6 +25,7 @@ Page {
         pageStack.nextPage();
     }
 
+
     //TODO rewrite (delete)
     function saveAsSetFilePath(filePathFromChooser) {
         filePath = filePathFromChooser;
