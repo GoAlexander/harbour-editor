@@ -136,7 +136,6 @@ Page {
                     width: parent.width
                     height: childrenRect.height
 
-
                     MenuButton {
                         width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
                         mySource: "image://theme/icon-m-acknowledge";
@@ -149,9 +148,9 @@ Page {
                                 outputNotifications.close()
                                 outputNotifications.previewBody = qsTr("Document saved!")
                                 outputNotifications.publish()
-
                                 saveFlag.text = "";
                             }
+
                             if (filePath==="") {
                                 outputNotifications.close()
                                 outputNotifications.previewBody = qsTr("Document can`t be saved!")
@@ -189,7 +188,6 @@ Page {
                 width: parent.width
                 height: childrenRect.height
 
-
                 MenuButton {
                     width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
                     mySource: "image://theme/icon-m-acknowledge";
@@ -202,16 +200,14 @@ Page {
                             outputNotifications.close()
                             outputNotifications.previewBody = qsTr("Document saved!")
                             outputNotifications.publish()
-
                             saveFlag.text = "";
-
                         }
+
                         if (filePath==="") {
                             outputNotifications.close()
                             outputNotifications.previewBody = qsTr("Document can`t be saved!")
                             outputNotifications.publish()
                         }
-
                     }
                 }
 
@@ -293,9 +289,10 @@ Page {
                 //+при смене ориентации автоматически не переписывает номера строк
                 //Хм, считать во всем тексте количество символов переноса строки (а не lineCount)?!
                 onTextChanged: { //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
+                    saveFlag.text = "*";
+
                     //For line numeration:
-                    console.log(font.pixelSize, myTextArea._editor.lineCount);
-                    console.log("filePath = " + filePath);
+                    console.log("filePath = " + filePath); //console.log(font.pixelSize, myTextArea._editor.lineCount);
                     lineNumberChanged();
 
                     //For cover:
@@ -306,8 +303,6 @@ Page {
                     if (filePath!=="") {
                         py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
                     }
-
-                    saveFlag.text = "*";
                 }
 
                 onRotationChanged: {

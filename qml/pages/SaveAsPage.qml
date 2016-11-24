@@ -38,31 +38,18 @@ Page {
          id: header
          width: parent.width
          height: nameField.height
-//            title: path == homePath && page.title.length > 0 ? page.title
-//                                                             : page.path.split("/").pop()
+
         TextField {
             id: nameField
 
             width: parent.width
-            placeholderText: "path"
+            placeholderText: "Enter full path to file"
             label: placeholderText
             text: fileModel.path + "/"
 
-            //EnterKey.enabled: text.length > 0
-            //EnterKey.iconSource: "image://theme/icon-m-enter-next"
+            EnterKey.enabled: text.length > 0
+            EnterKey.iconSource: "image://theme/icon-m-enter-next"
             EnterKey.onClicked: {
-//                if (model.isDir) {
-//                    pageStack.push(Qt.resolvedUrl("SaveAsPage.qml"),
-//                                   { path: fileModel.appendPath(nameField.text), homePath: page.homePath, callback: page.callback })
-//                } else {
-//                    var filePath = fileModel.path + "/" + nameField.text;
-//                    console.log("###", mimeType, filePath);
-//                    //if (mimeType.indexOf("image/") == 0) {
-//                        if (typeof callback == "function") {
-//                            callback(filePath);
-//                        }
-//                    //}
-//                }
                 filePath = nameField.text;
 
                 if (typeof callback == "function") {
@@ -86,7 +73,6 @@ Page {
 
         anchors.fill: parent
         model: fileModel
-
 
 
         delegate: ListItem {
@@ -199,25 +185,13 @@ Page {
 
 
             onClicked: {
-//                if (model.isDir) {
-//                    nameField.text = fileModel.appendPath(model.fileName);
-//                }
                 if (model.isDir) {
                     pageStack.push(Qt.resolvedUrl("SaveAsPage.qml"),
                                    { path: fileModel.appendPath(model.fileName), homePath: page.homePath, callback: page.callback })
-
-                    //filePath = fileModel.path;
-                    //nameField.text = filePath;
                 } else {
                     filePath = fileModel.path + "/" + model.fileName;
                     console.log("###", mimeType, filePath);
-                    //if (mimeType.indexOf("image/") == 0) {
-//                        if (typeof callback == "function") {
-//                            callback(filePath);
-//                        }
-                        //nameField.text = fileModel.appendPath(model.fileName);
                     nameField.text = filePath;
-                    //}
                 }
             }
 

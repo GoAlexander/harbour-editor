@@ -133,6 +133,10 @@
         <source>New</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Document can`t be saved!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>
