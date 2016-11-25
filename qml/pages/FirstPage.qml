@@ -227,7 +227,6 @@ Page {
                 Label {
                     width: sizeBackgroundItem
                 }
-
                 Label {
                     id: saveFlag
                     anchors.verticalCenter: parent.verticalCenter
@@ -250,7 +249,7 @@ Page {
                 y: 8
                 height: myTextArea.height
                 color: Theme.secondaryHighlightColor
-                font.pixelSize: fontSize //Theme.fontSizeMedium
+                font.pixelSize: fontSize
                 text: "1"
                 visible: lineNumbersVisible
             }
@@ -258,12 +257,11 @@ Page {
             TextArea {
                 id: myTextArea
                 width: parent.width
-                font.family: fontType //"Helvetica" //TODO implements in SettingsPage!
+                font.family: fontType
                 font.pixelSize: fontSize
                 background: null
                 selectionMode: TextEdit.SelectCharacters
                 focus: true
-
                 onTextChanged: {
                     console.log("filePath = " + filePath, fontSize, font.family);
                     saveFlag.text = "*";
@@ -281,7 +279,6 @@ Page {
                         py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
                     }
                 }
-
                 onRotationChanged: {
                     //TODO пересчитать label
                 }
