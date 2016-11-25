@@ -102,16 +102,17 @@ Page {
                 }
             }
 
-            SectionHeader { text: qsTr("File browser") }
+            //Wait for new version of OS (add information in requirements)
+//            SectionHeader { text: qsTr("File browser") }
 
-            TextSwitch {
-                id: showHiddenFilesSwitch
-                anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
-                text: qsTr("Show hidden files")
-                description: qsTr("Be careful to enable this option!")
-                checked: showHiddenFiles
-                onCheckedChanged: showHiddenFiles = showHiddenFilesSwitch.checked;
-            }
+//            TextSwitch {
+//                id: showHiddenFilesSwitch
+//                anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
+//                text: qsTr("Show hidden files")
+//                description: qsTr("Be careful to enable this option!")
+//                checked: showHiddenFiles
+//                onCheckedChanged: showHiddenFiles = showHiddenFilesSwitch.checked;
+//            }
 
         }
     }

@@ -95,6 +95,7 @@ Page {
                                                homePath: "/home/nemo",
                                                showFormat: true,
                                                title: "Select file",
+//                                               showHiddenFiles: showHiddenFiles,
                                                callback: saveAsSetFilePath
                                            })
                         }
@@ -109,8 +110,7 @@ Page {
                                                homePath: "/home/nemo",
                                                showFormat: true,
                                                title: "Select file",
-                                               showHiddenFiles: showHiddenFiles,
-                                               //includeHiddenFiles: showHiddenFiles,
+//                                               showHiddenFiles: showHiddenFiles,
                                                callback: setFilePath
                                            })
                         }
