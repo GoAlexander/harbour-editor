@@ -50,4 +50,6 @@ ApplicationWindow
 
     property int charNumber: 0
     property int linesNumber: 0
+
+    property bool showHiddenFiles: false
 }

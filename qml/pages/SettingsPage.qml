@@ -27,38 +27,21 @@ Page {
 
             SectionHeader { text: qsTr("Appearance") }
 
-            TextSwitch
-            {
+            TextSwitch {
                 id: headerVisibleSwitch
                 anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
                 text: qsTr("Quick menu enabled")
+                description: qsTr("Use it to get more space for text")
                 checked: headerVisible
                 onCheckedChanged: headerVisible = headerVisibleSwitch.checked;
-//                onCheckedChanged: {
-//                    if (headerVisibleSwitch.checked === true) {
-//                        headerVisible = headerVisibleSwitch.checked;
-//                    }
-//                    else {
-//                        headerVisible = null;
-//                    }
-//                }
             }
 
-            TextSwitch
-            {
+            TextSwitch {
                 id: lineNumbersVisibleSwitch
                 anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
                 text: qsTr("Line numeration enabled") + "\n" + "(experimental, broken)"
                 checked: lineNumbersVisible
                 onCheckedChanged: lineNumbersVisible = lineNumbersVisibleSwitch.checked;
-//                onCheckedChanged: {
-//                    if (lineNumbersVisibleSwitch.checked === true) {
-//                        lineNumbersVisible = lineNumbersVisibleSwitch.checked;
-//                    }
-//                    else {
-//                        lineNumbersVisible = null;
-//                    }
-//                }
             }
 
             SectionHeader { text: qsTr("Fonts and size") }
@@ -86,7 +69,6 @@ Page {
             ComboBox {
                 label: "Font"
                 value: fontType
-                //font.family: fontType //TODO implement!
 
                 menu: ContextMenu {
                     MenuItem {
@@ -120,74 +102,18 @@ Page {
                 }
             }
 
+            SectionHeader { text: qsTr("File browser") }
+
+            TextSwitch {
+                id: showHiddenFilesSwitch
+                anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
+                text: qsTr("Show hidden files")
+                description: qsTr("Be careful to enable this option!")
+                checked: showHiddenFiles
+                onCheckedChanged: showHiddenFiles = showHiddenFilesSwitch.checked;
+            }
+
         }
     }
 
-
 }
-
-
-
-//    SilicaListView {
-//        id: listView
-//        model: 20
-//        anchors.fill: parent
-//        header: PageHeader {
-//            title: qsTr("Settings")
-//        }
-//        delegate: BackgroundItem {
-//            id: delegate
-
-//            Label {
-//                x: Theme.paddingLarge
-//                text: qsTr("Item") + " " + index
-//                anchors.verticalCenter: parent.verticalCenter
-//                color: delegate.highlighted ? Theme.highlightColor : Theme.primaryColor
-//            }
-//            onClicked: console.log("Clicked " + index)
-//        }
-//        VerticalScrollDecorator {}
-//    }
-
-
-
-//        // Tell SilicaFlickable the height of its content.
-//        contentHeight: column.height
-
-//        // Place our content in a Column.  The PageHeader is always placed at the top
-//        // of the page, followed by our content.
-//        Column {
-//            id: column
-
-//            width: page.width
-//            spacing: Theme.paddingLarge
-//            PageHeader {
-//                title: qsTr("UI Template")
-//            }
-//            Label {
-//                x: Theme.paddingLarge
-//                text: qsTr("Hello Sailors")
-//                color: Theme.secondaryHighlightColor
-//                font.pixelSize: Theme.fontSizeExtraLarge
-//            }
-//        }
-
-//onHorizontalAlignmentChanged: {
-//        if (explicitHorizontalAlignment) {
-//            textEdit.horizontalAlignment = horizontalAlignment
-//        }
-
-//            color: {
-//                if (myTextArea.focus == true) {
-//                    myTextArea.color = Theme.secondaryColor;
-//                } else {
-//                    myTextArea.color = Theme.HighlightColor;
-//                }
-//            }
-
-
-
-
-//font.strikeout
-
-

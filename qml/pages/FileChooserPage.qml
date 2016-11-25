@@ -16,6 +16,9 @@ Page {
     property string homePath
     property string title
     property bool showFormat
+    property alias includeHiddenFiles: fileModel.includeHiddenFiles
+    property bool showHiddenFiles
+    //property bool includeHiddenFiles
 
     signal formatClicked
 
@@ -28,6 +31,8 @@ Page {
 
         path: homePath
         active: page.status === PageStatus.Active
+        includeHiddenFiles: showHiddenFiles
+        //includeHiddenFiles: true
         onError: {
             console.log("###", fileName, error)
         }

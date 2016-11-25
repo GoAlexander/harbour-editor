@@ -109,6 +109,8 @@ Page {
                                                homePath: "/home/nemo",
                                                showFormat: true,
                                                title: "Select file",
+                                               showHiddenFiles: showHiddenFiles,
+                                               //includeHiddenFiles: showHiddenFiles,
                                                callback: setFilePath
                                            })
                         }
@@ -239,15 +241,7 @@ Page {
         SilicaFlickable {
             id: editorView
             anchors.fill: parent
-            anchors.topMargin:  {
-                if (header.visible === true) {
-                     editorView.anchors.topMargin=header.height;
-                }
-                else {
-                    editorView.anchors.topMargin=page.height;
-                }
-            }
-
+            anchors.topMargin: header.visible ? header.height : 0 // для сдвига при отключении quick actions menu
             contentHeight: myTextArea.height
             clip: true
 
@@ -263,14 +257,6 @@ Page {
 
             TextArea {
                 id: myTextArea
-                x: {  // TODO фактически компоненты друга на друге :( Нормально?
-                    if (lineNumbersVisible === true) {
-                        myTextArea.x = 30;
-                    }
-                    else {
-                        myTextArea.x = 0;
-                    }
-                }
                 width: parent.width
                 font.family: fontType //"Helvetica" //TODO implements in SettingsPage!
                 font.pixelSize: fontSize
@@ -279,9 +265,7 @@ Page {
                 focus: true
 
                 onTextChanged: {
-                    console.log("filePath = " + filePath);
-                    console.log(font.family);
-                    console.log(fontSize);
+                    console.log("filePath = " + filePath, fontSize, font.family);
                     saveFlag.text = "*";
 
                     //For line numeration: //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк

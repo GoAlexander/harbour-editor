@@ -29,6 +29,7 @@ Page {
 
         path: homePath
         active: page.status === PageStatus.Active
+        includeHiddenFiles: showHiddenFiles
         onError: {
             console.log("###", fileName, error)
         }
