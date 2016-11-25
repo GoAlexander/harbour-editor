@@ -129,6 +129,14 @@
         <source>Document saved!</source>
         <translation>Dokument sparat!</translation>
     </message>
+    <message>
+        <source>New</source>
+        <translation>Nytt</translation>
+    </message>
+    <message>
+        <source>Document can`t be saved!</source>
+        <translation>Dokumentet kan inte sparas!</translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>
@@ -146,11 +154,15 @@
     </message>
     <message>
         <source>Quick menu enabled</source>
-        <translation>Snabbmeny aktiverad</translation>
+        <translation>Aktivera snabbmeny</translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
-        <translation>Radnumrering aktiverad</translation>
+        <translation>Aktivera radnumrering</translation>
+    </message>
+    <message>
+        <source>Fonts and size</source>
+        <translation>Teckensnitt och storlek</translation>
     </message>
 </context>
 </TS>
