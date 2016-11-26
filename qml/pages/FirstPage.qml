@@ -11,6 +11,7 @@ Page {
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
     property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
     property string filePath: "" //"autosave" //TODO сделать предзагрузку последнего открытого
+    property bool saveFlag: false
 
 
     Notification {
@@ -139,6 +140,7 @@ Page {
                         width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
                         mySource: "image://theme/icon-m-acknowledge";
                         myText: qsTr("Save   ")
+                        enabled: saveFlag
                         onClicked: {
                             if (filePath!=="") {
                                 py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
@@ -146,7 +148,7 @@ Page {
                                 outputNotifications.close()
                                 outputNotifications.previewBody = qsTr("Document saved!")
                                 outputNotifications.publish()
-                                saveFlag.text = "";
+                                saveFlag = false;
                             }
 
                             if (filePath==="") {
@@ -189,6 +191,7 @@ Page {
                     width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
                     mySource: "image://theme/icon-m-acknowledge";
                     myText: qsTr("Save")
+                    enabled: saveFlag
                     onClicked: {
                         if (filePath!=="") {
                             py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
@@ -196,7 +199,7 @@ Page {
                             outputNotifications.close()
                             outputNotifications.previewBody = qsTr("Document saved!")
                             outputNotifications.publish()
-                            saveFlag.text = "";
+                            saveFlag = false;
                         }
 
                         if (filePath==="") {
@@ -221,18 +224,26 @@ Page {
                     }
                 }
 
-                Label {
-                    width: sizeBackgroundItem
-                }
-                Label {
-                    width: sizeBackgroundItem
-                }
-                Label {
-                    id: saveFlag
-                    anchors.verticalCenter: parent.verticalCenter
-                    width: sizeBackgroundItem
-                    horizontalAlignment: Text.Center
-                }
+//                Label {
+//                    width: sizeBackgroundItem
+//                }
+//                Label {
+//                    width: sizeBackgroundItem
+//                }
+
+//                Item {
+//                    width: sizeBackgroundItemMainMenu
+//                    height: Theme.itemSizeSmall
+//                    Image {
+//                        id: saveFlag
+//                        width: Theme.iconSizeSmallPlus
+//                        height: Theme.iconSizeSmallPlus
+//                        anchors.centerIn: parent
+//                        source: "image://theme/icon-s-edit"
+//                        visible: false
+//                    }
+//                }
+
             }
         }
 
@@ -261,10 +272,12 @@ Page {
                 font.pixelSize: fontSize
                 background: null
                 selectionMode: TextEdit.SelectCharacters
+                //color: "green"
                 focus: true
                 onTextChanged: {
                     console.log("filePath = " + filePath, fontSize, font.family);
-                    saveFlag.text = "*";
+                    console.log("Real lines: " + myTextArea._editor.lineCount);
+                    saveFlag = true;
 
                     //For line numeration: //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
                      //console.log(font.pixelSize, myTextArea._editor.lineCount);

@@ -168,5 +168,13 @@
         <source>Use it to get more space for text</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Font size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Font:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
