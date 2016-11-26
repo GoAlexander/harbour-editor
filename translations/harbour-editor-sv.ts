@@ -164,5 +164,17 @@
         <source>Fonts and size</source>
         <translation>Teckensnitt och storlek</translation>
     </message>
+    <message>
+        <source>Use it to get more space for text</source>
+        <translation>Inaktivera för att få mer plats för text</translation>
+    </message>
+    <message>
+        <source>Font size:</source>
+        <translation>Teckenstorlek</translation>
+    </message>
+    <message>
+        <source>Font:</source>
+        <translation>Teckensnitt</translation>
+    </message>
 </context>
 </TS>
