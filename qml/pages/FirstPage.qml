@@ -243,6 +243,13 @@ Page {
 //                        visible: false
 //                    }
 //                }
+                Label {
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: sizeBackgroundItem * 3
+                    font.pixelSize: Theme.fontSizeTiny
+                    text: filePath
+                    horizontalAlignment: Text.Center
+                }
 
             }
         }
