@@ -264,7 +264,6 @@ Page {
                 text: "1"
                 visible: lineNumbersVisible
             }
-
             TextArea {
                 id: myTextArea
                 width: parent.width

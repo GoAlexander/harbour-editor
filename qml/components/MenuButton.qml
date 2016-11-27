@@ -15,14 +15,12 @@ BackgroundItem {
         Image {
             width: Theme.iconSizeSmallPlus
             height: Theme.iconSizeSmallPlus
-            //source: "image://theme/icon-m-acknowledge"
             source: mySource
         }
         Label {
             anchors.verticalCenter: parent.verticalCenter
             width: contentWidth
             font.pixelSize: Theme.fontSizeTiny
-            //text: qsTr("Save   ")
             text: myText
         }
     }
