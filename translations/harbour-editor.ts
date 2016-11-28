@@ -72,10 +72,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>-Unsaved changes are saved in the file ending with &apos;~&apos; in the same dir where you placed your original file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Paypal donation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -85,6 +81,10 @@
     </message>
     <message>
         <source>-Russian community for feedback and help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Unsaved changes are saved in the file with ending &apos;~&apos; in the same dir where you placed your original file</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
