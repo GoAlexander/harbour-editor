@@ -3,6 +3,7 @@
 
 import pyotherside
 import os
+import json
 
 def openings(filepath):
     if os.path.exists(filepath):
@@ -38,3 +39,32 @@ def isSaved(filepath):
         return False
     else:
         return True
+
+#----------------------------------------
+
+#var PATH_TO_JSON = "/home/nemo/.local/share/harbour-editor/editor.json"
+
+def getValue(key):
+    try:
+        with open("/home/nemo/.local/share/harbour-editor/editor.json") as data_file:
+            data = json.load(data_file)
+    except:
+        createJson() # !!!
+        with open("/home/nemo/.local/share/harbour-editor/editor.json") as data_file:
+            data = json.load(data_file)
+    return data[key] #TODO: проверить, что правильно передается key
+
+
+def setValue(key, value):
+    with open("/home/nemo/.local/share/harbour-editor/editor.json") as data_file:
+        data = json.load(data_file)
+    data[key] = value #TODO: проверить, что правильно передается key
+
+def createJson():
+    if (!os.path.exists("/home/nemo/.local/share/harbour-editor/editor.json")):
+        os.mkdir("/home/nemo/.local/share/harbour-editor")
+    str = '{' + '"headerVisible": true,' + '"lineNumbersVisible": false,' + '"fontType": "Theme.fontFamily",' + '"fontSize": "Theme.fontSizeMedium",' + '"showHiddenFiles": false,' + '"history": [' + '"/home/nemo/Documents/notes.txt",' + '"/home/nemo/Documents/test.txt"' + ']' + '}'
+    file = open("/home/nemo/.local/share/harbour-editor/editor.json", 'w')
+    file.write(str)
+    file.close()
+    return

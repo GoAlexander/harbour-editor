@@ -31,6 +31,9 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
+//import "js/json.js" as JsonParse
+import io.thp.pyotherside 1.3
+
 
 ApplicationWindow
 {
@@ -42,8 +45,8 @@ ApplicationWindow
 
     //TODO write .conf file and functions in C++/Python
     //These variables are in: FirstPage + SettingsPage + Cover
-    property bool headerVisible: true
-    property bool lineNumbersVisible: false
+    property bool headerVisible: py2.call('editFile.getValue', [headerVisible], function() {}); //true //JsonParse.getValue("headerVisible"); //true
+    property bool lineNumbersVisible: false //JsonParse.getValue("lineNumbersVisible"); //false
 
     property string fontType: Theme.fontFamily
     property int fontSize: Theme.fontSizeMedium
@@ -52,4 +55,15 @@ ApplicationWindow
     property int linesNumber: 0
 
     property bool showHiddenFiles: false
+
+
+    Python {
+        id: py2
+        Component.onCompleted: {
+            addImportPath(Qt.resolvedUrl("."));
+            importModule('editFile', function () {});
+        }
+    }
+
 }
+
