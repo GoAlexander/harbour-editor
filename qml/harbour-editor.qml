@@ -42,7 +42,6 @@ ApplicationWindow
     _defaultPageOrientations: Orientation.All
 
 
-    //TODO write .conf file and functions in C++/Python
     //These variables are in: FirstPage + SettingsPage + Cover
     property bool headerVisible
     property bool lineNumbersVisible
@@ -83,4 +82,3 @@ ApplicationWindow
     }
 
 }
-

@@ -102,7 +102,6 @@ Page {
                 }
             }
 
-            //Wait for new version of OS (add information in requirements)
             SectionHeader { text: qsTr("File browser") }
 
             TextSwitch {
