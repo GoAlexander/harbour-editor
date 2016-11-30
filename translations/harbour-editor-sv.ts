@@ -72,10 +72,6 @@
         <translation>-eekkelund, för spar-/inläsnings-/autosparfunktioner och återkoppling</translation>
     </message>
     <message>
-        <source>-Unsaved changes are saved in the file ending with &apos;~&apos; in the same dir where you placed your original file</source>
-        <translation>-Osparade ändringar sparas i filen som slutar med tilde (~), i samma mapp som där du placerat originalfilen</translation>
-    </message>
-    <message>
         <source>Paypal donation</source>
         <translation>Paypal-donation</translation>
     </message>
@@ -86,6 +82,10 @@
     <message>
         <source>-Russian community for feedback and help</source>
         <translation>-Ryska gemenskapen, för åtekoppling och hjälp</translation>
+    </message>
+    <message>
+        <source>-Unsaved changes are saved in the file with ending &apos;~&apos; in the same dir where you placed your original file</source>
+        <translation>-Osparade ändringar sparas i filen som slutar med tilde (~), i samma mapp som där du placerat originalfilen</translation>
     </message>
 </context>
 <context>
@@ -111,7 +111,7 @@
     </message>
     <message>
         <source>R-only</source>
-        <translation>R-only</translation>
+        <translation>Skrivskyddat</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -174,7 +174,19 @@
     </message>
     <message>
         <source>Font:</source>
-        <translation>Teckensnitt</translation>
+        <translation>Teckensnitt&gt;</translation>
+    </message>
+    <message>
+        <source>File browser</source>
+        <translation>Filhanterare</translation>
+    </message>
+    <message>
+        <source>Show hidden files</source>
+        <translation>Visa dolda filer</translation>
+    </message>
+    <message>
+        <source>Be careful to enable this option!</source>
+        <translation>Var försiktig vid aktivering av detta alternativ!</translation>
     </message>
 </context>
 </TS>
