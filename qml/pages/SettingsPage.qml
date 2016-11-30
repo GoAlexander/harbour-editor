@@ -117,4 +117,13 @@ Page {
         }
     }
 
+    Component.onDestruction: {
+            py2.call('editFile.setValue', ["headerVisible", headerVisible], function(result) {});
+            py2.call('editFile.setValue', ["lineNumbersVisible", lineNumbersVisible], function(result) {});
+
+            py2.call('editFile.setValue', ["fontType", fontType], function(result) {});
+            py2.call('editFile.setValue', ["fontSize", fontSize], function(result) {});
+
+            py2.call('editFile.setValue', ["showHiddenFiles", showHiddenFiles], function(result) {});
+    }
 }

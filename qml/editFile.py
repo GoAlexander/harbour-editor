@@ -46,24 +46,29 @@ def isSaved(filepath):
 
 def getValue(key):
     try:
-        with open("/home/nemo/.local/share/harbour-editor/editor.json") as data_file:
+        with open("/home/nemo/.local/share/harbour-editor/editor.json", "r") as data_file:
             data = json.load(data_file)
     except:
-        createJson() # !!!
-        with open("/home/nemo/.local/share/harbour-editor/editor.json") as data_file:
+        createJson()
+        with open("/home/nemo/.local/share/harbour-editor/editor.json", "r") as data_file:
             data = json.load(data_file)
-    return data[key] #TODO: проверить, что правильно передается key
+    return data[key]
 
 
 def setValue(key, value):
-    with open("/home/nemo/.local/share/harbour-editor/editor.json") as data_file:
+    with open("/home/nemo/.local/share/harbour-editor/editor.json", "r") as data_file:
         data = json.load(data_file)
     data[key] = value #TODO: проверить, что правильно передается key
 
+    with open("/home/nemo/.local/share/harbour-editor/editor.json", "w") as data_file:
+        data_file.write(json.dumps(data))
+    return
+
+
 def createJson():
-    if (!os.path.exists("/home/nemo/.local/share/harbour-editor/editor.json")):
+    if not os.path.exists("/home/nemo/.local/share/harbour-editor/editor.json"):
         os.mkdir("/home/nemo/.local/share/harbour-editor")
-    str = '{' + '"headerVisible": true,' + '"lineNumbersVisible": false,' + '"fontType": "Theme.fontFamily",' + '"fontSize": "Theme.fontSizeMedium",' + '"showHiddenFiles": false,' + '"history": [' + '"/home/nemo/Documents/notes.txt",' + '"/home/nemo/Documents/test.txt"' + ']' + '}'
+    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"showHiddenFiles": false, ' + '"history": [' + '"/home/nemo/Documents/notes.txt",' + '"/home/nemo/Documents/test.txt"' + ']' + '}'
     file = open("/home/nemo/.local/share/harbour-editor/editor.json", 'w')
     file.write(str)
     file.close()

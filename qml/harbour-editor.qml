@@ -31,7 +31,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
-//import "js/json.js" as JsonParse
 import io.thp.pyotherside 1.3
 
 
@@ -45,23 +44,41 @@ ApplicationWindow
 
     //TODO write .conf file and functions in C++/Python
     //These variables are in: FirstPage + SettingsPage + Cover
-    property bool headerVisible: py2.call('editFile.getValue', [headerVisible], function() {}); //true //JsonParse.getValue("headerVisible"); //true
-    property bool lineNumbersVisible: false //JsonParse.getValue("lineNumbersVisible"); //false
+    property bool headerVisible//: true //JsonParse.getValue("headerVisible"); //true
+    property bool lineNumbersVisible//: false //JsonParse.getValue("lineNumbersVisible"); //false
 
-    property string fontType: Theme.fontFamily
-    property int fontSize: Theme.fontSizeMedium
+    property string fontType//: Theme.fontFamily
+    property int fontSize//: Theme.fontSizeMedium
 
     property int charNumber: 0
     property int linesNumber: 0
 
-    property bool showHiddenFiles: false
+    property bool showHiddenFiles//: false
 
 
     Python {
-        id: py2
+        id: py2 //TODO rename!
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl("."));
-            importModule('editFile', function () {});
+            importModule('editFile', function () {
+                py2.call('editFile.getValue', ["headerVisible"], function(result) {
+                    headerVisible=result // result=headerVisible
+                });
+                py2.call('editFile.getValue', ["lineNumbersVisible"], function(result) {
+                    lineNumbersVisible=result
+                });
+
+                py2.call('editFile.getValue', ["fontType"], function(result) {
+                    fontType=result
+                });
+                py2.call('editFile.getValue', ["fontSize"], function(result) {
+                    fontSize=result
+                });
+
+                py2.call('editFile.getValue', ["showHiddenFiles"], function(result) {
+                    showHiddenFiles=result
+                });
+            });
         }
     }
 

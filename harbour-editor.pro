@@ -43,6 +43,4 @@ DISTFILES += \
     qml/pages/SettingsPage.qml \
     qml/pages/FileChooserPage.qml \
     qml/components/MenuButton.qml \
-    qml/pages/SaveAsPage.qml \
-    qml/js/json.js \
-    qml/js/editor.json
+    qml/pages/SaveAsPage.qml
