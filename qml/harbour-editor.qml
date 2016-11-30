@@ -44,16 +44,16 @@ ApplicationWindow
 
     //TODO write .conf file and functions in C++/Python
     //These variables are in: FirstPage + SettingsPage + Cover
-    property bool headerVisible//: true //JsonParse.getValue("headerVisible"); //true
-    property bool lineNumbersVisible//: false //JsonParse.getValue("lineNumbersVisible"); //false
+    property bool headerVisible
+    property bool lineNumbersVisible
 
-    property string fontType//: Theme.fontFamily
-    property int fontSize//: Theme.fontSizeMedium
+    property string fontType
+    property int fontSize
 
     property int charNumber: 0
     property int linesNumber: 0
 
-    property bool showHiddenFiles//: false
+    property bool showHiddenFiles
 
 
     Python {

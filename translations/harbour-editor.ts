@@ -176,5 +176,17 @@
         <source>Font:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>File browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show hidden files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Be careful to enable this option!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

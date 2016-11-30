@@ -96,7 +96,7 @@ Page {
                                                homePath: "/home/nemo",
                                                showFormat: true,
                                                title: "Select file",
-//                                               showHiddenFiles: showHiddenFiles,
+                                               showHiddenFiles: showHiddenFiles,
                                                callback: saveAsSetFilePath
                                            })
                         }
@@ -111,7 +111,7 @@ Page {
                                                homePath: "/home/nemo",
                                                showFormat: true,
                                                title: "Select file",
-//                                               showHiddenFiles: showHiddenFiles,
+                                               showHiddenFiles: showHiddenFiles,
                                                callback: setFilePath
                                            })
                         }
@@ -127,6 +127,18 @@ Page {
                             myTextArea.text = "";
                         }
                     }
+
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+//                        mySource: "image://theme/icon-m-document";
+//                        myText: qsTr("History")
+//                        onClicked: {
+//                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {
+//                                               currentFilePath: filePath,
+//                                               callback: setFilePath
+//                                           })
+//                        }
+//                    }
 
                 }
 
