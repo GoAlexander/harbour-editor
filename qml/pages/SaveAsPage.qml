@@ -42,24 +42,29 @@ Page {
          width: parent.width
          height: nameField.height
 
-        TextField {
-            id: nameField
+         Rectangle {
+             color: Theme.rgba(Theme.highlightColor, 0.5)
+             anchors.fill: parent
 
-            width: parent.width
-            placeholderText: "Enter full path to file"
-            label: placeholderText
-            text: fileModel.path + "/"
+             TextField {
+                 id: nameField
 
-            EnterKey.enabled: text.length > 0
-            EnterKey.iconSource: "image://theme/icon-m-enter-next"
-            EnterKey.onClicked: {
-                filePath = nameField.text;
+                 width: parent.width
+                 placeholderText: "Enter full path to file"
+                 label: placeholderText
+                 text: fileModel.path + "/"
 
-                if (typeof callback == "function") {
-                    callback(filePath);
-                }
-            }
-        }
+                 EnterKey.enabled: text.length > 0
+                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
+                 EnterKey.onClicked: {
+                     filePath = nameField.text;
+
+                     if (typeof callback == "function") {
+                         callback(filePath);
+                     }
+                 }
+             }
+         }
 
     }
 
@@ -70,6 +75,7 @@ Page {
         width: parent.width
         height: parent.height
         anchors.topMargin: header.height;
+        clip: true // to be below than PageHeader
 
         opacity: FileEngine.busy ? 0.6 : 1.0
         Behavior on opacity { FadeAnimator {} }
