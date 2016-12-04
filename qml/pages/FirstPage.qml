@@ -316,18 +316,25 @@ Page {
     }
 
 
+    onStatusChanged: {
+        if(status !== PageStatus.Active){
+            return
+        }else{
+            console.log(filePath)
+            if (filePath!=="") {
+                py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
+                    myTextArea.text = result;
+                });
+            }
+        }
+    }
+
     Python {
         id: py
 
         Component.onCompleted: {
-            if (filePath!=="") { // || filePath !== "autosave"
-                addImportPath(Qt.resolvedUrl('../.'));
-                importModule('editFile', function () {
-                    py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
-                        myTextArea.text = result;
-                    });
-                });
-            }
+            addImportPath(Qt.resolvedUrl('../.'));
+            importModule('editFile', function () {});
         }
         onError: {
             // when an exception is raised, this error handler will be called
