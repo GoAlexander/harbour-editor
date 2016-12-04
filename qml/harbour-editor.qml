@@ -36,7 +36,18 @@ import io.thp.pyotherside 1.3
 
 ApplicationWindow
 {
-    initialPage: Component { FirstPage { } }
+    initialPage: Component { FirstPage {
+            id: mainPage
+            Component.onCompleted: {
+                //open file from commandline
+                var args = Qt.application.arguments
+                if (args.length > 1) {
+                    mainPage.filePath=args[1]
+                    console.log(filePath)
+                }
+            }
+        }
+    }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
