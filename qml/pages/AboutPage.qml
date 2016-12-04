@@ -49,7 +49,7 @@ Page {
                       "<br/>" +
                       qsTr("or") +
                       "<br/>" +
-                      qsTr("Star the repository at the github \u263a") + "</b>" +
+                      qsTr("Star the repository at the github \u263a ") +  "</b>"  +
                       "<br/>" +
                       "<br/>" +
                       qsTr("Special thanks:") +

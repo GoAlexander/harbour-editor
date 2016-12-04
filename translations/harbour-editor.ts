@@ -60,10 +60,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Star the repository at the github ☺</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>If you want to support the developer:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -85,6 +81,10 @@
     </message>
     <message>
         <source>-Unsaved changes are saved in the file with ending &apos;~&apos; in the same dir where you placed your original file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Star the repository at the github ☺ </source>
         <translation type="unfinished"></translation>
     </message>
 </context>
