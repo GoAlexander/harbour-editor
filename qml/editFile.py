@@ -42,34 +42,33 @@ def isSaved(filepath):
 
 #----------------------------------------
 
-#var PATH_TO_JSON = "/home/nemo/.local/share/harbour-editor/editor.json"
+PATH_TO_JSON = os.path.join(os.environ['HOME'], '.local', 'share') + "/harbour-editor/editor.json"  #/home/nemo/.local/share/harbour-editor/editor.json"
 
 def getValue(key):
     try:
-        with open("/home/nemo/.local/share/harbour-editor/editor.json", "r") as data_file:
+        with open(PATH_TO_JSON, "r") as data_file:
             data = json.load(data_file)
     except:
         createJson()
-        with open("/home/nemo/.local/share/harbour-editor/editor.json", "r") as data_file:
+        with open(PATH_TO_JSON, "r") as data_file:
             data = json.load(data_file)
     return data[key]
 
-
 def setValue(key, value):
-    with open("/home/nemo/.local/share/harbour-editor/editor.json", "r") as data_file:
+    with open(PATH_TO_JSON, "r") as data_file:
         data = json.load(data_file)
-    data[key] = value #TODO: проверить, что правильно передается key
+    data[key] = value
 
-    with open("/home/nemo/.local/share/harbour-editor/editor.json", "w") as data_file:
+    with open(PATH_TO_JSON, "w") as data_file:
         data_file.write(json.dumps(data))
     return
 
-
 def createJson():
-    if not os.path.exists("/home/nemo/.local/share/harbour-editor/editor.json"):
-        os.mkdir("/home/nemo/.local/share/harbour-editor")
-    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"showHiddenFiles": false, ' + '"history": [' + '"/home/nemo/Documents/notes.txt",' + '"/home/nemo/Documents/test.txt"' + ']' + '}'
-    file = open("/home/nemo/.local/share/harbour-editor/editor.json", 'w')
+    if not os.path.exists(PATH_TO_JSON):
+        os.mkdir(os.path.join(os.environ['HOME'], '.local', 'share') + "/harbour-editor")
+    #TODO delete here lines like that: "$HOME/Documents/notes.txt"
+    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"showHiddenFiles": false, ' + '"history": [' + '"$HOME/Documents/notes.txt",' + '"$HOME/Documents/test.txt"' + ']' + '}'
+    file = open(PATH_TO_JSON, 'w')
     file.write(str)
     file.close()
     return
