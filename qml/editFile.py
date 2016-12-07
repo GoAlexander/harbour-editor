@@ -42,7 +42,7 @@ def isSaved(filepath):
 
 #----------------------------------------
 
-PATH_TO_JSON = os.path.join(os.environ['HOME'], '.local', 'share') + "/harbour-editor/editor.json"  #/home/nemo/.local/share/harbour-editor/editor.json"
+PATH_TO_JSON = os.environ['HOME'] + "/.local/share/harbour-editor/editor.json"
 
 def getValue(key):
     try:
