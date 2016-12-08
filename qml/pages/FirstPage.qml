@@ -248,6 +248,18 @@ Page {
                     }
                 }
 
+                MenuButton {
+                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+                    mySource: "image://theme/icon-m-forward";
+                    myText: qsTr("Tab")
+                    onClicked: {
+                        var previousCursorPosition = myTextArea.cursorPosition;
+                        myTextArea.text = myTextArea.text.slice(0, myTextArea.cursorPosition) + "\t" + myTextArea.text.slice(myTextArea.cursorPosition, myTextArea.text.length);
+                        myTextArea.cursorPosition = previousCursorPosition + 1;
+
+                    }
+                }
+
 //                Label {
 //                    width: sizeBackgroundItem
 //                }

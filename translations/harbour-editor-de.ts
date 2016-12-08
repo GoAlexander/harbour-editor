@@ -137,6 +137,10 @@
         <source>Document can`t be saved!</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SettingsPage</name>
