@@ -77,7 +77,7 @@
     </message>
     <message>
         <source>-Russian community for feedback and help</source>
-        <translation>-Ryska gemenskapen, för åtekoppling och hjälp</translation>
+        <translation>-Ryska gemenskapen, för återkoppling och hjälp</translation>
     </message>
     <message>
         <source>-Unsaved changes are saved in the file with ending &apos;~&apos; in the same dir where you placed your original file</source>
@@ -85,7 +85,7 @@
     </message>
     <message>
         <source>Star the repository at the github ☺ </source>
-        <translation type="unfinished"></translation>
+        <translation>Stjärnmärk projektet på GitHub</translation>
     </message>
 </context>
 <context>
@@ -111,7 +111,7 @@
     </message>
     <message>
         <source>R-only</source>
-        <translation>Skrivskyddat</translation>
+        <translation>R-only</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -139,7 +139,7 @@
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab</translation>
     </message>
 </context>
 <context>
