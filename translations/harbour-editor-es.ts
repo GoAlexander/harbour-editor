@@ -10,7 +10,7 @@
     </message>
     <message id="filemanager-la-no_files">
         <source>No files</source>
-        <translation>no archivos</translation>
+        <translation>No archivos</translation>
     </message>
 </context>
 <context>
