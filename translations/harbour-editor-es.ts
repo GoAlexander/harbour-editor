@@ -53,7 +53,7 @@
     </message>
     <message>
         <source>-osanwe for very often consultations about qml code</source>
-        <translation>-osawe Por varias consultas sobre codigo qml</translation>
+        <translation>-osawe Por varias consultas sobre código qml</translation>
     </message>
     <message>
         <source>or</source>
@@ -69,7 +69,7 @@
     </message>
     <message>
         <source>Paypal donation</source>
-        <translation>Donacion PayPal</translation>
+        <translation>Donación PayPal</translation>
     </message>
     <message>
         <source>Make a donation (button above)</source>
