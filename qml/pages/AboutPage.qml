@@ -69,6 +69,67 @@ Page {
                     Qt.openUrlExternally("https://github.com/GoAlexander/harbour-editor");
                 }
             }
+
+
+            SectionHeader { text: qsTr("Translators") }
+
+            Row {
+                x: Theme.horizontalPageMargin
+                Label {
+                    text: "Caballlero"
+                    color: Theme.highlightColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+                Label {
+                    text: qsTr(" - Spanish translation")
+                    color: Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+            }
+
+            Row {
+                x: Theme.horizontalPageMargin
+                Label {
+                    text: "eson57"
+                    color: Theme.highlightColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+                Label {
+                    text: qsTr(" - Swedish translation")
+                    color: Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+            }
+
+            Row {
+                x: Theme.horizontalPageMargin
+                Label {
+                    text: "GoAlexander"
+                    color: Theme.highlightColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+                Label {
+                    text: qsTr(" - Russian translation")
+                    color: Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+            }
+
+            Row {
+                x: Theme.horizontalPageMargin
+                Label {
+                    text: "Quent-in"
+                    color: Theme.highlightColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+                Label {
+                    text: qsTr(" - French translation")
+                    color: Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                }
+            }
+
+
             VerticalScrollDecorator {}
         }
 

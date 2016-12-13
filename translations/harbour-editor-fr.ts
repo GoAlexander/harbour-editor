@@ -17,7 +17,7 @@
     <name>AboutPage</name>
     <message>
         <source>&quot;Editor.&quot; is feature-rich text/code editor!</source>
-        <translation>&quot;Editor.&quot; es un outil avancé d'édition de texte/codes</translation>
+        <translation>&quot;Editor.&quot; es un outil avancé d&apos;édition de texte/codes</translation>
     </message>
     <message>
         <source>License: GPLv3</source>
@@ -65,7 +65,7 @@
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions and feedback</source>
-        <translation>-eekkelund pour les fonctions d'enregistrement/chargement/sauvegarde automatique et ses retours</translation>
+        <translation>-eekkelund pour les fonctions d&apos;enregistrement/chargement/sauvegarde automatique et ses retours</translation>
     </message>
     <message>
         <source>Paypal donation</source>
@@ -86,6 +86,26 @@
     <message>
         <source>Star the repository at the github ☺ </source>
         <translation>Noter le répertoire sur github ☺ </translation>
+    </message>
+    <message>
+        <source>Translators</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Spanish translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Swedish translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Russian translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - French translation</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -170,7 +190,7 @@
     </message>
     <message>
         <source>Use it to get more space for text</source>
-        <translation>Utilisez cela pour avoir plus d'espace pour le texte</translation>
+        <translation>Utilisez cela pour avoir plus d&apos;espace pour le texte</translation>
     </message>
     <message>
         <source>Font size:</source>

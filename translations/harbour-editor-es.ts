@@ -87,6 +87,26 @@
         <source>Star the repository at the github ☺ </source>
         <translation>Empezar el repositorio en github ☺</translation>
     </message>
+    <message>
+        <source>Translators</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Spanish translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Swedish translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Russian translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - French translation</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -95,8 +115,8 @@
         <translation>Lineas:</translation>
     </message>
     <message>
-        <source>Chars:</source>
-        <translation>Carac:</translation>
+        <source>Chars: </source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
