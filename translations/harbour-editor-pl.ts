@@ -6,86 +6,86 @@
     <message id="filemanager-la-file_details">
         <source>%1, %2</source>
         <extracomment>Shows size and modification date, e.g. &quot;15.5MB, 02/03/2016&quot;</extracomment>
-        <translation type="Pokaz rozmiar i datę modyfikacji, np. &quot;15.5MB, 02/03/2016&quot;"></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message id="filemanager-la-no_files">
         <source>No files</source>
-        <translation type="Brak plików"></translation>
+        <translation>Brak plików</translation>
     </message>
 </context>
 <context>
     <name>AboutPage</name>
     <message>
         <source>&quot;Editor.&quot; is feature-rich text/code editor!</source>
-        <translation type="&quot;Edytor"></translation>
+        <translation>&quot;Editor.&quot; jest bogatym w funkcje edytorem tekstu/Kodu!</translation>
     </message>
     <message>
         <source>License: GPLv3</source>
-        <translation type="Licencja: GPLv3"></translation>
+        <translation>Licencja: GPLv3</translation>
     </message>
     <message>
         <source>You can find the source code at the:</source>
-        <translation type="unfinished"></translation>
+        <translation>Możesz znaleźć kod źródłowy na:</translation>
     </message>
     <message>
         <source>GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>GitHub</translation>
     </message>
     <message>
         <source>Special thanks:</source>
-        <translation type="unfinished"></translation>
+        <translation>Specjalne podziękowania:</translation>
     </message>
     <message>
-        <source>Tips:</source>
-        <translation type="unfinished"></translation>
+        <source>Wskazówki:</source>
+        <translation>Советы:</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>О programie</translation>
     </message>
     <message>
         <source>-coderus for various tips and code</source>
-        <translation type="unfinished"></translation>
+        <translation>-coderusowi za wskazórki i kod</translation>
     </message>
     <message>
         <source>-To &apos;Select all text&apos; hold your finger until 3 vibrations</source>
-        <translation type="unfinished"></translation>
+        <translation>-Aby &apos;Zaznaczyć cały takst&apos; przytrzymaj palec, aż zawibruje 3 razy</translation>
     </message>
     <message>
         <source>-osanwe for very often consultations about qml code</source>
-        <translation type="unfinished"></translation>
+        <translation>-osanwe za częste konsultacje w sprawie kodu qml</translation>
     </message>
     <message>
         <source>or</source>
-        <translation type="unfinished"></translation>
+        <translation>lub</translation>
     </message>
     <message>
         <source>If you want to support the developer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeśli chcesz wesprzeć programistę:</translation>
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions and feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>-eekkelund za funkcje zapisywania/ładowania/autozapisywania oraz informacje zwrotną</translation>
     </message>
     <message>
         <source>Paypal donation</source>
-        <translation type="unfinished"></translation>
+        <translation>Dotacje Paypal</translation>
     </message>
     <message>
         <source>Make a donation (button above)</source>
-        <translation type="unfinished"></translation>
+        <translation>Wspomóż (przycisk powyżej)</translation>
     </message>
     <message>
         <source>-Russian community for feedback and help</source>
-        <translation type="unfinished"></translation>
+        <translation>-Rosyjskiej społeczności za informację zwrotną i pomoc </translation>
     </message>
     <message>
         <source>-Unsaved changes are saved in the file with ending &apos;~&apos; in the same dir where you placed your original file</source>
-        <translation type="unfinished"></translation>
+        <translation>-Niezapisane zmiany zapisywane są w pliku z końcówką &apos;~&apos;, w folderze gdzie znajduje się oryginalny plik</translation>
     </message>
     <message>
         <source>Star the repository at the github ☺ </source>
-        <translation type="unfinished"></translation>
+        <translation>Daj gwiazdkę repozytorium na Github ☺ </translation>
     </message>
     <message>
         <source>Translators</source>
@@ -112,105 +112,105 @@
     <name>CoverPage</name>
     <message>
         <source>Lines: </source>
-        <translation type="unfinished"></translation>
+        <translation>Linie:</translation>
     </message>
     <message>
         <source>Chars: </source>
-        <translation type="unfinished"></translation>
+        <translation>Znaki:</translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished"></translation>
+        <translation>Тylko do odczytu</translation>
     </message>
     <message>
         <source>Save as</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz jako</translation>
     </message>
     <message>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz</translation>
     </message>
     <message>
         <source>Save   </source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz</translation>
     </message>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokument zapisany!</translation>
     </message>
     <message>
         <source>New</source>
-        <translation type="unfinished"></translation>
+        <translation>Nowy</translation>
     </message>
     <message>
         <source>Document can`t be saved!</source>
-        <translation type="unfinished"></translation>
+        <translation> Dokument nie może być zapisany!</translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Wygląd</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>О programie</translation>
     </message>
     <message>
         <source>Quick menu enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Szybkie menu włączone</translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Numeracja linii włączona</translation>
     </message>
     <message>
         <source>Fonts and size</source>
-        <translation type="unfinished"></translation>
+        <translation>Czcionki i rozmiar</translation>
     </message>
     <message>
         <source>Use it to get more space for text</source>
-        <translation type="unfinished"></translation>
+        <translation>Użyj aby uzyskać więcej miejsca dla tekstu</translation>
     </message>
     <message>
         <source>Font size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmiar czcionki:</translation>
     </message>
     <message>
         <source>Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Czcionka:</translation>
     </message>
     <message>
         <source>File browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyszukiwarka plików</translation>
     </message>
     <message>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż ukryte pliki</translation>
     </message>
     <message>
         <source>Be careful to enable this option!</source>
-        <translation type="unfinished"></translation>
+        <translation>Bądź ostrożny uruchamiając tą funkcję!</translation>
     </message>
 </context>
 </TS>
