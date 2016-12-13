@@ -37,7 +37,7 @@
     </message>
     <message>
         <source>Tips:</source>
-        <translation>Consejos</translation>
+        <translation>Consejos:</translation>
     </message>
     <message>
         <source>About</source>
@@ -158,11 +158,11 @@
     </message>
     <message>
         <source>Quick menu enabled</source>
-        <translation>menu rapido habilitado</translation>
+        <translation>menu rápido activado</translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
-        <translation>Numeración de línea habilitada</translation>
+        <translation>Numeración de línea activada</translation>
     </message>
     <message>
         <source>Fonts and size</source>
