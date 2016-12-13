@@ -210,7 +210,7 @@
     </message>
     <message>
         <source>Be careful to enable this option!</source>
-        <translation>Bądź ostrożny uruchamiając tą funkcję!</translation>
+        <translation>Bądź ostrożny uruchamiając tę funkcję!</translation>
     </message>
 </context>
 </TS>
