@@ -17,11 +17,11 @@
     <name>AboutPage</name>
     <message>
         <source>&quot;Editor.&quot; is feature-rich text/code editor!</source>
-        <translation>&quot;Editor.&quot; Editor de texto rico en funciones!</translation>
+        <translation>&quot;Editor.&quot; de texto rico en funciones!</translation>
     </message>
     <message>
         <source>License: GPLv3</source>
-        <translation>Licensia GPLv3</translation>
+        <translation>Licensia: GPLv3</translation>
     </message>
     <message>
         <source>You can find the source code at the:</source>
@@ -41,7 +41,7 @@
     </message>
     <message>
         <source>About</source>
-        <translation>Acerca de:</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>-coderus for various tips and code</source>
@@ -49,11 +49,11 @@
     </message>
     <message>
         <source>-To &apos;Select all text&apos; hold your finger until 3 vibrations</source>
-        <translation>-To &apos;Select all text&apos; Sostenga su dedo hasta 3 vibraciones</translation>
+        <translation>-Para &apos;Seleccionar todo el texto&apos; Sostenga su dedo hasta 3 vibraciones</translation>
     </message>
     <message>
         <source>-osanwe for very often consultations about qml code</source>
-        <translation>-osawe Por varias consultas sobre código qml</translation>
+        <translation>-osanwe Por varias consultas sobre código qml</translation>
     </message>
     <message>
         <source>or</source>
@@ -61,7 +61,7 @@
     </message>
     <message>
         <source>If you want to support the developer:</source>
-        <translation>si quiere apoyar al desarrollador:</translation>
+        <translation>Si quiere apoyar al desarrollador:</translation>
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions and feedback</source>
@@ -146,7 +146,7 @@
     <name>SettingsPage</name>
     <message>
         <source>Settings</source>
-        <translation>ajustes</translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <source>Appearance</source>
@@ -154,11 +154,11 @@
     </message>
     <message>
         <source>About</source>
-        <translation>Acerca de:</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>Quick menu enabled</source>
-        <translation>menu rápido activado</translation>
+        <translation>Menu rápido activado</translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
