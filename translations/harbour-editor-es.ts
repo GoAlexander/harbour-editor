@@ -6,78 +6,78 @@
     <message id="filemanager-la-file_details">
         <source>%1, %2</source>
         <extracomment>Shows size and modification date, e.g. &quot;15.5MB, 02/03/2016&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Muestra el tamaño y la fecha de modificación, e.g. &quot;15.5MB, 02/03/2016&quot;</translation>
     </message>
     <message id="filemanager-la-no_files">
         <source>No files</source>
-        <translation type="unfinished"></translation>
+        <translation>No archivos</translation>
     </message>
 </context>
 <context>
     <name>AboutPage</name>
     <message>
         <source>&quot;Editor.&quot; is feature-rich text/code editor!</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Editor.&quot; Es un editor de texto rico en funciones</translation>
     </message>
     <message>
         <source>License: GPLv3</source>
-        <translation type="unfinished"></translation>
+        <translation>Licencia GPLv3  </translation>
     </message>
     <message>
         <source>You can find the source code at the:</source>
-        <translation type="unfinished"></translation>
+        <translation>Usted puede encontrar el codigo fuente en:</translation>
     </message>
     <message>
         <source>GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>GitHub</translation>
     </message>
     <message>
         <source>Special thanks:</source>
-        <translation type="unfinished"></translation>
+        <translation>Especiales gracias a:</translation>
     </message>
     <message>
         <source>Tips:</source>
-        <translation type="unfinished"></translation>
+        <translation>Consejos</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>acerca de:</translation>
     </message>
     <message>
         <source>-coderus for various tips and code</source>
-        <translation type="unfinished"></translation>
+        <translation>Coderus por varios consejos y codigo</translation>
     </message>
     <message>
         <source>-To &apos;Select all text&apos; hold your finger until 3 vibrations</source>
-        <translation type="unfinished"></translation>
+        <translation>-To &apos;Select all text&apos; Sostenga su dedo hasta 3 vibraciones</translation>
     </message>
     <message>
         <source>-osanwe for very often consultations about qml code</source>
-        <translation type="unfinished"></translation>
+        <translation>Osawe por muchas consultas sobre código qml</translation>
     </message>
     <message>
         <source>or</source>
-        <translation type="unfinished"></translation>
+        <translation>o</translation>
     </message>
     <message>
         <source>If you want to support the developer:</source>
-        <translation type="unfinished"></translation>
+        <translation>y si desea apoyar al desarrollador:</translation>
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions and feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>-eekkelund por guardar/cargar/autoguardar funciones y atencion</translation>
     </message>
     <message>
         <source>Paypal donation</source>
-        <translation type="unfinished"></translation>
+        <translation>Donacion por PayPal</translation>
     </message>
     <message>
         <source>Make a donation (button above)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer una donacion(boton de arriba)</translation>
     </message>
     <message>
         <source>-Russian community for feedback and help</source>
-        <translation type="unfinished"></translation>
+        <translation>A la comunidad rusa por su atencion y ayuda</translation>
     </message>
     <message>
         <source>-Unsaved changes are saved in the file with ending &apos;~&apos; in the same dir where you placed your original file</source>
