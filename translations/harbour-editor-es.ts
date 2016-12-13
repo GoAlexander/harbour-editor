@@ -6,50 +6,50 @@
     <message id="filemanager-la-file_details">
         <source>%1, %2</source>
         <extracomment>Shows size and modification date, e.g. &quot;15.5MB, 02/03/2016&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Muestra el tamaño y la fecha de modificación, e.g. &quot;15.5MB, 02/03/2016&quot;</translation>
     </message>
     <message id="filemanager-la-no_files">
         <source>No files</source>
-        <translation type="unfinished"></translation>
+        <translation>no archivos</translation>
     </message>
 </context>
 <context>
     <name>AboutPage</name>
     <message>
         <source>&quot;Editor.&quot; is feature-rich text/code editor!</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Editor.&quot; Editor de texto rico en funciones!</translation>
     </message>
     <message>
         <source>License: GPLv3</source>
-        <translation type="unfinished"></translation>
+        <translation>Licensia GPLv3</translation>
     </message>
     <message>
         <source>You can find the source code at the:</source>
-        <translation type="unfinished"></translation>
+        <translation>Usted puede encontrar el codigo fuente en:</translation>
     </message>
     <message>
         <source>GitHub</source>
-        <translation type="unfinished"></translation>
+        <translation>GitHub</translation>
     </message>
     <message>
         <source>Special thanks:</source>
-        <translation type="unfinished"></translation>
+        <translation>Especiales gracias a:</translation>
     </message>
     <message>
         <source>Tips:</source>
-        <translation type="unfinished"></translation>
+        <translation>Consejos</translation>
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca de:</translation>
     </message>
     <message>
         <source>-coderus for various tips and code</source>
-        <translation type="unfinished"></translation>
+        <translation>-Coderus por varios consejos y código</translation>
     </message>
     <message>
         <source>-To &apos;Select all text&apos; hold your finger until 3 vibrations</source>
-        <translation type="unfinished"></translation>
+        <translation>-To &apos;Select all text&apos; Sostenga su dedo hasta 3 vibraciones</translation>
     </message>
     <message>
         <source>-osanwe for very often consultations about qml code</source>
