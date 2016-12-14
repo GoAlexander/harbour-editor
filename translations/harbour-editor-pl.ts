@@ -36,8 +36,8 @@
         <translation>Specjalne podziękowania:</translation>
     </message>
     <message>
-        <source>Wskazówki:</source>
-        <translation>Советы:</translation>
+        <source>Tips:</source>
+        <translation>Wskazówki:</translation>
     </message>
     <message>
         <source>About</source>
