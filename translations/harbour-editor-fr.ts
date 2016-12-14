@@ -73,7 +73,7 @@
     </message>
     <message>
         <source>Make a donation (button above)</source>
-        <translation>Faire un don (bouton ci-dessous)</translation>
+        <translation>Faites un don (bouton ci-dessous)</translation>
     </message>
     <message>
         <source>-Russian community for feedback and help</source>
@@ -85,27 +85,27 @@
     </message>
     <message>
         <source>Star the repository at the github ☺ </source>
-        <translation>Noter le répertoire sur github ☺ </translation>
+        <translation>Notez le répertoire sur github ☺ </translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Traducteurs</translation>
     </message>
     <message>
         <source> - Spanish translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - version espagnole</translation>
     </message>
     <message>
         <source> - Swedish translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - version suédoise</translation>
     </message>
     <message>
         <source> - Russian translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - version russe</translation>
     </message>
     <message>
         <source> - French translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - version française</translation>
     </message>
 </context>
 <context>
