@@ -131,18 +131,18 @@
     </message>
     <message>
         <source>R-only</source>
-        <translation>Тylko do odczytu</translation>
+        <translation>Odczyt</translation>
     </message>
     <message>
         <source>Save as</source>
-        <translation>Zapisz jako</translation>
+        <translation>Z. jako</translation>
     </message>
     <message>
         <source>Open</source>
         <translation>Otwórz</translation>
     </message>
     <message>
-        <source>Save   </source>
+        <source>Save</source>
         <translation>Zapisz</translation>
     </message>
     <message>
@@ -155,7 +155,7 @@
     </message>
     <message>
         <source>Document can`t be saved!</source>
-        <translation> Dokument nie może być zapisany!</translation>
+        <translation>Dokument nie może być zapisany!</translation>
     </message>
     <message>
         <source>Tab</source>
