@@ -93,19 +93,19 @@
     </message>
     <message>
         <source> - Spanish translation</source>
-        <translation>Spansk översättning</translation>
+        <translation> - Spansk översättning</translation>
     </message>
     <message>
         <source> - Swedish translation</source>
-        <translation>Svensk översättning</translation>
+        <translation> - Svensk översättning</translation>
     </message>
     <message>
         <source> - Russian translation</source>
-        <translation>Rysk översättning</translation>
+        <translation> - Rysk översättning</translation>
     </message>
     <message>
         <source> - French translation</source>
-        <translation>Fransk översättning</translation>
+        <translation> - Fransk översättning</translation>
     </message>
 </context>
 <context>

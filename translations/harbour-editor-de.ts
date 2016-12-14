@@ -87,6 +87,26 @@
         <source>Star the repository at the github ☺ </source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Translators</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Spanish translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Swedish translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Russian translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - French translation</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
