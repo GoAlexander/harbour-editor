@@ -1,5 +1,13 @@
 # Editor.
 Description is in progress...
+
+Rules for translation
+---------------------
+Translation of buttons on FirstPage has to be NOT longer than 7 symbols (better 4-5 symbols).  
+Examples:
+- `Save as` - maximal length
+- `Save` - optimal length
+
   
 License
 -------
