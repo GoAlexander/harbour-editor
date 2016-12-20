@@ -85,7 +85,7 @@
     </message>
     <message>
         <source>Star the repository at the github ☺ </source>
-        <translation>Empezar el repositorio en github ☺</translation>
+        <translation>Contribuir en el repositorio github ☺</translation>
     </message>
     <message>
         <source>Translators</source>
@@ -178,11 +178,11 @@
     </message>
     <message>
         <source>Quick menu enabled</source>
-        <translation>Menu rápido activado</translation>
+        <translation>Activar menu rápido </translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
-        <translation>Numeración de línea activada</translation>
+        <translation>Activar numeración por línea </translation>
     </message>
     <message>
         <source>Fonts and size</source>
