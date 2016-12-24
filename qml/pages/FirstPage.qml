@@ -269,7 +269,7 @@ Page {
 
                     MenuButton {
                         width: sizeBackgroundItemMainMenu
-                        mySource: "image://theme/icon-m-forward";
+                        mySource: "../img/tab.svg";
                         myText: qsTr("Tab")
                         onClicked: {
                             var previousCursorPosition = myTextArea.cursorPosition;
@@ -362,7 +362,7 @@ Page {
 
                 MenuButton {
                     width: sizeBackgroundItem
-                    mySource: "image://theme/icon-m-forward";
+                    mySource: "../img/tab.svg";
                     myText: qsTr("Tab")
                     onClicked: {
                         var previousCursorPosition = myTextArea.cursorPosition;
