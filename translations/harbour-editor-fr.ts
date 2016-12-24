@@ -142,10 +142,6 @@
         <translation>Ouvrir</translation>
     </message>
     <message>
-        <source>Save   </source>
-        <translation>Enregistrer    </translation>
-    </message>
-    <message>
         <source>Document saved!</source>
         <translation>Document enregistré !</translation>
     </message>
@@ -160,6 +156,22 @@
     <message>
         <source>Tab</source>
         <translation>Onglet</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

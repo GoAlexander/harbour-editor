@@ -142,10 +142,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save   </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Document saved!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -159,6 +155,22 @@
     </message>
     <message>
         <source>Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

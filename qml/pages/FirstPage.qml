@@ -8,6 +8,7 @@ Page {
     id: editorPage
 
     property int lastLineCount: 0
+    property int sizeBackgroundItemMainMenuFirstRow: pullMenu2.width / 4
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
     property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
     property string filePath: "" //"autosave" //TODO сделать предзагрузку последнего открытого
@@ -88,7 +89,7 @@ Page {
                     height: childrenRect.height
 
                     MenuButton {
-                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        width: sizeBackgroundItemMainMenuFirstRow
                         mySource: "image://theme/icon-m-acknowledge";
                         myText: qsTr("Save as")
                         onClicked: {
@@ -103,7 +104,7 @@ Page {
                     }
 
                     MenuButton {
-                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        width: sizeBackgroundItemMainMenuFirstRow
                         mySource: "image://theme/icon-m-folder";
                         myText: qsTr("Open")
                         onClicked: {
@@ -118,7 +119,7 @@ Page {
                     }
 
                     MenuButton {
-                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        width: sizeBackgroundItemMainMenuFirstRow
                         mySource: "image://theme/icon-m-note";
                         myText: qsTr("New")
                         onClicked: {
@@ -128,18 +129,33 @@ Page {
                         }
                     }
 
-//                    MenuButton {
-//                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
-//                        mySource: "image://theme/icon-m-document";
-//                        myText: qsTr("History")
-//                        onClicked: {
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenuFirstRow
+                        mySource: "image://theme/icon-m-document";
+                        myText: qsTr("History")
+                        onClicked: {
 //                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {
 //                                               currentFilePath: filePath,
 //                                               callback: setFilePath
 //                                           })
-//                        }
-//                    }
+                        }
+                    }
 
+                }
+
+
+                Row {
+                    width: parent.width
+                    height: childrenRect.height
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenuFirstRow
+                        mySource: "image://theme/icon-m-search";
+                        myText: qsTr("Search")
+                        onClicked: {
+
+                        }
+                    }
                 }
 
 
@@ -149,9 +165,9 @@ Page {
                     height: childrenRect.height
 
                     MenuButton {
-                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        width: sizeBackgroundItemMainMenu
                         mySource: "image://theme/icon-m-acknowledge";
-                        myText: qsTr("Save   ")
+                        myText: qsTr("Save")
                         enabled: saveFlag
                         onClicked: {
                             if (filePath!=="") {
@@ -172,7 +188,7 @@ Page {
                     }
 
                     MenuButton {
-                        width: sizeBackgroundItemMainMenu //height: Theme.itemSizeExtraSmall
+                        width: sizeBackgroundItemMainMenu
                         mySource: "image://theme/icon-m-keyboard";
                         myText: qsTr("R-only")
                         onClicked: {
@@ -184,6 +200,37 @@ Page {
                             }
                         }
                     }
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenu
+                        mySource: "image://theme/icon-m-rotate-left";
+                        myText: qsTr("Undo")
+                        onClicked: {
+                            //myTextArea.undo();
+                        }
+                    }
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenu
+                        mySource: "image://theme/icon-m-rotate-right";
+                        myText: qsTr("Redo")
+                        onClicked: {
+                            //myTextArea.redo();
+                        }
+                    }
+
+                    MenuButton {
+                        width: sizeBackgroundItemMainMenu
+                        mySource: "image://theme/icon-m-forward";
+                        myText: qsTr("Tab")
+                        onClicked: {
+                            var previousCursorPosition = myTextArea.cursorPosition;
+                            myTextArea.text = myTextArea.text.slice(0, myTextArea.cursorPosition) + "\t" + myTextArea.text.slice(myTextArea.cursorPosition, myTextArea.text.length);
+                            myTextArea.cursorPosition = previousCursorPosition + 1;
+
+                        }
+                    }
+
                 }
             }
 
@@ -212,7 +259,7 @@ Page {
                 height: childrenRect.height
 
                 MenuButton {
-                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+                    width: sizeBackgroundItem
                     mySource: "image://theme/icon-m-acknowledge";
                     myText: qsTr("Save")
                     enabled: saveFlag
@@ -235,7 +282,7 @@ Page {
                 }
 
                 MenuButton {
-                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+                    width: sizeBackgroundItem
                     mySource: "image://theme/icon-m-keyboard";
                     myText: qsTr("R-only")
                     onClicked: {
@@ -249,7 +296,27 @@ Page {
                 }
 
                 MenuButton {
-                    width: sizeBackgroundItem //height: Theme.itemSizeExtraSmall
+                    width: sizeBackgroundItem
+                    mySource: "image://theme/icon-m-rotate-left";
+                    myText: qsTr("Undo")
+
+                    onClicked: {
+                        //myTextArea.undo();
+                    }
+                }
+
+                MenuButton {
+                    width: sizeBackgroundItem
+                    mySource: "image://theme/icon-m-rotate-right";
+                    myText: qsTr("Redo")
+
+                    onClicked: {
+                        //myTextArea.redo();
+                    }
+                }
+
+                MenuButton {
+                    width: sizeBackgroundItem
                     mySource: "image://theme/icon-m-forward";
                     myText: qsTr("Tab")
                     onClicked: {

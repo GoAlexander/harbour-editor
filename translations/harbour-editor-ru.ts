@@ -89,23 +89,23 @@
     </message>
     <message>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Переводчики</translation>
     </message>
     <message>
         <source> - Spanish translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - испанский перевод</translation>
     </message>
     <message>
         <source> - Swedish translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - шведский перевод</translation>
     </message>
     <message>
         <source> - Russian translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - русский перевод</translation>
     </message>
     <message>
         <source> - French translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - французский перевод</translation>
     </message>
 </context>
 <context>
@@ -131,7 +131,7 @@
     </message>
     <message>
         <source>R-only</source>
-        <translation>Т-чтен.</translation>
+        <translation>Чтение</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -140,10 +140,6 @@
     <message>
         <source>Open</source>
         <translation>Открыть</translation>
-    </message>
-    <message>
-        <source>Save   </source>
-        <translation>Сохр.</translation>
     </message>
     <message>
         <source>Document saved!</source>
@@ -159,7 +155,23 @@
     </message>
     <message>
         <source>Tab</source>
-        <translation>Таб</translation>
+        <translation>Tab</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
