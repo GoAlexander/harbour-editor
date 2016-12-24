@@ -198,6 +198,7 @@ Page {
 //                                               currentFilePath: filePath,
 //                                               callback: setFilePath
 //                                           })
+                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"))
                         }
                     }
 
@@ -281,16 +282,13 @@ Page {
                 }
             }
 
-            MenuLabel {
+            MenuItem {
+                visible: (filePath == "") ? false : true
                 text: filePath
+                onClicked: Clipboard.text = filePath;
+                font.pixelSize: Theme.fontSizeTiny
+                color: Theme.highlightColor
             }
-
-//            MenuItem {
-//                text: filePath
-//                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
-//                font.pixelSize: Theme.fontSizeTiny
-//            }
-//            https://supportforums.blackberry.com/t5/Native-Development/How-to-access-ClipBoard-from-QML/td-p/2074663
 
         }
 
