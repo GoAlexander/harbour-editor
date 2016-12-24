@@ -107,6 +107,14 @@
         <source> - French translation</source>
         <translation> - французский перевод</translation>
     </message>
+    <message>
+        <source> - Polish translation</source>
+        <translation> - польский перевод</translation>
+    </message>
+    <message>
+        <source>-You can copy the file path to the clipboard by selecting appropriate MenuItem in pulley menu</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -159,18 +167,25 @@
     </message>
     <message>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Назад</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Вперед</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>История</translation>
     </message>
     <message>
         <source>Search</source>
+        <translation>Поиск</translation>
+    </message>
+</context>
+<context>
+    <name>HistoryPage</name>
+    <message>
+        <source>Dialogs</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

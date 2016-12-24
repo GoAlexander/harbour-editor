@@ -48,4 +48,5 @@ DISTFILES += \
     qml/pages/FileChooserPage.qml \
     qml/components/MenuButton.qml \
     qml/pages/SaveAsPage.qml \
-    qml/pages/HistoryPage.qml
+    qml/pages/HistoryPage.qml \
+    qml/components/AuthorRow.qml

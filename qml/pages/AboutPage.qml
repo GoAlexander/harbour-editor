@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import "../components"
 
 Page {
     id: aboutPage
@@ -63,7 +64,9 @@ Page {
                       "<br/>" +
                       qsTr("-To 'Select all text' hold your finger until 3 vibrations") +
                       "<br/>" +
-                      qsTr("-Unsaved changes are saved in the file with ending '~' in the same dir where you placed your original file");
+                      qsTr("-Unsaved changes are saved in the file with ending '~' in the same dir where you placed your original file") +
+                      "<br/>" +
+                      qsTr("-You can copy the file path to the clipboard by selecting appropriate MenuItem in pulley menu");
 
                 onLinkActivated: {
                     Qt.openUrlExternally("https://github.com/GoAlexander/harbour-editor");
@@ -73,62 +76,30 @@ Page {
 
             SectionHeader { text: qsTr("Translators") }
 
-            Row {
-                x: Theme.horizontalPageMargin
-                Label {
-                    text: "Caballlero"
-                    color: Theme.highlightColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
-                Label {
-                    text: qsTr(" - Spanish translation")
-                    color: Theme.secondaryColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
+            AuthorRow{
+                author: "atlochowski"
+                myText: qsTr(" - Polish translation")
             }
 
-            Row {
-                x: Theme.horizontalPageMargin
-                Label {
-                    text: "eson57"
-                    color: Theme.highlightColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
-                Label {
-                    text: qsTr(" - Swedish translation")
-                    color: Theme.secondaryColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
+            AuthorRow{
+                author: "Caballlero"
+                myText: qsTr(" - Spanish translation")
             }
 
-            Row {
-                x: Theme.horizontalPageMargin
-                Label {
-                    text: "GoAlexander"
-                    color: Theme.highlightColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
-                Label {
-                    text: qsTr(" - Russian translation")
-                    color: Theme.secondaryColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
+            AuthorRow{
+                author: "eson57"
+                myText: qsTr(" - Swedish translation")
             }
 
-            Row {
-                x: Theme.horizontalPageMargin
-                Label {
-                    text: "Quent-in"
-                    color: Theme.highlightColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
-                Label {
-                    text: qsTr(" - French translation")
-                    color: Theme.secondaryColor
-                    font.pixelSize: Theme.fontSizeExtraSmall
-                }
+            AuthorRow{
+                author: "GoAlexander"
+                myText: qsTr(" - Russian translation")
             }
 
+            AuthorRow{
+                author: "Quent-in"
+                myText: qsTr(" - French translation")
+            }
 
             VerticalScrollDecorator {}
         }

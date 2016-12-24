@@ -107,6 +107,14 @@
         <source> - French translation</source>
         <translation> - Fransk översättning</translation>
     </message>
+    <message>
+        <source> - Polish translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-You can copy the file path to the clipboard by selecting appropriate MenuItem in pulley menu</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -171,6 +179,13 @@
     </message>
     <message>
         <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HistoryPage</name>
+    <message>
+        <source>Dialogs</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
