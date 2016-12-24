@@ -96,6 +96,54 @@ Page {
                 height: childrenRect.height
 
                 Row {
+                    //id: pullMenu3
+                    width: parent.width
+                    height: childrenRect.height
+                    spacing: Theme.paddingSmall
+
+                    SearchField{
+                        id:searchField
+                        width: parent.width / 1.5
+                        height: Theme.itemSizeSmall
+                        font.pixelSize: Theme.fontSizeTiny
+                        EnterKey.iconSource: "image://theme/icon-m-enter-next"
+                        placeholderText: qsTr("Search")
+                        EnterKey.onClicked:{
+                            //flipable.search(text,0,"forward",searchField);
+                            search(text,0,"forward",searchField);
+                            searched=true
+                        }
+                        onTextChanged: searched = false
+                    }
+
+                    IconButton {
+                        id:previous
+                        icon.source: "image://theme/icon-m-previous"
+                        height: searchField.height
+                        enabled: searched
+                        onClicked:{
+                            //flipable.search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
+                            search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
+                            myTextArea.forceActiveFocus();
+                        }
+                        visible:searchField.activeFocus || searchField.text.length>0
+                    }
+                    IconButton {
+                        id:next
+                        icon.source: "image://theme/icon-m-next"
+                        height: searchField.height
+                        enabled: searched
+                        onClicked:{
+                            //flipable.search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
+                            search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
+                            myTextArea.forceActiveFocus();
+                        }
+                        visible:searchField.activeFocus || searchField.text.length>0
+                    }
+                }
+
+
+                Row {
                     id: pullMenu2
                     width: parent.width
                     height: childrenRect.height
@@ -157,53 +205,6 @@ Page {
 
 
                 Row {
-                    width: parent.width
-                    height: childrenRect.height
-                    spacing: Theme.paddingSmall
-
-                    SearchField{
-                        id:searchField
-                        width: parent.width / 1.5
-                        height: Theme.itemSizeSmall
-                        font.pixelSize: Theme.fontSizeTiny
-                        EnterKey.iconSource: "image://theme/icon-m-enter-next"
-                        placeholderText: qsTr("Search")
-                        EnterKey.onClicked:{
-                            //flipable.search(text,0,"forward",searchField);
-                            search(text,0,"forward",searchField);
-                            searched=true
-                        }
-                        onTextChanged: searched = false
-                    }
-
-                    IconButton {
-                        id:previous
-                        icon.source: "image://theme/icon-m-previous"
-                        height: searchField.height
-                        enabled: searched
-                        onClicked:{
-                            //flipable.search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
-                            search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
-                            myTextArea.forceActiveFocus();
-                        }
-                        visible:searchField.activeFocus || searchField.text.length>0
-                    }
-                    IconButton {
-                        id:next
-                        icon.source: "image://theme/icon-m-next"
-                        height: searchField.height
-                        enabled: searched
-                        onClicked:{
-                            //flipable.search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
-                            search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
-                            myTextArea.forceActiveFocus();
-                        }
-                        visible:searchField.activeFocus || searchField.text.length>0
-                    }
-                }
-
-
-                Row {
                     id: pullMenu
                     width: parent.width
                     height: childrenRect.height
@@ -249,8 +250,9 @@ Page {
                         width: sizeBackgroundItemMainMenu
                         mySource: "image://theme/icon-m-rotate-left";
                         myText: qsTr("Undo")
+                        enabled: myTextArea._editor.canUndo
                         onClicked: {
-                            //myTextArea.undo();
+                            myTextArea._editor.undo()
                         }
                     }
 
@@ -258,8 +260,9 @@ Page {
                         width: sizeBackgroundItemMainMenu
                         mySource: "image://theme/icon-m-rotate-right";
                         myText: qsTr("Redo")
+                        enabled: myTextArea._editor.canRedo
                         onClicked: {
-                            //myTextArea.redo();
+                            myTextArea._editor.redo()
                         }
                     }
 
@@ -343,9 +346,9 @@ Page {
                     width: sizeBackgroundItem
                     mySource: "image://theme/icon-m-rotate-left";
                     myText: qsTr("Undo")
-
+                    enabled: myTextArea._editor.canUndo
                     onClicked: {
-                        //myTextArea.undo();
+                        myTextArea._editor.undo()
                     }
                 }
 
@@ -353,9 +356,9 @@ Page {
                     width: sizeBackgroundItem
                     mySource: "image://theme/icon-m-rotate-right";
                     myText: qsTr("Redo")
-
+                    enabled: myTextArea._editor.canRedo
                     onClicked: {
-                        //myTextArea.redo();
+                        myTextArea._editor.redo()
                     }
                 }
 
@@ -370,13 +373,6 @@ Page {
 
                     }
                 }
-
-//                Label {
-//                    width: sizeBackgroundItem
-//                }
-//                Label {
-//                    width: sizeBackgroundItem
-//                }
 
 //                Item {
 //                    width: sizeBackgroundItemMainMenu
