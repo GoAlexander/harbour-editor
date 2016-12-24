@@ -14,6 +14,8 @@ Page {
     property string filePath: "" //"autosave" //TODO сделать предзагрузку последнего открытого
     property bool saveFlag: false
 
+    property bool searched: false
+
 
     Notification {
         id: outputNotifications
@@ -66,6 +68,16 @@ Page {
             lineNumbers.text = lineNumbers.text.slice(0, -2);
             lastLineCount = myTextArea._editor.lineCount;
         }
+    }
+
+    function search(text, position, direction, id) {
+        var reg = new RegExp(text, "ig")
+        var match = myTextArea.text.match(reg)
+        if(direction == "back"){
+            myTextArea.cursorPosition = myTextArea.text.lastIndexOf(match[match.length-1], position)
+        }else myTextArea.cursorPosition = myTextArea.text.indexOf(match[0],position)
+        //id.focus =false
+        myTextArea.forceActiveFocus();
     }
 
     SilicaFlickable {
@@ -147,14 +159,46 @@ Page {
                 Row {
                     width: parent.width
                     height: childrenRect.height
+                    spacing: Theme.paddingSmall
 
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenuFirstRow
-                        mySource: "image://theme/icon-m-search";
-                        myText: qsTr("Search")
-                        onClicked: {
-
+                    SearchField{
+                        id:searchField
+                        width: parent.width / 1.5
+                        height: Theme.itemSizeSmall
+                        font.pixelSize: Theme.fontSizeTiny
+                        EnterKey.iconSource: "image://theme/icon-m-enter-next"
+                        placeholderText: qsTr("Search")
+                        EnterKey.onClicked:{
+                            //flipable.search(text,0,"forward",searchField);
+                            search(text,0,"forward",searchField);
+                            searched=true
                         }
+                        onTextChanged: searched = false
+                    }
+
+                    IconButton {
+                        id:previous
+                        icon.source: "image://theme/icon-m-previous"
+                        height: searchField.height
+                        enabled: searched
+                        onClicked:{
+                            //flipable.search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
+                            search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
+                            myTextArea.forceActiveFocus();
+                        }
+                        visible:searchField.activeFocus || searchField.text.length>0
+                    }
+                    IconButton {
+                        id:next
+                        icon.source: "image://theme/icon-m-next"
+                        height: searchField.height
+                        enabled: searched
+                        onClicked:{
+                            //flipable.search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
+                            search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
+                            myTextArea.forceActiveFocus();
+                        }
+                        visible:searchField.activeFocus || searchField.text.length>0
                     }
                 }
 
