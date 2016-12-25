@@ -1,19 +1,77 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-
 Page {
     id: historyPage
 
     SilicaListView {
-            id: dialogsList
+            id: historyList
+            width: parent.width; height: parent.height
             anchors.fill: parent
             clip: true
+
+            header: PageHeader {
+                title: qsTr("History")
+            }
+
+            model: ListModel {
+                id: myModel
+             }
+//                ListModel {
+//                ListElement { fruit: "jackfruit" }
+//                ListElement { fruit: "orange" }
+//                ListElement { fruit: "lemon" }
+//                ListElement { fruit: "lychee" }
+//                ListElement { fruit: "apricots" }
+//            }
+            delegate: BackgroundItem  {
+                width: ListView.view.width
+                height: Theme.itemSizeSmall
+
+                Label {
+                    //anchors.margins:Theme.horizontalPageMargin
+                    //anchors.verticalCenter: Text.verticalCenter
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        verticalCenter: Text.verticalCenter
+                        margins: Theme.paddingLarge
+                    }
+                    //spacing: Theme.paddingMedium
+
+                    text: value
+                }
+
+                onClicked: {
+                    //поставить filePath
+                    //и уйти обратно
+//                    pageStack.pop(Qt.resolvedUrl("HistoryPage.qml"), {
+//                                      currentFilePath: "/home/nemo/Documents/test.txt"//filePath
+//                                  })
+
+                    //filePath = "/home/nemo/Documents/test.txt";
+                    pageStack.pop();
+                }
+            }
+
+            Component.onCompleted: {
+                //PATH_TO_JSON = os.environ['HOME'] + "/.local/share/harbour-editor/editor.json"
+                //var elements = JSON.parse()
+
+                for(var i=0;i<=100;i++) {
+                    var element = { "value" : i }
+                    myModel.append(element)
+                }
+            }
+
+
+
+            /*
 
 //            model: myModel
 
             header: PageHeader {
-                title: qsTr("Dialogs")
+                title: qsTr("History")
             }
 
             delegate: BackgroundItem {
@@ -47,10 +105,14 @@ Page {
         }
 
     Component.onCompleted: {
-        for(var i=0;i<=100;i++) {
-            var element = { "value" : i }
-            myModel.append(element)
-        }
+//        for(var i=0;i<=100;i++) {
+//            var element = { "value" : i }
+//            myModel.append(element)
+//        }
+
+
+    */
+
     }
 }
 

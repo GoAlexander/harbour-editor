@@ -77,27 +77,27 @@ Page {
 
             SectionHeader { text: qsTr("Translators") }
 
-            AuthorRow{
+            AuthorRow {
                 author: "atlochowski"
                 myText: qsTr(" - Polish translation")
             }
 
-            AuthorRow{
+            AuthorRow {
                 author: "Caballlero"
                 myText: qsTr(" - Spanish translation")
             }
 
-            AuthorRow{
+            AuthorRow {
                 author: "eson57"
                 myText: qsTr(" - Swedish translation")
             }
 
-            AuthorRow{
+            AuthorRow {
                 author: "GoAlexander"
                 myText: qsTr(" - Russian translation")
             }
 
-            AuthorRow{
+            AuthorRow {
                 author: "Quent-in"
                 myText: qsTr(" - French translation")
             }
