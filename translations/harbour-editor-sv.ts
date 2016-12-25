@@ -109,11 +109,11 @@
     </message>
     <message>
         <source> - Polish translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - Polsk översättning</translation>
     </message>
     <message>
         <source>-You can copy the file path to the clipboard by selecting appropriate MenuItem in pulley menu</source>
-        <translation type="unfinished"></translation>
+        <translation>-Du kan kopiera filsökvägen till urklipp genom att välja dra neråt och välja från toppmenyn</translation>
     </message>
 </context>
 <context>
@@ -167,26 +167,26 @@
     </message>
     <message>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Ångra</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Upprepa</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Historik</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök</translation>
     </message>
 </context>
 <context>
     <name>HistoryPage</name>
     <message>
         <source>Dialogs</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialoger</translation>
     </message>
 </context>
 <context>
