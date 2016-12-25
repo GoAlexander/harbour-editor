@@ -58,6 +58,7 @@ Page {
                       "<br/>" + qsTr("-osanwe for very often consultations about qml code") +
                       "<br/>" + qsTr("-coderus for various tips and code") +
                       "<br/>" + qsTr("-Russian community for feedback and help") +
+                      "<br/>" + qsTr("-Ancelad for tab icon, testing and help") +
                       "<br/>" +
                       "<br/>" +
                       qsTr("Tips:")+
