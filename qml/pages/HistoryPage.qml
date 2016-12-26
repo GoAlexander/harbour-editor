@@ -4,6 +4,10 @@ import Sailfish.Silica 1.0
 Page {
     id: historyPage
 
+    property string value
+
+    property var callback
+
     SilicaListView {
             id: historyList
             width: parent.width; height: parent.height
@@ -16,19 +20,14 @@ Page {
 
             model: ListModel {
                 id: myModel
-             }
-//                ListModel {
-//                ListElement { fruit: "jackfruit" }
-//                ListElement { fruit: "orange" }
-//                ListElement { fruit: "lemon" }
-//                ListElement { fruit: "lychee" }
-//                ListElement { fruit: "apricots" }
-//            }
+            }
+
             delegate: BackgroundItem  {
                 width: ListView.view.width
                 height: Theme.itemSizeSmall
 
                 Label {
+                    id: labelPath
                     //anchors.margins:Theme.horizontalPageMargin
                     //anchors.verticalCenter: Text.verticalCenter
                     anchors {
@@ -45,23 +44,31 @@ Page {
                 onClicked: {
                     //поставить filePath
                     //и уйти обратно
-//                    pageStack.pop(Qt.resolvedUrl("HistoryPage.qml"), {
-//                                      currentFilePath: "/home/nemo/Documents/test.txt"//filePath
-//                                  })
 
-                    //filePath = "/home/nemo/Documents/test.txt";
-                    pageStack.pop();
+                    console.log(labelPath.text); //сохранить это!
+                    callback("/home/nemo/Documents/test.txt"); //FOR TEST!
+                    //callback(labelPath.text); //FOR RELEASE!
+
+                    //TEST
+                    //pageStack.pop();
                 }
             }
 
             Component.onCompleted: {
-                //PATH_TO_JSON = os.environ['HOME'] + "/.local/share/harbour-editor/editor.json"
-                //var elements = JSON.parse()
+//                for(var i=0;i<=100;i++) {
+//                    var element = { "value" : i }
+//                    myModel.append(element)
+//                }
+                var openedFiles = [];
+                py2.call('editFile.getValue', ["history"], function(result) {
+                    openedFiles = result;
+                    console.log(result)
 
-                for(var i=0;i<=100;i++) {
-                    var element = { "value" : i }
-                    myModel.append(element)
-                }
+                    for(var i = 0; i < openedFiles.length; i++) {
+                        var element = { "value" : openedFiles[i] }
+                        myModel.append(element)
+                    }
+                });
             }
 
 

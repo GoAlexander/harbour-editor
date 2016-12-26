@@ -198,7 +198,10 @@ Page {
 //                                               currentFilePath: filePath,
 //                                               callback: setFilePath
 //                                           })
-                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"))
+                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {
+                                               callback: setFilePath
+                                           })
+                            //pageStack.push(Qt.resolvedUrl("HistoryPage.qml"))
                         }
                     }
 
