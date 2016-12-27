@@ -66,8 +66,8 @@ def setValue(key, value):
 def createJson():
     if not os.path.exists(PATH_TO_JSON):
         os.mkdir(os.path.join(os.environ['HOME'], '.local', 'share') + "/harbour-editor")
-    #TODO delete here lines like that: "$HOME/Documents/notes.txt"
-    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"showHiddenFiles": false, ' + '"history": [' + '"$HOME/Documents/notes.txt",' + '"$HOME/Documents/test.txt"' + ']' + '}'
+
+    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"showHiddenFiles": false, ' + '"history": [' + ' ' + ']' + '}'
     file = open(PATH_TO_JSON, 'w')
     file.write(str)
     file.close()

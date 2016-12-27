@@ -115,6 +115,10 @@
         <source>-You can copy the file path to the clipboard by selecting appropriate MenuItem in pulley menu</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>-Ancelad for tab icon, testing and help</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -185,8 +189,8 @@
 <context>
     <name>HistoryPage</name>
     <message>
-        <source>Dialogs</source>
-        <translation type="unfinished"></translation>
+        <source>History</source>
+        <translation type="unfinished">История</translation>
     </message>
 </context>
 <context>
