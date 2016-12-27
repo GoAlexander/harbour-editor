@@ -26,19 +26,16 @@ Page {
     function setFilePath(filePathFromChooser) { //TODO refactoring of this function (it uses ALSO HystoryPage)
         filePath = filePathFromChooser;
 
+        //add new unique path to history (json)
         var openedFiles = [];
         py2.call('editFile.getValue', ["history"], function(result) {
             openedFiles = result;
 
-            //if (!openedFiles.contains(filePath)) {
-            if (openedFiles.indexOf(filePath) === -1) { //TODO haha :)
+            if (openedFiles.indexOf(filePath) === -1) { //TODO haha :) //if (!openedFiles.contains(filePath)) {
                 openedFiles.push(filePath);
-                //openedFiles.push("/home/nemo/Documents/test.txt");//test
                 py2.call('editFile.setValue', ["history", openedFiles], function(result) {});
             }
         });
-
-
 
         pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePathFromChooser}, PageStackAction.Animated);
         pageStack.nextPage();
