@@ -117,7 +117,7 @@
     </message>
     <message>
         <source>-Ancelad for tab icon, testing and help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ancelad för flikikon, testning och hjälp</translation>
     </message>
 </context>
 <context>
@@ -190,7 +190,7 @@
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Historik</translation>
     </message>
 </context>
 <context>
