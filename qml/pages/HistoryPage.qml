@@ -42,29 +42,20 @@ Page {
                 }
 
                 onClicked: {
-                    //поставить filePath
-                    //и уйти обратно
-
-                    console.log(labelPath.text); //сохранить это!
-                    callback("/home/nemo/Documents/test.txt"); //FOR TEST!
-                    //callback(labelPath.text); //FOR RELEASE!
-
-                    //TEST
-                    //pageStack.pop();
+                    console.log(labelPath.text);
+                    callback(labelPath.text);
+                    //pageStack.pop(); //TEST
                 }
             }
 
             Component.onCompleted: {
-//                for(var i=0;i<=100;i++) {
-//                    var element = { "value" : i }
-//                    myModel.append(element)
-//                }
                 var openedFiles = [];
                 py2.call('editFile.getValue', ["history"], function(result) {
                     openedFiles = result;
                     console.log(result)
 
-                    for(var i = 0; i < openedFiles.length; i++) {
+                    //for(var i = 0; i < openedFiles.length; i++) {
+                    for(var i = openedFiles.length-1; i >= 0; i--) {
                         var element = { "value" : openedFiles[i] }
                         myModel.append(element)
                     }
