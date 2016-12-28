@@ -8,6 +8,10 @@ Examples:
 - `Save as` - maximal length
 - `Save` - optimal length
 
+Public To Do
+------------
+https://trello.com/b/Gyu7pPqi/harbour-editor
+
   
 License
 -------
