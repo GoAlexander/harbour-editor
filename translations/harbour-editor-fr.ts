@@ -17,7 +17,7 @@
     <name>AboutPage</name>
     <message>
         <source>&quot;Editor.&quot; is feature-rich text/code editor!</source>
-        <translation>&quot;Editor.&quot; es un outil avancé d&apos;édition de texte/codes</translation>
+        <translation>&quot;Editor.&quot; es un outil avancé d&apos;édition de textes/codes</translation>
     </message>
     <message>
         <source>License: GPLv3</source>
@@ -109,15 +109,15 @@
     </message>
     <message>
         <source> - Polish translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - version polonaise</translation>
     </message>
     <message>
         <source>-You can copy the file path to the clipboard by selecting appropriate MenuItem in pulley menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous pouvez copier le chemin du fichier dans le presse-papier à partir du menu déroulant</translation>
     </message>
     <message>
         <source>-Ancelad for tab icon, testing and help</source>
-        <translation type="unfinished"></translation>
+        <translation>-Ancelad pour les icônes des onglets, pour ses tests et son aide</translation>
     </message>
 </context>
 <context>
@@ -139,15 +139,15 @@
     </message>
     <message>
         <source>Save</source>
-        <translation>Enregistrer</translation>
+        <translation>Enrg</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation>Lecture seule</translation>
+        <translation>Lire</translation>
     </message>
     <message>
         <source>Save as</source>
-        <translation>Enregistrer comme</translation>
+        <translation>Enrg.</translation>
     </message>
     <message>
         <source>Open</source>
@@ -171,26 +171,26 @@
     </message>
     <message>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Rétab.</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Histor.</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Recher.</translation>
     </message>
 </context>
 <context>
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Historique</translation>
     </message>
 </context>
 <context>
