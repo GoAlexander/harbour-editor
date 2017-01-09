@@ -139,7 +139,7 @@
     </message>
     <message>
         <source>Save</source>
-        <translation>Enrg</translation>
+        <translation>Enrg.</translation>
     </message>
     <message>
         <source>R-only</source>
@@ -183,7 +183,7 @@
     </message>
     <message>
         <source>Search</source>
-        <translation>Recher.</translation>
+        <translation>Rechercher</translation>
     </message>
 </context>
 <context>
