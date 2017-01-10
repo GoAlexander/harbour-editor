@@ -89,35 +89,35 @@
     </message>
     <message>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Traductores</translation>
     </message>
     <message>
         <source> - Spanish translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - Traducción al español</translation>
     </message>
     <message>
         <source> - Swedish translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - Traducción al sueco </translation>
     </message>
     <message>
         <source> - Russian translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - Traducción al ruso</translation>
     </message>
     <message>
         <source> - French translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - Traducción al francés</translation>
     </message>
     <message>
         <source> - Polish translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - Traducción al polaco </translation>
     </message>
     <message>
         <source>-You can copy the file path to the clipboard by selecting appropriate MenuItem in pulley menu</source>
-        <translation type="unfinished"></translation>
+        <translation>-Puede copiar la ruta del archivo al portapapeles seleccionando la apropiada opción del menú en la polea de opciones</translation>
     </message>
     <message>
         <source>-Ancelad for tab icon, testing and help</source>
-        <translation type="unfinished"></translation>
+        <translation>-Ancelad por el tab icono, pruebas y ayuda</translation>
     </message>
 </context>
 <context>
@@ -128,7 +128,7 @@
     </message>
     <message>
         <source>Chars: </source>
-        <translation type="unfinished"></translation>
+        <translation>Carac:</translation>
     </message>
 </context>
 <context>
@@ -171,26 +171,26 @@
     </message>
     <message>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Anular</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Rehacer</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasado</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar</translation>
     </message>
 </context>
 <context>
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasado</translation>
     </message>
 </context>
 <context>
