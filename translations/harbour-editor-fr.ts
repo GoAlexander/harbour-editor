@@ -119,6 +119,10 @@
         <source>-Ancelad for tab icon, testing and help</source>
         <translation>-Ancelad pour les icônes des onglets, pour ses tests et son aide</translation>
     </message>
+    <message>
+        <source> - German translation</source>
+        <translation> - version allemande</translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -162,7 +166,7 @@
         <translation>Nouveau</translation>
     </message>
     <message>
-        <source>Document can`t be saved!</source>
+        <source>Document can&apos;t be saved!</source>
         <translation>Le document ne peut pas être enregistré !</translation>
     </message>
     <message>

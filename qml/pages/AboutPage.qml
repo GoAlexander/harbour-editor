@@ -102,6 +102,11 @@ Page {
                 myText: qsTr(" - French translation")
             }
 
+            AuthorRow {
+                author: "rabauke"
+                myText: qsTr(" - German translation")
+            }
+
             VerticalScrollDecorator {}
         }
 

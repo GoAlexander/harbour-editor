@@ -119,6 +119,10 @@
         <source>-Ancelad for tab icon, testing and help</source>
         <translation>Ancelad för flikikon, testning och hjälp</translation>
     </message>
+    <message>
+        <source> - German translation</source>
+        <translation> - Tysk översättning</translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -162,7 +166,7 @@
         <translation>Nytt</translation>
     </message>
     <message>
-        <source>Document can`t be saved!</source>
+        <source>Document can&apos;t be saved!</source>
         <translation>Dokumentet kan inte sparas!</translation>
     </message>
     <message>
