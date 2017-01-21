@@ -6,7 +6,9 @@ Rules for translation
 Translation of buttons on FirstPage has to be NOT longer than 7 symbols (better 4-5 symbols).  
 Examples:
 - `Save as` - maximal length
-- `Save` - optimal length
+- `Save` - optimal length  
+If you can not do translation of buttons short try solution of @rabauke - empty the tranclation context.  
+Screenshot: https://cloud.githubusercontent.com/assets/1159508/22174835/1e7fa1e2-dfe8-11e6-8c81-f1391a6ab08a.png
 
 Public To Do
 ------------
