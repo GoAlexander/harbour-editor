@@ -251,7 +251,7 @@ Page {
 
                     MenuButton {
                         width: sizeBackgroundItemMainMenu
-                        mySource: "image://theme/icon-m-edit?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
+                        mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
                         myText: qsTr("R-only")
                         onClicked: {
                             if (myTextArea.readOnly == false) {
@@ -344,7 +344,7 @@ Page {
 
                 MenuButton {
                     width: sizeBackgroundItem
-                    mySource: "image://theme/icon-m-edit?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
+                    mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
                     myText: qsTr("R-only")
                     onClicked: {
                         if (myTextArea.readOnly == false) {
