@@ -15,6 +15,10 @@ Public To Do
 ------------
 https://trello.com/b/Gyu7pPqi/harbour-editor
 
+
+Important notes
+---------------
+- because of OS default File Manager minimal version of Sailfish OS should be 2.0.5 
   
 License
 -------
