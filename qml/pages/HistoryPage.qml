@@ -21,9 +21,42 @@ Page {
             id: myModel
         }
 
-        delegate: BackgroundItem  {
-            width: ListView.view.width
-            height: Theme.itemSizeSmall
+        delegate: ListItem {
+            onClicked: {
+                console.log(labelPath.text);
+                callback(labelPath.text);
+            }
+
+            menu: ContextMenu {
+                MenuItem {
+                    text: qsTr("Move to top")
+                    onClicked: {
+
+                    }
+                }
+                MenuItem {
+                    text: qsTr("Delete")
+                    onClicked: {
+                        //TODO вынести массив "выше"? (чтобы несколько раз запросы не делать...
+                        var openedFiles = [];
+                        var openedFilesNew = [];
+                        py2.call('editFile.getValue', ["history"], function(result) {
+                            openedFiles = result;
+
+                            //var index = openedFiles.indexOf(labelPath.text);
+                            //openedFiles.splice(index, 1);
+                            for (var i = 0; i < openedFiles.length; i++) {
+                                if (openedFiles[i] !== labelPath.text) {
+                                    openedFilesNew[i] = openedFiles[i];
+                                }
+                            }
+                        });
+
+                        py2.call('editFile.setValue', ["history", openedFilesNew], function(result) {});
+                        remorseAction("Deleting", function () { animateRemoval(listItem)});
+                    }
+                }
+            }
 
             Label {
                 id: labelPath
@@ -39,10 +72,6 @@ Page {
                 text: value
             }
 
-            onClicked: {
-                console.log(labelPath.text);
-                callback(labelPath.text);
-            }
         }
 
         Component.onCompleted: {
@@ -51,7 +80,6 @@ Page {
                 openedFiles = result;
                 console.log(result)
 
-                //for(var i = 0; i < openedFiles.length; i++) {
                 for(var i = openedFiles.length-1; i >= 0; i--) {
                     var element = { "value" : openedFiles[i] }
                     myModel.append(element)
