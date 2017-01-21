@@ -197,10 +197,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Move to top</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>

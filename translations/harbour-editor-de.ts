@@ -194,11 +194,7 @@
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation>Suche</translation>
-    </message>
-    <message>
-        <source>Move to top</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Chronik</translation>
     </message>
     <message>
         <source>Delete</source>
