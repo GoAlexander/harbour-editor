@@ -126,6 +126,7 @@ Page {
                             searched=true
                         }
                         onTextChanged: searched = false
+                        inputMethodHints: Qt.ImhNoAutoUppercase
                     }
 
                     IconButton {
@@ -250,7 +251,7 @@ Page {
 
                     MenuButton {
                         width: sizeBackgroundItemMainMenu
-                        mySource: "image://theme/icon-m-keyboard";
+                        mySource: "image://theme/icon-m-edit?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
                         myText: qsTr("R-only")
                         onClicked: {
                             if (myTextArea.readOnly == false) {
@@ -343,7 +344,7 @@ Page {
 
                 MenuButton {
                     width: sizeBackgroundItem
-                    mySource: "image://theme/icon-m-keyboard";
+                    mySource: "image://theme/icon-m-edit?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
                     myText: qsTr("R-only")
                     onClicked: {
                         if (myTextArea.readOnly == false) {
