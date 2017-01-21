@@ -242,7 +242,7 @@ Page {
 
                             if (filePath==="") {
                                 outputNotifications.close()
-                                outputNotifications.previewBody = qsTr("Document can`t be saved!")
+                                outputNotifications.previewBody = qsTr("Document can't be saved!")
                                 outputNotifications.publish()
                             }
                         }
@@ -335,7 +335,7 @@ Page {
 
                         if (filePath==="") {
                             outputNotifications.close()
-                            outputNotifications.previewBody = qsTr("Document can`t be saved!")
+                            outputNotifications.previewBody = qsTr("Document can't be saved!")
                             outputNotifications.publish()
                         }
                     }

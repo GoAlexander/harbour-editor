@@ -154,7 +154,7 @@
         <translation>Nowy</translation>
     </message>
     <message>
-        <source>Document can`t be saved!</source>
+        <source>Document can't be saved!</source>
         <translation>Dokument nie może być zapisany!</translation>
     </message>
     <message>

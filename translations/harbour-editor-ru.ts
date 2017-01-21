@@ -119,6 +119,10 @@
         <source>-Ancelad for tab icon, testing and help</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source> - German translation</source>
+        <translation> - немецкий перевод</translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -162,7 +166,7 @@
         <translation>Новый</translation>
     </message>
     <message>
-        <source>Document can`t be saved!</source>
+        <source>Document can&apos;t be saved!</source>
         <translation> Документ не может быть сохранен!</translation>
     </message>
     <message>
@@ -190,7 +194,7 @@
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation type="unfinished">История</translation>
+        <translation>История</translation>
     </message>
 </context>
 <context>
