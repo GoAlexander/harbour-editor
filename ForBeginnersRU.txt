@@ -11,7 +11,7 @@ Infromation for beginners RU
 2. Устанавливаем Sailfish OS SDK + Hello World
 ----------------------------------------------
 
-- Читаем статьи попорядку:  
+- Читаем статьи по порядку:  
 https://habrahabr.ru/post/305510/  
 https://habrahabr.ru/post/306188/  
   
