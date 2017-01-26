@@ -74,5 +74,6 @@ https://github.com/GoAlexander/sailfishos-wiki/tree/master/slidesSummerSchool201
 
 Github:https://github.com/GoAlexander/harbour-editor  
 Trello (todo):https://trello.com/b/Gyu7pPqi/harbour-editor  
-Openrepos:https://openrepos.net/content/goalexander/editor  
+Openrepos:https://openrepos.net/content/goalexander/editor 
+Дружественныйпроект - tIDE (можно "воровать фичи", но при этом не забываем тоже делать вклад в его проект): https://github.com/eekkelund/harbour-tIDE   
   
