@@ -107,6 +107,11 @@ Page {
                 myText: qsTr(" - German translation")
             }
 
+            AuthorRow {
+                author: "Nathan Follens"
+                myText: qsTr(" - Dutch translation")
+            }
+
             VerticalScrollDecorator {}
         }
 
