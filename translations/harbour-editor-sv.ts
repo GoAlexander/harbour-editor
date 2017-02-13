@@ -263,5 +263,13 @@
         <source>Be careful to enable this option!</source>
         <translation>Var försiktig vid aktivering av detta alternativ!</translation>
     </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished">Tab</translation>
+    </message>
+    <message>
+        <source>Type of tab:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

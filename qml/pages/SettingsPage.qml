@@ -7,6 +7,7 @@ Page {
     SilicaFlickable {
         id: view
         anchors.fill: parent
+        contentHeight: column.height
 
         PullDownMenu {
             MenuItem {
@@ -17,7 +18,8 @@ Page {
 
         Column {
             id: column
-            spacing: 5
+            //spacing: 5
+            spacing: Theme.paddingLarge
             width: parent.width
 
             PageHeader {
@@ -102,6 +104,30 @@ Page {
                 }
             }
 
+            ComboBox {
+                label: qsTr("Type of tab:")
+                value: tabType
+
+                menu: ContextMenu {
+                    MenuItem {
+                        text: "\\t (default)"
+                        onClicked: tabType = "\t";
+                    }
+                    MenuItem {
+                        text: "2 spaces"
+                        onClicked: tabType = "  ";
+                    }
+                    MenuItem {
+                        text: "4 spaces"
+                        onClicked: tabType = "    ";
+                    }
+                    MenuItem {
+                        text: "8 spaces"
+                        onClicked: tabType = "        ";
+                    }
+                }
+            }
+
             SectionHeader { text: qsTr("File browser") }
 
             TextSwitch {
@@ -113,6 +139,8 @@ Page {
                 onCheckedChanged: showHiddenFiles = showHiddenFilesSwitch.checked;
             }
 
+
+             VerticalScrollDecorator {}
         }
     }
 

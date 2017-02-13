@@ -59,6 +59,7 @@ ApplicationWindow
 
     property string fontType
     property int fontSize
+    property string tabType
 
     property int charNumber: 0
     property int linesNumber: 0
@@ -83,6 +84,9 @@ ApplicationWindow
                 });
                 py2.call('editFile.getValue', ["fontSize"], function(result) {
                     fontSize=result
+                });
+                py2.call('editFile.getValue', ["tabType"], function(result) {
+                    tabType=result
                 });
 
                 py2.call('editFile.getValue', ["showHiddenFiles"], function(result) {

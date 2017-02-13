@@ -263,5 +263,13 @@
         <source>Be careful to enable this option!</source>
         <translation>Soyez prudent en activant cette option !</translation>
     </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished">Onglet</translation>
+    </message>
+    <message>
+        <source>Type of tab:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
