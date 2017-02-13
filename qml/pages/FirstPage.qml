@@ -22,7 +22,6 @@ Page {
         category: "Editor."
     }
 
-
     function setFilePath(filePathFromChooser) { //TODO refactoring of this function (it uses ALSO HystoryPage)
         filePath = filePathFromChooser;
 
@@ -83,13 +82,24 @@ Page {
     }
 
     function search(text, position, direction, id) {
-        var reg = new RegExp(text, "ig")
-        var match = myTextArea.text.match(reg)
-        if(direction == "back"){
-            myTextArea.cursorPosition = myTextArea.text.lastIndexOf(match[match.length-1], position)
-        }else myTextArea.cursorPosition = myTextArea.text.indexOf(match[0],position)
-        //id.focus =false
-        myTextArea.forceActiveFocus();
+        text = text.toLowerCase()
+        var myText = myTextArea.text.toLowerCase()
+        Theme.highlightText(myText,text,Theme.highlightColor)
+        //var reg = new RegExp(text, "ig")
+        //var match = myTextArea.text.match(reg)
+        var match = myText.match(text)
+        if (match) {
+            if (direction=="back") {
+                myTextArea.cursorPosition = myText.lastIndexOf(match[match.length-1], position)
+                if(myText.lastIndexOf(match[match.length-1], position) != -1) myTextArea.select(myTextArea.cursorPosition,myTextArea.cursorPosition+text.length)
+            } else {
+                myTextArea.cursorPosition = myText.indexOf(match[0],position)
+                if (myText.indexOf(match[0],position)!=-1) myTextArea.select(myTextArea.cursorPosition,myTextArea.cursorPosition+text.length)
+            }
+            myTextArea.forceActiveFocus()
+        } else {
+            searchField.errorHighlight = true
+        }
     }
 
     SilicaFlickable {
@@ -134,24 +144,24 @@ Page {
                         icon.source: "image://theme/icon-m-previous"
                         height: searchField.height
                         enabled: searched
-                        onClicked:{
+                        onClicked: {
                             //flipable.search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
                             search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
                             myTextArea.forceActiveFocus();
                         }
-                        visible:searchField.activeFocus || searchField.text.length>0
+                        visible: searchField.activeFocus || searchField.text.length>0
                     }
                     IconButton {
                         id:next
                         icon.source: "image://theme/icon-m-next"
                         height: searchField.height
                         enabled: searched
-                        onClicked:{
+                        onClicked: {
                             //flipable.search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
                             search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
                             myTextArea.forceActiveFocus();
                         }
-                        visible:searchField.activeFocus || searchField.text.length>0
+                        visible: searchField.activeFocus || searchField.text.length>0
                     }
                 }
 
@@ -301,9 +311,14 @@ Page {
             MenuItem {
                 visible: (filePath == "") ? false : true
                 text: filePath
-                onClicked: Clipboard.text = filePath;
                 font.pixelSize: Theme.fontSizeTiny
                 color: Theme.highlightColor
+                onClicked: {
+                    Clipboard.text = filePath;
+                    outputNotifications.close()
+                    outputNotifications.previewBody = qsTr("File path copied to the clipboard")
+                    outputNotifications.publish()
+                }
             }
 
         }

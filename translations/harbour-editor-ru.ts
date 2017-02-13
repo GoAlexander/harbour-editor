@@ -123,6 +123,10 @@
         <source> - German translation</source>
         <translation> - немецкий перевод</translation>
     </message>
+    <message>
+        <source> - Dutch translation</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -188,6 +192,10 @@
     <message>
         <source>Search</source>
         <translation>Поиск</translation>
+    </message>
+    <message>
+        <source>File path copied to the clipboard</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
