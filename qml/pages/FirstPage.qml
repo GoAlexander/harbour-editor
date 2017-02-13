@@ -243,12 +243,13 @@ Page {
                         enabled: saveFlag
                         onClicked: {
                             if (filePath!=="") {
-                                py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
-
-                                outputNotifications.close()
-                                outputNotifications.previewBody = qsTr("Document saved!")
-                                outputNotifications.publish()
-                                saveFlag = false;
+                                py.call('editFile.savings', [filePath,myTextArea.text], function() {
+                                    //this code is inside to fix problem with async nature of python
+                                    outputNotifications.close()
+                                    outputNotifications.previewBody = qsTr("Document saved!")
+                                    outputNotifications.publish()
+                                    saveFlag = false;
+                                }); //filePath is path where you want to save!
                             }
 
                             if (filePath==="") {
@@ -341,13 +342,14 @@ Page {
                     enabled: saveFlag
                     onClicked: {
                         if (filePath!=="") {
-                            py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
-
-                            outputNotifications.close()
-                            outputNotifications.previewBody = qsTr("Document saved!")
-                            outputNotifications.publish()
-                            saveFlag = false;
+                            py.call('editFile.savings', [filePath,myTextArea.text], function() {
+                                outputNotifications.close()
+                                outputNotifications.previewBody = qsTr("Document saved!")
+                                outputNotifications.publish()
+                                saveFlag = false;
+                            });//filePath is path where you want to save!
                         }
+
 
                         if (filePath==="") {
                             outputNotifications.close()

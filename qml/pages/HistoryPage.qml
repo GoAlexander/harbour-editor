@@ -29,34 +29,33 @@ Page {
             }
 
             menu: ContextMenu {
-//                MenuItem {
-//                    text: qsTr("Move to top")
-//                    onClicked: {
-//                        var openedFiles = [];
-//                        var openedFilesNew = [];
-//                        py2.call('editFile.getValue', ["history"], function(result) {
-//                            openedFiles = result;
+                MenuItem {
+                    text: qsTr("Move to top")
+                    onClicked: {
+                        var openedFiles = [];
+                        var openedFilesNew = [];
+                        py2.call('editFile.getValue', ["history"], function(result) {
+                            openedFiles = result; //TODO-REFACTORING: использовать сразу result (без openedFiles)
+                            for (var i = 0; i < openedFiles.length; i++) {
+                                if (openedFiles[i] !== labelPath.text) {
+                                    openedFilesNew.push(openedFiles[i]);
+                                }
+                            }
+                            openedFilesNew.push(labelPath.text);
 
-//                            openedFilesNew[0] = labelPath.text;
-//                            for (var i = 1; i < openedFiles.length; i++) {
-//                                if (openedFiles[i] !== labelPath.text) {
-//                                    openedFilesNew[i] = openedFiles[i];
-//                                }
-//                            }
-
-//                            // now save new history on file system
-//                            // and update qml model (UI)
-//                            py2.call('editFile.setValue', ["history", openedFilesNew], function(result) {
-//                                remorseAction("Deleting", function () { animateRemoval(listItem)}); // here because of async nature of Python in Sailfish OS
-//                                myModel.clear();
-//                                for(var i = openedFilesNew.length-1; i >= 0; i--) {
-//                                    var element = { "value" : openedFilesNew[i] }
-//                                    myModel.append(element)
-//                                }
-//                            });
-//                        });
-//                    }
-//                }
+                            // now save new history on file system
+                            // and update qml model (UI)
+                            py2.call('editFile.setValue', ["history", openedFilesNew], function(result) {
+                                //remorseAction("Deleting", function () { animateRemoval(listItem)}); // here because of async nature of Python in Sailfish OS
+                                myModel.clear();
+                                for(var i = openedFilesNew.length-1; i >= 0; i--) {
+                                    var element = { "value" : openedFilesNew[i] }
+                                    myModel.append(element)
+                                }
+                            });
+                        });
+                    }
+                }
                 MenuItem {
                     text: qsTr("Delete")
                     onClicked: {
@@ -65,7 +64,6 @@ Page {
                         var openedFilesNew = [];
                         py2.call('editFile.getValue', ["history"], function(result) {
                             openedFiles = result;
-
                             for (var i = 0; i < openedFiles.length; i++) {
                                 if (openedFiles[i] !== labelPath.text) {
                                     openedFilesNew[i] = openedFiles[i];
@@ -75,12 +73,8 @@ Page {
                             // now save new history on file system
                             // and update qml model (UI)
                             py2.call('editFile.setValue', ["history", openedFilesNew], function(result) {
-                                remorseAction("Deleting", function () { animateRemoval(listItem)}); // here because of async nature of Python in Sailfish OS
-                                myModel.clear();
-                                for(var i = openedFilesNew.length-1; i >= 0; i--) {
-                                    var element = { "value" : openedFilesNew[i] }
-                                    myModel.append(element)
-                                }
+                                //myListItem.remorseAction("Deleting", function () {animateRemoval(listItem) });
+                                myModel.remove(labelPath.text); // here because of async nature of Python in Sailfish OS
                             });
                         });
                     }
