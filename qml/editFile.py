@@ -68,7 +68,7 @@ def createJson():
         os.mkdir(os.path.join(os.environ['HOME'], '.local', 'share') + "/harbour-editor")
 
     #+ '"tabType": "\t", '
-    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"showHiddenFiles": false, ' + '"history": [' + ' ' + ']' + '}'
+    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"tabType": "    ", ' + '"showHiddenFiles": false, ' + '"history": [' + ' ' + ']' + '}'
     file = open(PATH_TO_JSON, 'w')
     file.write(str)
     file.close()

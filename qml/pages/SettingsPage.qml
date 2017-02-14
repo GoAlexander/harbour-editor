@@ -106,11 +106,21 @@ Page {
 
             ComboBox {
                 label: qsTr("Type of tab:")
-                value: tabType
+                value: {
+                    if (tabType == "\t") {
+                        value = "\\t";
+                    } else if (tabType == "  ") {
+                        value = "2 spaces";
+                    } else if (tabType == "    ") {
+                        value = "4 spaces";
+                    } else if (tabType == "        ") {
+                        value = "8 spaces";
+                    }
+                }
 
                 menu: ContextMenu {
                     MenuItem {
-                        text: "\\t (default)"
+                        text: "\\t"
                         onClicked: tabType = "\t";
                     }
                     MenuItem {
@@ -145,12 +155,13 @@ Page {
     }
 
     Component.onDestruction: {
-            py2.call('editFile.setValue', ["headerVisible", headerVisible], function(result) {});
-            py2.call('editFile.setValue', ["lineNumbersVisible", lineNumbersVisible], function(result) {});
+        py2.call('editFile.setValue', ["headerVisible", headerVisible], function(result) {});
+        py2.call('editFile.setValue', ["lineNumbersVisible", lineNumbersVisible], function(result) {});
 
-            py2.call('editFile.setValue', ["fontType", fontType], function(result) {});
-            py2.call('editFile.setValue', ["fontSize", fontSize], function(result) {});
+        py2.call('editFile.setValue', ["fontType", fontType], function(result) {});
+        py2.call('editFile.setValue', ["fontSize", fontSize], function(result) {});
+        py2.call('editFile.setValue', ["tabType", tabType], function(result) {});
 
-            py2.call('editFile.setValue', ["showHiddenFiles", showHiddenFiles], function(result) {});
+        py2.call('editFile.setValue', ["showHiddenFiles", showHiddenFiles], function(result) {});
     }
 }

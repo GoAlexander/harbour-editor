@@ -264,10 +264,6 @@
         <translation>Aktivierung auf eigene Gefahr!</translation>
     </message>
     <message>
-        <source>Tab</source>
-        <translation type="unfinished"> </translation>
-    </message>
-    <message>
         <source>Type of tab:</source>
         <translation type="unfinished"></translation>
     </message>

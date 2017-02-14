@@ -264,10 +264,6 @@
         <translation>Будьте осторожны, активируя эту функцию!</translation>
     </message>
     <message>
-        <source>Tab</source>
-        <translation type="unfinished">Tab</translation>
-    </message>
-    <message>
         <source>Type of tab:</source>
         <translation type="unfinished"></translation>
     </message>
