@@ -89,23 +89,23 @@
     </message>
     <message>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Tłumacze</translation>
     </message>
     <message>
         <source> - Spanish translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Tłumaczenie hiszpańskie</translation>
     </message>
     <message>
         <source> - Swedish translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Tłumaczenie szwedzkie</translation>
     </message>
     <message>
         <source> - Russian translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Tłumaczenie rosyjskie</translation>
     </message>
     <message>
         <source> - French translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Tłumaczenie francuskie</translation>
     </message>
 </context>
 <context>
