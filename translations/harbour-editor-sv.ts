@@ -125,7 +125,7 @@
     </message>
     <message>
         <source> - Dutch translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Holländsk översättning</translation>
     </message>
 </context>
 <context>
@@ -195,7 +195,7 @@
     </message>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Filsökväg kopierad till urklipp</translation>
     </message>
 </context>
 <context>
@@ -206,11 +206,11 @@
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta bort</translation>
     </message>
     <message>
         <source>Move to top</source>
-        <translation type="unfinished"></translation>
+        <translation>Flytta till toppen</translation>
     </message>
 </context>
 <context>
@@ -265,7 +265,7 @@
     </message>
     <message>
         <source>Type of tab:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fliktyp:</translation>
     </message>
 </context>
 </TS>
