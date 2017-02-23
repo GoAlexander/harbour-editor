@@ -11,7 +11,7 @@ Page {
     property int sizeBackgroundItemMainMenuFirstRow: pullMenu2.width / 4
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
     property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
-    property string filePath: "" //"autosave" //TODO сделать предзагрузку последнего открытого
+    property string filePath: "" //"autosave"
     property bool saveFlag: false
 
     property bool searched: false
@@ -452,9 +452,9 @@ Page {
                         py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
                     }
                 }
-                onRotationChanged: {
-                    //TODO пересчитать label
-                }
+//                onRotationChanged: {
+//                    //TODO пересчитать label
+//                }
             }
             VerticalScrollDecorator { flickable: editorView }
         }
