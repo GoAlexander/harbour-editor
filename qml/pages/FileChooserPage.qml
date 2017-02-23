@@ -164,9 +164,21 @@ Page {
                 } else {
                     var filePath = fileModel.path + "/" + model.fileName;
                     console.log("###", mimeType, filePath);
+
+                    //add new unique path to history (json)
+                    py2.call('editFile.getValue', ["history"], function(result) {
+                        var openedFiles = [];
+                        openedFiles = result;
+
+                        if (openedFiles.indexOf(filePath) === -1) { // haha :) it is like //if (!openedFiles.contains(filePath)) {
+                            openedFiles.push(filePath);
+                            py2.call('editFile.setValue', ["history", openedFiles], function(result) {});
+                        }
+                    });
+
                     //if (mimeType.indexOf("image/") == 0) {
                         if (typeof callback == "function") {
-                            callback(filePath);
+                            callback(filePath); //return to the page from which this page was called
                         }
                     //}
                 }
