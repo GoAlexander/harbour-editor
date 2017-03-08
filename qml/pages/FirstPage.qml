@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 import org.nemomobile.notifications 1.0
 import io.thp.pyotherside 1.3
 import "../components"
+import "../components/pullMenus/rows"
 
 Page {
     id: editorPage
@@ -154,68 +155,74 @@ Page {
                 }
 
 
-                Row {
-                    id: pullMenu2
-                    width: parent.width
-                    height: childrenRect.height
+//                Row {
+//                    id: pullMenu2
+//                    width: parent.width
+//                    height: childrenRect.height
 
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenuFirstRow
-                        mySource: "image://theme/icon-m-acknowledge";
-                        myText: qsTr("Save as")
-                        onClicked: {
-                            pageStack.push(Qt.resolvedUrl("SaveAsPage.qml"), {
-                                               homePath: "/home/nemo",
-                                               showFormat: true,
-                                               title: "Select file",
-                                               showHiddenFiles: showHiddenFiles,
-                                               callback: saveAsSetFilePath
-                                           })
-                        }
-                    }
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenuFirstRow
+//                        mySource: "image://theme/icon-m-acknowledge";
+//                        myText: qsTr("Save as")
+//                        onClicked: {
+//                            pageStack.push(Qt.resolvedUrl("SaveAsPage.qml"), {
+//                                               homePath: "/home/nemo",
+//                                               showFormat: true,
+//                                               title: "Select file",
+//                                               showHiddenFiles: showHiddenFiles,
+//                                               callback: saveAsSetFilePath
+//                                           })
+//                        }
+//                    }
 
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenuFirstRow
-                        mySource: "image://theme/icon-m-folder";
-                        myText: qsTr("Open")
-                        onClicked: {
-                            pageStack.push(Qt.resolvedUrl("FileChooserPage.qml"), {
-                                               homePath: "/home/nemo",
-                                               showFormat: true,
-                                               title: "Select file",
-                                               showHiddenFiles: showHiddenFiles,
-                                               callback: setFilePath
-                                           })
-                        }
-                    }
-
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenuFirstRow
-                        mySource: "image://theme/icon-m-note";
-                        myText: qsTr("New")
-                        onClicked: {
-                            //TODO ask:Are you sure?
-                            filePath = "";
-                            myTextArea.text = "";
-                        }
-                    }
-
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenuFirstRow
-                        mySource: "image://theme/icon-m-document";
-                        myText: qsTr("History")
-                        onClicked: {
-//                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {
-//                                               currentFilePath: filePath,
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenuFirstRow
+//                        mySource: "image://theme/icon-m-folder";
+//                        myText: qsTr("Open")
+//                        onClicked: {
+//                            pageStack.push(Qt.resolvedUrl("FileChooserPage.qml"), {
+//                                               homePath: "/home/nemo",
+//                                               showFormat: true,
+//                                               title: "Select file",
+//                                               showHiddenFiles: showHiddenFiles,
 //                                               callback: setFilePath
 //                                           })
-                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {
-                                               callback: setFilePath
-                                           })
-                            //pageStack.push(Qt.resolvedUrl("HistoryPage.qml"))
-                        }
-                    }
+//                        }
+//                    }
 
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenuFirstRow
+//                        mySource: "image://theme/icon-m-note";
+//                        myText: qsTr("New")
+//                        onClicked: {
+//                            //TODO ask:Are you sure?
+//                            filePath = "";
+//                            myTextArea.text = "";
+//                        }
+//                    }
+
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenuFirstRow
+//                        mySource: "image://theme/icon-m-document";
+//                        myText: qsTr("History")
+//                        onClicked: {
+////                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {
+////                                               currentFilePath: filePath,
+////                                               callback: setFilePath
+////                                           })
+//                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {
+//                                               callback: setFilePath
+//                                           })
+//                            //pageStack.push(Qt.resolvedUrl("HistoryPage.qml"))
+//                        }
+//                    }
+
+//                }
+                MainRow {
+                    id: pullMenu2
+                    myWidth: parent.width
+                    myHeight: childrenRect.height
+                    myMenuButtonWidth:sizeBackgroundItemMainMenuFirstRow
                 }
 
 
