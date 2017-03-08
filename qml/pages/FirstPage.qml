@@ -34,7 +34,7 @@ Page {
         filePath = filePathFromChooser;
         pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePathFromChooser}, PageStackAction.Animated);
         pageStack.nextPage();
-        if (filePath!=="") { //TODO delete if
+        if (filePath!=="") {
             py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
         }
         py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
