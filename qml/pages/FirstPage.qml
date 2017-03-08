@@ -11,7 +11,7 @@ Page {
     property int lastLineCount: 0
     property int sizeBackgroundItemMainMenuFirstRow: pullMenu2.width / 4
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
-    property int sizeBackgroundItem: hotActionsMenu.width / 5 //TODO rewrite?
+    property int sizeBackgroundItem: hotActionsMenu.width / 5
     property string filePath: "" //"autosave"
     property bool saveFlag: false
 
@@ -154,70 +154,7 @@ Page {
                     }
                 }
 
-
-//                Row {
-//                    id: pullMenu2
-//                    width: parent.width
-//                    height: childrenRect.height
-
-//                    MenuButton {
-//                        width: sizeBackgroundItemMainMenuFirstRow
-//                        mySource: "image://theme/icon-m-acknowledge";
-//                        myText: qsTr("Save as")
-//                        onClicked: {
-//                            pageStack.push(Qt.resolvedUrl("SaveAsPage.qml"), {
-//                                               homePath: "/home/nemo",
-//                                               showFormat: true,
-//                                               title: "Select file",
-//                                               showHiddenFiles: showHiddenFiles,
-//                                               callback: saveAsSetFilePath
-//                                           })
-//                        }
-//                    }
-
-//                    MenuButton {
-//                        width: sizeBackgroundItemMainMenuFirstRow
-//                        mySource: "image://theme/icon-m-folder";
-//                        myText: qsTr("Open")
-//                        onClicked: {
-//                            pageStack.push(Qt.resolvedUrl("FileChooserPage.qml"), {
-//                                               homePath: "/home/nemo",
-//                                               showFormat: true,
-//                                               title: "Select file",
-//                                               showHiddenFiles: showHiddenFiles,
-//                                               callback: setFilePath
-//                                           })
-//                        }
-//                    }
-
-//                    MenuButton {
-//                        width: sizeBackgroundItemMainMenuFirstRow
-//                        mySource: "image://theme/icon-m-note";
-//                        myText: qsTr("New")
-//                        onClicked: {
-//                            //TODO ask:Are you sure?
-//                            filePath = "";
-//                            myTextArea.text = "";
-//                        }
-//                    }
-
-//                    MenuButton {
-//                        width: sizeBackgroundItemMainMenuFirstRow
-//                        mySource: "image://theme/icon-m-document";
-//                        myText: qsTr("History")
-//                        onClicked: {
-////                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {
-////                                               currentFilePath: filePath,
-////                                               callback: setFilePath
-////                                           })
-//                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {
-//                                               callback: setFilePath
-//                                           })
-//                            //pageStack.push(Qt.resolvedUrl("HistoryPage.qml"))
-//                        }
-//                    }
-
-//                }
+                // my own component (To Do need some cleaning and optimisation)
                 MainRow {
                     id: pullMenu2
                     myWidth: parent.width
@@ -226,82 +163,91 @@ Page {
                 }
 
 
-                Row {
+//                Row {
+//                    id: pullMenu
+//                    width: parent.width
+//                    height: childrenRect.height
+
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenu
+//                        mySource: "image://theme/icon-m-acknowledge";
+//                        myText: qsTr("Save")
+//                        enabled: saveFlag
+//                        onClicked: {
+//                            if (filePath!=="") {
+//                                py.call('editFile.savings', [filePath,myTextArea.text], function() {
+//                                    //this code is inside to fix problem with async nature of python
+//                                    outputNotifications.close()
+//                                    outputNotifications.previewBody = qsTr("Document saved!")
+//                                    outputNotifications.publish()
+//                                    saveFlag = false;
+//                                }); //filePath is path where you want to save!
+//                            }
+
+//                            if (filePath==="") {
+//                                outputNotifications.close()
+//                                outputNotifications.previewBody = qsTr("Document can't be saved!")
+//                                outputNotifications.publish()
+//                            }
+//                        }
+//                    }
+
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenu
+//                        mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
+//                        myText: qsTr("R-only")
+//                        onClicked: {
+//                            if (myTextArea.readOnly == false) {
+//                                myTextArea.readOnly = true;
+//                            }
+//                            else {
+//                                myTextArea.readOnly = false;
+//                            }
+//                        }
+//                    }
+
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenu
+//                        mySource: "image://theme/icon-m-rotate-left";
+//                        myText: qsTr("Undo")
+//                        enabled: myTextArea._editor.canUndo
+//                        onClicked: {
+//                            myTextArea._editor.undo()
+//                        }
+//                    }
+
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenu
+//                        mySource: "image://theme/icon-m-rotate-right";
+//                        myText: qsTr("Redo")
+//                        enabled: myTextArea._editor.canRedo
+//                        onClicked: {
+//                            myTextArea._editor.redo()
+//                        }
+//                    }
+
+//                    MenuButton {
+//                        width: sizeBackgroundItemMainMenu
+//                        mySource: "../img/tab.svg";
+//                        myText: qsTr("Tab")
+//                        onClicked: {
+//                            var previousCursorPosition = myTextArea.cursorPosition;
+//                            myTextArea.text = myTextArea.text.slice(0, myTextArea.cursorPosition) + tabType + myTextArea.text.slice(myTextArea.cursorPosition, myTextArea.text.length);
+//                            myTextArea.cursorPosition = previousCursorPosition + 1;
+
+//                        }
+//                    }
+
+//                }
+
+                // my own component (To Do need some cleaning and optimisation)
+                EditRow {
                     id: pullMenu
-                    width: parent.width
-                    height: childrenRect.height
-
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenu
-                        mySource: "image://theme/icon-m-acknowledge";
-                        myText: qsTr("Save")
-                        enabled: saveFlag
-                        onClicked: {
-                            if (filePath!=="") {
-                                py.call('editFile.savings', [filePath,myTextArea.text], function() {
-                                    //this code is inside to fix problem with async nature of python
-                                    outputNotifications.close()
-                                    outputNotifications.previewBody = qsTr("Document saved!")
-                                    outputNotifications.publish()
-                                    saveFlag = false;
-                                }); //filePath is path where you want to save!
-                            }
-
-                            if (filePath==="") {
-                                outputNotifications.close()
-                                outputNotifications.previewBody = qsTr("Document can't be saved!")
-                                outputNotifications.publish()
-                            }
-                        }
-                    }
-
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenu
-                        mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
-                        myText: qsTr("R-only")
-                        onClicked: {
-                            if (myTextArea.readOnly == false) {
-                                myTextArea.readOnly = true;
-                            }
-                            else {
-                                myTextArea.readOnly = false;
-                            }
-                        }
-                    }
-
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenu
-                        mySource: "image://theme/icon-m-rotate-left";
-                        myText: qsTr("Undo")
-                        enabled: myTextArea._editor.canUndo
-                        onClicked: {
-                            myTextArea._editor.undo()
-                        }
-                    }
-
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenu
-                        mySource: "image://theme/icon-m-rotate-right";
-                        myText: qsTr("Redo")
-                        enabled: myTextArea._editor.canRedo
-                        onClicked: {
-                            myTextArea._editor.redo()
-                        }
-                    }
-
-                    MenuButton {
-                        width: sizeBackgroundItemMainMenu
-                        mySource: "../img/tab.svg";
-                        myText: qsTr("Tab")
-                        onClicked: {
-                            var previousCursorPosition = myTextArea.cursorPosition;
-                            myTextArea.text = myTextArea.text.slice(0, myTextArea.cursorPosition) + tabType + myTextArea.text.slice(myTextArea.cursorPosition, myTextArea.text.length);
-                            myTextArea.cursorPosition = previousCursorPosition + 1;
-
-                        }
-                    }
-
+                    myWidth: parent.width
+                    myHeight: childrenRect.height
+                    myMenuButtonWidth: sizeBackgroundItemMainMenu
                 }
+
             }
 
             MenuItem {
@@ -325,94 +271,102 @@ Page {
             height: hotActionsMenu.height
             visible: headerVisible
 
-            Row {
+            // my own component (To Do need some cleaning and optimisation)
+            EditRow {
                 id: hotActionsMenu
-                width: parent.width
-                height: childrenRect.height
+                myWidth: parent.width
+                myHeight: childrenRect.height
+                myMenuButtonWidth: sizeBackgroundItem
+            }
 
-                MenuButton {
-                    width: sizeBackgroundItem
-                    mySource: "image://theme/icon-m-acknowledge";
-                    myText: qsTr("Save")
-                    enabled: saveFlag
-                    onClicked: {
-                        if (filePath!=="") {
-                            py.call('editFile.savings', [filePath,myTextArea.text], function() {
-                                outputNotifications.close()
-                                outputNotifications.previewBody = qsTr("Document saved!")
-                                outputNotifications.publish()
-                                saveFlag = false;
-                            });//filePath is path where you want to save!
-                        }
+//            Row {
+//                id: hotActionsMenu
+//                width: parent.width
+//                height: childrenRect.height
+
+//                MenuButton {
+//                    width: sizeBackgroundItem
+//                    mySource: "image://theme/icon-m-acknowledge";
+//                    myText: qsTr("Save")
+//                    enabled: saveFlag
+//                    onClicked: {
+//                        if (filePath!=="") {
+//                            py.call('editFile.savings', [filePath,myTextArea.text], function() {
+//                                outputNotifications.close()
+//                                outputNotifications.previewBody = qsTr("Document saved!")
+//                                outputNotifications.publish()
+//                                saveFlag = false;
+//                            });//filePath is path where you want to save!
+//                        }
 
 
-                        if (filePath==="") {
-                            outputNotifications.close()
-                            outputNotifications.previewBody = qsTr("Document can't be saved!")
-                            outputNotifications.publish()
-                        }
-                    }
-                }
-
-                MenuButton {
-                    width: sizeBackgroundItem
-                    mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
-                    myText: qsTr("R-only")
-                    onClicked: {
-                        if (myTextArea.readOnly == false) {
-                            myTextArea.readOnly = true;
-                        }
-                        else {
-                            myTextArea.readOnly = false;
-                        }
-                    }
-                }
-
-                MenuButton {
-                    width: sizeBackgroundItem
-                    mySource: "image://theme/icon-m-rotate-left";
-                    myText: qsTr("Undo")
-                    enabled: myTextArea._editor.canUndo
-                    onClicked: {
-                        myTextArea._editor.undo()
-                    }
-                }
-
-                MenuButton {
-                    width: sizeBackgroundItem
-                    mySource: "image://theme/icon-m-rotate-right";
-                    myText: qsTr("Redo")
-                    enabled: myTextArea._editor.canRedo
-                    onClicked: {
-                        myTextArea._editor.redo()
-                    }
-                }
-
-                MenuButton {
-                    width: sizeBackgroundItem
-                    mySource: "../img/tab.svg";
-                    myText: qsTr("Tab")
-                    onClicked: {
-                        var previousCursorPosition = myTextArea.cursorPosition;
-                        myTextArea.text = myTextArea.text.slice(0, myTextArea.cursorPosition) + tabType + myTextArea.text.slice(myTextArea.cursorPosition, myTextArea.text.length);
-                        myTextArea.cursorPosition = previousCursorPosition + 1;
-
-                    }
-                }
-
-//                Item {
-//                    width: sizeBackgroundItemMainMenu
-//                    height: Theme.itemSizeSmall
-//                    Image {
-//                        id: saveFlag
-//                        width: Theme.iconSizeSmallPlus
-//                        height: Theme.iconSizeSmallPlus
-//                        anchors.centerIn: parent
-//                        source: "image://theme/icon-s-edit"
-//                        visible: false
+//                        if (filePath==="") {
+//                            outputNotifications.close()
+//                            outputNotifications.previewBody = qsTr("Document can't be saved!")
+//                            outputNotifications.publish()
+//                        }
 //                    }
 //                }
-            }
+
+//                MenuButton {
+//                    width: sizeBackgroundItem
+//                    mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
+//                    myText: qsTr("R-only")
+//                    onClicked: {
+//                        if (myTextArea.readOnly == false) {
+//                            myTextArea.readOnly = true;
+//                        }
+//                        else {
+//                            myTextArea.readOnly = false;
+//                        }
+//                    }
+//                }
+
+//                MenuButton {
+//                    width: sizeBackgroundItem
+//                    mySource: "image://theme/icon-m-rotate-left";
+//                    myText: qsTr("Undo")
+//                    enabled: myTextArea._editor.canUndo
+//                    onClicked: {
+//                        myTextArea._editor.undo()
+//                    }
+//                }
+
+//                MenuButton {
+//                    width: sizeBackgroundItem
+//                    mySource: "image://theme/icon-m-rotate-right";
+//                    myText: qsTr("Redo")
+//                    enabled: myTextArea._editor.canRedo
+//                    onClicked: {
+//                        myTextArea._editor.redo()
+//                    }
+//                }
+
+//                MenuButton {
+//                    width: sizeBackgroundItem
+//                    mySource: "../img/tab.svg";
+//                    myText: qsTr("Tab")
+//                    onClicked: {
+//                        var previousCursorPosition = myTextArea.cursorPosition;
+//                        myTextArea.text = myTextArea.text.slice(0, myTextArea.cursorPosition) + tabType + myTextArea.text.slice(myTextArea.cursorPosition, myTextArea.text.length);
+//                        myTextArea.cursorPosition = previousCursorPosition + 1;
+
+//                    }
+//                }
+
+////                Item {
+////                    width: sizeBackgroundItemMainMenu
+////                    height: Theme.itemSizeSmall
+////                    Image {
+////                        id: saveFlag
+////                        width: Theme.iconSizeSmallPlus
+////                        height: Theme.iconSizeSmallPlus
+////                        anchors.centerIn: parent
+////                        source: "image://theme/icon-s-edit"
+////                        visible: false
+////                    }
+////                }
+//            }
         }
 
 
