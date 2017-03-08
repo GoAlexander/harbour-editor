@@ -113,11 +113,11 @@
     </message>
     <message>
         <source>-You can copy the file path to the clipboard by selecting appropriate MenuItem in pulley menu</source>
-        <translation type="unfinished"></translation>
+        <translation>-Вы можете скопировать файловый путь путем выбора соответствующего элемента в пулл-меню</translation>
     </message>
     <message>
         <source>-Ancelad for tab icon, testing and help</source>
-        <translation type="unfinished"></translation>
+        <translation>-Ancelad за иконку табуляции, тестирование и помощь</translation>
     </message>
     <message>
         <source> - German translation</source>
@@ -125,7 +125,7 @@
     </message>
     <message>
         <source> - Dutch translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - голландский перевод</translation>
     </message>
 </context>
 <context>
@@ -140,42 +140,22 @@
     </message>
 </context>
 <context>
-    <name>FirstPage</name>
-    <message>
-        <source>Settings</source>
-        <translation>Настройки</translation>
-    </message>
+    <name>EditRow</name>
     <message>
         <source>Save</source>
         <translation>Сохр.</translation>
-    </message>
-    <message>
-        <source>R-only</source>
-        <translation>Чтение</translation>
-    </message>
-    <message>
-        <source>Save as</source>
-        <translation>Сохр. как</translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation>Открыть</translation>
     </message>
     <message>
         <source>Document saved!</source>
         <translation>Документ сохранен!</translation>
     </message>
     <message>
-        <source>New</source>
-        <translation>Новый</translation>
-    </message>
-    <message>
         <source>Document can&apos;t be saved!</source>
         <translation> Документ не может быть сохранен!</translation>
     </message>
     <message>
-        <source>Tab</source>
-        <translation>Tab</translation>
+        <source>R-only</source>
+        <translation>Чтение</translation>
     </message>
     <message>
         <source>Undo</source>
@@ -186,8 +166,19 @@
         <translation>Вперед</translation>
     </message>
     <message>
-        <source>History</source>
-        <translation>История</translation>
+        <source>Tab</source>
+        <translation>Tab</translation>
+    </message>
+</context>
+<context>
+    <name>FirstPage</name>
+    <message>
+        <source>Settings</source>
+        <translation>Настройки</translation>
+    </message>
+    <message>
+        <source>Document saved!</source>
+        <translation>Документ сохранен!</translation>
     </message>
     <message>
         <source>Search</source>
@@ -195,22 +186,48 @@
     </message>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Файловый путь копирован в буфер обмена</translation>
     </message>
 </context>
 <context>
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation type="unfinished">История</translation>
+        <translation>История</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить</translation>
     </message>
     <message>
         <source>Move to top</source>
-        <translation type="unfinished"></translation>
+        <translation>Переместить вверх</translation>
+    </message>
+</context>
+<context>
+    <name>MainRow</name>
+    <message>
+        <source>Save as</source>
+        <translation>Сохр. как</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation>Открыть</translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation>Новый</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation>История</translation>
+    </message>
+</context>
+<context>
+    <name>SearchRow</name>
+    <message>
+        <source>Search</source>
+        <translation>Поиск</translation>
     </message>
 </context>
 <context>
@@ -265,7 +282,7 @@
     </message>
     <message>
         <source>Type of tab:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип табуляции</translation>
     </message>
 </context>
 </TS>
