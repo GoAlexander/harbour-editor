@@ -140,25 +140,9 @@
     </message>
 </context>
 <context>
-    <name>FirstPage</name>
-    <message>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
+    <name>EditRow</name>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>R-only</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save as</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -166,15 +150,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Document can&apos;t be saved!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Tab</source>
+        <source>R-only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -186,7 +166,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>History</source>
+        <source>Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>FirstPage</name>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Document saved!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -210,6 +201,32 @@
     </message>
     <message>
         <source>Move to top</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MainRow</name>
+    <message>
+        <source>Save as</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SearchRow</name>
+    <message>
+        <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

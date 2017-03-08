@@ -140,54 +140,45 @@
     </message>
 </context>
 <context>
+    <name>EditRow</name>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished">Guardar</translation>
+    </message>
+    <message>
+        <source>Document saved!</source>
+        <translation type="unfinished">Documento guardado!</translation>
+    </message>
+    <message>
+        <source>Document can&apos;t be saved!</source>
+        <translation type="unfinished">Documento no puede ser guardado</translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">L-solo</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished">Anular</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished">Rehacer</translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished">Tab</translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>Settings</source>
         <translation>Ajustes</translation>
     </message>
     <message>
-        <source>Save</source>
-        <translation>Guardar</translation>
-    </message>
-    <message>
-        <source>R-only</source>
-        <translation>L-solo</translation>
-    </message>
-    <message>
-        <source>Save as</source>
-        <translation>G-como</translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation>Abrir</translation>
-    </message>
-    <message>
         <source>Document saved!</source>
         <translation>Documento guardado!</translation>
-    </message>
-    <message>
-        <source>New</source>
-        <translation>Nuevo</translation>
-    </message>
-    <message>
-        <source>Document can&apos;t be saved!</source>
-        <translation>Documento no puede ser guardado</translation>
-    </message>
-    <message>
-        <source>Tab</source>
-        <translation>Tab</translation>
-    </message>
-    <message>
-        <source>Undo</source>
-        <translation>Anular</translation>
-    </message>
-    <message>
-        <source>Redo</source>
-        <translation>Rehacer</translation>
-    </message>
-    <message>
-        <source>History</source>
-        <translation>Pasado</translation>
     </message>
     <message>
         <source>Search</source>
@@ -211,6 +202,32 @@
     <message>
         <source>Move to top</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MainRow</name>
+    <message>
+        <source>Save as</source>
+        <translation type="unfinished">G-como</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="unfinished">Abrir</translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation type="unfinished">Nuevo</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished">Pasado</translation>
+    </message>
+</context>
+<context>
+    <name>SearchRow</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Buscar</translation>
     </message>
 </context>
 <context>

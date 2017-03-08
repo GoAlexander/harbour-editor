@@ -140,54 +140,45 @@
     </message>
 </context>
 <context>
+    <name>EditRow</name>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Document saved!</source>
+        <translation type="unfinished">Dokument gesichert.</translation>
+    </message>
+    <message>
+        <source>Document can&apos;t be saved!</source>
+        <translation type="unfinished">Dokument kann nicht gesichert werden!</translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished"> </translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <source>Save</source>
-        <translation> </translation>
-    </message>
-    <message>
-        <source>R-only</source>
-        <translation> </translation>
-    </message>
-    <message>
-        <source>Save as</source>
-        <translation>Sichern als</translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation>Öffne</translation>
-    </message>
-    <message>
         <source>Document saved!</source>
         <translation>Dokument gesichert.</translation>
-    </message>
-    <message>
-        <source>New</source>
-        <translation>Neu</translation>
-    </message>
-    <message>
-        <source>Document can&apos;t be saved!</source>
-        <translation>Dokument kann nicht gesichert werden!</translation>
-    </message>
-    <message>
-        <source>Tab</source>
-        <translation> </translation>
-    </message>
-    <message>
-        <source>Undo</source>
-        <translation> </translation>
-    </message>
-    <message>
-        <source>Redo</source>
-        <translation> </translation>
-    </message>
-    <message>
-        <source>History</source>
-        <translation>Chronik</translation>
     </message>
     <message>
         <source>Search</source>
@@ -211,6 +202,32 @@
     <message>
         <source>Move to top</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MainRow</name>
+    <message>
+        <source>Save as</source>
+        <translation type="unfinished">Sichern als</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="unfinished">Öffne</translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation type="unfinished">Neu</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished">Chronik</translation>
+    </message>
+</context>
+<context>
+    <name>SearchRow</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Suche</translation>
     </message>
 </context>
 <context>

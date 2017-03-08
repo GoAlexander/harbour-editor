@@ -140,54 +140,45 @@
     </message>
 </context>
 <context>
+    <name>EditRow</name>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished">Spara</translation>
+    </message>
+    <message>
+        <source>Document saved!</source>
+        <translation type="unfinished">Dokument sparat!</translation>
+    </message>
+    <message>
+        <source>Document can&apos;t be saved!</source>
+        <translation type="unfinished">Dokumentet kan inte sparas!</translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">R-only</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished">Ångra</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished">Upprepa</translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished">Tab</translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>Settings</source>
         <translation>Inställningar</translation>
     </message>
     <message>
-        <source>Save</source>
-        <translation>Spara</translation>
-    </message>
-    <message>
-        <source>R-only</source>
-        <translation>R-only</translation>
-    </message>
-    <message>
-        <source>Save as</source>
-        <translation>Spara som</translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation>Öppna</translation>
-    </message>
-    <message>
         <source>Document saved!</source>
         <translation>Dokument sparat!</translation>
-    </message>
-    <message>
-        <source>New</source>
-        <translation>Nytt</translation>
-    </message>
-    <message>
-        <source>Document can&apos;t be saved!</source>
-        <translation>Dokumentet kan inte sparas!</translation>
-    </message>
-    <message>
-        <source>Tab</source>
-        <translation>Tab</translation>
-    </message>
-    <message>
-        <source>Undo</source>
-        <translation>Ångra</translation>
-    </message>
-    <message>
-        <source>Redo</source>
-        <translation>Upprepa</translation>
-    </message>
-    <message>
-        <source>History</source>
-        <translation>Historik</translation>
     </message>
     <message>
         <source>Search</source>
@@ -211,6 +202,32 @@
     <message>
         <source>Move to top</source>
         <translation>Flytta till toppen</translation>
+    </message>
+</context>
+<context>
+    <name>MainRow</name>
+    <message>
+        <source>Save as</source>
+        <translation type="unfinished">Spara som</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="unfinished">Öppna</translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation type="unfinished">Nytt</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished">Historik</translation>
+    </message>
+</context>
+<context>
+    <name>SearchRow</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Sök</translation>
     </message>
 </context>
 <context>

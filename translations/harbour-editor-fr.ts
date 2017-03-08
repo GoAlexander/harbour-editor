@@ -140,54 +140,45 @@
     </message>
 </context>
 <context>
+    <name>EditRow</name>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished">Enrg.</translation>
+    </message>
+    <message>
+        <source>Document saved!</source>
+        <translation type="unfinished">Document enregistré !</translation>
+    </message>
+    <message>
+        <source>Document can&apos;t be saved!</source>
+        <translation type="unfinished">Le document ne peut pas être enregistré !</translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">Lire</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished">Annuler</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished">Rétab.</translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished">Onglet</translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
     <message>
-        <source>Save</source>
-        <translation>Enrg.</translation>
-    </message>
-    <message>
-        <source>R-only</source>
-        <translation>Lire</translation>
-    </message>
-    <message>
-        <source>Save as</source>
-        <translation>Enrg.</translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation>Ouvrir</translation>
-    </message>
-    <message>
         <source>Document saved!</source>
         <translation>Document enregistré !</translation>
-    </message>
-    <message>
-        <source>New</source>
-        <translation>Nouveau</translation>
-    </message>
-    <message>
-        <source>Document can&apos;t be saved!</source>
-        <translation>Le document ne peut pas être enregistré !</translation>
-    </message>
-    <message>
-        <source>Tab</source>
-        <translation>Onglet</translation>
-    </message>
-    <message>
-        <source>Undo</source>
-        <translation>Annuler</translation>
-    </message>
-    <message>
-        <source>Redo</source>
-        <translation>Rétab.</translation>
-    </message>
-    <message>
-        <source>History</source>
-        <translation>Histor.</translation>
     </message>
     <message>
         <source>Search</source>
@@ -211,6 +202,32 @@
     <message>
         <source>Move to top</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MainRow</name>
+    <message>
+        <source>Save as</source>
+        <translation type="unfinished">Enrg.</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="unfinished">Ouvrir</translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation type="unfinished">Nouveau</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished">Histor.</translation>
+    </message>
+</context>
+<context>
+    <name>SearchRow</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Rechercher</translation>
     </message>
 </context>
 <context>
