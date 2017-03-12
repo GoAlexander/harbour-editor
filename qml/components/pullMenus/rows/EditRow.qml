@@ -42,7 +42,7 @@ Row {
     }
 
     MenuButton {
-        width: sizeBackgroundItemMainMenu
+        width: myMenuButtonWidth
         mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
         myText: qsTr("R-only")
         onClicked: {
@@ -56,7 +56,7 @@ Row {
     }
 
     MenuButton {
-        width: sizeBackgroundItemMainMenu
+        width: myMenuButtonWidth
         mySource: "image://theme/icon-m-rotate-left";
         myText: qsTr("Undo")
         enabled: myTextArea._editor.canUndo
@@ -66,7 +66,7 @@ Row {
     }
 
     MenuButton {
-        width: sizeBackgroundItemMainMenu
+        width: myMenuButtonWidth
         mySource: "image://theme/icon-m-rotate-right";
         myText: qsTr("Redo")
         enabled: myTextArea._editor.canRedo
@@ -76,7 +76,7 @@ Row {
     }
 
     MenuButton {
-        width: sizeBackgroundItemMainMenu
+        width: myMenuButtonWidth
         mySource: "../img/tab.svg";
         myText: qsTr("Tab")
         onClicked: {
