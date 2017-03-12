@@ -143,31 +143,31 @@
     <name>EditRow</name>
     <message>
         <source>Save</source>
-        <translation type="unfinished">Guardar</translation>
+        <translation>Guardar</translation>
     </message>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished">Documento guardado!</translation>
+        <translation>Documento guardado!</translation>
     </message>
     <message>
         <source>Document can&apos;t be saved!</source>
-        <translation type="unfinished">Documento no puede ser guardado</translation>
+        <translation>Documento no puede ser guardado</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished">L-solo</translation>
+        <translation>L-solo</translation>
     </message>
     <message>
         <source>Undo</source>
-        <translation type="unfinished">Anular</translation>
+        <translation>Anular</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished">Rehacer</translation>
+        <translation>Rehacer</translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished">Tab</translation>
+        <translation>Tab</translation>
     </message>
 </context>
 <context>
@@ -181,10 +181,6 @@
         <translation>Documento guardado!</translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation>Buscar</translation>
-    </message>
-    <message>
         <source>File path copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -193,7 +189,7 @@
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation type="unfinished">Pasado</translation>
+        <translation>Pasado</translation>
     </message>
     <message>
         <source>Delete</source>
@@ -208,26 +204,26 @@
     <name>MainRow</name>
     <message>
         <source>Save as</source>
-        <translation type="unfinished">G-como</translation>
+        <translation>G-como</translation>
     </message>
     <message>
         <source>Open</source>
-        <translation type="unfinished">Abrir</translation>
+        <translation>Abrir</translation>
     </message>
     <message>
         <source>New</source>
-        <translation type="unfinished">Nuevo</translation>
+        <translation>Nuevo</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished">Pasado</translation>
+        <translation>Pasado</translation>
     </message>
 </context>
 <context>
     <name>SearchRow</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Buscar</translation>
+        <translation>Buscar</translation>
     </message>
 </context>
 <context>

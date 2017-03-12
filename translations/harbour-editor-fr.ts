@@ -143,31 +143,31 @@
     <name>EditRow</name>
     <message>
         <source>Save</source>
-        <translation type="unfinished">Enrg.</translation>
+        <translation>Enrg.</translation>
     </message>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished">Document enregistré !</translation>
+        <translation>Document enregistré !</translation>
     </message>
     <message>
         <source>Document can&apos;t be saved!</source>
-        <translation type="unfinished">Le document ne peut pas être enregistré !</translation>
+        <translation>Le document ne peut pas être enregistré !</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished">Lire</translation>
+        <translation>Lire</translation>
     </message>
     <message>
         <source>Undo</source>
-        <translation type="unfinished">Annuler</translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished">Rétab.</translation>
+        <translation>Rétab.</translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished">Onglet</translation>
+        <translation>Onglet</translation>
     </message>
 </context>
 <context>
@@ -181,10 +181,6 @@
         <translation>Document enregistré !</translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation>Rechercher</translation>
-    </message>
-    <message>
         <source>File path copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -193,7 +189,7 @@
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation type="unfinished">Histor.</translation>
+        <translation>Histor.</translation>
     </message>
     <message>
         <source>Delete</source>
@@ -208,26 +204,26 @@
     <name>MainRow</name>
     <message>
         <source>Save as</source>
-        <translation type="unfinished">Enrg.</translation>
+        <translation>Enrg.</translation>
     </message>
     <message>
         <source>Open</source>
-        <translation type="unfinished">Ouvrir</translation>
+        <translation>Ouvrir</translation>
     </message>
     <message>
         <source>New</source>
-        <translation type="unfinished">Nouveau</translation>
+        <translation>Nouveau</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished">Histor.</translation>
+        <translation>Histor.</translation>
     </message>
 </context>
 <context>
     <name>SearchRow</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Rechercher</translation>
+        <translation>Rechercher</translation>
     </message>
 </context>
 <context>
