@@ -4,17 +4,15 @@ import "../../" //for import of MenuButton
 import "../../../pages" //for import of SaveAsPage.qml + to do visible functions
 
 
+//TODO -> use next variables as parameters (don`t use import)
+//-saveFlag
+//-filePath
+//-outputNotifications
+//-myTextArea.*
+
 Row {
-    property int myWidth
-    property int myHeight
     property int myMenuButtonWidth
     //property string filePath
-
-    //id: pullMenu
-    //width: parent.width
-    width: myWidth
-    //height: childrenRect.height
-    height: myHeight
 
     MenuButton {
         //width: sizeBackgroundItemMainMenu

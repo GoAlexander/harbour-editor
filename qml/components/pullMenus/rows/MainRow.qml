@@ -6,12 +6,12 @@ import "../../../pages" //for import of SaveAsPage.qml + to do visible functions
 
 // Save as - Open - New - History
 Row {
-    property int myWidth
-    property int myHeight
+    //property int myWidth
+    //property int myHeight
     property int myMenuButtonWidth
 
-    width: myWidth
-    height: myHeight
+    //width: myWidth
+    //height: myHeight
 
     MenuButton {
         width: myMenuButtonWidth

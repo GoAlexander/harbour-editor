@@ -18,10 +18,10 @@ Row {
         if (match) {
             if (direction=="back") {
                 myTextArea.cursorPosition = myText.lastIndexOf(match[match.length-1], position)
-                if(myText.lastIndexOf(match[match.length-1], position) != -1) myTextArea.select(myTextArea.cursorPosition,myTextArea.cursorPosition+text.length)
+                if(myText.lastIndexOf(match[match.length-1], position) != -1) myTextArea.select(myTextArea.cursorPosition, myTextArea.cursorPosition+text.length)
             } else {
                 myTextArea.cursorPosition = myText.indexOf(match[0],position)
-                if (myText.indexOf(match[0],position)!=-1) myTextArea.select(myTextArea.cursorPosition,myTextArea.cursorPosition+text.length)
+                if (myText.indexOf(match[0],position)!=-1) myTextArea.select(myTextArea.cursorPosition, myTextArea.cursorPosition+text.length)
             }
             myTextArea.forceActiveFocus()
         } else {
