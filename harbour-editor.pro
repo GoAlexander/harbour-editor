@@ -41,7 +41,8 @@ TRANSLATIONS += translations/harbour-editor-de.ts \
 	translations/harbour-editor-sv.ts \
 	translations/harbour-editor-fr.ts \
         translations/harbour-editor-es.ts \
-        translations/harbour-editor-nl.ts
+        translations/harbour-editor-nl.ts \
+        translations/harbour-editor-pl.ts
 
 DISTFILES += \
     qml/pages/AboutPage.qml \
