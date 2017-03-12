@@ -143,31 +143,31 @@
     <name>EditRow</name>
     <message>
         <source>Save</source>
-        <translation type="unfinished"> </translation>
+        <translation> </translation>
     </message>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished">Dokument gesichert.</translation>
+        <translation>Dokument gesichert.</translation>
     </message>
     <message>
         <source>Document can&apos;t be saved!</source>
-        <translation type="unfinished">Dokument kann nicht gesichert werden!</translation>
+        <translation>Dokument kann nicht gesichert werden!</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished"> </translation>
+        <translation> </translation>
     </message>
     <message>
         <source>Undo</source>
-        <translation type="unfinished"> </translation>
+        <translation> </translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished"> </translation>
+        <translation> </translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished"> </translation>
+        <translation> </translation>
     </message>
 </context>
 <context>
@@ -181,10 +181,6 @@
         <translation>Dokument gesichert.</translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation>Suche</translation>
-    </message>
-    <message>
         <source>File path copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
@@ -193,7 +189,7 @@
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation type="unfinished">Chronik</translation>
+        <translation>Chronik</translation>
     </message>
     <message>
         <source>Delete</source>
@@ -208,26 +204,26 @@
     <name>MainRow</name>
     <message>
         <source>Save as</source>
-        <translation type="unfinished">Sichern als</translation>
+        <translation>Sichern als</translation>
     </message>
     <message>
         <source>Open</source>
-        <translation type="unfinished">Öffne</translation>
+        <translation>Öffne</translation>
     </message>
     <message>
         <source>New</source>
-        <translation type="unfinished">Neu</translation>
+        <translation>Neu</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished">Chronik</translation>
+        <translation>Chronik</translation>
     </message>
 </context>
 <context>
     <name>SearchRow</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Suche</translation>
+        <translation>Suche</translation>
     </message>
 </context>
 <context>
