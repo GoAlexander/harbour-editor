@@ -84,14 +84,14 @@ Page {
             Label {
                 id: labelPath
                 //anchors.margins:Theme.horizontalPageMargin
-                //anchors.verticalCenter: Text.verticalCenter
                 anchors {
                     left: parent.left
                     right: parent.right
                     verticalCenter: Text.verticalCenter
                     margins: Theme.paddingLarge
                 }
-                //spacing: Theme.paddingMedium
+                wrapMode: Text.WordWrap
+                font.pixelSize: Theme.fontSizeSmall
                 text: value
             }
 
