@@ -181,10 +181,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>File path copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>

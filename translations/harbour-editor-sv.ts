@@ -143,31 +143,31 @@
     <name>EditRow</name>
     <message>
         <source>Save</source>
-        <translation type="unfinished">Spara</translation>
+        <translation>Spara</translation>
     </message>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished">Dokument sparat!</translation>
+        <translation>Dokument sparat!</translation>
     </message>
     <message>
         <source>Document can&apos;t be saved!</source>
-        <translation type="unfinished">Dokumentet kan inte sparas!</translation>
+        <translation>Dokumentet kan inte sparas!</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished">R-only</translation>
+        <translation>R-only</translation>
     </message>
     <message>
         <source>Undo</source>
-        <translation type="unfinished">Ångra</translation>
+        <translation>Ångra</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished">Upprepa</translation>
+        <translation>Upprepa</translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished">Tab</translation>
+        <translation>Tab</translation>
     </message>
 </context>
 <context>
@@ -181,10 +181,6 @@
         <translation>Dokument sparat!</translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation>Sök</translation>
-    </message>
-    <message>
         <source>File path copied to the clipboard</source>
         <translation>Filsökväg kopierad till urklipp</translation>
     </message>
@@ -193,7 +189,7 @@
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation type="unfinished">Historik</translation>
+        <translation>Historik</translation>
     </message>
     <message>
         <source>Delete</source>
@@ -208,26 +204,26 @@
     <name>MainRow</name>
     <message>
         <source>Save as</source>
-        <translation type="unfinished">Spara som</translation>
+        <translation>Spara som</translation>
     </message>
     <message>
         <source>Open</source>
-        <translation type="unfinished">Öppna</translation>
+        <translation>Öppna</translation>
     </message>
     <message>
         <source>New</source>
-        <translation type="unfinished">Nytt</translation>
+        <translation>Nytt</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished">Historik</translation>
+        <translation>Historik</translation>
     </message>
 </context>
 <context>
     <name>SearchRow</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Sök</translation>
+        <translation>Sök</translation>
     </message>
 </context>
 <context>

@@ -107,6 +107,26 @@
         <source> - French translation</source>
         <translation>Tłumaczenie francuskie</translation>
     </message>
+    <message>
+        <source>-Ancelad for tab icon, testing and help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-You can copy the file path to the clipboard by selecting appropriate MenuItem in pulley menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Polish translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - German translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> - Dutch translation</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -120,46 +140,90 @@
     </message>
 </context>
 <context>
+    <name>EditRow</name>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished">Zapisz</translation>
+    </message>
+    <message>
+        <source>Document saved!</source>
+        <translation type="unfinished">Dokument zapisany!</translation>
+    </message>
+    <message>
+        <source>Document can&apos;t be saved!</source>
+        <translation type="unfinished">Dokument nie może być zapisany!</translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">Odczyt</translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished">Tab</translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>Settings</source>
         <translation>Ustawienia</translation>
     </message>
     <message>
-        <source>Save</source>
-        <translation>Zapisz</translation>
-    </message>
-    <message>
-        <source>R-only</source>
-        <translation>Odczyt</translation>
-    </message>
-    <message>
-        <source>Save as</source>
-        <translation>Z. jako</translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation>Otwórz</translation>
-    </message>
-    <message>
-        <source>Save</source>
-        <translation>Zapisz</translation>
-    </message>
-    <message>
         <source>Document saved!</source>
         <translation>Dokument zapisany!</translation>
     </message>
     <message>
+        <source>File path copied to the clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HistoryPage</name>
+    <message>
+        <source>History</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Move to top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MainRow</name>
+    <message>
+        <source>Save as</source>
+        <translation type="unfinished">Z. jako</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="unfinished">Otwórz</translation>
+    </message>
+    <message>
         <source>New</source>
-        <translation>Nowy</translation>
+        <translation type="unfinished">Nowy</translation>
     </message>
     <message>
-        <source>Document can't be saved!</source>
-        <translation>Dokument nie może być zapisany!</translation>
+        <source>History</source>
+        <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>SearchRow</name>
     <message>
-        <source>Tab</source>
-        <translation>Tab</translation>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -211,6 +275,10 @@
     <message>
         <source>Be careful to enable this option!</source>
         <translation>Bądź ostrożny uruchamiając tę funkcję!</translation>
+    </message>
+    <message>
+        <source>Type of tab:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

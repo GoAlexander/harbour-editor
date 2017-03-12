@@ -181,10 +181,6 @@
         <translation>Документ сохранен!</translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation>Поиск</translation>
-    </message>
-    <message>
         <source>File path copied to the clipboard</source>
         <translation>Файловый путь копирован в буфер обмена</translation>
     </message>

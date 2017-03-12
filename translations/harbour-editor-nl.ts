@@ -140,58 +140,49 @@
     </message>
 </context>
 <context>
+    <name>EditRow</name>
+    <message>
+        <source>Save</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Document saved!</source>
+        <translation type="unfinished">Document opgeslagen!</translation>
+    </message>
+    <message>
+        <source>Document can&apos;t be saved!</source>
+        <translation type="unfinished">Document kan niet worden opgeslagen!</translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished"> </translation>
+    </message>
+</context>
+<context>
     <name>FirstPage</name>
     <message>
         <source>Settings</source>
         <translation>Instellingen</translation>
     </message>
     <message>
-        <source>Save</source>
-        <translation> </translation>
-    </message>
-    <message>
-        <source>R-only</source>
-        <translation> </translation>
-    </message>
-    <message>
-        <source>Save as</source>
-        <translation>Opslaan als</translation>
-    </message>
-    <message>
-        <source>Open</source>
-        <translation>Openen</translation>
-    </message>
-    <message>
         <source>Document saved!</source>
         <translation>Document opgeslagen!</translation>
     </message>
     <message>
-        <source>New</source>
-        <translation>Nieuw</translation>
-    </message>
-    <message>
-        <source>Document can&apos;t be saved!</source>
-        <translation>Document kan niet worden opgeslagen!</translation>
-    </message>
-    <message>
-        <source>Tab</source>
-        <translation> </translation>
-    </message>
-    <message>
-        <source>Undo</source>
-        <translation> </translation>
-    </message>
-    <message>
-        <source>Redo</source>
-        <translation> </translation>
-    </message>
-    <message>
-        <source>History</source>
-        <translation>Geschiedenis</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Zoeken</translation>
+        <source>File path copied to the clipboard</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -203,6 +194,36 @@
     <message>
         <source>Delete</source>
         <translation>Verwijderen</translation>
+    </message>
+    <message>
+        <source>Move to top</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MainRow</name>
+    <message>
+        <source>Save as</source>
+        <translation type="unfinished">Opslaan als</translation>
+    </message>
+    <message>
+        <source>Open</source>
+        <translation type="unfinished">Openen</translation>
+    </message>
+    <message>
+        <source>New</source>
+        <translation type="unfinished">Nieuw</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation type="unfinished">Geschiedenis</translation>
+    </message>
+</context>
+<context>
+    <name>SearchRow</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Zoeken</translation>
     </message>
 </context>
 <context>
@@ -254,6 +275,10 @@
     <message>
         <source>Be careful to enable this option!</source>
         <translation>Let op bij het inschakelen van deze optie!</translation>
+    </message>
+    <message>
+        <source>Type of tab:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
