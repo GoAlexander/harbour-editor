@@ -5,7 +5,7 @@ import "../../../pages" //for import of SaveAsPage.qml + to do visible functions
 
 
 //TODO -> use next variables as parameters (don`t use import)
-//-saveFlag
+//-saveFlag (!)
 //-filePath
 //-outputNotifications
 //-myTextArea.*

@@ -134,8 +134,6 @@ Page {
             // my own component (To Do need some cleaning and optimisation)
             EditRow {
                 id: hotActionsMenu
-                //myWidth: parent.width
-                //myHeight: childrenRect.height
                 width: parent.width
                 height: childrenRect.height
                 myMenuButtonWidth: sizeBackgroundItem
