@@ -31,11 +31,14 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
+import "service"
 import io.thp.pyotherside 1.3
 
 
 ApplicationWindow
 {
+    Dao { id: dao }
+
     initialPage: Component { FirstPage {
             id: mainPage
             Component.onCompleted: {
@@ -67,6 +70,8 @@ ApplicationWindow
     property bool showHiddenFiles
 
     //TODO add these variables!
+    //property var database
+    // ---
     property bool darkTheme: false
     property string bgColor
 
