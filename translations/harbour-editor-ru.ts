@@ -280,5 +280,13 @@
         <source>Type of tab:</source>
         <translation>Тип табуляции</translation>
     </message>
+    <message>
+        <source>Dark Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ambience Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

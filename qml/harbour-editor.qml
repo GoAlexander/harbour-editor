@@ -66,6 +66,10 @@ ApplicationWindow
 
     property bool showHiddenFiles
 
+    //TODO add these variables!
+    property bool darkTheme: false
+    property string bgColor
+
 
     Python {
         id: py2 //TODO rename!

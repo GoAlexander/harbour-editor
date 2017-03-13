@@ -70,133 +70,164 @@ Page {
         }
     }
 
-    SilicaFlickable {
-        id: view
+    Rectangle {
+        id:background
+        color: bgColor
         anchors.fill: parent
+        visible: true
 
-        // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
-        PullDownMenu {
-            MenuItem {
-                text: qsTr("Settings")
-                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+        SilicaFlickable {
+            id: view
+            anchors.fill: parent
+
+            // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
+            PullDownMenu {
+                MenuItem {
+                    text: qsTr("Settings")
+                    onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+                }
+
+                Column {
+                    width: parent.width
+                    height: childrenRect.height
+
+                    // my own component (To Do need some cleaning and optimisation)
+                    SearchRow {
+                        //id: pullMenu3
+                        width: parent.width
+                        height: childrenRect.height
+                    }
+
+                    // my own component (To Do need some cleaning and optimisation)
+                    MainRow {
+                        id: pullMenu2
+                        width: parent.width
+                        height: childrenRect.height
+                        myMenuButtonWidth:sizeBackgroundItemMainMenuFirstRow
+                    }
+
+                    // my own component (To Do need some cleaning and optimisation)
+                    EditRow {
+                        id: pullMenu
+                        width: parent.width
+                        height: childrenRect.height
+                        myMenuButtonWidth: sizeBackgroundItemMainMenu
+                    }
+
+                }
+
+                MenuItem {
+                    visible: (filePath == "") ? false : true
+                    text: filePath
+                    font.pixelSize: Theme.fontSizeTiny
+                    color: Theme.highlightColor
+                    onClicked: {
+                        Clipboard.text = filePath;
+                        outputNotifications.close()
+                        outputNotifications.previewBody = qsTr("File path copied to the clipboard")
+                        outputNotifications.publish()
+                    }
+                }
+
             }
 
-            Column {
-                width: parent.width
-                height: childrenRect.height
+            //        SilicaFlickable {
+            //            property QtObject ngfeffect
+            //            property Item selectedItem: null
 
-                // my own component (To Do need some cleaning and optimisation)
-                SearchRow {
-                    //id: pullMenu3
-                    width: parent.width
-                    height: childrenRect.height
-                }
+            //            width: parent.width
+            //            height: hotActionsMenu.height
+            //            anchors.fill: parent
+            //            flickableDirection: Flickable.HorizontalFlick
 
-                // my own component (To Do need some cleaning and optimisation)
-                MainRow {
-                    id: pullMenu2
-                    width: parent.width
-                    height: childrenRect.height
-                    myMenuButtonWidth:sizeBackgroundItemMainMenuFirstRow
-                }
+            PageHeader {
+                id: header
+                height: hotActionsMenu.height
+                visible: headerVisible
 
                 // my own component (To Do need some cleaning and optimisation)
                 EditRow {
-                    id: pullMenu
+                    id: hotActionsMenu
                     width: parent.width
                     height: childrenRect.height
-                    myMenuButtonWidth: sizeBackgroundItemMainMenu
-                }
-
-            }
-
-            MenuItem {
-                visible: (filePath == "") ? false : true
-                text: filePath
-                font.pixelSize: Theme.fontSizeTiny
-                color: Theme.highlightColor
-                onClicked: {
-                    Clipboard.text = filePath;
-                    outputNotifications.close()
-                    outputNotifications.previewBody = qsTr("File path copied to the clipboard")
-                    outputNotifications.publish()
+                    myMenuButtonWidth: sizeBackgroundItem
                 }
             }
 
-        }
+            //            boundsBehavior: {
+            ////                if(!normalMode || querybar.editing || (currentTab() && !currentTab().viewStack.empty))
+            ////                    return Flickable.StopAtBounds;
 
+            //                return Flickable.DragAndOvershootBounds;
+            //            }
 
-        PageHeader {
-            id: header
-            height: hotActionsMenu.height
-            visible: headerVisible
+            //            onDraggingChanged: {
+            //                console.log("Test!!!");
+            //            }
 
-            // my own component (To Do need some cleaning and optimisation)
-            EditRow {
-                id: hotActionsMenu
-                width: parent.width
-                height: childrenRect.height
-                myMenuButtonWidth: sizeBackgroundItem
-            }
-        }
+            //            Component.onCompleted: {
+            //                ngfeffect = Qt.createQmlObject("import org.nemomobile.ngf 1.0; NonGraphicalFeedback { event: 'pulldown_highlight' }", content, 'NonGraphicalFeedback');
+            //            }
+            //        }
 
+            SilicaFlickable {
+                id: editorView
+                anchors.fill: parent
+                anchors.topMargin: header.visible ? header.height : 0 // для сдвига при отключении quick actions menu
+                contentHeight: myTextArea.height
+                clip: true
 
-        SilicaFlickable {
-            id: editorView
-            anchors.fill: parent
-            anchors.topMargin: header.visible ? header.height : 0 // для сдвига при отключении quick actions menu
-            contentHeight: myTextArea.height
-            clip: true
+                Label {
+                    id: lineNumbers
+                    y: 8
+                    height: myTextArea.height
+                    color: Theme.secondaryHighlightColor
+                    font.pixelSize: fontSize
+                    text: "1"
+                    visible: lineNumbersVisible
+                }
+                TextArea {
+                    id: myTextArea
+                    width: parent.width
+                    font.family: fontType
+                    font.pixelSize: fontSize
+                    background: null
+                    selectionMode: TextEdit.SelectCharacters
+                    //color: "green"
+                    focus: true
+                    onTextChanged: {
+                        console.log("filePath = " + filePath, fontSize, font.family);
+                        console.log("Real lines: " + myTextArea._editor.lineCount);
+                        saveFlag = true;
 
-            Label {
-                id: lineNumbers
-                y: 8
-                height: myTextArea.height
-                color: Theme.secondaryHighlightColor
-                font.pixelSize: fontSize
-                text: "1"
-                visible: lineNumbersVisible
-            }
-            TextArea {
-                id: myTextArea
-                width: parent.width
-                font.family: fontType
-                font.pixelSize: fontSize
-                background: null
-                selectionMode: TextEdit.SelectCharacters
-                //color: "green"
-                focus: true
-                onTextChanged: {
-                    console.log("filePath = " + filePath, fontSize, font.family);
-                    console.log("Real lines: " + myTextArea._editor.lineCount);
-                    saveFlag = true;
+                        //For line numeration: //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
+                        //console.log(font.pixelSize, myTextArea._editor.lineCount);
+                        lineNumberChanged();
 
-                    //For line numeration: //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
-                     //console.log(font.pixelSize, myTextArea._editor.lineCount);
-                    lineNumberChanged();
+                        //For cover:
+                        charNumber = myTextArea.text.length;
+                        linesNumber = numberOfLines();
 
-                    //For cover:
-                    charNumber = myTextArea.text.length;
-                    linesNumber = numberOfLines();
-
-                    //Autosave
-                    if (filePath!=="") {
-                        py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
+                        //Autosave
+                        if (filePath!=="") {
+                            py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
+                        }
                     }
+                    //                onRotationChanged: {
+                    //                    //TODO пересчитать label
+                    //                }
                 }
-//                onRotationChanged: {
-//                    //TODO пересчитать label
-//                }
+                VerticalScrollDecorator { flickable: editorView }
             }
-            VerticalScrollDecorator { flickable: editorView }
+
+
         }
     }
 
-
     onStatusChanged: {
-        if(status !== PageStatus.Active){
+        if (status !== PageStatus.Active) {
             return
-        }else{
+        } else {
             console.log(filePath)
             if (filePath!=="") {
                 py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
