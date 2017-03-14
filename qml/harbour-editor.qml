@@ -79,6 +79,29 @@ ApplicationWindow
     Python {
         id: py2 //TODO rename!
         Component.onCompleted: {
+
+            var resultDB;
+            dao.getValue(function(result){
+                resultDB = result;
+            });
+            console.log(resultDB);
+            console.log(resultDB.item(8));
+            console.log(resultDB.item(9))
+            if (resultDB.item(8) === 1) {
+                darkTheme = true;
+            } else {
+                darkTheme = false;
+            }
+            //darkTheme = resultDB.item(8)
+            if (resultDB.item(9) === "transparent") { //TODO на самом деле не работает, произвести
+                                                     //нормальное приведение типов!
+                bgColor = "transparent";
+            } else {
+                bgColor = "#1e1e27";
+            }
+            //bgColor = resultDB.item(9);
+
+
             addImportPath(Qt.resolvedUrl("."));
             importModule('editFile', function () {
                 py2.call('editFile.getValue', ["headerVisible"], function(result) {
