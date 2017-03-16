@@ -282,11 +282,11 @@
     </message>
     <message>
         <source>Dark Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Mörkt tema</translation>
     </message>
     <message>
         <source>Ambience Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Atmosfär-tema</translation>
     </message>
 </context>
 </TS>
