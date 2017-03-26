@@ -97,8 +97,14 @@ ApplicationWindow
                 darkTheme = false;
             }
             //darkTheme = resultDB.item(8)
-            if (resultDB.item(9) === "transparent") { //TODO на самом деле не работает, произвести
-                                                     //нормальное приведение типов!
+//            if (resultDB.item(9) === "transparent") { //TODO на самом деле не работает, произвести
+//                                                     //нормальное приведение типов!
+//                bgColor = "transparent";
+//            } else {
+//                bgColor = "#1e1e27";
+//            }
+            if (darkTheme === false) { //TODO на самом деле не работает, произвести
+                //нормальное приведение типов!
                 bgColor = "transparent";
             } else {
                 bgColor = "#1e1e27";
