@@ -67,6 +67,10 @@ ApplicationWindow
     property int charNumber: 0
     property int linesNumber: 0
 
+    //TODO: implement:
+    property int wordsNumber: 0
+    property string fileName: "filePath"
+
     property bool showHiddenFiles
 
     //TODO add these variables!

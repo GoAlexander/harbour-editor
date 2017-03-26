@@ -3,17 +3,89 @@ import Sailfish.Silica 1.0
 import "../pages"
 
 CoverBackground {
-    Label {
-        id: label
-        anchors.centerIn: parent
-        horizontalAlignment: Text.Center
-        width: parent.width
-        color: Theme.highlightColor
-        wrapMode: Text.WordWrap
-        x: Theme.horizontalPageMargin
+    Column {
+            width: parent.width
+            anchors.centerIn: parent
+            spacing: Theme.paddingMedium
 
-        text: "Editor."
+            Image {
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: Theme.iconSizeMedium
+                height: Theme.iconSizeMedium
+                source: closestMatchingIcon()
+                   sourceSize.width: width
+                   sourceSize.height: height
+
+                   function closestMatchingIcon() {
+                       var icon = "harbour-editor"
+
+                       if (width <= 500) {
+                           return "/usr/share/icons/hicolor/86x86/apps/"+icon+".png"
+                       } else if (width <= 100) {
+                           return "/usr/share/icons/hicolor/108x108/apps/"+icon+".png"
+                       } else {
+                           return "/usr/share/icons/hicolor/256x256/apps/"+icon+".png"
+                       }
+                   }
+            }
+//            Label {
+//                anchors.horizontalCenter: parent.horizontalCenter
+//                color: Theme.highlightColor
+//                wrapMode: Text.WordWrap
+//                font.bold: true
+
+//                text: "Editor."
+//            }
+
+            Label {
+                id: label
+                //anchors.horizontalCenter: parent.horizontalCenter
+                horizontalAlignment: Text.Center
+                width: parent.width
+                wrapMode: Text.WordWrap
+                color: Theme.highlightColor
+                //x: Theme.horizontalPageMargin
+
+                text: "Editor."
+            }
+        }
+
+    /*
+    Column {
+        id: column
+        spacing: Theme.paddingLarge
+        width: parent.width
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        Label {
+            //anchors.centerIn: parent
+            //anchors.horizontalCenter: parent.horizontalCenter
+            horizontalAlignment: Text.Center
+            //width: parent.width
+            //height: parent.height
+            color: Theme.highlightColor
+            wrapMode: Text.WordWrap
+            x: Theme.horizontalPageMargin
+            font.bold: true
+
+            text: "Editor."
+        }
+
+        Label {
+            id: label
+            //anchors.centerIn: parent
+            //anchors.horizontalCenter: parent.horizontalCenter
+            horizontalAlignment: Text.Center
+            //width: parent.width
+            //height: parent.height
+            color: Theme.highlightColor
+            wrapMode: Text.WordWrap
+            x: Theme.horizontalPageMargin
+
+            text: "Editor."
+        }
     }
+    */
 
     CoverActionList {
         id: coverAction
@@ -21,8 +93,9 @@ CoverBackground {
         CoverAction {
             iconSource: "image://theme/icon-cover-sync"
             onTriggered: {
-                label.text = "Editor." + "\n" + "\n" +
+                label.text = qsTr("Doc name: ") + fileName + "\n" +
                         qsTr("Lines: ") + linesNumber + "\n" +
+                        qsTr("Words: ") + wordsNumber + "\n" +
                         qsTr("Chars: ") + charNumber
             }
         }
