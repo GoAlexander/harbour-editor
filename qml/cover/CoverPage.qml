@@ -57,7 +57,8 @@ CoverBackground {
                 label.text = qsTr("Doc name: ") + fileName + "\n" +
                         qsTr("Lines: ") + linesNumber + "\n" +
                         qsTr("Words: ") + wordsNumber + "\n" +
-                        qsTr("Chars: ") + charNumber
+                        qsTr("Chars: ") + charNumber +
+                        "\n"; // to fix height
             }
         }
     }
