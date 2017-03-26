@@ -125,7 +125,7 @@
     </message>
     <message>
         <source> - Dutch translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - Traducción al holandés</translation>
     </message>
 </context>
 <context>
@@ -167,11 +167,11 @@
     </message>
     <message>
         <source>Undo</source>
-        <translation>Anular</translation>
+        <translation>D-hacer</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation>Rehacer</translation>
+        <translation>R-hacer</translation>
     </message>
     <message>
         <source>Tab</source>
@@ -190,22 +190,22 @@
     </message>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta del archivo copiado al portapapeles</translation>
     </message>
 </context>
 <context>
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation>Pasado</translation>
+        <translation>Pasados</translation>
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar</translation>
     </message>
     <message>
         <source>Move to top</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover hacia arriba</translation>
     </message>
 </context>
 <context>
@@ -224,7 +224,7 @@
     </message>
     <message>
         <source>History</source>
-        <translation>Pasado</translation>
+        <translation>Pasados</translation>
     </message>
 </context>
 <context>
@@ -286,15 +286,15 @@
     </message>
     <message>
         <source>Type of tab:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo de tab:</translation>
     </message>
     <message>
         <source>Dark Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema oscuro</translation>
     </message>
     <message>
         <source>Ambience Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema ambiente</translation>
     </message>
 </context>
 </TS>
