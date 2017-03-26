@@ -33,10 +33,8 @@ CoverBackground {
 //                color: Theme.highlightColor
 //                wrapMode: Text.WordWrap
 //                font.bold: true
-
 //                text: "Editor."
 //            }
-
             Label {
                 id: label
                 //anchors.horizontalCenter: parent.horizontalCenter
@@ -50,43 +48,6 @@ CoverBackground {
             }
         }
 
-    /*
-    Column {
-        id: column
-        spacing: Theme.paddingLarge
-        width: parent.width
-        anchors.horizontalCenter: parent.horizontalCenter
-
-        Label {
-            //anchors.centerIn: parent
-            //anchors.horizontalCenter: parent.horizontalCenter
-            horizontalAlignment: Text.Center
-            //width: parent.width
-            //height: parent.height
-            color: Theme.highlightColor
-            wrapMode: Text.WordWrap
-            x: Theme.horizontalPageMargin
-            font.bold: true
-
-            text: "Editor."
-        }
-
-        Label {
-            id: label
-            //anchors.centerIn: parent
-            //anchors.horizontalCenter: parent.horizontalCenter
-            horizontalAlignment: Text.Center
-            //width: parent.width
-            //height: parent.height
-            color: Theme.highlightColor
-            wrapMode: Text.WordWrap
-            x: Theme.horizontalPageMargin
-
-            text: "Editor."
-        }
-    }
-    */
-
     CoverActionList {
         id: coverAction
 
@@ -99,6 +60,5 @@ CoverBackground {
                         qsTr("Chars: ") + charNumber
             }
         }
-
     }
 }

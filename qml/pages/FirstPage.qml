@@ -80,7 +80,6 @@ Page {
             id: view
             anchors.fill: parent
 
-            // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
             PullDownMenu {
                 MenuItem {
                     text: qsTr("Settings")
@@ -200,22 +199,20 @@ Page {
                         console.log("Real lines: " + myTextArea._editor.lineCount);
                         saveFlag = true;
 
-                        //For line numeration: //TODO: BUG: В начале неправильно определяет количество строк + он длинную строчку (с автоматическим переносом) считает за несколько строк
-                        //console.log(font.pixelSize, myTextArea._editor.lineCount);
+                        //lineNumbers counter
                         lineNumberChanged();
 
                         //For cover:
                         charNumber = myTextArea.text.length;
                         linesNumber = numberOfLines();
+                        //wordsNumber = ... ; //todo
+                        fileName = filePath; //todo
 
                         //Autosave
                         if (filePath!=="") {
                             py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
                         }
                     }
-                    //                onRotationChanged: {
-                    //                    //TODO пересчитать label
-                    //                }
                 }
                 VerticalScrollDecorator { flickable: editorView }
             }

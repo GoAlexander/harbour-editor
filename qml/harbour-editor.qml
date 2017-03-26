@@ -69,7 +69,7 @@ ApplicationWindow
 
     //TODO: implement:
     property int wordsNumber: 0
-    property string fileName: "filePath"
+    property string fileName
 
     property bool showHiddenFiles
 

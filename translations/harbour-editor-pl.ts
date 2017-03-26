@@ -138,6 +138,14 @@
         <source>Chars: </source>
         <translation>Znaki:</translation>
     </message>
+    <message>
+        <source>Words: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Doc name: </source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditRow</name>
