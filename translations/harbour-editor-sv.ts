@@ -140,11 +140,11 @@
     </message>
     <message>
         <source>Words: </source>
-        <translation type="unfinished"></translation>
+        <translation>Ord: </translation>
     </message>
     <message>
         <source>Doc name: </source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumentnamn: </translation>
     </message>
 </context>
 <context>
