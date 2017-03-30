@@ -127,6 +127,10 @@
         <source> - Dutch translation</source>
         <translation> - Traducción al holandés</translation>
     </message>
+    <message>
+        <source>-gri4994 for the wonderful app icon</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -141,10 +145,6 @@
     <message>
         <source>Words: </source>
         <translation>Palabras:</translation>
-    </message>
-    <message>
-        <source>Doc name: </source>
-        <translation>Nombre de doc:</translation>
     </message>
 </context>
 <context>

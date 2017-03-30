@@ -70,6 +70,20 @@ Page {
         }
     }
 
+    //Function for cover
+    function getName(text) {
+        return text.substr(text.lastIndexOf('/') + 1 );
+    }
+    //Function for cover
+    function wordsCounter(text) {
+        try {
+            return text.match(/\S+/g).length
+        }
+        catch (ex) {
+            return 0
+        }
+    }
+
     Rectangle {
         id:background
         color: bgColor
@@ -205,8 +219,11 @@ Page {
                         //For cover:
                         charNumber = myTextArea.text.length;
                         linesNumber = numberOfLines();
-                        //wordsNumber = ... ; //todo
-                        fileName = filePath; //todo
+                        wordsNumber = wordsCounter(myTextArea.text);
+                        fileName = getName(filePath);
+                        //wordsNumber = myTextArea.text;
+                        //fileName = filePath;
+
 
                         //Autosave
                         if (filePath!=="") {

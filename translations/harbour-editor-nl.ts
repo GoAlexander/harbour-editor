@@ -127,6 +127,10 @@
         <source>-Ancelad for tab icon, testing and help</source>
         <translation>• Ancelad voor het tabbladpictogram, testen en hulp</translation>
     </message>
+    <message>
+        <source>-gri4994 for the wonderful app icon</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -140,10 +144,6 @@
     </message>
     <message>
         <source>Words: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Doc name: </source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -59,6 +59,7 @@ Page {
                       "<br/>" + qsTr("-coderus for various tips and code") +
                       "<br/>" + qsTr("-Russian community for feedback and help") +
                       "<br/>" + qsTr("-Ancelad for tab icon, testing and help") +
+                      "<br/>" + qsTr("-gri4994 for the wonderful app icon") +
                       "<br/>" +
                       "<br/>" +
                       qsTr("Tips:")+
