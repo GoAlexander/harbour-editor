@@ -56,6 +56,7 @@ Page {
                         });
                     }
                 }
+
                 MenuItem {
                     text: qsTr("Delete")
                     onClicked: {
