@@ -59,22 +59,25 @@ Page {
                 MenuItem {
                     text: qsTr("Delete")
                     onClicked: {
-                        //TODO вынести массив "выше"? (чтобы несколько раз запросы не делать...
                         var openedFiles = [];
                         var openedFilesNew = [];
+
                         py2.call('editFile.getValue', ["history"], function(result) {
                             openedFiles = result;
-                            for (var i = 0; i < openedFiles.length; i++) {
-                                if (openedFiles[i] !== labelPath.text) {
-                                    openedFilesNew[i] = openedFiles[i];
-                                }
-                            }
+
+                            openedFilesNew = openedFiles;
+                            openedFilesNew.splice(openedFiles.indexOf(labelPath.text), 1);
 
                             // now save new history on file system
                             // and update qml model (UI)
                             py2.call('editFile.setValue', ["history", openedFilesNew], function(result) {
                                 //myListItem.remorseAction("Deleting", function () {animateRemoval(listItem) });
-                                myModel.remove(labelPath.text); // here because of async nature of Python in Sailfish OS
+                                //myModel.remove(labelPath.text); // here because of async nature of Python in Sailfish OS
+                                myModel.clear();
+                                for(var i = openedFilesNew.length-1; i >= 0; i--) {
+                                    var element = { "value" : openedFilesNew[i] }
+                                    myModel.append(element)
+                                }
                             });
                         });
                     }

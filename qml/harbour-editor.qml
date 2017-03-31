@@ -37,7 +37,8 @@ import io.thp.pyotherside 1.3
 
 ApplicationWindow
 {
-    Dao { id: dao }
+    // For SQLite:
+    //Dao { id: dao }
 
     initialPage: Component { FirstPage {
             id: mainPage
@@ -67,7 +68,6 @@ ApplicationWindow
     property int charNumber: 0
     property int linesNumber: 0
 
-    //TODO: implement:
     property int wordsNumber: 0
     property string fileName
 
@@ -76,40 +76,40 @@ ApplicationWindow
     //TODO add these variables!
     //property var database
     // ---
-    property bool darkTheme: false
-    property string bgColor
+    property bool darkTheme: false // tmp value
+    property string bgColor: "transparent" // tmp value
 
 
     Python {
         id: py2 //TODO rename!
         Component.onCompleted: {
 
-            var resultDB;
-            dao.getValue(function(result){
-                resultDB = result;
-            });
-            console.log(resultDB);
-            console.log(resultDB.item(8));
-            console.log(resultDB.item(9))
-            if (resultDB.item(8) === 1) {
-                darkTheme = true;
-            } else {
-                darkTheme = false;
-            }
-            //darkTheme = resultDB.item(8)
-//            if (resultDB.item(9) === "transparent") { //TODO на самом деле не работает, произвести
-//                                                     //нормальное приведение типов!
+//            var resultDB;
+//            dao.getValue(function(result){
+//                resultDB = result;
+//            });
+//            console.log(resultDB);
+//            console.log(resultDB.item(8));
+//            console.log(resultDB.item(9))
+//            if (resultDB.item(8) === 1) {
+//                darkTheme = true;
+//            } else {
+//                darkTheme = false;
+//            }
+//            //darkTheme = resultDB.item(8)
+////            if (resultDB.item(9) === "transparent") { //TODO на самом деле не работает, произвести
+////                                                     //нормальное приведение типов!
+////                bgColor = "transparent";
+////            } else {
+////                bgColor = "#1e1e27";
+////            }
+//            if (darkTheme === false) { //TODO на самом деле не работает, произвести
+//                //нормальное приведение типов!
 //                bgColor = "transparent";
 //            } else {
 //                bgColor = "#1e1e27";
 //            }
-            if (darkTheme === false) { //TODO на самом деле не работает, произвести
-                //нормальное приведение типов!
-                bgColor = "transparent";
-            } else {
-                bgColor = "#1e1e27";
-            }
-            //bgColor = resultDB.item(9);
+//            //bgColor = resultDB.item(9);
 
 
             addImportPath(Qt.resolvedUrl("."));

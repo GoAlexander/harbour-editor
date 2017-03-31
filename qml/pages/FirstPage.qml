@@ -221,9 +221,6 @@ Page {
                         linesNumber = numberOfLines();
                         wordsNumber = wordsCounter(myTextArea.text);
                         fileName = getName(filePath);
-                        //wordsNumber = myTextArea.text;
-                        //fileName = filePath;
-
 
                         //Autosave
                         if (filePath!=="") {

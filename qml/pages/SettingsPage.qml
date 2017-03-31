@@ -207,6 +207,6 @@ Page {
 
         py2.call('editFile.setValue', ["showHiddenFiles", showHiddenFiles], function(result) {});
 
-        dao.setValue(darkTheme);
+        //dao.setValue(darkTheme);
     }
 }

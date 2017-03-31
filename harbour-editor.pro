@@ -55,5 +55,4 @@ DISTFILES += \
     qml/components/pullMenus/rows/SearchRow.qml \
     qml/components/pullMenus/rows/MainRow.qml \
     qml/components/pullMenus/rows/EditRow.qml \
-    qml/img/tab.svg \
     qml/service/Dao.qml
