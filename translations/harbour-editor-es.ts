@@ -129,7 +129,7 @@
     </message>
     <message>
         <source>-gri4994 for the wonderful app icon</source>
-        <translation type="unfinished"></translation>
+        <translation>-gri4994 por el maravilloso icono</translation>
     </message>
 </context>
 <context>
@@ -139,8 +139,8 @@
         <translation>Lineas:</translation>
     </message>
     <message>
-        <source>Chars: </source>
-        <translation>Carac:</translation>
+        <source>Chars:</source>
+        <translation>Caracteres:</translation>
     </message>
     <message>
         <source>Words: </source>
@@ -163,7 +163,7 @@
     </message>
     <message>
         <source>R-only</source>
-        <translation>L-solo</translation>
+        <translation>Leer</translation>
     </message>
     <message>
         <source>Undo</source>
@@ -197,7 +197,7 @@
     <name>HistoryPage</name>
     <message>
         <source>History</source>
-        <translation>Pasados</translation>
+        <translation>Lista</translation>
     </message>
     <message>
         <source>Delete</source>
@@ -224,7 +224,7 @@
     </message>
     <message>
         <source>History</source>
-        <translation>Pasados</translation>
+        <translation>Lista</translation>
     </message>
 </context>
 <context>
@@ -250,11 +250,11 @@
     </message>
     <message>
         <source>Quick menu enabled</source>
-        <translation>Activar menu rápido </translation>
+        <translation>Activar menú expreso</translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
-        <translation>Activar numeración por línea </translation>
+        <translation>Activar numeración líneal</translation>
     </message>
     <message>
         <source>Fonts and size</source>
