@@ -15,15 +15,14 @@ Public To Do
 ------------
 https://trello.com/b/Gyu7pPqi/harbour-editor
 
-
 Important notes
 ---------------
-- because of OS default File Manager minimal version of Sailfish OS should be 2.0.5 
+- Because of OS default File Manager minimal version of Sailfish OS should be 2.0.5 
   
 License
 -------
 
-    Copyright (c) 2016 Alexander Dydychkin
+    Copyright (c) 2016-2017 Alexander Dydychkin
 
     Editor. is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
