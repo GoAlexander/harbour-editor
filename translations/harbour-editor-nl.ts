@@ -129,7 +129,7 @@
     </message>
     <message>
         <source>-gri4994 for the wonderful app icon</source>
-        <translation type="unfinished"></translation>
+        <translation>• gri4994 voor het mooie applogo</translation>
     </message>
 </context>
 <context>
@@ -144,38 +144,38 @@
     </message>
     <message>
         <source>Words: </source>
-        <translation type="unfinished"></translation>
+        <translation>Woorden: </translation>
     </message>
 </context>
 <context>
     <name>EditRow</name>
     <message>
         <source>Save</source>
-        <translation type="unfinished"> </translation>
+        <translation>Opslaan</translation>
     </message>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished">Document opgeslagen!</translation>
+        <translation>Document opgeslagen!</translation>
     </message>
     <message>
         <source>Document can&apos;t be saved!</source>
-        <translation type="unfinished">Document kan niet worden opgeslagen!</translation>
+        <translation>Document kan niet worden opgeslagen!</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished"> </translation>
+        <translation> </translation>
     </message>
     <message>
         <source>Undo</source>
-        <translation type="unfinished"> </translation>
+        <translation> </translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished"> </translation>
+        <translation> </translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished"> </translation>
+        <translation> </translation>
     </message>
 </context>
 <context>
@@ -190,7 +190,7 @@
     </message>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandspad gekopieerd naar klembord</translation>
     </message>
 </context>
 <context>
@@ -205,33 +205,33 @@
     </message>
     <message>
         <source>Move to top</source>
-        <translation type="unfinished"></translation>
+        <translation>Ga naar top</translation>
     </message>
 </context>
 <context>
     <name>MainRow</name>
     <message>
         <source>Save as</source>
-        <translation type="unfinished">Opslaan als</translation>
+        <translation>Opslaan als</translation>
     </message>
     <message>
         <source>Open</source>
-        <translation type="unfinished">Openen</translation>
+        <translation>Openen</translation>
     </message>
     <message>
         <source>New</source>
-        <translation type="unfinished">Nieuw</translation>
+        <translation>Nieuw</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished">Geschiedenis</translation>
+        <translation>Geschiedenis</translation>
     </message>
 </context>
 <context>
     <name>SearchRow</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Zoeken</translation>
+        <translation>Zoeken</translation>
     </message>
 </context>
 <context>
@@ -286,15 +286,15 @@
     </message>
     <message>
         <source>Type of tab:</source>
-        <translation type="unfinished"></translation>
+        <translation>Soort tab:</translation>
     </message>
     <message>
         <source>Dark Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Donker thema</translation>
     </message>
     <message>
         <source>Ambience Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Sfeerthema</translation>
     </message>
 </context>
 </TS>
