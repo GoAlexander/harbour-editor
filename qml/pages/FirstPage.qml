@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import org.nemomobile.notifications 1.0
 import io.thp.pyotherside 1.3
+import harbour.editor.documenthandler 1.0
 import "../components"
 import "../components/pullMenus/rows"
 
@@ -208,6 +209,9 @@ Page {
                     selectionMode: TextEdit.SelectCharacters
                     //color: "green"
                     focus: true
+
+                    text: documentHandler.text
+
                     onTextChanged: {
                         console.log("filePath = " + filePath, fontSize, font.family);
                         console.log("Real lines: " + myTextArea._editor.lineCount);
@@ -227,6 +231,19 @@ Page {
                             py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
                         }
                     }
+
+                    DocumentHandler {
+                        id: documentHandler
+                        target: myTextArea._editor
+                        cursorPosition: myTextArea.cursorPosition
+                        selectionStart: myTextArea.selectionStart
+                        selectionEnd: myTextArea.selectionEnd
+                        onTextChanged: {
+                            myTextArea.text = text
+                            myTextArea.update()
+                        }
+                    }
+
                 }
                 VerticalScrollDecorator { flickable: editorView }
             }
@@ -261,4 +278,5 @@ Page {
         }
         onReceived: console.log('Unhandled event: ' + data)
     }
+
 }

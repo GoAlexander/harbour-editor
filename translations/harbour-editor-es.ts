@@ -139,12 +139,12 @@
         <translation>Lineas:</translation>
     </message>
     <message>
-        <source>Chars:</source>
-        <translation>Caracteres:</translation>
-    </message>
-    <message>
         <source>Words: </source>
         <translation>Palabras:</translation>
+    </message>
+    <message>
+        <source>Chars: </source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

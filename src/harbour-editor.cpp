@@ -33,6 +33,7 @@
 #endif
 
 #include <sailfishapp.h>
+#include "documenthandler.h"
 
 
 int main(int argc, char *argv[])
@@ -46,5 +47,14 @@ int main(int argc, char *argv[])
     //
     // To display the view, call "show()" (will show fullscreen on device).
 
-    return SailfishApp::main(argc, argv);
+    QGuiApplication *app = SailfishApp::application(argc, argv);
+    QQuickView *view = SailfishApp::createView();
+
+    qmlRegisterType<DocumentHandler>("harbour.editor.documenthandler", 1, 0, "DocumentHandler");
+
+    view->setSource(SailfishApp::pathTo("qml/harbour-editor.qml"));
+    view->showFullScreen();
+    return app->exec();
+
+    //return SailfishApp::main(argc, argv);
 }
