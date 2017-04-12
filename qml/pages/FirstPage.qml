@@ -9,6 +9,13 @@ import "../components/pullMenus/rows"
 Page {
     id: editorPage
 
+    property string qmlHighlightColor: Theme.highlightColor
+    property string keywordsHighlightColor:Theme.highlightDimmerColor
+    property string propertiesHighlightColor:Theme.primaryColor
+    property string javascriptHighlightColor:Theme.secondaryHighlightColor
+    property string stringHighlightColor:Theme.secondaryColor
+    property string commentHighlightColor: Theme.highlightBackgroundColor
+
     property int lastLineCount: 0
     property int sizeBackgroundItemMainMenuFirstRow: pullMenu2.width / 4
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
@@ -24,7 +31,61 @@ Page {
         category: "Editor."
     }
 
-    function setFilePath(filePathFromChooser) { //TODO refactoring of this function (it uses ALSO HystoryPage)
+
+    function pageStatusChange(page){
+//        if(!inSplitView && page.status === PageStatus.Active && pageStack.forwardNavigation) {
+//            pageStack.popAttached()
+//        }
+//        if((page.status !== PageStatus.Active) || (myTextArea.text.length > 0)){
+//            if (autoSave&&textChangedAutoSave){
+//                py.call('editFile.savings', [fullFilePath,myTextArea.text], function(result) {
+//                    fileTitle=result
+//                });
+//            }
+//            ready =false
+//            return;
+//        }
+//        else {
+//            if(untitled){
+//                py.call('editFile.untitledNumber', [homePath], function(result) {
+//                    fileTitle=result
+//                });
+//                myTextArea.forceActiveFocus();
+//                busy.running=false;
+//                hintLoader.start()
+//            }
+//            else{
+
+
+                documentHandler.setStyle(propertiesHighlightColor, stringHighlightColor,
+                                         qmlHighlightColor, javascriptHighlightColor,
+                                         commentHighlightColor, keywordsHighlightColor,
+                                         myTextArea.font.pixelSize);
+//                py.call('editFile.checkAutoSaved', [fullFilePath], function(result) {
+//                    if(!result){
+//                        py.call('editFile.openings', [fullFilePath], function(result) {
+//                            documentHandler.text = result.text;
+//                            fileTitle=result.fileTitle
+//                            if(!editorMode){
+//                            py.call('editFile.changeFiletype', [fileType], function(result){});
+//                            }
+//                            documentHandler.setDictionary(fileType);
+//                        })
+//                    }else {
+//                        pageStack.push(restoreD, {pathToFile:fullFilePath});
+//                    }
+//                })
+                myTextArea.forceActiveFocus();
+                //busy.running=false;
+
+//                hintLoader.start()
+//            }
+//        }
+//        ready = true
+    }
+
+
+    function setFilePath(filePathFromChooser) { //TODO refactoring of this function (it uses ALSO HistoryPage)
         filePath = filePathFromChooser;
         pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePathFromChooser}, PageStackAction.Animated);
         pageStack.nextPage();
@@ -37,9 +98,11 @@ Page {
         pageStack.nextPage();
         if (filePath!=="") {
             py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
+            //py.call('editFile.savings', [filePath,documentHandler.text], function() {});//filePath is path where you want to save!
         }
         py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
             myTextArea.text = result;
+            //documentHandler.text = result;
         });
 
         outputNotifications.close()
@@ -210,11 +273,11 @@ Page {
                     //color: "green"
                     focus: true
 
-                    text: documentHandler.text
+                    text: documentHandler.text //tmp?!
 
                     onTextChanged: {
                         console.log("filePath = " + filePath, fontSize, font.family);
-                        console.log("Real lines: " + myTextArea._editor.lineCount);
+                        //console.log("Real lines: " + myTextArea._editor.lineCount);
                         saveFlag = true;
 
                         //lineNumbers counter
@@ -229,8 +292,10 @@ Page {
                         //Autosave
                         if (filePath!=="") {
                             py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
+                            //py.call('editFile.autosave', [filePath,documentHandler.text], function(result) {});
                         }
                     }
+
 
                     DocumentHandler {
                         id: documentHandler
@@ -239,10 +304,14 @@ Page {
                         selectionStart: myTextArea.selectionStart
                         selectionEnd: myTextArea.selectionEnd
                         onTextChanged: {
-                            myTextArea.text = text
+                            myTextArea.text = documentHandler.text
                             myTextArea.update()
+
+                            console.log("documentHandler.text ===>>>" + documentHandler.text)
+                            console.log("myTextArea.text ===>>>" + myTextArea.text)
                         }
                     }
+
 
                 }
                 VerticalScrollDecorator { flickable: editorView }
@@ -253,13 +322,24 @@ Page {
     }
 
     onStatusChanged: {
+
+        pageStatusChange(editorPage) //TMP!
+
+
+
         if (status !== PageStatus.Active) {
             return
         } else {
             console.log(filePath)
             if (filePath!=="") {
                 py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
-                    myTextArea.text = result;
+                    //myTextArea.text = result;
+                    documentHandler.text = result;
+
+                    console.log(result);
+                    console.log("documentHandler.text ===>>>" + documentHandler.text)
+                    console.log("myTextArea.text ===>>>" + myTextArea.text)
+
                 });
             }
         }
