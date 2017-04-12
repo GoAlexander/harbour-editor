@@ -144,7 +144,7 @@
     </message>
     <message>
         <source>Chars: </source>
-        <translation type="unfinished"></translation>
+        <translation>Caracteres: </translation>
     </message>
 </context>
 <context>
