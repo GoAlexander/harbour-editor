@@ -336,10 +336,9 @@ Page {
                     //myTextArea.text = result;
                     documentHandler.text = result;
 
-                    console.log(result);
+                    console.log("result ===>>>" + result)
                     console.log("documentHandler.text ===>>>" + documentHandler.text)
                     console.log("myTextArea.text ===>>>" + myTextArea.text)
-
                 });
             }
         }
