@@ -3,31 +3,23 @@ import Sailfish.Silica 1.0
 import "../pages"
 
 CoverBackground {
+
+    Image {
+            source: "/usr/share/icons/hicolor/256x256/apps/harbour-editor.png"
+            asynchronous: true
+            width: parent.width
+            anchors.left: parent.left
+            anchors.top:parent.top
+            anchors.topMargin: Theme.paddingLarge
+            anchors.leftMargin: -Theme.paddingLarge
+            fillMode: Image.PreserveAspectFit
+            opacity: 0.15
+    }
+
     Column {
         width: parent.width
         anchors.centerIn: parent
         spacing: Theme.paddingMedium
-
-        Image {
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: Theme.iconSizeMedium
-            height: Theme.iconSizeMedium
-            source: closestMatchingIcon()
-            sourceSize.width: width
-            sourceSize.height: height
-
-            function closestMatchingIcon() {
-                var icon = "harbour-editor"
-
-                if (width <= 500) {
-                    return "/usr/share/icons/hicolor/86x86/apps/"+icon+".png"
-                } else if (width <= 100) {
-                    return "/usr/share/icons/hicolor/108x108/apps/"+icon+".png"
-                } else {
-                    return "/usr/share/icons/hicolor/256x256/apps/"+icon+".png"
-                }
-            }
-        }
 
         Label {
             horizontalAlignment: Text.Center
