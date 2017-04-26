@@ -189,6 +189,7 @@ Page {
                         width: parent.width
                         height: childrenRect.height
                         myMenuButtonWidth: sizeBackgroundItemMainMenu
+                        visible: !headerVisible
                     }
 
                 }
