@@ -40,6 +40,14 @@ def isSaved(filepath):
     else:
         return True
 
+def changeFiletype(filetype):
+    config = configparser.RawConfigParser()
+    config.read("/var/lib/harbour-tide-keyboard/config/config.conf")
+    config.set('fileType', 'type', filetype)
+    # Updating configuration file 'config.conf'
+    with open("/var/lib/harbour-tide-keyboard/config/config.conf", 'w+') as configfile:
+        config.write(configfile)
+
 #----------------------------------------
 
 PATH_TO_JSON = os.environ['HOME'] + "/.local/share/harbour-editor/editor.json"

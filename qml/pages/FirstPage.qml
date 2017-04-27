@@ -23,6 +23,8 @@ Page {
     property string filePath: "" //"autosave"
     property bool saveFlag: false
 
+//    property bool firstTimeOpened: true
+
     property bool searched: false
 
 
@@ -61,6 +63,9 @@ Page {
                                          qmlHighlightColor, javascriptHighlightColor,
                                          commentHighlightColor, keywordsHighlightColor,
                                          myTextArea.font.pixelSize);
+                var fileType;
+                py.call('editFile.changeFiletype', [fileType], function(result){});
+                documentHandler.setDictionary(fileType);
 //                py.call('editFile.checkAutoSaved', [fullFilePath], function(result) {
 //                    if(!result){
 //                        py.call('editFile.openings', [fullFilePath], function(result) {
@@ -291,10 +296,11 @@ Page {
                         fileName = getName(filePath);
 
                         //Autosave
-                        if (filePath!=="") {
-                            py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
-                            //py.call('editFile.autosave', [filePath,documentHandler.text], function(result) {});
+                        if (filePath!=="" && documentHandler.text !== "") {
+                            //py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
+                            py.call('editFile.autosave', [filePath,documentHandler.text], function(result) {});
                         }
+
                     }
 
 
