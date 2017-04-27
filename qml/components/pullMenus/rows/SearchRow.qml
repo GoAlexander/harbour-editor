@@ -23,7 +23,7 @@ Row {
                 myTextArea.cursorPosition = myText.indexOf(match[0],position)
                 if (myText.indexOf(match[0],position)!=-1) myTextArea.select(myTextArea.cursorPosition, myTextArea.cursorPosition+text.length)
             }
-            myTextArea.forceActiveFocus()
+            //myTextArea.forceActiveFocus()
         } else {
             searchField.errorHighlight = true
         }

@@ -192,6 +192,10 @@
         <source>File path copied to the clipboard</source>
         <translation>Ruta del archivo copiado al portapapeles</translation>
     </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Buscar</translation>
+    </message>
 </context>
 <context>
     <name>HistoryPage</name>

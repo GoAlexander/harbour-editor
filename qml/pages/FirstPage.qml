@@ -32,6 +32,7 @@ Page {
     property bool saveFlag: false
 
     property bool searched: false
+    property bool searchRowVisible: false
 
 
     Notification {
@@ -152,12 +153,32 @@ Page {
                     width: parent.width
                     height: childrenRect.height
 
-                    // my own component (To Do need some cleaning and optimisation)
-                    SearchRow {
-                        //id: pullMenu3
+                    //TODO need refactoring for this row
+                    Row {
                         width: parent.width
                         height: childrenRect.height
+
+                        MenuButton {
+                            width: parent.width
+                            mySource: "image://theme/icon-m-search";
+                            myText: qsTr("Search")
+                            onClicked: {
+                                if (searchRowVisible == false) {
+                                    searchRowVisible = true;
+                                }
+                                else {
+                                    searchRowVisible = false;
+                                }
+                            }
+                        }
                     }
+
+                    // my own component (To Do need some cleaning and optimisation)
+//                    SearchRow {
+//                        //id: pullMenu3
+//                        width: parent.width
+//                        height: childrenRect.height
+//                    }
 
                     // my own component (To Do need some cleaning and optimisation)
                     MainRow {
@@ -204,7 +225,7 @@ Page {
             PageHeader {
                 id: header
                 height: hotActionsMenu.height
-                visible: headerVisible
+                visible: headerVisible || searchRowVisible //header visible if EditRow active or SearchRow active
 
                 // my own component (To Do need some cleaning and optimisation)
                 EditRow {
@@ -212,7 +233,15 @@ Page {
                     width: parent.width
                     height: childrenRect.height
                     myMenuButtonWidth: sizeBackgroundItem
+                    visible: !searchRowVisible
                 }
+
+                SearchRow {
+                    width: parent.width
+                    height: childrenRect.height
+                    visible: searchRowVisible
+                }
+
             }
 
             //            boundsBehavior: {

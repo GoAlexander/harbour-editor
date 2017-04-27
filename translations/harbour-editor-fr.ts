@@ -192,6 +192,10 @@
         <source>File path copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Rechercher</translation>
+    </message>
 </context>
 <context>
     <name>HistoryPage</name>

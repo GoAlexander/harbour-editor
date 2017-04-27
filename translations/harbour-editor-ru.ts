@@ -192,6 +192,10 @@
         <source>File path copied to the clipboard</source>
         <translation>Файловый путь копирован в буфер обмена</translation>
     </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Поиск</translation>
+    </message>
 </context>
 <context>
     <name>HistoryPage</name>

@@ -192,6 +192,10 @@
         <source>File path copied to the clipboard</source>
         <translation>Filsökväg kopierad till urklipp</translation>
     </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Sök</translation>
+    </message>
 </context>
 <context>
     <name>HistoryPage</name>
