@@ -41,37 +41,15 @@ Page {
 
 
     function pageStatusChange(page){
-//        if(!inSplitView && page.status === PageStatus.Active && pageStack.forwardNavigation) {
-//            pageStack.popAttached()
-//        }
-//        if((page.status !== PageStatus.Active) || (myTextArea.text.length > 0)){
-//            if (autoSave&&textChangedAutoSave){
-//                py.call('editFile.savings', [fullFilePath,myTextArea.text], function(result) {
-//                    fileTitle=result
-//                });
-//            }
-//            ready =false
-//            return;
-//        }
-//        else {
-//            if(untitled){
-//                py.call('editFile.untitledNumber', [homePath], function(result) {
-//                    fileTitle=result
-//                });
-//                myTextArea.forceActiveFocus();
-//                busy.running=false;
-//                hintLoader.start()
-//            }
-//            else{
-
-
                 documentHandler.setStyle(propertiesHighlightColor, stringHighlightColor,
                                          qmlHighlightColor, javascriptHighlightColor,
                                          commentHighlightColor, keywordsHighlightColor,
                                          myTextArea.font.pixelSize);
                 var fileType;
-                py.call('editFile.changeFiletype', [fileType], function(result){});
-                documentHandler.setDictionary(fileType);
+                py.call('editFile.changeFiletype', [fileType], function(result){
+                    documentHandler.setDictionary(fileType);
+                });
+
 //                py.call('editFile.checkAutoSaved', [fullFilePath], function(result) {
 //                    if(!result){
 //                        py.call('editFile.openings', [fullFilePath], function(result) {
@@ -86,13 +64,10 @@ Page {
 //                        pageStack.push(restoreD, {pathToFile:fullFilePath});
 //                    }
 //                })
-                myTextArea.forceActiveFocus();
-                //busy.running=false;
-
+                myTextArea.forceActiveFocus(); //?
+//                busy.running=false;
 //                hintLoader.start()
-//            }
-//        }
-//        ready = true
+
     }
 
 
@@ -192,7 +167,6 @@ Page {
                         myMenuButtonWidth:sizeBackgroundItemMainMenuFirstRow
                     }
 
-                    // my own component (To Do need some cleaning and optimisation)
                     EditRow {
                         id: pullMenu
                         width: parent.width
@@ -280,10 +254,9 @@ Page {
                     font.pixelSize: fontSize
                     background: null
                     selectionMode: TextEdit.SelectCharacters
-                    //color: "green"
                     focus: true
 
-                    text: documentHandler.text //tmp?!
+                    text: documentHandler.text //for highlighting
 
                     onTextChanged: {
                         console.log("filePath = " + filePath, fontSize, font.family);
@@ -306,7 +279,6 @@ Page {
 
                     }
 
-
                     DocumentHandler {
                         id: documentHandler
                         target: myTextArea._editor
@@ -316,12 +288,8 @@ Page {
                         onTextChanged: {
                             myTextArea.text = documentHandler.text
                             myTextArea.update()
-
-                            console.log("documentHandler.text ===>>>" + documentHandler.text)
-                            console.log("myTextArea.text ===>>>" + myTextArea.text)
                         }
                     }
-
 
                 }
                 VerticalScrollDecorator { flickable: editorView }
