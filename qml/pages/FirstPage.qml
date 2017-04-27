@@ -9,12 +9,20 @@ import "../components/pullMenus/rows"
 Page {
     id: editorPage
 
-    property string qmlHighlightColor: Theme.highlightColor
-    property string keywordsHighlightColor:Theme.highlightDimmerColor
-    property string propertiesHighlightColor:Theme.primaryColor
-    property string javascriptHighlightColor:Theme.secondaryHighlightColor
-    property string stringHighlightColor:Theme.secondaryColor
-    property string commentHighlightColor: Theme.highlightBackgroundColor
+//    property string qmlHighlightColor: Theme.highlightColor
+//    property string keywordsHighlightColor:Theme.highlightDimmerColor
+//    property string propertiesHighlightColor:Theme.primaryColor
+//    property string javascriptHighlightColor:Theme.secondaryHighlightColor
+//    property string stringHighlightColor:Theme.secondaryColor
+//    property string commentHighlightColor: Theme.highlightBackgroundColor
+
+    property string qmlHighlightColor: "#ff8bff"
+    property string keywordsHighlightColor: "#808bed"
+    property string propertiesHighlightColor: "#ff5555"
+    property string javascriptHighlightColor: "#8888ff"
+    property string stringHighlightColor: "#ffcd8b"
+    property string commentHighlightColor: "#cd8b00"
+    //textColor="#cfbfad"
 
     property int lastLineCount: 0
     property int sizeBackgroundItemMainMenuFirstRow: pullMenu2.width / 4
@@ -22,8 +30,6 @@ Page {
     property int sizeBackgroundItem: hotActionsMenu.width / 5
     property string filePath: "" //"autosave"
     property bool saveFlag: false
-
-//    property bool firstTimeOpened: true
 
     property bool searched: false
 
@@ -102,12 +108,10 @@ Page {
         pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePathFromChooser}, PageStackAction.Animated);
         pageStack.nextPage();
         if (filePath!=="") {
-            py.call('editFile.savings', [filePath,myTextArea.text], function() {});//filePath is path where you want to save!
-            //py.call('editFile.savings', [filePath,documentHandler.text], function() {});//filePath is path where you want to save!
+            py.call('editFile.savings', [filePath,documentHandler.text], function() {});//filePath is path where you want to save!
         }
-        py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
-            myTextArea.text = result;
-            //documentHandler.text = result;
+        py.call('editFile.openings', [filePath], function(result) {
+            documentHandler.text = result;
         });
 
         outputNotifications.close()
@@ -297,7 +301,6 @@ Page {
 
                         //Autosave
                         if (filePath!=="" && documentHandler.text !== "") {
-                            //py.call('editFile.autosave', [filePath,myTextArea.text], function(result) {});
                             py.call('editFile.autosave', [filePath,documentHandler.text], function(result) {});
                         }
 
@@ -330,22 +333,15 @@ Page {
 
     onStatusChanged: {
 
-        pageStatusChange(editorPage) //TMP!
-
-
+        pageStatusChange(editorPage);
 
         if (status !== PageStatus.Active) {
             return
         } else {
             console.log(filePath)
             if (filePath!=="") {
-                py.call('editFile.openings', [filePath], function(result) {//filePath is path where file that you want to open is
-                    //myTextArea.text = result;
+                py.call('editFile.openings', [filePath], function(result) {
                     documentHandler.text = result;
-
-                    console.log("result ===>>>" + result)
-                    console.log("documentHandler.text ===>>>" + documentHandler.text)
-                    console.log("myTextArea.text ===>>>" + myTextArea.text)
                 });
             }
         }
