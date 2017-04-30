@@ -42,8 +42,7 @@ Page {
 
 
     function pageStatusChange(page){
-//                busy.running=true;
-
+//        busy.running=true;
         documentHandler.setStyle(propertiesHighlightColor, stringHighlightColor,
                                  qmlHighlightColor, javascriptHighlightColor,
                                  commentHighlightColor, keywordsHighlightColor,
@@ -52,10 +51,8 @@ Page {
         documentHandler.setDictionary(getFileType(filePath)); //enable appropriate dictionary file
         console.log(getFileType(filePath)); //Debug
 
-        busy.running=false;
-//                hintLoader.start() //???
-//                busy.running=false;
-
+//        busy.running=false;
+//        hintLoader.start() //???
     }
 
 

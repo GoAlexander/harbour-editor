@@ -37,7 +37,7 @@ Row {
         id:searchField
         width: parent.width / 1.5
         height: Theme.itemSizeSmall
-        font.pixelSize: Theme.fontSizeTiny
+        font.pixelSize: Theme.fontSizeMedium
         EnterKey.iconSource: "image://theme/icon-m-enter-next"
         placeholderText: qsTr("Search")
         EnterKey.onClicked:{
