@@ -42,32 +42,19 @@ Page {
 
 
     function pageStatusChange(page){
-                documentHandler.setStyle(propertiesHighlightColor, stringHighlightColor,
-                                         qmlHighlightColor, javascriptHighlightColor,
-                                         commentHighlightColor, keywordsHighlightColor,
-                                         myTextArea.font.pixelSize);
-                var fileType;
-                py.call('editFile.changeFiletype', [fileType], function(result){
-                    documentHandler.setDictionary(fileType);
-                });
+//                busy.running=true;
 
-//                py.call('editFile.checkAutoSaved', [fullFilePath], function(result) {
-//                    if(!result){
-//                        py.call('editFile.openings', [fullFilePath], function(result) {
-//                            documentHandler.text = result.text;
-//                            fileTitle=result.fileTitle
-//                            if(!editorMode){
-//                            py.call('editFile.changeFiletype', [fileType], function(result){});
-//                            }
-//                            documentHandler.setDictionary(fileType);
-//                        })
-//                    }else {
-//                        pageStack.push(restoreD, {pathToFile:fullFilePath});
-//                    }
-//                })
-                myTextArea.forceActiveFocus(); //?
+        documentHandler.setStyle(propertiesHighlightColor, stringHighlightColor,
+                                 qmlHighlightColor, javascriptHighlightColor,
+                                 commentHighlightColor, keywordsHighlightColor,
+                                 myTextArea.font.pixelSize);
+
+        documentHandler.setDictionary(getFileType(filePath)); //enable appropriate dictionary file
+        console.log(getFileType(filePath)); //Debug
+
+        busy.running=false;
+//                hintLoader.start() //???
 //                busy.running=false;
-//                hintLoader.start()
 
     }
 
@@ -119,6 +106,11 @@ Page {
         }
     }
 
+    //for syntax highlighting
+    function getFileType(text) {
+        return text.substr(text.lastIndexOf('.') + 1 )
+    }
+
     //Function for cover
     function getName(text) {
         return text.substr(text.lastIndexOf('/') + 1 );
@@ -132,6 +124,7 @@ Page {
             return 0
         }
     }
+
 
     Rectangle {
         id:background
@@ -174,13 +167,6 @@ Page {
                     }
 
                     // my own component (To Do need some cleaning and optimisation)
-//                    SearchRow {
-//                        //id: pullMenu3
-//                        width: parent.width
-//                        height: childrenRect.height
-//                    }
-
-                    // my own component (To Do need some cleaning and optimisation)
                     MainRow {
                         id: pullMenu2
                         width: parent.width
@@ -216,7 +202,6 @@ Page {
             //        SilicaFlickable {
             //            property QtObject ngfeffect
             //            property Item selectedItem: null
-
             //            width: parent.width
             //            height: hotActionsMenu.height
             //            anchors.fill: parent
@@ -236,6 +221,7 @@ Page {
                     visible: !searchRowVisible
                 }
 
+                // my own component (To Do need some cleaning and optimisation)
                 SearchRow {
                     width: parent.width
                     height: childrenRect.height
