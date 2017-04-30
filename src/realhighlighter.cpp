@@ -114,7 +114,6 @@ void RealHighlighter::ruleUpdate()
             rule.format = pythonFormat;
             highlightingRules.append(rule);
         }
-
         keywordFormat.setForeground(QColor(m_highlightDimmerColor));
         keywordFormat.setFontWeight(QFont::Bold);
         loadDict(":/dictionaries/keywords.txt",keywordPatterns);
@@ -149,6 +148,27 @@ void RealHighlighter::ruleUpdate()
         rule.pattern = QRegExp("//[^\n]*");
         rule.format = singleLineCommentFormat;
         highlightingRules.append(rule);
+    }else if (m_dictionary=="sh") {
+        shFormat.setForeground(QColor(m_secondaryHighlightColor));
+        shFormat.setFontItalic(true);
+        QStringList shPatterns;
+        loadDict(":/dictionaries/sh.txt",shPatterns);
+
+        foreach (const QString &pattern, shPatterns) {
+            rule.pattern = QRegExp(pattern);
+            rule.format = shFormat;
+            highlightingRules.append(rule);
+        }
+
+        keywordFormat.setForeground(QColor(m_highlightDimmerColor));
+        keywordFormat.setFontWeight(QFont::Bold);
+        loadDict(":/dictionaries/keywords.txt",keywordPatterns);
+
+        foreach (const QString &pattern, keywordPatterns) {
+            rule.pattern = QRegExp(pattern);
+            rule.format = keywordFormat;
+            highlightingRules.append(rule);
+        }
     }else{
         keywordFormat.setForeground(QColor(m_highlightDimmerColor));
         keywordFormat.setFontWeight(QFont::Bold);

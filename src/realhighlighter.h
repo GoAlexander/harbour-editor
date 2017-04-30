@@ -67,6 +67,7 @@ private:
     QTextCharFormat jsFormat;
     QTextCharFormat propertiesFormat;
     QTextCharFormat pythonFormat;
+    QTextCharFormat shFormat;
     QTextCharFormat singleLineCommentFormat;
      QTextCharFormat multiLineCommentFormat;
      QTextCharFormat quotationFormat;
