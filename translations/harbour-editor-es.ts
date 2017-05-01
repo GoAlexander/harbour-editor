@@ -194,11 +194,11 @@
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Buscar</translation>
+        <translation>Buscar</translation>
     </message>
     <message>
         <source>Highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Destacando</translation>
     </message>
     <message>
         <source>Highlighting enabled</source>
