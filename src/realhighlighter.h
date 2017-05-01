@@ -69,10 +69,10 @@ private:
     QTextCharFormat pythonFormat;
     QTextCharFormat shFormat;
     QTextCharFormat singleLineCommentFormat;
-     QTextCharFormat multiLineCommentFormat;
-     QTextCharFormat quotationFormat;
-     QTextCharFormat functionFormat;
-     QTextCharFormat numberFormat;
+    QTextCharFormat multiLineCommentFormat;
+    QTextCharFormat quotationFormat;
+    QTextCharFormat functionFormat;
+    QTextCharFormat numberFormat;
     void loadDict(QString path, QStringList &patterns);
 };
 

@@ -54,12 +54,13 @@ Page {
                       "<br/>" +
                       "<br/>" +
                       qsTr("Special thanks:") +
-                      "<br/>" + qsTr("-eekkelund for save/load/autosave functions and feedback") +
+                      "<br/>" + qsTr("-eekkelund for save/load/autosave functions, source code and some dictionaries for syntax highlighting and feedback") +
                       "<br/>" + qsTr("-osanwe for very often consultations about qml code") +
                       "<br/>" + qsTr("-coderus for various tips and code") +
                       "<br/>" + qsTr("-Russian community for feedback and help") +
                       "<br/>" + qsTr("-Ancelad for tab icon, testing and help") +
                       "<br/>" + qsTr("-gri4994 for the wonderful app icon") +
+                      "<br/>" + qsTr("-the team of GtkSourceView for the basis for .sh dictionary") +
                       "<br/>" +
                       "<br/>" +
                       qsTr("Tips:")+
