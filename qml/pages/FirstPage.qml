@@ -34,6 +34,8 @@ Page {
     property bool searched: false
     property bool searchRowVisible: false
 
+    property bool highlightingEnabled: false
+
 
     Notification {
         id: outputNotifications
@@ -149,8 +151,8 @@ Page {
                         height: childrenRect.height
 
                         MenuButton {
-                            width: parent.width
-                            mySource: "image://theme/icon-m-search";
+                            width: parent.width / 2
+                            mySource: "image://theme/icon-m-search?" + (searchRowVisible ? Theme.highlightColor : Theme.primaryColor);
                             myText: qsTr("Search")
                             onClicked: {
                                 if (searchRowVisible == false) {
@@ -158,6 +160,31 @@ Page {
                                 }
                                 else {
                                     searchRowVisible = false;
+                                }
+                            }
+                        }
+
+                        MenuButton {
+                            width: parent.width / 2
+                            mySource: "image://theme/icon-m-wizard?" + (highlightingEnabled ? Theme.highlightColor : Theme.primaryColor); //icon-m-dot
+                            myText:  qsTr("Highlighting")
+                            onClicked: {
+                                if (highlightingEnabled == false) {
+                                    highlightingEnabled = true;
+                                    pageStatusChange(editorPage);
+
+                                    outputNotifications.close()
+                                    outputNotifications.previewBody = qsTr("Highlighting enabled");
+                                    outputNotifications.publish()
+                                }
+                                else {
+                                    highlightingEnabled = false;
+                                    pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePath}, PageStackAction.Replace);
+
+                                    outputNotifications.close()
+                                    outputNotifications.previewBody = qsTr("Highlighting disabled");
+                                    outputNotifications.publish()
+
                                 }
                             }
                         }
@@ -313,7 +340,9 @@ Page {
 
     onStatusChanged: {
 
-        pageStatusChange(editorPage);
+        if(highlightingEnabled) {
+            pageStatusChange(editorPage);
+        }
 
         if (status !== PageStatus.Active) {
             return
