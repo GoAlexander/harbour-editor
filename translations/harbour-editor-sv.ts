@@ -129,7 +129,7 @@
     </message>
     <message>
         <source>-gri4994 for the wonderful app icon</source>
-        <translation type="unfinished"></translation>
+        <translation>-gri4994 för den fina app-ikonen</translation>
     </message>
 </context>
 <context>
@@ -198,15 +198,15 @@
     </message>
     <message>
         <source>Highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Färgmarkering</translation>
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Färgmarkering aktiverad</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Färgmarkering inaktiverad</translation>
     </message>
 </context>
 <context>
