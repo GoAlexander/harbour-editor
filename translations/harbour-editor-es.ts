@@ -198,15 +198,15 @@
     </message>
     <message>
         <source>Highlighting</source>
-        <translation>Resaltando</translation>
+        <translation>Resaltar</translation>
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation>Activar resaltando</translation>
+        <translation>Activar resaltado</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation>Desactivar resaltando</translation>
+        <translation>Desactivar resaltado</translation>
     </message>
 </context>
 <context>
