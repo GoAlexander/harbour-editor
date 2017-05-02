@@ -45,7 +45,7 @@
     </message>
     <message>
         <source>-coderus for various tips and code</source>
-        <translation>-coderus Por varios consejos y código</translation>
+        <translation>-coderus Por consejos y código</translation>
     </message>
     <message>
         <source>-To &apos;Select all text&apos; hold your finger until 3 vibrations</source>
@@ -53,7 +53,7 @@
     </message>
     <message>
         <source>-osanwe for very often consultations about qml code</source>
-        <translation>-osanwe Por varias consultas sobre código qml</translation>
+        <translation>-osanwe Por consultas sobre código qml</translation>
     </message>
     <message>
         <source>or</source>
@@ -159,7 +159,7 @@
     </message>
     <message>
         <source>Document can&apos;t be saved!</source>
-        <translation>Documento no puede ser guardado</translation>
+        <translation>Documento no puede&apos;ser guardado!</translation>
     </message>
     <message>
         <source>R-only</source>
@@ -198,15 +198,15 @@
     </message>
     <message>
         <source>Highlighting</source>
-        <translation>Destacando</translation>
+        <translation>Resaltando</translation>
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar resaltando</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactivar resaltando</translation>
     </message>
 </context>
 <context>
