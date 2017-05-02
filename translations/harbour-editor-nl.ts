@@ -64,10 +64,6 @@
         <translation>Als je de ontwikkelaar wil ondersteunen:</translation>
     </message>
     <message>
-        <source>-eekkelund for save/load/autosave functions and feedback</source>
-        <translation>• eekkelund voor functies voor opslaan/laden/automatisch opslaan en terugkoppeling</translation>
-    </message>
-    <message>
         <source>Paypal donation</source>
         <translation>Paypal-donatie</translation>
     </message>
@@ -130,6 +126,14 @@
     <message>
         <source>-gri4994 for the wonderful app icon</source>
         <translation>• gri4994 voor het mooie applogo</translation>
+    </message>
+    <message>
+        <source>-eekkelund for save/load/autosave functions, source code and some dictionaries for syntax highlighting and feedback</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-the team of GtkSourceView for the basis for .sh dictionary</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

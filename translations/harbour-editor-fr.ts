@@ -64,10 +64,6 @@
         <translation>Si vous souhaitez soutenir le développeur : </translation>
     </message>
     <message>
-        <source>-eekkelund for save/load/autosave functions and feedback</source>
-        <translation>-eekkelund pour les fonctions d&apos;enregistrement/chargement/sauvegarde automatique et ses retours</translation>
-    </message>
-    <message>
         <source>Paypal donation</source>
         <translation>Don Paypal</translation>
     </message>
@@ -129,6 +125,14 @@
     </message>
     <message>
         <source>-gri4994 for the wonderful app icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-eekkelund for save/load/autosave functions, source code and some dictionaries for syntax highlighting and feedback</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-the team of GtkSourceView for the basis for .sh dictionary</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
