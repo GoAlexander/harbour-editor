@@ -42,9 +42,15 @@ Page {
         category: "Editor."
     }
 
+    BusyIndicator {
+        id:busy
+        size: BusyIndicatorSize.Large
+        anchors.centerIn: parent
+        running: true
+    }
+
 
     function pageStatusChange(page){
-//        busy.running=true;
         documentHandler.setStyle(propertiesHighlightColor, stringHighlightColor,
                                  qmlHighlightColor, javascriptHighlightColor,
                                  commentHighlightColor, keywordsHighlightColor,
@@ -52,9 +58,6 @@ Page {
 
         documentHandler.setDictionary(getFileType(filePath)); //enable appropriate dictionary file
         console.log(getFileType(filePath)); //Debug
-
-//        busy.running=false;
-//        hintLoader.start() //???
     }
 
 
@@ -167,11 +170,12 @@ Page {
                         MenuButton {
                             width: parent.width / 2
                             mySource: "image://theme/icon-m-wizard?" + (highlightingEnabled ? Theme.highlightColor : Theme.primaryColor); //icon-m-dot
-                            myText:  qsTr("Highlighting")
+                            myText:  "Code " + qsTr("Highlighting")
                             onClicked: {
                                 if (highlightingEnabled == false) {
                                     highlightingEnabled = true;
-                                    pageStatusChange(editorPage);
+                                    //pageStatusChange(editorPage); //bug
+                                    pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePath, highlightingEnabled: highlightingEnabled}, PageStackAction.Replace);
 
                                     outputNotifications.close()
                                     outputNotifications.previewBody = qsTr("Highlighting enabled");
@@ -339,6 +343,7 @@ Page {
     }
 
     onStatusChanged: {
+        busy.running=true;
 
         if(highlightingEnabled) {
             pageStatusChange(editorPage);
@@ -354,6 +359,8 @@ Page {
                 });
             }
         }
+
+        busy.running=false;
     }
 
     Python {
