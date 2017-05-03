@@ -43,7 +43,7 @@ Page {
     }
 
     BusyIndicator {
-        id:busy
+        id: busy
         size: BusyIndicatorSize.Large
         anchors.centerIn: parent
         running: true

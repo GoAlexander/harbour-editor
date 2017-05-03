@@ -15,6 +15,13 @@
  * this file belongs to.
 *****************************************************************************/
 
+/*****************************************************************************
+ *
+ * It is changed version of the original file (disabled italic style,
+ * added support of *.shand some minor changes).
+ * It was modified for project "Editor.".
+*****************************************************************************/
+
 #ifndef REALHIGHLIGHTER_H
 #define REALHIGHLIGHTER_H
 

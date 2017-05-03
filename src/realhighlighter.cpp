@@ -14,6 +14,14 @@
  * contact the author of this file, or the owner of the project in which
  * this file belongs to.
 *****************************************************************************/
+
+/*****************************************************************************
+ *
+ * It is changed version of the original file (disabled italic style,
+ * added support of *.shand some minor changes).
+ * It was modified for project "Editor.".
+*****************************************************************************/
+
 #include "realhighlighter.h"
 
 #include <QtGui>
@@ -48,7 +56,7 @@ void RealHighlighter::ruleUpdate()
     QStringList keywordPatterns;
     QStringList propertiesPatterns;
 
-    functionFormat.setFontItalic(true);
+    //functionFormat.setFontItalic(true);
     functionFormat.setForeground(QColor(m_secondaryHighlightColor));
     rule.pattern = QRegExp("\\b[A-Za-z0-9_]+(?=\\()");
     rule.format = functionFormat;
@@ -56,7 +64,7 @@ void RealHighlighter::ruleUpdate()
 
     if (m_dictionary=="qml") {
         jsFormat.setForeground(QColor(m_secondaryHighlightColor));
-        jsFormat.setFontItalic(true);
+        //jsFormat.setFontItalic(true);
         QStringList jsPatterns;
         loadDict(":/dictionaries/javascript.txt",jsPatterns);
 
@@ -97,7 +105,7 @@ void RealHighlighter::ruleUpdate()
             rule.format = propertiesFormat;
             highlightingRules.append(rule);
         }
-        singleLineCommentFormat.setFontItalic(true);
+        //singleLineCommentFormat.setFontItalic(true);
         singleLineCommentFormat.setForeground(QColor(m_highlightBackgroundColor));
         rule.pattern = QRegExp("//[^\n]*");
         rule.format = singleLineCommentFormat;
@@ -105,7 +113,7 @@ void RealHighlighter::ruleUpdate()
 
     }else if (m_dictionary=="py") {
         pythonFormat.setForeground(QColor(m_secondaryHighlightColor));
-        pythonFormat.setFontItalic(true);
+        //pythonFormat.setFontItalic(true);
         QStringList pythonPatterns;
         loadDict(":/dictionaries/python.txt",pythonPatterns);
 
@@ -125,7 +133,7 @@ void RealHighlighter::ruleUpdate()
         }
     }else if (m_dictionary=="js") {
         jsFormat.setForeground(QColor(m_secondaryHighlightColor));
-        jsFormat.setFontItalic(true);
+        //jsFormat.setFontItalic(true);
         QStringList jsPatterns;
         loadDict(":/dictionaries/javascript.txt",jsPatterns);
 
@@ -143,14 +151,14 @@ void RealHighlighter::ruleUpdate()
             rule.format = keywordFormat;
             highlightingRules.append(rule);
         }
-        singleLineCommentFormat.setFontItalic(true);
+        //singleLineCommentFormat.setFontItalic(true);
         singleLineCommentFormat.setForeground(QColor(m_highlightBackgroundColor));
         rule.pattern = QRegExp("//[^\n]*");
         rule.format = singleLineCommentFormat;
         highlightingRules.append(rule);
     }else if (m_dictionary=="sh") {
         shFormat.setForeground(QColor(m_secondaryHighlightColor));
-        shFormat.setFontItalic(true);
+        //shFormat.setFontItalic(true);
         QStringList shPatterns;
         loadDict(":/dictionaries/sh.txt",shPatterns);
 
@@ -182,7 +190,7 @@ void RealHighlighter::ruleUpdate()
     }
 
     quotationFormat.setForeground(QColor(m_secondaryColor));
-    quotationFormat.setFontItalic(true);
+    //quotationFormat.setFontItalic(true);
     rule.pattern = QRegExp("\"([^\"]*)\"");
     rule.format = quotationFormat;
     highlightingRules.append(rule);
@@ -243,7 +251,7 @@ void RealHighlighter::highlightBlock(const QString &text)
                 if (ch == '*' && next == '/') {
                     ++i;
                     ++i;
-                    tmpFormat.setFontItalic(true);
+                    //tmpFormat.setFontItalic(true);
                     tmpFormat.setForeground(QColor(m_highlightBackgroundColor));
                     setFormat(start, i - start, tmpFormat);
                     state = Start;
@@ -259,7 +267,7 @@ void RealHighlighter::highlightBlock(const QString &text)
         }
 
         if (state == MultiLineComment){
-            tmpFormat.setFontItalic(true);
+            //tmpFormat.setFontItalic(true);
             tmpFormat.setForeground(QColor(m_highlightBackgroundColor));
             setFormat(start, text.length(), tmpFormat);
         }else
