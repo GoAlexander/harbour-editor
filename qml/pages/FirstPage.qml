@@ -9,25 +9,11 @@ import "../components/pullMenus/rows"
 Page {
     id: editorPage
 
-//    property string qmlHighlightColor: Theme.highlightColor
-//    property string keywordsHighlightColor:Theme.highlightDimmerColor
-//    property string propertiesHighlightColor:Theme.primaryColor
-//    property string javascriptHighlightColor:Theme.secondaryHighlightColor
-//    property string stringHighlightColor:Theme.secondaryColor
-//    property string commentHighlightColor: Theme.highlightBackgroundColor
-
-//    property string qmlHighlightColor: "#ff8bff"
-//    property string keywordsHighlightColor: "#808bed"
-//    property string propertiesHighlightColor: "#ff5555"
-//    property string javascriptHighlightColor: "#8888ff"
-//    property string stringHighlightColor: "#ffcd8b"
-//    property string commentHighlightColor: "#cd8b00"
-
     property int lastLineCount: 0
     property int sizeBackgroundItemMainMenuFirstRow: pullMenu2.width / 4
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
     property int sizeBackgroundItem: hotActionsMenu.width / 5
-    property string filePath: "" //"autosave"
+    property string filePath: ""
     property bool saveFlag: false
 
     property bool searched: false
