@@ -202,11 +202,11 @@
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation>Activar resaltado</translation>
+        <translation>Resaltado activado</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation>Desactivar resaltado</translation>
+        <translation>Resaltado desactivado</translation>
     </message>
     <message>
         <source>Code highlighting</source>
