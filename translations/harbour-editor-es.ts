@@ -201,16 +201,16 @@
         <translation>Buscar</translation>
     </message>
     <message>
-        <source>Highlighting</source>
-        <translation>Resaltar</translation>
-    </message>
-    <message>
         <source>Highlighting enabled</source>
         <translation>Activar resaltado</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
         <translation>Desactivar resaltado</translation>
+    </message>
+    <message>
+        <source>Code highlighting</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

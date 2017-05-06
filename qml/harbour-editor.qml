@@ -76,9 +76,15 @@ ApplicationWindow
     //TODO add these variables!
     //property var database
     // ---
-    property bool darkTheme: false // tmp value
-    property string bgColor: "transparent" // tmp value
-
+    property bool darkTheme: false
+    property string bgColor: "transparent"
+    property string textColor: Theme.highlightColor
+    property string qmlHighlightColor: Theme.highlightColor
+    property string keywordsHighlightColor:Theme.highlightDimmerColor
+    property string propertiesHighlightColor:Theme.primaryColor
+    property string javascriptHighlightColor:Theme.secondaryHighlightColor
+    property string stringHighlightColor:Theme.secondaryColor
+    property string commentHighlightColor: Theme.highlightBackgroundColor
 
     Python {
         id: py2 //TODO rename!

@@ -201,15 +201,15 @@
         <translation type="unfinished">Zoeken</translation>
     </message>
     <message>
-        <source>Highlighting</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Highlighting enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Code highlighting</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

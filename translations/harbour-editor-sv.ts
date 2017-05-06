@@ -201,16 +201,16 @@
         <translation type="unfinished">Sök</translation>
     </message>
     <message>
-        <source>Highlighting</source>
-        <translation>Färgmarkering</translation>
-    </message>
-    <message>
         <source>Highlighting enabled</source>
         <translation>Färgmarkering aktiverad</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
         <translation>Färgmarkering inaktiverad</translation>
+    </message>
+    <message>
+        <source>Code highlighting</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

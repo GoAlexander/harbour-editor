@@ -16,13 +16,12 @@ Page {
 //    property string stringHighlightColor:Theme.secondaryColor
 //    property string commentHighlightColor: Theme.highlightBackgroundColor
 
-    property string qmlHighlightColor: "#ff8bff"
-    property string keywordsHighlightColor: "#808bed"
-    property string propertiesHighlightColor: "#ff5555"
-    property string javascriptHighlightColor: "#8888ff"
-    property string stringHighlightColor: "#ffcd8b"
-    property string commentHighlightColor: "#cd8b00"
-    //textColor="#cfbfad"
+//    property string qmlHighlightColor: "#ff8bff"
+//    property string keywordsHighlightColor: "#808bed"
+//    property string propertiesHighlightColor: "#ff5555"
+//    property string javascriptHighlightColor: "#8888ff"
+//    property string stringHighlightColor: "#ffcd8b"
+//    property string commentHighlightColor: "#cd8b00"
 
     property int lastLineCount: 0
     property int sizeBackgroundItemMainMenuFirstRow: pullMenu2.width / 4
@@ -170,7 +169,7 @@ Page {
                         MenuButton {
                             width: parent.width / 2
                             mySource: "image://theme/icon-m-wizard?" + (highlightingEnabled ? Theme.highlightColor : Theme.primaryColor); //icon-m-dot
-                            myText:  "Code " + qsTr("Highlighting")
+                            myText: qsTr("Code highlighting")
                             onClicked: {
                                 if (highlightingEnabled == false) {
                                     highlightingEnabled = true;
@@ -297,6 +296,7 @@ Page {
                     font.pixelSize: fontSize
                     background: null
                     selectionMode: TextEdit.SelectCharacters
+                    color: focus ? textColor : Theme.primaryColor
                     focus: true
 
                     text: documentHandler.text //for highlighting

@@ -57,22 +57,22 @@ Page {
                         darkTheme = checked
                         lightT.checked = !checked
                         if (darkTheme) {
-//                            textColor="#cfbfad"
-//                            qmlHighlightColor="#ff8bff"
-//                            keywordsHighlightColor="#808bed"
-//                            propertiesHighlightColor="#ff5555"
-//                            javascriptHighlightColor="#8888ff"
-//                            stringHighlightColor="#ffcd8b"
-//                            commentHighlightColor="#cd8b00"
+                            textColor="#cfbfad"
+                            qmlHighlightColor="#ff8bff"
+                            keywordsHighlightColor="#808bed"
+                            propertiesHighlightColor="#ff5555"
+                            javascriptHighlightColor="#8888ff"
+                            stringHighlightColor="#ffcd8b"
+                            commentHighlightColor="#cd8b00"
                             bgColor="#1e1e27"
                         } else {
-//                            textColor=Theme.highlightColor
-//                            qmlHighlightColor=Theme.highlightColor
-//                            keywordsHighlightColor=Theme.highlightDimmerColor
-//                            propertiesHighlightColor=Theme.primaryColor
-//                            javascriptHighlightColor=Theme.secondaryHighlightColor
-//                            stringHighlightColor=Theme.secondaryColor
-//                            commentHighlightColor= Theme.highlightBackgroundColor
+                            textColor=Theme.highlightColor
+                            qmlHighlightColor=Theme.highlightColor
+                            keywordsHighlightColor=Theme.highlightDimmerColor
+                            propertiesHighlightColor=Theme.primaryColor
+                            javascriptHighlightColor=Theme.secondaryHighlightColor
+                            stringHighlightColor=Theme.secondaryColor
+                            commentHighlightColor= Theme.highlightBackgroundColor
                             bgColor="transparent"
                         }
                     }
