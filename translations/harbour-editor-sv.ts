@@ -129,11 +129,11 @@
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions, source code and some dictionaries for syntax highlighting and feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>eekelund för funktionerna spara/läs in/spara automatiskt, källkod och ordböcker för kodmarkering och återkoppling</translation>
     </message>
     <message>
         <source>-the team of GtkSourceView for the basis for .sh dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>GtkSourceView-gruppen för grunderna i .sh-ordboken</translation>
     </message>
 </context>
 <context>
@@ -210,7 +210,7 @@
     </message>
     <message>
         <source>Code highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Kodmarkering</translation>
     </message>
 </context>
 <context>
