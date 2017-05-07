@@ -129,11 +129,11 @@
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions, source code and some dictionaries for syntax highlighting and feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>-eekkelund Por funciones de guardar/cargar/autoguardar, código fuente y algunos diccionarios para resaltar sintaxis y retroalimentación</translation>
     </message>
     <message>
         <source>-the team of GtkSourceView for the basis for .sh dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>-al equido de GtkSourceView, por la base del diccionario .sh</translation>
     </message>
 </context>
 <context>
@@ -202,15 +202,15 @@
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation>Activar resaltado</translation>
+        <translation>Resaltado activado</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation>Desactivar resaltado</translation>
+        <translation>Resaltado desactivado</translation>
     </message>
     <message>
         <source>Code highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Resaltar código</translation>
     </message>
 </context>
 <context>
