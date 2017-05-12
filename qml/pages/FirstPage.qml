@@ -303,7 +303,7 @@ Page {
 
                         //Autosave
                         if (filePath!=="" && documentHandler.text !== "") {
-                            py.call('editFile.autosave', [filePath,documentHandler.text], function(result) {});
+                            py.call('editFile.autosave', [filePath, myTextArea.text], function(result) {}); // written myTextArea.text to fix autosaving
                         }
 
                     }
