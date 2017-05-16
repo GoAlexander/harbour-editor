@@ -210,11 +210,11 @@
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota rápida</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Resaltar</translation>
     </message>
 </context>
 <context>
@@ -267,15 +267,15 @@
     </message>
     <message>
         <source>Text auto-saved in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Texto auto guardado en:</translation>
     </message>
     <message>
         <source>Quick note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota rápida</translation>
     </message>
     <message>
         <source>~/Documents/harbour-editor-quickNote.txt</source>
-        <translation type="unfinished"></translation>
+        <translation>~/Documentos/harbour-editor-NotaRápida.txt</translation>
     </message>
 </context>
 <context>
