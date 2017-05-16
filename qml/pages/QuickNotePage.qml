@@ -7,11 +7,9 @@ import "../components/pullMenus/rows"
 Page {
     id: editorPage
 
-    //property string filePath: "~/Documents/harbour-editor-quickNote.txt"
     property string filePath: "/home/nemo/Documents/harbour-editor-quickNote.txt"
-    property bool saveFlag: false
-    property bool searched: false
-    property bool searchRowVisible: false
+//    property bool searched: false
+//    property bool searchRowVisible: false
 
     Rectangle {
         id:background
@@ -25,13 +23,13 @@ Page {
 
             PullDownMenu {
                 MenuLabel {
-                    text: qsTr("Quick note")
+                    text: qsTr("Quick note.")
                 }
                 MenuLabel {
                     text: qsTr("Text auto-saved in:")
                 }
                 MenuLabel {
-                    text: qsTr("`~/Documents/harbour-editor-quickNote.txt`")
+                    text: qsTr("~/Documents/harbour-editor-quickNote.txt")
                 }
             }
 
@@ -40,13 +38,6 @@ Page {
                 height: hotActionsMenu.height
                 //visible: headerVisible || searchRowVisible //header visible if EditRow active or SearchRow active
 
-//                EditRow {
-//                    id: hotActionsMenu
-//                    width: parent.width
-//                    height: childrenRect.height
-//                    myMenuButtonWidth: sizeBackgroundItem
-//                    visible: !searchRowVisible
-//                }
                 Row {
                     id: hotActionsMenu
                     width: parent.width
@@ -111,20 +102,15 @@ Page {
 
                     onTextChanged: {
                         console.log("filePath = " + filePath, fontSize, font.family);
-                        saveFlag = true; //?
 
                         //Autosave
                         if (filePath!=="" && myTextArea.text !== "") {
-                            //py.call('editFile.autosave', [filePath, myTextArea.text], function(result) {});
                             py.call('editFile.savings', [filePath,myTextArea.text], function() {});
                         }
                     }
-
                 }
                 VerticalScrollDecorator { flickable: editorView }
             }
-
-
         }
     }
 

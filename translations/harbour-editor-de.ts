@@ -266,15 +266,15 @@
         <translation type="unfinished"> </translation>
     </message>
     <message>
-        <source>Quick note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>`~/Documents/harbour-editor-quickNote.txt`</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Text auto-saved in:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quick note.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>~/Documents/harbour-editor-quickNote.txt</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
