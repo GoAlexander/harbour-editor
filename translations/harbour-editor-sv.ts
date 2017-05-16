@@ -209,8 +209,12 @@
         <translation>Färgmarkering inaktiverad</translation>
     </message>
     <message>
-        <source>Code highlighting</source>
-        <translation>Kodmarkering</translation>
+        <source>Quick note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlight</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -245,6 +249,33 @@
     <message>
         <source>History</source>
         <translation>Historik</translation>
+    </message>
+</context>
+<context>
+    <name>QuickNotePage</name>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished">Ångra</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished">Upprepa</translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished">Tab</translation>
+    </message>
+    <message>
+        <source>Quick note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>`~/Documents/harbour-editor-quickNote.txt`</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text auto-saved in:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

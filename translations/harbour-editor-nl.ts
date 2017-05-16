@@ -209,7 +209,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Code highlighting</source>
+        <source>Quick note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlight</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -245,6 +249,33 @@
     <message>
         <source>History</source>
         <translation>Geschiedenis</translation>
+    </message>
+</context>
+<context>
+    <name>QuickNotePage</name>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished"> </translation>
+    </message>
+    <message>
+        <source>Quick note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>`~/Documents/harbour-editor-quickNote.txt`</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text auto-saved in:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

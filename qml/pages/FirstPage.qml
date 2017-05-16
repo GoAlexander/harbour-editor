@@ -139,7 +139,7 @@ Page {
                         height: childrenRect.height
 
                         MenuButton {
-                            width: parent.width / 2
+                            width: parent.width / 3
                             mySource: "image://theme/icon-m-search?" + (searchRowVisible ? Theme.highlightColor : Theme.primaryColor);
                             myText: qsTr("Search")
                             onClicked: {
@@ -153,9 +153,18 @@ Page {
                         }
 
                         MenuButton {
-                            width: parent.width / 2
+                            width: parent.width / 3
+                            mySource: "image://theme/icon-m-other";
+                            myText: qsTr("Quick note")
+                            onClicked: {
+                                pageStack.push(Qt.resolvedUrl("QuickNotePage.qml"))
+                            }
+                        }
+
+                        MenuButton {
+                            width: parent.width / 3
                             mySource: "image://theme/icon-m-wizard?" + (highlightingEnabled ? Theme.highlightColor : Theme.primaryColor); //icon-m-dot
-                            myText: qsTr("Code highlighting")
+                            myText: qsTr("Highlight")
                             onClicked: {
                                 if (highlightingEnabled == false) {
                                     highlightingEnabled = true;

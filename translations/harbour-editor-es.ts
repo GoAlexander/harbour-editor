@@ -209,8 +209,12 @@
         <translation>Resaltado desactivado</translation>
     </message>
     <message>
-        <source>Code highlighting</source>
-        <translation>Resaltar código</translation>
+        <source>Quick note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlight</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -245,6 +249,33 @@
     <message>
         <source>History</source>
         <translation>Lista</translation>
+    </message>
+</context>
+<context>
+    <name>QuickNotePage</name>
+    <message>
+        <source>Undo</source>
+        <translation type="unfinished">D-hacer</translation>
+    </message>
+    <message>
+        <source>Redo</source>
+        <translation type="unfinished">R-hacer</translation>
+    </message>
+    <message>
+        <source>Tab</source>
+        <translation type="unfinished">Tab</translation>
+    </message>
+    <message>
+        <source>Quick note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>`~/Documents/harbour-editor-quickNote.txt`</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text auto-saved in:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -57,7 +57,8 @@ DISTFILES += \
     qml/components/pullMenus/rows/SearchRow.qml \
     qml/components/pullMenus/rows/MainRow.qml \
     qml/components/pullMenus/rows/EditRow.qml \
-    qml/service/Dao.qml
+    qml/service/Dao.qml \
+    qml/pages/QuickNotePage.qml
 
 HEADERS += \
     src/documenthandler.h \
