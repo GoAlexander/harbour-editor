@@ -210,11 +210,11 @@
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished"></translation>
+        <translation>Snabbnotis</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Färgmarkera</translation>
     </message>
 </context>
 <context>
@@ -267,11 +267,11 @@
     </message>
     <message>
         <source>Text auto-saved in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Text autosparad i:</translation>
     </message>
     <message>
         <source>Quick note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Snabbnotis.</translation>
     </message>
 </context>
 <context>
@@ -345,7 +345,7 @@
     </message>
     <message>
         <source>Default text editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardtextredigerare</translation>
     </message>
 </context>
 </TS>
