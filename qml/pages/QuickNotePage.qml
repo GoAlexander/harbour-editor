@@ -1,13 +1,19 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.3
+import harbour.editor.generallogic 1.0
 import "../components"
 import "../components/pullMenus/rows"
 
 Page {
     id: editorPage
 
-    property string filePath: "/home/nemo/Documents/harbour-editor-quickNote.txt"
+    //for filePath
+    GeneralLogic {
+        id: myGeneralLogic
+    }
+
+    property string filePath: myGeneralLogic.getQuickNotePath();
 //    property bool searched: false
 //    property bool searchRowVisible: false
 
@@ -29,7 +35,7 @@ Page {
                     text: qsTr("Text auto-saved in:")
                 }
                 MenuLabel {
-                    text: qsTr("~/Documents/harbour-editor-quickNote.txt")
+                    text: "~/Documents/harbour-editor-quickNote.txt"
                 }
             }
 

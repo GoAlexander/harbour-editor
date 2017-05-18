@@ -34,6 +34,7 @@
 
 #include <sailfishapp.h>
 #include "documenthandler.h"
+#include "generallogic.h"
 
 
 int main(int argc, char *argv[])
@@ -51,6 +52,7 @@ int main(int argc, char *argv[])
     QQuickView *view = SailfishApp::createView();
 
     qmlRegisterType<DocumentHandler>("harbour.editor.documenthandler", 1, 0, "DocumentHandler");
+    qmlRegisterType<GeneralLogic>("harbour.editor.generallogic", 1, 0, "GeneralLogic");
 
     view->setSource(SailfishApp::pathTo("qml/harbour-editor.qml"));
     view->showFullScreen();

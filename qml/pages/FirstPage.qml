@@ -163,7 +163,9 @@ Page {
 
                         MenuButton {
                             width: parent.width / 3
-                            mySource: "image://theme/icon-m-wizard?" + (highlightingEnabled ? Theme.highlightColor : Theme.primaryColor); //icon-m-dot
+                            //mySource: "../img/highlight.png";
+                            //mySource: "image://theme/icon-m-wizard?" + (highlightingEnabled ? Theme.highlightColor : Theme.primaryColor);
+                            mySource: "image://theme/icon-m-dot?" + (highlightingEnabled ? Theme.highlightColor : Theme.primaryColor);
                             myText: qsTr("Highlight")
                             onClicked: {
                                 if (highlightingEnabled == false) {

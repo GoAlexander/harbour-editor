@@ -16,7 +16,8 @@ CONFIG += sailfishapp
 
 SOURCES += src/harbour-editor.cpp \
     src/documenthandler.cpp \
-    src/realhighlighter.cpp
+    src/realhighlighter.cpp \
+    src/generallogic.cpp
 
 OTHER_FILES += qml/harbour-editor.qml \
     qml/cover/CoverPage.qml \
@@ -62,7 +63,8 @@ DISTFILES += \
 
 HEADERS += \
     src/documenthandler.h \
-    src/realhighlighter.h
+    src/realhighlighter.h \
+    src/generallogic.h
 
 RESOURCES += \
     src/dictionarys.qrc

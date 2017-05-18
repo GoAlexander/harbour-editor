@@ -273,10 +273,6 @@
         <source>Quick note.</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>~/Documents/harbour-editor-quickNote.txt</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SearchRow</name>
@@ -345,6 +341,10 @@
     </message>
     <message>
         <source>Ambience Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default text editor</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
