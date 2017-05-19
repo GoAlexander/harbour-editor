@@ -214,7 +214,7 @@
     </message>
     <message>
         <source>Highlight</source>
-        <translation>Resaltar</translation>
+        <translation>Colorear</translation>
     </message>
 </context>
 <context>
