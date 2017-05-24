@@ -210,11 +210,11 @@
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota rápida</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Colorear</translation>
     </message>
 </context>
 <context>
@@ -267,11 +267,11 @@
     </message>
     <message>
         <source>Text auto-saved in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Texto auto guardado en:</translation>
     </message>
     <message>
         <source>Quick note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nota rápida</translation>
     </message>
 </context>
 <context>
