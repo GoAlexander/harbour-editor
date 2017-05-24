@@ -231,6 +231,10 @@
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Documents are in order of first opening</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainRow</name>

@@ -169,18 +169,15 @@ Page {
                     py2.call('editFile.getValue', ["history"], function(result) {
                         var openedFiles = [];
                         openedFiles = result;
-
                         if (openedFiles.indexOf(filePath) === -1) { // haha :) it is like //if (!openedFiles.contains(filePath)) {
                             openedFiles.push(filePath);
                             py2.call('editFile.setValue', ["history", openedFiles], function(result) {});
                         }
                     });
 
-                    //if (mimeType.indexOf("image/") == 0) {
-                        if (typeof callback == "function") {
-                            callback(filePath); //return to the page from which this page was called
-                        }
-                    //}
+                    if (typeof callback == "function") {
+                        callback(filePath); //return to the page from which this page was called
+                    }
                 }
             }
         }

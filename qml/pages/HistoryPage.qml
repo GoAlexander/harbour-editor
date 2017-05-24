@@ -15,6 +15,7 @@ Page {
 
         header: PageHeader {
             title: qsTr("History")
+            description: qsTr("Documents are in order of first opening")
         }
 
         model: ListModel {
