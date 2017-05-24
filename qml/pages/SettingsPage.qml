@@ -1,8 +1,14 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.editor.generallogic 1.0
 
 Page {
     id: page
+
+    //for xdg-mime
+    GeneralLogic {
+        id: myGeneralLogic
+    }
 
     SilicaFlickable {
         id: view
@@ -177,6 +183,36 @@ Page {
                     MenuItem {
                         text: "8 spaces"
                         onClicked: tabType = "        ";
+                    }
+                }
+            }
+
+            SectionHeader { text: qsTr("Default text editor") }
+
+            Row{
+                anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
+                TextSwitch {
+                    id: editorT
+                    checked: myGeneralLogic.isDefaultApp()
+                    text: "Editor."
+                    width: parent.width/2
+                    onCheckedChanged: {
+                        //console.log(myGeneralLogic.isDefaultApp());
+
+                        editorT.checked = checked;
+                        jNotesT.checked = !checked
+                        myGeneralLogic.setDefaultApp("harbour-editor.desktop");
+                    }
+                }
+                TextSwitch {
+                    id: jNotesT
+                    checked: !myGeneralLogic.isDefaultApp()
+                    text: "Jolla-notes"
+                    width: parent.width/2
+                    onCheckedChanged: {
+                        editorT.checked = !checked;
+                        jNotesT.checked = checked
+                        myGeneralLogic.setDefaultApp("jolla-notes.desktop");
                     }
                 }
             }
