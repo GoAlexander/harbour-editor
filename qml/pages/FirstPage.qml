@@ -58,10 +58,11 @@ Page {
         pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"), {filePath: filePathFromChooser}, PageStackAction.Animated);
         pageStack.nextPage();
         if (filePath!=="") {
-            py.call('editFile.savings', [filePath,documentHandler.text], function() {});//filePath is path where you want to save!
+            //py.call('editFile.savings', [filePath,documentHandler.text], function() {}); //test it :)
+            py.call('editFile.savings', [filePath,myTextArea.text], function() {});
         }
         py.call('editFile.openings', [filePath], function(result) {
-            documentHandler.text = result;
+            myTextArea.text = result;
         });
 
         outputNotifications.close()
