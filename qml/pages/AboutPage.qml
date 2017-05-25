@@ -28,7 +28,7 @@ Page {
             Label {
                 width: parent.width
                 horizontalAlignment: Text.AlignHCenter
-                text: qsTr("Version ") + Qt.application.version
+                text: qsTr("Version") + " " + Qt.application.version
             }
 
             Button {
