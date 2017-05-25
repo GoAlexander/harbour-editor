@@ -128,11 +128,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Version </source>
+        <source>Source code</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Source code</source>
+        <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
