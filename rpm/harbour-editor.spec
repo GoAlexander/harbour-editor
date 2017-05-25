@@ -13,7 +13,7 @@ Name:       harbour-editor
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    My Sailfish OS Application
-Version:    0.7.3
+Version:    0.7.4
 Release:    1
 Group:      Qt/Qt
 License:    LICENSE
@@ -43,7 +43,8 @@ Short description of my Sailfish OS Application
 # >> build pre
 # << build pre
 
-%qtc_qmake5 
+%qtc_qmake5  \
+    VERSION=%{version}
 
 %qtc_make %{?_smp_mflags}
 

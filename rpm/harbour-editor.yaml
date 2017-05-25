@@ -1,6 +1,6 @@
 Name: harbour-editor
 Summary: My Sailfish OS Application
-Version: 0.7.3
+Version: 0.7.4
 Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
@@ -45,3 +45,6 @@ Files:
 
 # For more information about yaml and what's supported in Sailfish OS
 # build system, please see https://wiki.merproject.org/wiki/Spectacle
+
+QMakeOptions:
+  - VERSION=%{version}

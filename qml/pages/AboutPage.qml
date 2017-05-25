@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 import "../components"
 
@@ -18,11 +18,32 @@ Page {
                 title: qsTr("About")
             }
 
+            Image {
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: Theme.iconSizeExtraLarge
+                height: Theme.iconSizeExtraLarge
+                source: "/usr/share/icons/hicolor/256x256/apps/harbour-editor.png"
+            }
+
+            Label {
+                width: parent.width
+                horizontalAlignment: Text.AlignHCenter
+                text: qsTr("Version ") + Qt.application.version
+            }
+
             Button {
                 text: qsTr("Paypal donation")
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     Qt.openUrlExternally("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E8CL7QXGEMQEG");
+                }
+            }
+
+            Button {
+                text: qsTr("Source code")
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {
+                    Qt.openUrlExternally("https://github.com/GoAlexander/harbour-editor");
                 }
             }
 
@@ -39,9 +60,6 @@ Page {
                       qsTr("\"Editor.\" is feature-rich text/code editor!") +
                       "<br/>" +
                       qsTr("License: GPLv3") +
-                      "<br/><br/>" + qsTr("You can find the source code at the:") +
-                      "<br/> <a href=\"https://github.com/GoAlexander/harbour-editor\">" +
-                      qsTr("GitHub") + "</a>" +
                       "<br/>" +
                       "<br/>" +
                       "<b>" + qsTr("If you want to support the developer:") +

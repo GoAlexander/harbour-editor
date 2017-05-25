@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
     // To display the view, call "show()" (will show fullscreen on device).
 
     QGuiApplication *app = SailfishApp::application(argc, argv);
+    app->setApplicationVersion(QString(APP_VERSION));
     QQuickView *view = SailfishApp::createView();
 
     qmlRegisterType<DocumentHandler>("harbour.editor.documenthandler", 1, 0, "DocumentHandler");

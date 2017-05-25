@@ -14,6 +14,8 @@ TARGET = harbour-editor
 
 CONFIG += sailfishapp
 
+DEFINES += APP_VERSION=\"\\\"$${VERSION}\\\"\"
+
 SOURCES += src/harbour-editor.cpp \
     src/documenthandler.cpp \
     src/realhighlighter.cpp \
@@ -25,7 +27,6 @@ OTHER_FILES += qml/harbour-editor.qml \
     rpm/harbour-editor.changes.in \
     rpm/harbour-editor.spec \
     rpm/harbour-editor.yaml \
-    translations/*.ts \
     harbour-editor.desktop \
     qml/editFile.py #You can find better place :)
 

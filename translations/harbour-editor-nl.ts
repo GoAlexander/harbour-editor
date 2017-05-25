@@ -24,14 +24,6 @@
         <translation>Licentie: GPLv3</translation>
     </message>
     <message>
-        <source>You can find the source code at the:</source>
-        <translation>Je kan de broncode vinden op:</translation>
-    </message>
-    <message>
-        <source>GitHub</source>
-        <translation>GitHub</translation>
-    </message>
-    <message>
         <source>Special thanks:</source>
         <translation>Met dank aan:</translation>
     </message>
@@ -133,6 +125,14 @@
     </message>
     <message>
         <source>-the team of GtkSourceView for the basis for .sh dictionary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Source code</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

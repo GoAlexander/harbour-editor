@@ -18,6 +18,24 @@ https://trello.com/b/Gyu7pPqi/harbour-editor
 Important notes
 ---------------
 - Because of OS default File Manager minimal version of Sailfish OS should be 2.0.5 
+
+Some tips for the developers
+----------------------------
+
+If you want to have automatically changeable version counter in your QML you can read this thread:
+https://lists.sailfishos.org/pipermail/devel/2015-January/005559.html
+
+>a) in your .yaml add the lines:
+QMakeOptions:
+- VERSION=%{version}
+b) in your .pro add the lines:
+DEFINES += APP_VERSION=\"\\\"$${VERSION}\\\"\"
+c) in your .c's main() function add the lines:
+QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
+app->setApplicationVersion(QString(APP_VERSION));
+d) now your app's version is available in QML through
+Qt.application.version
+
   
 License
 -------
