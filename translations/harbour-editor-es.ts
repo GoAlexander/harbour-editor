@@ -202,11 +202,11 @@
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation>Resaltado activado</translation>
+        <translation>Coloreado activado</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation>Resaltado desactivado</translation>
+        <translation>Coloreado desactivado</translation>
     </message>
     <message>
         <source>Quick note</source>
@@ -214,7 +214,7 @@
     </message>
     <message>
         <source>Highlight</source>
-        <translation>Colorear</translation>
+        <translation>Color</translation>
     </message>
 </context>
 <context>
@@ -233,7 +233,7 @@
     </message>
     <message>
         <source>Documents are in order of first opening</source>
-        <translation type="unfinished"></translation>
+        <translation>Documentos están en orden de primera apertura</translation>
     </message>
 </context>
 <context>
@@ -259,15 +259,15 @@
     <name>QuickNotePage</name>
     <message>
         <source>Undo</source>
-        <translation type="unfinished">D-hacer</translation>
+        <translation>D-hacer</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished">R-hacer</translation>
+        <translation>R-hacer</translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished">Tab</translation>
+        <translation>Tab</translation>
     </message>
     <message>
         <source>Text auto-saved in:</source>
@@ -301,11 +301,11 @@
     </message>
     <message>
         <source>Quick menu enabled</source>
-        <translation>Activar menú expreso</translation>
+        <translation>Menú expreso</translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
-        <translation>Activar numeración líneal</translation>
+        <translation>Numeración líneal</translation>
     </message>
     <message>
         <source>Fonts and size</source>
@@ -313,7 +313,7 @@
     </message>
     <message>
         <source>Use it to get more space for text</source>
-        <translation>Uselo para obtener más espacio para el texto</translation>
+        <translation>Usarlo para obtener más espacio para el texto</translation>
     </message>
     <message>
         <source>Font size:</source>
@@ -333,7 +333,7 @@
     </message>
     <message>
         <source>Be careful to enable this option!</source>
-        <translation>Ten cuidado en activar esta opcion!</translation>
+        <translation>Tener cuidado en activar esta opcion!</translation>
     </message>
     <message>
         <source>Type of tab:</source>
@@ -349,7 +349,7 @@
     </message>
     <message>
         <source>Default text editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor de texto predeterminado</translation>
     </message>
 </context>
 </TS>
