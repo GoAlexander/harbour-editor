@@ -124,15 +124,40 @@ Page {
             id: view
             anchors.fill: parent
 
-            PullDownMenu {
+            PushUpMenu { //PullDownMenu {
+
                 MenuItem {
-                    text: qsTr("Settings")
-                    onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+                    visible: (filePath == "") ? false : true
+                    text: filePath
+                    font.pixelSize: Theme.fontSizeTiny
+                    color: Theme.highlightColor
+                    onClicked: {
+                        Clipboard.text = filePath;
+                        outputNotifications.close()
+                        outputNotifications.previewBody = qsTr("File path copied to the clipboard")
+                        outputNotifications.publish()
+                    }
                 }
 
                 Column {
                     width: parent.width
                     height: childrenRect.height
+
+                    EditRow {
+                        id: pullMenu
+                        width: parent.width
+                        height: childrenRect.height
+                        myMenuButtonWidth: sizeBackgroundItemMainMenu
+                        visible: !headerVisible
+                    }
+
+                    // my own component (To Do need some cleaning and optimisation)
+                    MainRow {
+                        id: pullMenu2
+                        width: parent.width
+                        height: childrenRect.height
+                        myMenuButtonWidth:sizeBackgroundItemMainMenuFirstRow
+                    }
 
                     //TODO need refactoring for this row
                     Row {
@@ -190,37 +215,12 @@ Page {
                         }
                     }
 
-                    // my own component (To Do need some cleaning and optimisation)
-                    MainRow {
-                        id: pullMenu2
-                        width: parent.width
-                        height: childrenRect.height
-                        myMenuButtonWidth:sizeBackgroundItemMainMenuFirstRow
-                    }
-
-                    EditRow {
-                        id: pullMenu
-                        width: parent.width
-                        height: childrenRect.height
-                        myMenuButtonWidth: sizeBackgroundItemMainMenu
-                        visible: !headerVisible
-                    }
-
                 }
 
                 MenuItem {
-                    visible: (filePath == "") ? false : true
-                    text: filePath
-                    font.pixelSize: Theme.fontSizeTiny
-                    color: Theme.highlightColor
-                    onClicked: {
-                        Clipboard.text = filePath;
-                        outputNotifications.close()
-                        outputNotifications.previewBody = qsTr("File path copied to the clipboard")
-                        outputNotifications.publish()
-                    }
+                    text: qsTr("Settings")
+                    onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
                 }
-
             }
 
             //        SilicaFlickable {
@@ -231,9 +231,11 @@ Page {
             //            anchors.fill: parent
             //            flickableDirection: Flickable.HorizontalFlick
 
-            PageHeader {
+            Row { //PageHeader {
                 id: header
                 height: hotActionsMenu.height
+                width: parent.width
+                anchors.bottom: parent.bottom
                 visible: headerVisible || searchRowVisible //header visible if EditRow active or SearchRow active
 
                 // my own component (To Do need some cleaning and optimisation)
@@ -251,7 +253,6 @@ Page {
                     height: childrenRect.height
                     visible: searchRowVisible
                 }
-
             }
 
             //            boundsBehavior: {
@@ -273,7 +274,8 @@ Page {
             SilicaFlickable {
                 id: editorView
                 anchors.fill: parent
-                anchors.topMargin: header.visible ? header.height : 0 // для сдвига при отключении quick actions menu
+                //anchors.topMargin: header.visible ? header.height : 0 // для сдвига при отключении quick actions menu
+                anchors.bottomMargin: header.visible ? header.height : 0
                 contentHeight: myTextArea.height
                 clip: true
 
