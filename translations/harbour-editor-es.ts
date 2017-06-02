@@ -135,6 +135,10 @@
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Telegram group of app</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -350,6 +354,10 @@
     <message>
         <source>Default text editor</source>
         <translation>Editor de texto predeterminado</translation>
+    </message>
+    <message>
+        <source>Default for js</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

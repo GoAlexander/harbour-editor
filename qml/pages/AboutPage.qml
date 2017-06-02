@@ -47,6 +47,16 @@ Page {
                 }
             }
 
+            //You can join my telegram group where I will post some conceptes and new ideas.
+            //You can discuss new features and [влиять] development of app.
+            Button {
+                text: qsTr("Telegram group of app")
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {
+                    Qt.openUrlExternally("https://t.me/joinchat/AAAAAAsnaqUj-ZWC3WmVIw");
+                }
+            }
+
             Text {
                 id: titleLabel
                 anchors { horizontalCenter: parent.horizontalCenter }
