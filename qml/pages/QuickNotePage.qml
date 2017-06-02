@@ -27,7 +27,7 @@ Page {
             id: view
             anchors.fill: parent
 
-            PullDownMenu {
+            PushUpMenu {
                 MenuLabel {
                     text: qsTr("Quick note.")
                 }
@@ -39,10 +39,11 @@ Page {
                 }
             }
 
-            PageHeader {
+            Row {
                 id: header
                 height: hotActionsMenu.height
-                //visible: headerVisible || searchRowVisible //header visible if EditRow active or SearchRow active
+                width: parent.width
+                anchors.bottom: parent.bottom
 
                 Row {
                     id: hotActionsMenu
@@ -93,7 +94,7 @@ Page {
             SilicaFlickable {
                 id: editorView
                 anchors.fill: parent
-                anchors.topMargin: header.visible ? header.height : 0 // для сдвига при отключении quick actions menu
+                anchors.bottomMargin: header.visible ? header.height : 0 // для сдвига при отключении quick actions menu
                 contentHeight: myTextArea.height
                 clip: true
 

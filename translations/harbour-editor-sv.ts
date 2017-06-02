@@ -355,9 +355,5 @@
         <source>Default text editor</source>
         <translation>Standardtextredigerare</translation>
     </message>
-    <message>
-        <source>Default for js</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 </TS>

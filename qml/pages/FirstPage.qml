@@ -124,7 +124,7 @@ Page {
             id: view
             anchors.fill: parent
 
-            PushUpMenu { //PullDownMenu {
+            PushUpMenu {
 
                 MenuItem {
                     visible: (filePath == "") ? false : true
@@ -231,7 +231,7 @@ Page {
             //            anchors.fill: parent
             //            flickableDirection: Flickable.HorizontalFlick
 
-            Row { //PageHeader {
+            Row {
                 id: header
                 height: hotActionsMenu.height
                 width: parent.width
