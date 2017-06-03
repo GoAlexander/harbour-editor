@@ -129,15 +129,15 @@
     </message>
     <message>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Código fuente</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versión</translation>
     </message>
     <message>
         <source>Telegram group of app</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo de aps de telegrama</translation>
     </message>
 </context>
 <context>
