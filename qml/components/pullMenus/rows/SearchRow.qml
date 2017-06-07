@@ -4,6 +4,7 @@ import "../../../pages" //to do visible some variables
 
 //TODO -> use next variables as parameters (don`t use import)
 //-searched
+//-searchRowVisible
 //-myTexstArea.*
 
 Row {
@@ -29,14 +30,12 @@ Row {
         }
     }
 
-    //width: parent.width
-    //height: childrenRect.height
-    spacing: Theme.paddingSmall
-
     SearchField {
         id:searchField
-        width: parent.width / 1.5
+        //width: parent.width / 1.5
+        width: parent.width / 1.8
         height: Theme.itemSizeSmall
+
         font.pixelSize: Theme.fontSizeMedium
         EnterKey.iconSource: "image://theme/icon-m-enter-next"
         placeholderText: qsTr("Search")
@@ -49,29 +48,43 @@ Row {
         inputMethodHints: Qt.ImhNoAutoUppercase
     }
 
-    IconButton {
-        id:previous
-        icon.source: "image://theme/icon-m-previous"
-        height: searchField.height
-        enabled: searched
-        onClicked: {
-            //flipable.search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
-            search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
-            myTextArea.forceActiveFocus();
-        }
-        visible: searchField.activeFocus || searchField.text.length>0
-    }
+    Row {
+        spacing: Theme.paddingSmall
 
-    IconButton {
-        id:next
-        icon.source: "image://theme/icon-m-next"
-        height: searchField.height
-        enabled: searched
-        onClicked: {
-            //flipable.search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
-            search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
-            myTextArea.forceActiveFocus();
+        IconButton {
+            id:previous
+            icon.source: "image://theme/icon-m-previous"
+            height: searchField.height
+            scale: 0.8
+            enabled: searched
+            onClicked: {
+                //flipable.search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
+                search(searchField.text,myTextArea.cursorPosition-1,"back",previous);
+                myTextArea.forceActiveFocus();
+            }
+            visible: searchField.activeFocus || searchField.text.length>0
         }
-        visible: searchField.activeFocus || searchField.text.length>0
+
+        IconButton {
+            id:next
+            icon.source: "image://theme/icon-m-next"
+            height: searchField.height
+            scale: 0.8
+            enabled: searched
+            onClicked: {
+                //flipable.search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
+                search(searchField.text,myTextArea.cursorPosition+1,"forward",next);
+                myTextArea.forceActiveFocus();
+            }
+            visible: searchField.activeFocus || searchField.text.length>0
+        }
+
+        IconButton {
+            icon.source: "image://theme/icon-m-close"
+            height: searchField.height
+            onClicked: {
+                searchRowVisible = false;
+            }
+        }
     }
 }

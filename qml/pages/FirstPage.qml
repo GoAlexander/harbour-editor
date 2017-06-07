@@ -274,8 +274,7 @@ Page {
             SilicaFlickable {
                 id: editorView
                 anchors.fill: parent
-                //anchors.topMargin: header.visible ? header.height : 0 // для сдвига при отключении quick actions menu
-                anchors.bottomMargin: header.visible ? header.height : 0
+                anchors.bottomMargin: header.visible ? header.height : 0 // для сдвига при отключении quick actions menu
                 contentHeight: myTextArea.height
                 clip: true
 
