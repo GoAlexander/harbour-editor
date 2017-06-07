@@ -183,7 +183,7 @@
     </message>
     <message>
         <source>Document saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Documento guardado</translation>
     </message>
 </context>
 <context>
