@@ -162,10 +162,6 @@
         <translation type="unfinished">Zapisz</translation>
     </message>
     <message>
-        <source>Document saved!</source>
-        <translation type="unfinished">Dokument zapisany!</translation>
-    </message>
-    <message>
         <source>Document can&apos;t be saved!</source>
         <translation type="unfinished">Dokument nie może być zapisany!</translation>
     </message>
@@ -184,6 +180,10 @@
     <message>
         <source>Tab</source>
         <translation type="unfinished">Tab</translation>
+    </message>
+    <message>
+        <source>Document saved</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

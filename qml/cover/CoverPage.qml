@@ -45,4 +45,30 @@ CoverBackground {
                   qsTr("Chars: ") + charNumber;
         }
     }
+
+    CoverActionList {
+        id: coverAction
+
+//        CoverAction {
+//            iconSource: "../img/icon-m-open.svg"
+//            onTriggered: {
+//                pageStack.push(Qt.resolvedUrl("../pages/FileChooserPage.qml"), {
+//                                   homePath: "/home/nemo",
+//                                   showFormat: true,
+//                                   title: "Select file",
+//                                   showHiddenFiles: showHiddenFiles,
+//                                   callback: setFilePath
+//                               })
+//                mainwindow.activate();
+//            }
+//        }
+
+        CoverAction {
+            iconSource: "../img/icon-m-qnote.svg"
+            onTriggered: {
+                pageStack.replace(Qt.resolvedUrl("../pages/QuickNotePage.qml"))
+                mainwindow.activate();
+            }
+        }
+    }
 }

@@ -162,10 +162,6 @@
         <translation>Enrg.</translation>
     </message>
     <message>
-        <source>Document saved!</source>
-        <translation>Document enregistré !</translation>
-    </message>
-    <message>
         <source>Document can&apos;t be saved!</source>
         <translation>Le document ne peut pas être enregistré !</translation>
     </message>
@@ -184,6 +180,10 @@
     <message>
         <source>Tab</source>
         <translation>Onglet</translation>
+    </message>
+    <message>
+        <source>Document saved</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

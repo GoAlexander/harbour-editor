@@ -162,10 +162,6 @@
         <translation> </translation>
     </message>
     <message>
-        <source>Document saved!</source>
-        <translation>Dokument gesichert.</translation>
-    </message>
-    <message>
         <source>Document can&apos;t be saved!</source>
         <translation>Dokument kann nicht gesichert werden!</translation>
     </message>
@@ -184,6 +180,10 @@
     <message>
         <source>Tab</source>
         <translation> </translation>
+    </message>
+    <message>
+        <source>Document saved</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

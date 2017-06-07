@@ -162,10 +162,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Document saved!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Document can&apos;t be saved!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -183,6 +179,10 @@
     </message>
     <message>
         <source>Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Document saved</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

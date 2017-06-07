@@ -162,10 +162,6 @@
         <translation>Guardar</translation>
     </message>
     <message>
-        <source>Document saved!</source>
-        <translation>Documento guardado!</translation>
-    </message>
-    <message>
         <source>Document can&apos;t be saved!</source>
         <translation>Documento no puede&apos;ser guardado!</translation>
     </message>
@@ -184,6 +180,10 @@
     <message>
         <source>Tab</source>
         <translation>Tab</translation>
+    </message>
+    <message>
+        <source>Document saved</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

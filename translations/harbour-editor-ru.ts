@@ -162,10 +162,6 @@
         <translation>Сохр.</translation>
     </message>
     <message>
-        <source>Document saved!</source>
-        <translation>Документ сохранен!</translation>
-    </message>
-    <message>
         <source>Document can&apos;t be saved!</source>
         <translation> Документ не может быть сохранен!</translation>
     </message>
@@ -184,6 +180,10 @@
     <message>
         <source>Tab</source>
         <translation>Tab</translation>
+    </message>
+    <message>
+        <source>Document saved</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

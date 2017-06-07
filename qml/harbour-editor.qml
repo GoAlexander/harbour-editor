@@ -37,6 +37,8 @@ import io.thp.pyotherside 1.3
 
 ApplicationWindow
 {
+    id: mainwindow
+
     // For SQLite:
     //Dao { id: dao }
 

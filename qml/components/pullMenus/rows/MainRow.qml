@@ -25,7 +25,7 @@ Row {
 
     MenuButton {
         width: myMenuButtonWidth
-        mySource: "image://theme/icon-m-folder";
+        mySource: "../img/icon-m-open.svg"
         myText: qsTr("Open")
         onClicked: {
             pageStack.push(Qt.resolvedUrl("../../../pages/FileChooserPage.qml"), {
@@ -43,7 +43,7 @@ Row {
         mySource: "image://theme/icon-m-note";
         myText: qsTr("New")
         onClicked: {
-            //TODO ask:Are you sure?
+
             filePath = "";
             myTextArea.text = "";
         }
@@ -51,17 +51,12 @@ Row {
 
     MenuButton {
         width: myMenuButtonWidth
-        mySource: "image://theme/icon-m-document";
+        mySource: "../img/icon-m-history.svg"
         myText: qsTr("History")
         onClicked: {
-//                            pageStack.push(Qt.resolvedUrl("HistoryPage.qml"), {
-//                                               currentFilePath: filePath,
-//                                               callback: setFilePath
-//                                           })
             pageStack.push(Qt.resolvedUrl("../../../pages/HistoryPage.qml"), {
                                callback: setFilePath
                            })
-            //pageStack.push(Qt.resolvedUrl("HistoryPage.qml"))
         }
     }
 }

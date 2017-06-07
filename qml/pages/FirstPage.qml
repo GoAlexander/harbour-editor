@@ -180,7 +180,7 @@ Page {
 
                         MenuButton {
                             width: parent.width / 3
-                            mySource: "image://theme/icon-m-other";
+                            mySource: "../img/icon-m-qnote.svg"
                             myText: qsTr("Quick note")
                             onClicked: {
                                 pageStack.push(Qt.resolvedUrl("QuickNotePage.qml"))
@@ -189,8 +189,8 @@ Page {
 
                         MenuButton {
                             width: parent.width / 3
-                            //mySource: "../img/highlight.png";
-                            mySource: "image://theme/icon-m-wizard?" + (highlightingEnabled ? Theme.highlightColor : Theme.primaryColor);
+                            mySource: "../img/icon-m-code.svg";
+                            //mySource: "image://theme/icon-m-wizard?" + (highlightingEnabled ? Theme.highlightColor : Theme.primaryColor);
                             myText: qsTr("Highlight")
                             onClicked: {
                                 if (highlightingEnabled == false) {

@@ -25,7 +25,7 @@ Row {
                 py.call('editFile.savings', [filePath,myTextArea.text], function() {
                     //this code is inside to fix problem with async nature of python
                     outputNotifications.close()
-                    outputNotifications.previewBody = qsTr("Document saved!")
+                    outputNotifications.previewBody = qsTr("Document saved")
                     outputNotifications.publish()
                     saveFlag = false;
                 }); //filePath is path where you want to save!
@@ -75,7 +75,7 @@ Row {
 
     MenuButton {
         width: myMenuButtonWidth
-        mySource: "../img/tab.svg";
+        mySource: "../img/icon-m-tab.svg";
         myText: qsTr("Tab")
         onClicked: {
             var previousCursorPosition = myTextArea.cursorPosition;

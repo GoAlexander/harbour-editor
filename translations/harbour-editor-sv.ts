@@ -162,10 +162,6 @@
         <translation>Spara</translation>
     </message>
     <message>
-        <source>Document saved!</source>
-        <translation>Dokument sparat!</translation>
-    </message>
-    <message>
         <source>Document can&apos;t be saved!</source>
         <translation>Dokumentet kan inte sparas!</translation>
     </message>
@@ -184,6 +180,10 @@
     <message>
         <source>Tab</source>
         <translation>Tab</translation>
+    </message>
+    <message>
+        <source>Document saved</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
