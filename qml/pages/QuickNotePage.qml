@@ -72,7 +72,7 @@ Page {
 
                     MenuButton {
                         width: parent.width / 3
-                        mySource: "../img/tab.svg";
+                        mySource: "../img/icon-m-tab.svg";
                         myText: qsTr("Tab")
                         onClicked: {
                             var previousCursorPosition = myTextArea.cursorPosition;
