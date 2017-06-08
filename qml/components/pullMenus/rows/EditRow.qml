@@ -17,7 +17,7 @@ Row {
     MenuButton {
         //width: sizeBackgroundItemMainMenu
         width: myMenuButtonWidth
-        mySource: "image://theme/icon-m-acknowledge";
+        mySource: "../img/icon-m-save.svg";
         myText: qsTr("Save")
         enabled: saveFlag
         onClicked: {

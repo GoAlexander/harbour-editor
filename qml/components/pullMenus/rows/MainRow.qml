@@ -10,7 +10,7 @@ Row {
 
     MenuButton {
         width: myMenuButtonWidth
-        mySource: "image://theme/icon-m-acknowledge";
+        mySource: "../img/icon-m-save.svg";
         myText: qsTr("Save as")
         onClicked: {
             pageStack.push(Qt.resolvedUrl("../../../pages/SaveAsPage.qml"), {
