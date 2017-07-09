@@ -109,7 +109,7 @@
     </message>
     <message>
         <source> - German translation</source>
-        <translation> - Traducción al alemana</translation>
+        <translation> - Traducción al aleman</translation>
     </message>
     <message>
         <source> - Dutch translation</source>
