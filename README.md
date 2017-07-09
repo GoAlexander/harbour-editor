@@ -38,7 +38,7 @@ Qt.application.version
   
 Alternative:  
 In .pro file add:  
-`VERSION = $$system("echo $(awk -F ':' '/Version/ {print $2}' rpm/$${TARGET}.yaml)")`
+`VERSION = $$system("echo $(awk -F ':' '/Version/ {print $2}' rpm/$${TARGET}.yaml)")`  
 And then same steps in C++ files...
   
 License
