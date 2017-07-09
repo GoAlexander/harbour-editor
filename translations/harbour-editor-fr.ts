@@ -166,10 +166,6 @@
         <translation>Le document ne peut pas être enregistré !</translation>
     </message>
     <message>
-        <source>R-only</source>
-        <translation>Lire</translation>
-    </message>
-    <message>
         <source>Undo</source>
         <translation>Annuler</translation>
     </message>
@@ -184,6 +180,10 @@
     <message>
         <source>Document saved</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Rechercher</translation>
     </message>
 </context>
 <context>
@@ -201,10 +201,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation type="unfinished">Rechercher</translation>
-    </message>
-    <message>
         <source>Highlighting enabled</source>
         <translation type="unfinished"></translation>
     </message>
@@ -219,6 +215,14 @@
     <message>
         <source>Highlight</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">Lire</translation>
     </message>
 </context>
 <context>
@@ -257,6 +261,13 @@
     <message>
         <source>History</source>
         <translation>Histor.</translation>
+    </message>
+</context>
+<context>
+    <name>MenuPage</name>
+    <message>
+        <source>Quick note</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

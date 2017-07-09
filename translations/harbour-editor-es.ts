@@ -166,10 +166,6 @@
         <translation>Documento no puede&apos;ser guardado!</translation>
     </message>
     <message>
-        <source>R-only</source>
-        <translation>Leer</translation>
-    </message>
-    <message>
         <source>Undo</source>
         <translation>D-hacer</translation>
     </message>
@@ -184,6 +180,10 @@
     <message>
         <source>Document saved</source>
         <translation>Documento guardado</translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Buscar</translation>
     </message>
 </context>
 <context>
@@ -201,10 +201,6 @@
         <translation>Ruta del archivo copiado al portapapeles</translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation>Buscar</translation>
-    </message>
-    <message>
         <source>Highlighting enabled</source>
         <translation>Coloreado activado</translation>
     </message>
@@ -219,6 +215,14 @@
     <message>
         <source>Highlight</source>
         <translation>Color</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">Leer</translation>
     </message>
 </context>
 <context>
@@ -257,6 +261,13 @@
     <message>
         <source>History</source>
         <translation>Lista</translation>
+    </message>
+</context>
+<context>
+    <name>MenuPage</name>
+    <message>
+        <source>Quick note</source>
+        <translation type="unfinished">Nota rápida</translation>
     </message>
 </context>
 <context>

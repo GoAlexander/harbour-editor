@@ -166,10 +166,6 @@
         <translation> Документ не может быть сохранен!</translation>
     </message>
     <message>
-        <source>R-only</source>
-        <translation>Чтение</translation>
-    </message>
-    <message>
         <source>Undo</source>
         <translation>Назад</translation>
     </message>
@@ -184,6 +180,10 @@
     <message>
         <source>Document saved</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Поиск</translation>
     </message>
 </context>
 <context>
@@ -201,10 +201,6 @@
         <translation>Файловый путь копирован в буфер обмена</translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation type="unfinished">Поиск</translation>
-    </message>
-    <message>
         <source>Highlighting enabled</source>
         <translation type="unfinished"></translation>
     </message>
@@ -219,6 +215,14 @@
     <message>
         <source>Highlight</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">Чтение</translation>
     </message>
 </context>
 <context>
@@ -257,6 +261,13 @@
     <message>
         <source>History</source>
         <translation>История</translation>
+    </message>
+</context>
+<context>
+    <name>MenuPage</name>
+    <message>
+        <source>Quick note</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

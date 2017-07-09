@@ -166,10 +166,6 @@
         <translation>Dokumentet kan inte sparas!</translation>
     </message>
     <message>
-        <source>R-only</source>
-        <translation>R-only</translation>
-    </message>
-    <message>
         <source>Undo</source>
         <translation>Ångra</translation>
     </message>
@@ -184,6 +180,10 @@
     <message>
         <source>Document saved</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Sök</translation>
     </message>
 </context>
 <context>
@@ -201,10 +201,6 @@
         <translation>Filsökväg kopierad till urklipp</translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation type="unfinished">Sök</translation>
-    </message>
-    <message>
         <source>Highlighting enabled</source>
         <translation>Färgmarkering aktiverad</translation>
     </message>
@@ -219,6 +215,14 @@
     <message>
         <source>Highlight</source>
         <translation>Färgmarkera</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">R-only</translation>
     </message>
 </context>
 <context>
@@ -257,6 +261,13 @@
     <message>
         <source>History</source>
         <translation>Historik</translation>
+    </message>
+</context>
+<context>
+    <name>MenuPage</name>
+    <message>
+        <source>Quick note</source>
+        <translation type="unfinished">Snabbnotis</translation>
     </message>
 </context>
 <context>

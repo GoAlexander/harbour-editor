@@ -41,14 +41,14 @@ Row {
 
     MenuButton {
         width: myMenuButtonWidth
-        mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
-        myText: qsTr("R-only")
+        mySource: "image://theme/icon-m-search?" + (searchRowVisible ? Theme.highlightColor : Theme.primaryColor);
+        myText: qsTr("Search")
         onClicked: {
-            if (myTextArea.readOnly == false) {
-                myTextArea.readOnly = true;
+            if (searchRowVisible == false) {
+                searchRowVisible = true;
             }
             else {
-                myTextArea.readOnly = false;
+                searchRowVisible = false;
             }
         }
     }

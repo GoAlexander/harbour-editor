@@ -166,10 +166,6 @@
         <translation type="unfinished">Dokument nie może być zapisany!</translation>
     </message>
     <message>
-        <source>R-only</source>
-        <translation type="unfinished">Odczyt</translation>
-    </message>
-    <message>
         <source>Undo</source>
         <translation type="unfinished"></translation>
     </message>
@@ -183,6 +179,10 @@
     </message>
     <message>
         <source>Document saved</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -201,10 +201,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Highlighting enabled</source>
         <translation type="unfinished"></translation>
     </message>
@@ -219,6 +215,14 @@
     <message>
         <source>Highlight</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">Odczyt</translation>
     </message>
 </context>
 <context>
@@ -256,6 +260,13 @@
     </message>
     <message>
         <source>History</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MenuPage</name>
+    <message>
+        <source>Quick note</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

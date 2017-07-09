@@ -166,14 +166,14 @@ Page {
 
                         MenuButton {
                             width: parent.width / 3
-                            mySource: "image://theme/icon-m-search?" + (searchRowVisible ? Theme.highlightColor : Theme.primaryColor);
-                            myText: qsTr("Search")
+                            mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
+                            myText: qsTr("R-only")
                             onClicked: {
-                                if (searchRowVisible == false) {
-                                    searchRowVisible = true;
+                                if (myTextArea.readOnly == false) {
+                                    myTextArea.readOnly = true;
                                 }
                                 else {
-                                    searchRowVisible = false;
+                                    myTextArea.readOnly = false;
                                 }
                             }
                         }
@@ -221,6 +221,12 @@ Page {
                     text: qsTr("Settings")
                     onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
                 }
+
+                //TODO implement the MenuPage!
+//                MenuItem {
+//                    text: qsTr("Menu")
+//                    onClicked: pageStack.push(Qt.resolvedUrl("MenuPage.qml"))
+//                }
             }
 
             //        SilicaFlickable {
