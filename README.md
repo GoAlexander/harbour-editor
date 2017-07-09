@@ -35,7 +35,10 @@ QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
 app->setApplicationVersion(QString(APP_VERSION));  
 d) now your app's version is available in QML through  
 Qt.application.version  
-
+  
+Alternative:  
+In .pro file add:  
+`VERSION = $$system("echo $(awk -F ':' '/Version/ {print $2}' rpm/$${TARGET}.yaml)")`
   
 License
 -------
