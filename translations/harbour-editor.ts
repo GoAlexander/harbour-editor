@@ -217,11 +217,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Menu</source>
+        <source>R-only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>R-only</source>
+        <source>Menu</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

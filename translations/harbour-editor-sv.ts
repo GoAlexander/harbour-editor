@@ -217,12 +217,12 @@
         <translation>Färgmarkera</translation>
     </message>
     <message>
-        <source>Menu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>R-only</source>
         <translation type="unfinished">R-only</translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
