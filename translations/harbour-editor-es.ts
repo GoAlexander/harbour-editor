@@ -241,7 +241,7 @@
     </message>
     <message>
         <source>Documents are in order of first opening</source>
-        <translation>Documentos están en orden de primera apertura</translation>
+        <translation>Documentos en orden a la primera apertura</translation>
     </message>
 </context>
 <context>
