@@ -109,7 +109,7 @@
     </message>
     <message>
         <source> - German translation</source>
-        <translation> - Traducción al alemana</translation>
+        <translation> - Traducción al aleman</translation>
     </message>
     <message>
         <source> - Dutch translation</source>
@@ -137,7 +137,7 @@
     </message>
     <message>
         <source>Telegram group of app</source>
-        <translation>Grupo de aps de telegrama</translation>
+        <translation>Grupo telegrama</translation>
     </message>
 </context>
 <context>
@@ -183,7 +183,7 @@
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Buscar</translation>
+        <translation>Buscar</translation>
     </message>
 </context>
 <context>
@@ -202,11 +202,11 @@
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation>Coloreado activado</translation>
+        <translation>Resaltado activado</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation>Coloreado desactivado</translation>
+        <translation>Resaltado desactivado</translation>
     </message>
     <message>
         <source>Quick note</source>
@@ -214,15 +214,15 @@
     </message>
     <message>
         <source>Highlight</source>
-        <translation>Color</translation>
+        <translation>Resaltar</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished">Leer</translation>
+        <translation>Leer</translation>
     </message>
     <message>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menú</translation>
     </message>
 </context>
 <context>
@@ -241,7 +241,7 @@
     </message>
     <message>
         <source>Documents are in order of first opening</source>
-        <translation>Documentos están en orden de primera apertura</translation>
+        <translation>Documentos en orden a la primera apertura</translation>
     </message>
 </context>
 <context>
@@ -267,7 +267,7 @@
     <name>MenuPage</name>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished">Nota rápida</translation>
+        <translation>Nota rápida</translation>
     </message>
 </context>
 <context>
@@ -328,7 +328,7 @@
     </message>
     <message>
         <source>Use it to get more space for text</source>
-        <translation>Usarlo para obtener más espacio para el texto</translation>
+        <translation>Úsalo para obtener más espacio en el texto</translation>
     </message>
     <message>
         <source>Font size:</source>
