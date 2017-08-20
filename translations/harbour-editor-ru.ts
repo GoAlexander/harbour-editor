@@ -117,27 +117,27 @@
     </message>
     <message>
         <source>-gri4994 for the wonderful app icon</source>
-        <translation type="unfinished"></translation>
+        <translation>-gri4994 за замечательную иконку</translation>
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions, source code and some dictionaries for syntax highlighting and feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>-eekkelund за функции сохранения/загрузки/автосохранения, а также за исходный код и словари для подсветки кода</translation>
     </message>
     <message>
         <source>-the team of GtkSourceView for the basis for .sh dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>-команду GtkSourceView за основу для созданиях .sh словаря</translation>
     </message>
     <message>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Исходный код</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия</translation>
     </message>
     <message>
         <source>Telegram group of app</source>
-        <translation type="unfinished"></translation>
+        <translation>Группа в Telegram</translation>
     </message>
 </context>
 <context>
@@ -152,7 +152,7 @@
     </message>
     <message>
         <source>Words: </source>
-        <translation type="unfinished"></translation>
+        <translation>Слова</translation>
     </message>
 </context>
 <context>
@@ -179,11 +179,11 @@
     </message>
     <message>
         <source>Document saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Документ сохранен</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Поиск</translation>
+        <translation>Поиск</translation>
     </message>
 </context>
 <context>
@@ -202,27 +202,27 @@
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсветка включена</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсветка выключена</translation>
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished"></translation>
+        <translation>Быстрая записка</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсветка</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished">Чтение</translation>
+        <translation>Чтение</translation>
     </message>
     <message>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Меню</translation>
     </message>
 </context>
 <context>
@@ -241,7 +241,7 @@
     </message>
     <message>
         <source>Documents are in order of first opening</source>
-        <translation type="unfinished"></translation>
+        <translation>Документы расположены в порядке их первого открытия</translation>
     </message>
 </context>
 <context>
@@ -267,30 +267,30 @@
     <name>MenuPage</name>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished"></translation>
+        <translation>Быстрая записка</translation>
     </message>
 </context>
 <context>
     <name>QuickNotePage</name>
     <message>
         <source>Undo</source>
-        <translation type="unfinished">Назад</translation>
+        <translation>Назад</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished">Вперед</translation>
+        <translation>Вперед</translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished">Tab</translation>
+        <translation>Tab</translation>
     </message>
     <message>
         <source>Text auto-saved in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст автоматически сохранен в:</translation>
     </message>
     <message>
         <source>Quick note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Быстрая записка.</translation>
     </message>
 </context>
 <context>
@@ -356,15 +356,15 @@
     </message>
     <message>
         <source>Dark Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Темная тема</translation>
     </message>
     <message>
         <source>Ambience Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Тема атмосферы</translation>
     </message>
     <message>
         <source>Default text editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Текстовый редактор по-умолчанию</translation>
     </message>
 </context>
 </TS>
