@@ -169,7 +169,7 @@ Page {
                             mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
                             myText: qsTr("R-only")
                             onClicked: {
-                                if (myTextArea.readOnly == false) {
+                                if (!myTextArea.readOnly) {
                                     myTextArea.readOnly = true;
                                 }
                                 else {
@@ -226,17 +226,9 @@ Page {
                 MenuItem {
                     text: qsTr("Menu")
                     onClicked: pageStack.push(Qt.resolvedUrl("MenuPage.qml"))
-                    visible: false
+                    visible: true
                 }
             }
-
-            //        SilicaFlickable {
-            //            property QtObject ngfeffect
-            //            property Item selectedItem: null
-            //            width: parent.width
-            //            height: hotActionsMenu.height
-            //            anchors.fill: parent
-            //            flickableDirection: Flickable.HorizontalFlick
 
             Row {
                 id: header
@@ -261,22 +253,6 @@ Page {
                     visible: searchRowVisible
                 }
             }
-
-            //            boundsBehavior: {
-            ////                if(!normalMode || querybar.editing || (currentTab() && !currentTab().viewStack.empty))
-            ////                    return Flickable.StopAtBounds;
-
-            //                return Flickable.DragAndOvershootBounds;
-            //            }
-
-            //            onDraggingChanged: {
-            //                console.log("Test!!!");
-            //            }
-
-            //            Component.onCompleted: {
-            //                ngfeffect = Qt.createQmlObject("import org.nemomobile.ngf 1.0; NonGraphicalFeedback { event: 'pulldown_highlight' }", content, 'NonGraphicalFeedback');
-            //            }
-            //        }
 
             SilicaFlickable {
                 id: editorView

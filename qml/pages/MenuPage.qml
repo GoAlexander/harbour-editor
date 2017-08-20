@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "../components"
 import "../components/pullMenus/rows"
-import "." //?! :)
+
 
 Page {
 
@@ -30,22 +30,13 @@ Page {
                     icon.source: "image://theme/icon-m-keyboard"
                     checked: myTextArea.readOnly
                     onCheckedChanged:{
-                        if (myTextArea.readOnly === false) {
+                        if (!myTextArea.readOnly) {
                             myTextArea.readOnly = true;
                         }
                         else {
                             myTextArea.readOnly = false;
                         }
                     }
-                    //                        checked: myTextArea.readOnly
-                    //                        onClicked: {
-                    //                            if (myTextArea.readOnly === false) {
-                    //                                myTextArea.readOnly = true;
-                    //                            }
-                    //                            else {
-                    //                                myTextArea.readOnly = false;
-                    //                            }
-                    //                        }
                 }
 
                 Switch {
@@ -78,20 +69,6 @@ Page {
             Row {
                 width: parent.width
                 height: childrenRect.height
-
-                //                    MenuButton {
-                //                        width: parent.width / 3
-                //                        mySource: "image://theme/icon-m-keyboard?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
-                //                        myText: qsTr("R-only")
-                //                        onClicked: {
-                //                            if (myTextArea.readOnly == false) {
-                //                                myTextArea.readOnly = true;
-                //                            }
-                //                            else {
-                //                                myTextArea.readOnly = false;
-                //                            }
-                //                        }
-                //                    }
 
                 MenuButton {
                     width: parent.width

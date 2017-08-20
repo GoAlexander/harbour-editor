@@ -21,12 +21,7 @@ bool GeneralLogic::isDefaultApp() {
     QString code = "xdg-mime query default text/plain";
     QString output = queryMime(code);
 
-    if (QString::compare(output, "harbour-editor.desktop") == 1){
-        return true;
-    }
-    else {
-        return false;
-    }
+    return QString::compare(output, "harbour-editor.desktop") == 1;
 }
 
 QString GeneralLogic::queryMime(QString code) {
