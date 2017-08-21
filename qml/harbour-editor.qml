@@ -142,6 +142,10 @@ ApplicationWindow
                 py2.call('editFile.getValue', ["showHiddenFiles"], function(result) {
                     showHiddenFiles=result
                 });
+
+                py2.call('editFile.getValue', ["bgColor"], function(result) {
+                    bgColor=result
+                });
             });
         }
     }

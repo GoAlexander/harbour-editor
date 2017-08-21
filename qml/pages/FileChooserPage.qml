@@ -166,12 +166,12 @@ Page {
                     console.log("###", mimeType, filePath);
 
                     //add new unique path to history (json)
-                    py2.call('editFile.getValue', ["history"], function(result) {
+                    py2.call('editFile.getHistory', ["history"], function(result) {
                         var openedFiles = [];
                         openedFiles = result;
                         if (openedFiles.indexOf(filePath) === -1) { // haha :) it is like //if (!openedFiles.contains(filePath)) {
                             openedFiles.push(filePath);
-                            py2.call('editFile.setValue', ["history", openedFiles], function(result) {});
+                            py2.call('editFile.setHistory', ["history", openedFiles], function(result) {});
                         }
                     });
 

@@ -242,7 +242,7 @@ Page {
         py2.call('editFile.setValue', ["tabType", tabType], function(result) {});
 
         py2.call('editFile.setValue', ["showHiddenFiles", showHiddenFiles], function(result) {});
+        py2.call('editFile.setValue', ["bgColor", bgColor], function(result) {});
 
-        //dao.setValue(darkTheme);
     }
 }
