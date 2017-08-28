@@ -90,7 +90,7 @@ def createSettingsJson():
         os.mkdir(PATH_TO_FOLDER)
 
     #+ '"tabType": "\t", '
-    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"tabType": "    ", ' + '"showHiddenFiles": false, ' + '"bgColor": "transparent" ' + '}'
+    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"tabType": "    ", ' + '"showHiddenFiles": false, ' + '"darkTheme": "false" ' + '}'
     file = open(PATH_TO_SETTINGS, 'w')
     file.write(str)
     file.close()

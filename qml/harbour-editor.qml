@@ -39,9 +39,6 @@ ApplicationWindow
 {
     id: mainwindow
 
-    // For SQLite:
-    //Dao { id: dao }
-
     initialPage: Component { FirstPage {
             id: mainPage
             Component.onCompleted: {
@@ -75,51 +72,19 @@ ApplicationWindow
 
     property bool showHiddenFiles
 
-    //TODO add these variables!
-    //property var database
-    // ---
-    property bool darkTheme: false
-    property string bgColor: "transparent"
-    property string textColor: Theme.highlightColor
-    property string qmlHighlightColor: Theme.highlightColor
-    property string keywordsHighlightColor:Theme.highlightDimmerColor
-    property string propertiesHighlightColor:Theme.primaryColor
-    property string javascriptHighlightColor:Theme.secondaryHighlightColor
-    property string stringHighlightColor:Theme.secondaryColor
-    property string commentHighlightColor: Theme.highlightBackgroundColor
+    property bool darkTheme
+    property string bgColor
+    property string textColor
+    property string qmlHighlightColor
+    property string keywordsHighlightColor
+    property string propertiesHighlightColor
+    property string javascriptHighlightColor
+    property string stringHighlightColor
+    property string commentHighlightColor
 
     Python {
         id: py2 //TODO rename!
         Component.onCompleted: {
-
-//            var resultDB;
-//            dao.getValue(function(result){
-//                resultDB = result;
-//            });
-//            console.log(resultDB);
-//            console.log(resultDB.item(8));
-//            console.log(resultDB.item(9))
-//            if (resultDB.item(8) === 1) {
-//                darkTheme = true;
-//            } else {
-//                darkTheme = false;
-//            }
-//            //darkTheme = resultDB.item(8)
-////            if (resultDB.item(9) === "transparent") { //TODO на самом деле не работает, произвести
-////                                                     //нормальное приведение типов!
-////                bgColor = "transparent";
-////            } else {
-////                bgColor = "#1e1e27";
-////            }
-//            if (darkTheme === false) { //TODO на самом деле не работает, произвести
-//                //нормальное приведение типов!
-//                bgColor = "transparent";
-//            } else {
-//                bgColor = "#1e1e27";
-//            }
-//            //bgColor = resultDB.item(9);
-
-
             addImportPath(Qt.resolvedUrl("."));
             importModule('editFile', function () {
                 py2.call('editFile.getValue', ["headerVisible"], function(result) {
@@ -143,8 +108,28 @@ ApplicationWindow
                     showHiddenFiles=result
                 });
 
-                py2.call('editFile.getValue', ["bgColor"], function(result) {
-                    bgColor=result
+                py2.call('editFile.getValue', ["darkTheme"], function(result) {
+                    darkTheme=result
+
+                    if (darkTheme) {
+                        textColor="#cfbfad"
+                        qmlHighlightColor="#ff8bff"
+                        keywordsHighlightColor="#808bed"
+                        propertiesHighlightColor="#ff5555"
+                        javascriptHighlightColor="#8888ff"
+                        stringHighlightColor="#ffcd8b"
+                        commentHighlightColor="#cd8b00"
+                        bgColor="#1e1e27"
+                    } else {
+                        textColor=Theme.highlightColor
+                        qmlHighlightColor=Theme.highlightColor
+                        keywordsHighlightColor=Theme.highlightDimmerColor
+                        propertiesHighlightColor=Theme.primaryColor
+                        javascriptHighlightColor=Theme.secondaryHighlightColor
+                        stringHighlightColor=Theme.secondaryColor
+                        commentHighlightColor= Theme.highlightBackgroundColor
+                        bgColor="transparent"
+                    }
                 });
             });
         }
