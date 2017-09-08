@@ -226,7 +226,7 @@ Page {
                 MenuItem {
                     text: qsTr("Menu")
                     onClicked: pageStack.push(Qt.resolvedUrl("MenuPage.qml"))
-                    visible: false
+                    visible: true
                 }
             }
 

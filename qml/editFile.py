@@ -42,53 +42,50 @@ def isSaved(filepath):
 
 #----------------------------------------
 
-PATH_TO_SETTINGS = os.environ['HOME'] + "/.local/share/harbour-editor/settings.json"
-PATH_TO_HISTORY = os.environ['HOME'] + "/.local/share/harbour-editor/history.json"
 PATH_TO_FOLDER = os.environ['HOME'] + "/.local/share/harbour-editor"
+PATH_TO_SETTINGS = PATH_TO_FOLDER + "/settings.json"
+PATH_TO_HISTORY = PATH_TO_FOLDER + "/history.json"
+
+#private
+def _getFromJson(path, type, key):
+    try:
+        with open(path, "r") as data_file:
+            data = json.load(data_file)
+    except:
+        if type == "settings":
+            createSettingsJson()
+        elif type == "history":
+            createHistoryJson()
+        with open(path, "r") as data_file:
+            data = json.load(data_file)
+    return data[key]
+
+#private
+def _setToJson(path, key, value):
+    with open(path, "r") as data_file:
+        data = json.load(data_file)
+    data[key] = value
+
+    with open(path, "w") as data_file:
+        data_file.write(json.dumps(data))
+    return
 
 def getValue(key):
-    try:
-        with open(PATH_TO_SETTINGS, "r") as data_file:
-            data = json.load(data_file)
-    except:
-        createSettingsJson()
-        with open(PATH_TO_SETTINGS, "r") as data_file:
-            data = json.load(data_file)
-    return data[key]
+    return _getFromJson(PATH_TO_SETTINGS, "settings", key)
 
 def setValue(key, value):
-    with open(PATH_TO_SETTINGS, "r") as data_file:
-        data = json.load(data_file)
-    data[key] = value
-
-    with open(PATH_TO_SETTINGS, "w") as data_file:
-        data_file.write(json.dumps(data))
-    return
+    return _setToJson(PATH_TO_SETTINGS, key, value)
 
 def getHistory(key):
-    try:
-        with open(PATH_TO_HISTORY, "r") as data_file:
-            data = json.load(data_file)
-    except:
-        createHistoryJson()
-        with open(PATH_TO_HISTORY, "r") as data_file:
-            data = json.load(data_file)
-    return data[key]
+    return _getFromJson(PATH_TO_HISTORY, "history", key)
 
 def setHistory(key, value):
-    with open(PATH_TO_HISTORY, "r") as data_file:
-        data = json.load(data_file)
-    data[key] = value
-
-    with open(PATH_TO_HISTORY, "w") as data_file:
-        data_file.write(json.dumps(data))
-    return
+    return _setToJson(PATH_TO_HISTORY, key, value)
 
 
 def createSettingsJson():
     if not os.path.exists(PATH_TO_FOLDER):
         os.mkdir(PATH_TO_FOLDER)
-
     #+ '"tabType": "\t", '
     str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"tabType": "    ", ' + '"showHiddenFiles": false, ' + '"darkTheme": "false" ' + '}'
     file = open(PATH_TO_SETTINGS, 'w')
