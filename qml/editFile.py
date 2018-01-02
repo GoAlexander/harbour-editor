@@ -11,7 +11,7 @@ def openings(filepath):
             file = open(filepath + "~", 'r')
         else:
             file = open(filepath, 'r')
-    else: # For what? :)
+    else:
         file = open(filepath, 'a+')
     txt = file.read()
     file.close()
@@ -46,7 +46,6 @@ PATH_TO_FOLDER = os.environ['HOME'] + "/.local/share/harbour-editor"
 PATH_TO_SETTINGS = PATH_TO_FOLDER + "/settings.json"
 PATH_TO_HISTORY = PATH_TO_FOLDER + "/history.json"
 
-#private
 def _getFromJson(path, type, key):
     try:
         with open(path, "r") as data_file:
@@ -60,7 +59,6 @@ def _getFromJson(path, type, key):
             data = json.load(data_file)
     return data[key]
 
-#private
 def _setToJson(path, key, value):
     with open(path, "r") as data_file:
         data = json.load(data_file)
@@ -86,7 +84,6 @@ def setHistory(key, value):
 def createSettingsJson():
     if not os.path.exists(PATH_TO_FOLDER):
         os.mkdir(PATH_TO_FOLDER)
-    #+ '"tabType": "\t", '
     str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"tabType": "    ", ' + '"showHiddenFiles": false, ' + '"darkTheme": "false" ' + '}'
     file = open(PATH_TO_SETTINGS, 'w')
     file.write(str)

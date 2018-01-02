@@ -34,23 +34,20 @@ Page {
                     text: qsTr("Move to top")
                     onClicked: {
                         var openedFiles = [];
-                        var openedFilesNew = [];
                         py2.call('editFile.getHistory', ["history"], function(result) {
-                            openedFiles = result; //TODO-REFACTORING: использовать сразу result (без openedFiles)
-                            for (var i = 0; i < openedFiles.length; i++) {
-                                if (openedFiles[i] !== labelPath.text) {
-                                    openedFilesNew.push(openedFiles[i]);
+                            for (var i = 0; i < result.length; i++) {
+                                if (result[i] !== labelPath.text) {
+                                    openedFiles.push(result[i]);
                                 }
                             }
-                            openedFilesNew.push(labelPath.text);
+                            openedFiles.push(labelPath.text);
 
                             // now save new history on file system
                             // and update qml model (UI)
-                            py2.call('editFile.setHistory', ["history", openedFilesNew], function(result) {
-                                //remorseAction("Deleting", function () { animateRemoval(listItem)}); // here because of async nature of Python in Sailfish OS
+                            py2.call('editFile.setHistory', ["history", openedFiles], function(result) {
                                 myModel.clear();
-                                for(var i = openedFilesNew.length-1; i >= 0; i--) {
-                                    var element = { "value" : openedFilesNew[i] }
+                                for(var i = openedFiles.length-1; i >= 0; i--) {
+                                    var element = { "value" : openedFiles[i] }
                                     myModel.append(element)
                                 }
                             });
@@ -62,22 +59,16 @@ Page {
                     text: qsTr("Delete")
                     onClicked: {
                         var openedFiles = [];
-                        var openedFilesNew = [];
 
                         py2.call('editFile.getHistory', ["history"], function(result) {
-                            openedFiles = result;
-
-                            openedFilesNew = openedFiles;
-                            openedFilesNew.splice(openedFiles.indexOf(labelPath.text), 1);
+                            openedFiles.splice(result.indexOf(labelPath.text), 1);
 
                             // now save new history on file system
                             // and update qml model (UI)
-                            py2.call('editFile.setHistory', ["history", openedFilesNew], function(result) {
-                                //myListItem.remorseAction("Deleting", function () {animateRemoval(listItem) });
-                                //myModel.remove(labelPath.text); // here because of async nature of Python in Sailfish OS
+                            py2.call('editFile.setHistory', ["history", openedFiles], function(result) {
                                 myModel.clear();
-                                for(var i = openedFilesNew.length-1; i >= 0; i--) {
-                                    var element = { "value" : openedFilesNew[i] }
+                                for(var i = openedFiles.length-1; i >= 0; i--) {
+                                    var element = { "value" : openedFiles[i] }
                                     myModel.append(element)
                                 }
                             });
@@ -88,7 +79,6 @@ Page {
 
             Label {
                 id: labelPath
-                //anchors.margins:Theme.horizontalPageMargin
                 anchors {
                     left: parent.left
                     right: parent.right
