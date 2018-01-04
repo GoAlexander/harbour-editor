@@ -5,21 +5,20 @@ import "../../../pages" //for import of SaveAsPage.qml + to do visible functions
 
 
 //TODO -> use next variables as parameters (don`t use import)
-//-saveFlag (!)
+//-saved
 //-filePath
 //-outputNotifications
 //-myTextArea.*
 
 Row {
     property int myMenuButtonWidth
-    //property string filePath
 
     MenuButton {
         //width: sizeBackgroundItemMainMenu
         width: myMenuButtonWidth
         mySource: "../img/icon-m-save.svg";
         myText: qsTr("Save")
-        enabled: saveFlag
+        enabled: !saved
         onClicked: {
             if (filePath!=="") {
                 py.call('editFile.savings', [filePath,myTextArea.text], function() {
@@ -27,7 +26,7 @@ Row {
                     outputNotifications.close()
                     outputNotifications.previewBody = qsTr("Document saved")
                     outputNotifications.publish()
-                    saveFlag = false;
+                    saved = true;
                 }); //filePath is path where you want to save!
             }
 

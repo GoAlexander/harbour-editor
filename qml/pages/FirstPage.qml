@@ -14,7 +14,7 @@ Page {
     property int sizeBackgroundItemMainMenu: pullMenu2.width / 5
     property int sizeBackgroundItem: hotActionsMenu.width / 5
     property string filePath: ""
-    property bool saveFlag: false
+    property bool saved: false
 
     property bool searched: false
     property bool searchRowVisible: false
@@ -34,6 +34,10 @@ Page {
         running: true
     }
 
+
+    function setVariables(readOnly){
+        myTextArea.readOnly = readOnly
+    }
 
     function pageStatusChange(page){
         documentHandler.setStyle(propertiesHighlightColor, stringHighlightColor,
@@ -59,15 +63,15 @@ Page {
         pageStack.nextPage();
         if (filePath!=="") {
             //py.call('editFile.savings', [filePath,documentHandler.text], function() {}); //test it :)
-            py.call('editFile.savings', [filePath,myTextArea.text], function() {});
+            py.call('editFile.savings', [filePath,myTextArea.text], function() {
+                outputNotifications.close()
+                outputNotifications.previewBody = qsTr("Document saved!")
+                outputNotifications.publish()
+            });
         }
         py.call('editFile.openings', [filePath], function(result) {
             myTextArea.text = result;
         });
-
-        outputNotifications.close()
-        outputNotifications.previewBody = qsTr("Document saved!")
-        outputNotifications.publish()
     }
 
     function numberOfLines() {
@@ -115,7 +119,7 @@ Page {
 
 
     Rectangle {
-        id:background
+        id: background
         color: bgColor
         anchors.fill: parent
         visible: true
@@ -151,12 +155,11 @@ Page {
                         visible: !headerVisible
                     }
 
-                    // my own component (To Do need some cleaning and optimisation)
                     MainRow {
                         id: pullMenu2
                         width: parent.width
                         height: childrenRect.height
-                        myMenuButtonWidth:sizeBackgroundItemMainMenuFirstRow
+                        myMenuButtonWidth: sizeBackgroundItemMainMenuFirstRow
                     }
 
                     //TODO need refactoring for this row
@@ -190,7 +193,6 @@ Page {
                         MenuButton {
                             width: parent.width / 3
                             mySource: "../img/icon-m-code.svg";
-                            //mySource: "image://theme/icon-m-wizard?" + (highlightingEnabled ? Theme.highlightColor : Theme.primaryColor);
                             myText: qsTr("Highlight")
                             onClicked: {
                                 if (highlightingEnabled == false) {
@@ -221,14 +223,25 @@ Page {
                     text: qsTr("Settings")
                     onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
                 }
+            }
 
                 //TODO implement the MenuPage!
-                MenuItem {
-                    text: qsTr("Menu")
-                    onClicked: pageStack.push(Qt.resolvedUrl("MenuPage.qml"))
-                    visible: true
-                }
-            }
+//                MenuItem {
+//                    text: qsTr("Menu")
+//                    onClicked: pageStack.push(Qt.resolvedUrl("MenuPage.qml"))
+//                    visible: true
+//                }
+//                MenuItem {
+//                    text: qsTr("Menu")
+//                    onClicked: pageStack.push(Qt.resolvedUrl("MenuPage.qml"), {
+//                                                  readOnly: myTextArea.readOnly,
+//                                                  //showFormat: true,
+//                                                  //title: "Select file",
+//                                                  callback: setVariables
+//                                              })
+//                    visible: true
+//                }
+//            }
 
             Row {
                 id: header
@@ -237,7 +250,6 @@ Page {
                 anchors.bottom: parent.bottom
                 visible: headerVisible || searchRowVisible //header visible if EditRow active or SearchRow active
 
-                // my own component (To Do need some cleaning and optimisation)
                 EditRow {
                     id: hotActionsMenu
                     width: parent.width
@@ -246,7 +258,6 @@ Page {
                     visible: !searchRowVisible
                 }
 
-                // my own component (To Do need some cleaning and optimisation)
                 SearchRow {
                     width: parent.width
                     height: childrenRect.height
@@ -285,7 +296,7 @@ Page {
                     onTextChanged: {
                         console.log("filePath = " + filePath, fontSize, font.family);
                         //console.log("Real lines: " + myTextArea._editor.lineCount);
-                        saveFlag = true;
+                        saved = false;
 
                         //lineNumbers counter
                         lineNumberChanged();
@@ -300,7 +311,6 @@ Page {
                         if (filePath!=="" && documentHandler.text !== "") {
                             py.call('editFile.autosave', [filePath, myTextArea.text], function(result) {}); // written myTextArea.text to fix autosaving
                         }
-
                     }
 
                     DocumentHandler {
@@ -354,7 +364,11 @@ Page {
         onError: {
             // when an exception is raised, this error handler will be called
             console.log('python error: ' + traceback);
+            outputNotifications.close()
+            outputNotifications.previewBody = qsTr("Error while opening/saving the file");
+            outputNotifications.publish()
         }
+
         onReceived: console.log('Unhandled event: ' + data)
     }
 
