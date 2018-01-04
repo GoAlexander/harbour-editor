@@ -14,8 +14,8 @@ Page {
     }
 
     property string filePath: myGeneralLogic.getQuickNotePath();
-//    property bool searched: false
-//    property bool searchRowVisible: false
+    property bool searched: false
+    property bool searchRowVisible: false
 
     Rectangle {
         id:background
@@ -49,9 +49,10 @@ Page {
                     id: hotActionsMenu
                     width: parent.width
                     height: childrenRect.height
+                    visible: !searchRowVisible
 
                     MenuButton {
-                        width: parent.width / 3
+                        width: parent.width / 4
                         mySource: "image://theme/icon-m-rotate-left";
                         myText: qsTr("Undo")
                         enabled: myTextArea._editor.canUndo
@@ -61,7 +62,7 @@ Page {
                     }
 
                     MenuButton {
-                        width: parent.width / 3
+                        width: parent.width / 4
                         mySource: "image://theme/icon-m-rotate-right";
                         myText: qsTr("Redo")
                         enabled: myTextArea._editor.canRedo
@@ -71,7 +72,21 @@ Page {
                     }
 
                     MenuButton {
-                        width: parent.width / 3
+                        width: parent.width / 4
+                        mySource: "image://theme/icon-m-search?" + (searchRowVisible ? Theme.highlightColor : Theme.primaryColor);
+                        myText: qsTr("Search")
+                        onClicked: {
+                            if (searchRowVisible == false) {
+                                searchRowVisible = true;
+                            }
+                            else {
+                                searchRowVisible = false;
+                            }
+                        }
+                    }
+
+                    MenuButton {
+                        width: parent.width / 4
                         mySource: "../img/icon-m-tab.svg";
                         myText: qsTr("Tab")
                         onClicked: {
@@ -82,12 +97,11 @@ Page {
                     }
                 }
 
-//                // my own component (To Do need some cleaning and optimisation)
-//                SearchRow {
-//                    width: parent.width
-//                    height: childrenRect.height
-//                    visible: searchRowVisible
-//                }
+                SearchRow {
+                    width: parent.width
+                    height: childrenRect.height
+                    visible: searchRowVisible
+                }
 
             }
 
