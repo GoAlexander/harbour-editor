@@ -17,19 +17,19 @@
     <name>AboutPage</name>
     <message>
         <source>&quot;Editor.&quot; is feature-rich text/code editor!</source>
-        <translation>&quot;Editor.&quot; es un outil avancé d&apos;édition de textes/codes</translation>
+        <translation>&quot;Editor.&quot; est un outil avancé d&apos;édition de textes/codes</translation>
     </message>
     <message>
         <source>License: GPLv3</source>
-        <translation>Licence : GPLv3</translation>
+        <translation>Licence : GPLv3</translation>
     </message>
     <message>
         <source>Special thanks:</source>
-        <translation>Remerciements spéciaux :</translation>
+        <translation>Remerciements spéciaux :</translation>
     </message>
     <message>
         <source>Tips:</source>
-        <translation>Astuces :</translation>
+        <translation>Astuces :</translation>
     </message>
     <message>
         <source>About</source>
@@ -53,7 +53,7 @@
     </message>
     <message>
         <source>If you want to support the developer:</source>
-        <translation>Si vous souhaitez soutenir le développeur : </translation>
+        <translation>Si vous souhaitez soutenir le développeur : </translation>
     </message>
     <message>
         <source>Paypal donation</source>
@@ -113,46 +113,46 @@
     </message>
     <message>
         <source> - Dutch translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - version néerlandaise</translation>
     </message>
     <message>
         <source>-gri4994 for the wonderful app icon</source>
-        <translation type="unfinished"></translation>
+        <translation><-gri4994 pour le super logo d’application/translation>
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions, source code and some dictionaries for syntax highlighting and feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>-eekkelund pour les fonctions de sauvegarde/chargement/sauve. auto, codes sources et les dictionnaire pour le surlignage de la syntaxe et ses retours</translation>
     </message>
     <message>
         <source>-the team of GtkSourceView for the basis for .sh dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>L’équipe de GtkSourceView pour les bases des dictionnaires .sh</translation>
     </message>
     <message>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Code source</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version</translation>
     </message>
     <message>
         <source>Telegram group of app</source>
-        <translation type="unfinished"></translation>
+        <translation>Groupe Telegram de l’application</translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
         <source>Lines: </source>
-        <translation>Lignes : </translation>
+        <translation>Lignes : </translation>
     </message>
     <message>
         <source>Chars: </source>
-        <translation>Caractères : </translation>
+        <translation>Caractères : </translation>
     </message>
     <message>
         <source>Words: </source>
-        <translation type="unfinished"></translation>
+        <translation>Mots :</translation>
     </message>
 </context>
 <context>
@@ -163,7 +163,7 @@
     </message>
     <message>
         <source>Document can&apos;t be saved!</source>
-        <translation>Le document ne peut pas être enregistré !</translation>
+        <translation>Le document ne peut pas être enregistré !</translation>
     </message>
     <message>
         <source>Undo</source>
@@ -179,11 +179,11 @@
     </message>
     <message>
         <source>Document saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Document enregistré</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Rechercher</translation>
+        <translation>Rechercher</translation>
     </message>
 </context>
 <context>
@@ -194,35 +194,35 @@
     </message>
     <message>
         <source>Document saved!</source>
-        <translation>Document enregistré !</translation>
+        <translation>Document enregistré !</translation>
     </message>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin copié dans le presse-papier</translation>
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Surlignage activé</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Surlignage désactivé</translation>
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished"></translation>
+        <translation>Note rapide</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Surlignage</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished">Lire</translation>
+        <translation>Lire</translation>
     </message>
     <message>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu</translation>
     </message>
 </context>
 <context>
@@ -233,15 +233,15 @@
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Supp.</translation>
     </message>
     <message>
         <source>Move to top</source>
-        <translation type="unfinished"></translation>
+        <translation>Remonter</translation>
     </message>
     <message>
         <source>Documents are in order of first opening</source>
-        <translation type="unfinished"></translation>
+        <translation>Documents dans l’ordre d’ouverture</translation>
     </message>
 </context>
 <context>
@@ -267,30 +267,30 @@
     <name>MenuPage</name>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished"></translation>
+        <translation>Note rapide</translation>
     </message>
 </context>
 <context>
     <name>QuickNotePage</name>
     <message>
         <source>Undo</source>
-        <translation type="unfinished">Annuler</translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished">Rétab.</translation>
+        <translation>Rétab.</translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished">Onglet</translation>
+        <translation>Onglet</translation>
     </message>
     <message>
         <source>Text auto-saved in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde auto dins :</translation>
     </message>
     <message>
         <source>Quick note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Note rapide.</translation>
     </message>
 </context>
 <context>
@@ -332,11 +332,11 @@
     </message>
     <message>
         <source>Font size:</source>
-        <translation>Taille police : </translation>
+        <translation>Taille police : </translation>
     </message>
     <message>
         <source>Font:</source>
-        <translation>Police : </translation>
+        <translation>Police : </translation>
     </message>
     <message>
         <source>File browser</source>
@@ -348,23 +348,23 @@
     </message>
     <message>
         <source>Be careful to enable this option!</source>
-        <translation>Soyez prudent en activant cette option !</translation>
+        <translation>Soyez prudent en activant cette option !</translation>
     </message>
     <message>
         <source>Type of tab:</source>
-        <translation type="unfinished"></translation>
+        <translation>Type d’onglet</translation>
     </message>
     <message>
         <source>Dark Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Thème sombre</translation>
     </message>
     <message>
         <source>Ambience Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Thème d’Ambiance</translation>
     </message>
     <message>
         <source>Default text editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Éditeur de texte par défaut</translation>
     </message>
 </context>
 </TS>
