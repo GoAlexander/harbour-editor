@@ -121,23 +121,23 @@
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions, source code and some dictionaries for syntax highlighting and feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>• eekkelund voor de opslagfunctionaliteit, broncode, enkele woordenboeken voor opmaakmarkering, en feedback</translation>
     </message>
     <message>
         <source>-the team of GtkSourceView for the basis for .sh dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>• het team van GtkSourceView voor de basis voor het .sh-woordenboek</translation>
     </message>
     <message>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Broncode</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versie</translation>
     </message>
     <message>
         <source>Telegram group of app</source>
-        <translation type="unfinished"></translation>
+        <translation>Telegram-groep van de app</translation>
     </message>
 </context>
 <context>
@@ -179,11 +179,11 @@
     </message>
     <message>
         <source>Document saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Document opgeslagen</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Zoeken</translation>
+        <translation>Zoeken</translation>
     </message>
 </context>
 <context>
@@ -202,27 +202,27 @@
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Markeren ingeschakeld</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Markeren uitgeschakeld</translation>
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished"></translation>
+        <translation>Snelle notitie</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Markeren</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished"> </translation>
+        <translation>Excl L</translation>
     </message>
     <message>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu</translation>
     </message>
 </context>
 <context>
@@ -241,7 +241,7 @@
     </message>
     <message>
         <source>Documents are in order of first opening</source>
-        <translation type="unfinished"></translation>
+        <translation>Document staan gerangschikt op tijdstip van eerste opening</translation>
     </message>
 </context>
 <context>
@@ -267,30 +267,30 @@
     <name>MenuPage</name>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished"></translation>
+        <translation>Snelle notitie</translation>
     </message>
 </context>
 <context>
     <name>QuickNotePage</name>
     <message>
         <source>Undo</source>
-        <translation type="unfinished"> </translation>
+        <translation>Onged.</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished"> </translation>
+        <translation>Opnieuw</translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished"> </translation>
+        <translation>Tab</translation>
     </message>
     <message>
         <source>Text auto-saved in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst automatisch opgeslagen in:</translation>
     </message>
     <message>
         <source>Quick note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Snelle notitie</translation>
     </message>
 </context>
 <context>
@@ -364,7 +364,7 @@
     </message>
     <message>
         <source>Default text editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaardtekstverwerker</translation>
     </message>
 </context>
 </TS>
