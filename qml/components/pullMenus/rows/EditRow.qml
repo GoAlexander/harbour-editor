@@ -79,7 +79,7 @@ Row {
         onClicked: {
             var previousCursorPosition = myTextArea.cursorPosition;
             myTextArea.text = myTextArea.text.slice(0, myTextArea.cursorPosition) + tabType + myTextArea.text.slice(myTextArea.cursorPosition, myTextArea.text.length);
-            myTextArea.cursorPosition = previousCursorPosition + 1;
+            myTextArea.cursorPosition = previousCursorPosition + tabType.length;
         }
     }
 }

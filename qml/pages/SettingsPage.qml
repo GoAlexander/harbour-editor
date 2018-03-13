@@ -98,21 +98,37 @@ Page {
             SectionHeader { text: qsTr("Fonts and size") }
 
             ComboBox {
-                label: qsTr("Font size:")
+                label: qsTr("Font size")
                 value: fontSize
 
                 menu: ContextMenu {
                     MenuItem {
-                        text: "Medium (default)"
-                        onClicked: fontSize = Theme.fontSizeMedium;
+                        text: qsTr("Tiny")
+                        onClicked: fontSize = Theme.fontSizeTiny;
                     }
                     MenuItem {
-                        text: "Small"
+                        text: qsTr("Extra small")
+                        onClicked: fontSize = Theme.fontSizeExtraSmall;
+                    }
+                    MenuItem {
+                        text: qsTr("Small")
                         onClicked: fontSize = Theme.fontSizeSmall;
                     }
                     MenuItem {
-                        text: "Large"
+                        text: qsTr("Medium (default)")
+                        onClicked: fontSize = Theme.fontSizeMedium;
+                    }
+                    MenuItem {
+                        text: qsTr("Large")
                         onClicked: fontSize = Theme.fontSizeLarge;
+                    }
+                    MenuItem {
+                        text: qsTr("Extra large")
+                        onClicked: fontSize = Theme.fontSizeExtraLarge;
+                    }
+                    MenuItem {
+                        text: qsTr("Huge")
+                        onClicked: fontSize = Theme.fontSizeHuge;
                     }
                 }
             }
