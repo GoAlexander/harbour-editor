@@ -135,10 +135,6 @@
         <source>Version</source>
         <translation>Версия</translation>
     </message>
-    <message>
-        <source>Telegram group of app</source>
-        <translation>Группа в Telegram</translation>
-    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -189,40 +185,40 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Settings</source>
-        <translation>Настройки</translation>
-    </message>
-    <message>
         <source>Document saved!</source>
-        <translation>Документ сохранен!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation>Файловый путь копирован в буфер обмена</translation>
-    </message>
-    <message>
-        <source>Highlighting enabled</source>
-        <translation>Подсветка включена</translation>
-    </message>
-    <message>
-        <source>Highlighting disabled</source>
-        <translation>Подсветка выключена</translation>
-    </message>
-    <message>
-        <source>Quick note</source>
-        <translation>Быстрая записка</translation>
-    </message>
-    <message>
-        <source>Highlight</source>
-        <translation>Подсветка</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation>Чтение</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Menu</source>
-        <translation>Меню</translation>
+        <source>Quick note</source>
+        <translation type="unfinished">Быстрая записка</translation>
+    </message>
+    <message>
+        <source>Highlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlighting enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlighting disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished">Настройки</translation>
+    </message>
+    <message>
+        <source>Error while opening/saving the file</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -292,6 +288,10 @@
         <source>Quick note.</source>
         <translation>Быстрая записка.</translation>
     </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished">Поиск</translation>
+    </message>
 </context>
 <context>
     <name>SearchRow</name>
@@ -331,10 +331,6 @@
         <translation>Используйте, чтобы получить больше места для текста</translation>
     </message>
     <message>
-        <source>Font size:</source>
-        <translation>Размер шрифта:</translation>
-    </message>
-    <message>
         <source>Font:</source>
         <translation>Шрифт:</translation>
     </message>
@@ -365,6 +361,38 @@
     <message>
         <source>Default text editor</source>
         <translation>Текстовый редактор по-умолчанию</translation>
+    </message>
+    <message>
+        <source>Medium (default)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tiny</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Huge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Font size</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

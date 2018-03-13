@@ -135,10 +135,6 @@
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Telegram group of app</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>CoverPage</name>
@@ -189,10 +185,6 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Document saved!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -201,11 +193,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Highlighting disabled</source>
+        <source>R-only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -217,11 +205,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>R-only</source>
+        <source>Highlighting enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Menu</source>
+        <source>Highlighting disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error while opening/saving the file</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -292,6 +288,10 @@
         <source>Quick note.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SearchRow</name>
@@ -331,10 +331,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Font size:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Font:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -364,6 +360,38 @@
     </message>
     <message>
         <source>Default text editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Medium (default)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tiny</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Huge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Font size</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
