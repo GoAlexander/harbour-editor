@@ -384,7 +384,7 @@
     </message>
     <message>
         <source>Extra large</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra largo</translation>
     </message>
     <message>
         <source>Huge</source>
