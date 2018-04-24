@@ -21,11 +21,11 @@
     </message>
     <message>
         <source>License: GPLv3</source>
-        <translation>Licensia: GPLv3</translation>
+        <translation>Licencia: GPLv3</translation>
     </message>
     <message>
         <source>Special thanks:</source>
-        <translation>Especiales gracias a:</translation>
+        <translation>Créditos:</translation>
     </message>
     <message>
         <source>Tips:</source>
@@ -41,7 +41,7 @@
     </message>
     <message>
         <source>-To &apos;Select all text&apos; hold your finger until 3 vibrations</source>
-        <translation>-Para &apos;Seleccionar todo el texto&apos; Sostenga su dedo hasta 3 vibraciones</translation>
+        <translation>-Para seleccionar todo el texto; sostenga su dedo hasta 3 vibraciones</translation>
     </message>
     <message>
         <source>-osanwe for very often consultations about qml code</source>
@@ -53,7 +53,7 @@
     </message>
     <message>
         <source>If you want to support the developer:</source>
-        <translation>Si quiere apoyar al desarrollador:</translation>
+        <translation>Si quieres apoyar al desarrollador:</translation>
     </message>
     <message>
         <source>Paypal donation</source>
@@ -69,7 +69,7 @@
     </message>
     <message>
         <source>-Unsaved changes are saved in the file with ending &apos;~&apos; in the same dir where you placed your original file</source>
-        <translation>Cambios no guardados se guardan en el archivo final &apos;~&apos; En el mismo directorio donde colocó su archivo original</translation>
+        <translation>Cambios no guardados se guardan en el archivo final ~; en el mismo directorio donde colocó su archivo original</translation>
     </message>
     <message>
         <source>Star the repository at the github ☺ </source>
@@ -109,7 +109,7 @@
     </message>
     <message>
         <source> - German translation</source>
-        <translation> - Traducción al aleman</translation>
+        <translation> - Traducción al alemán</translation>
     </message>
     <message>
         <source> - Dutch translation</source>
@@ -121,7 +121,7 @@
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions, source code and some dictionaries for syntax highlighting and feedback</source>
-        <translation>-eekkelund Por funciones de guardar/cargar/autoguardar, código fuente y algunos diccionarios para resaltar sintaxis y retroalimentación</translation>
+        <translation>-eekkelund por funciones de guardar/cargar/autoguardar, código fuente y algunos diccionarios para resaltar sintaxis y retroalimentación</translation>
     </message>
     <message>
         <source>-the team of GtkSourceView for the basis for .sh dictionary</source>
@@ -148,7 +148,7 @@
     </message>
     <message>
         <source>Chars: </source>
-        <translation>Caracteres: </translation>
+        <translation>Caracteres:</translation>
     </message>
 </context>
 <context>
@@ -159,7 +159,7 @@
     </message>
     <message>
         <source>Document can&apos;t be saved!</source>
-        <translation>Documento no puede&apos;ser guardado!</translation>
+        <translation>El documento no se pudo guardar!</translation>
     </message>
     <message>
         <source>Undo</source>
@@ -186,39 +186,39 @@
     <name>FirstPage</name>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished"></translation>
+        <translation>Documento guardado!</translation>
     </message>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta de archivo copiada al portapapeles</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished"></translation>
+        <translation>L-only</translation>
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished">Nota rápida</translation>
+        <translation>Nota rápida</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Realzar</translation>
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Realzando activado</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Realzado desactivado</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished">Ajustes</translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <source>Error while opening/saving the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al abrir/guardar el archivo</translation>
     </message>
 </context>
 <context>
@@ -286,11 +286,11 @@
     </message>
     <message>
         <source>Quick note.</source>
-        <translation>Nota rápida</translation>
+        <translation>Nota rápida.</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Buscar</translation>
+        <translation>Buscar</translation>
     </message>
 </context>
 <context>
@@ -336,11 +336,11 @@
     </message>
     <message>
         <source>File browser</source>
-        <translation>Explorador de archivos</translation>
+        <translation>Gestor de archivos</translation>
     </message>
     <message>
         <source>Show hidden files</source>
-        <translation>Mostrar archivos ocultos</translation>
+        <translation>Archivos ocultos</translation>
     </message>
     <message>
         <source>Be careful to enable this option!</source>
@@ -364,35 +364,35 @@
     </message>
     <message>
         <source>Medium (default)</source>
-        <translation type="unfinished"></translation>
+        <translation>Medio (predeterminado)</translation>
     </message>
     <message>
         <source>Tiny</source>
-        <translation type="unfinished"></translation>
+        <translation>Diminuto</translation>
     </message>
     <message>
         <source>Extra small</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra pequeño</translation>
     </message>
     <message>
         <source>Small</source>
-        <translation type="unfinished"></translation>
+        <translation>Pequeño</translation>
     </message>
     <message>
         <source>Large</source>
-        <translation type="unfinished"></translation>
+        <translation>Largo</translation>
     </message>
     <message>
         <source>Extra large</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra largo</translation>
     </message>
     <message>
         <source>Huge</source>
-        <translation type="unfinished"></translation>
+        <translation>Enorme</translation>
     </message>
     <message>
         <source>Font size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño de fuente</translation>
     </message>
 </context>
 </TS>
