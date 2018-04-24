@@ -46,7 +46,7 @@ Page {
                             // and update qml model (UI)
                             py2.call('editFile.setHistory', ["history", openedFiles], function(result) {
                                 myModel.clear();
-                                for(var i = openedFiles.length-1; i >= 0; i--) {
+                                for (var i = openedFiles.length-1; i >= 0; i--) {
                                     var element = { "value" : openedFiles[i] }
                                     myModel.append(element)
                                 }
@@ -61,13 +61,17 @@ Page {
                         var openedFiles = [];
 
                         py2.call('editFile.getHistory', ["history"], function(result) {
-                            openedFiles.splice(result.indexOf(labelPath.text), 1);
+                            for (var i = 0; i < result.length; i++) {
+                                if (result[i] !== labelPath.text) {
+                                    openedFiles.push(result[i]);
+                                }
+                            }
 
                             // now save new history on file system
                             // and update qml model (UI)
                             py2.call('editFile.setHistory', ["history", openedFiles], function(result) {
                                 myModel.clear();
-                                for(var i = openedFiles.length-1; i >= 0; i--) {
+                                for (var i = openedFiles.length-1; i >= 0; i--) {
                                     var element = { "value" : openedFiles[i] }
                                     myModel.append(element)
                                 }
@@ -98,7 +102,7 @@ Page {
                 openedFiles = result;
                 console.log(result)
 
-                for(var i = openedFiles.length-1; i >= 0; i--) {
+                for (var i = openedFiles.length-1; i >= 0; i--) {
                     var element = { "value" : openedFiles[i] }
                     myModel.append(element)
                 }
