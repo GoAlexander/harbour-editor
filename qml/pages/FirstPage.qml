@@ -129,6 +129,7 @@ Page {
             anchors.fill: parent
 
             PushUpMenu {
+                bottomMargin: Theme.paddingMedium
 
                 MenuItem {
                     visible: (filePath == "") ? false : true
