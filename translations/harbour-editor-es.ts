@@ -194,7 +194,7 @@
     </message>
     <message>
         <source>R-only</source>
-        <translation>L-only</translation>
+        <translation>Leer</translation>
     </message>
     <message>
         <source>Quick note</source>
