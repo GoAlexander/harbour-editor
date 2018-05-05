@@ -394,5 +394,9 @@
         <source>Font size</source>
         <translation>Tamaño de fuente</translation>
     </message>
+    <message>
+        <source>Turn off to enable default notes</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

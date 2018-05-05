@@ -10,6 +10,8 @@ Page {
         id: myGeneralLogic
     }
 
+    property bool editorDefault: myGeneralLogic.isDefaultApp();
+
     SilicaFlickable {
         id: view
         anchors.fill: parent
@@ -205,33 +207,26 @@ Page {
 
             SectionHeader { text: qsTr("Default text editor") }
 
-            Row{
+            TextSwitch {
+                id: editorT
                 anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
-                TextSwitch {
-                    id: editorT
-                    checked: myGeneralLogic.isDefaultApp()
-                    text: "Editor."
-                    width: parent.width/2
-                    onCheckedChanged: {
-                        //console.log(myGeneralLogic.isDefaultApp());
+                checked: editorDefault
+                text: "Editor."
+                width: parent.width/2
+                description: qsTr("Turn off to enable default notes")
 
-                        editorT.checked = checked;
-                        jNotesT.checked = !checked
+                onClicked: {
+                    //console.log(myGeneralLogic.isDefaultApp());
+                    if (myGeneralLogic.isDefaultApp()) {
+                        editorT.checked = false;
+                        myGeneralLogic.setDefaultApp("jolla-notes.desktop");
+                    } else {
+                        editorT.checked = true;
                         myGeneralLogic.setDefaultApp("harbour-editor.desktop");
                     }
                 }
-                TextSwitch {
-                    id: jNotesT
-                    checked: !myGeneralLogic.isDefaultApp()
-                    text: "Jolla-notes"
-                    width: parent.width/2
-                    onCheckedChanged: {
-                        editorT.checked = !checked;
-                        jNotesT.checked = checked
-                        myGeneralLogic.setDefaultApp("jolla-notes.desktop");
-                    }
-                }
             }
+
 
             SectionHeader { text: qsTr("File browser") }
 
