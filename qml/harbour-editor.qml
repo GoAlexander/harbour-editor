@@ -70,6 +70,7 @@ ApplicationWindow
     property string fileName
 
     property bool showHiddenFiles
+    property bool autosave
 
     property bool darkTheme
     property string bgColor
@@ -129,6 +130,10 @@ ApplicationWindow
                         commentHighlightColor= Theme.highlightBackgroundColor
                         bgColor="transparent"
                     }
+                });
+
+                py2.call('editFile.getValue', ["autosave"], function(result) {
+                    autosave=result
                 });
             });
         }

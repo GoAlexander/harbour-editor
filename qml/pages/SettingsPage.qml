@@ -227,6 +227,16 @@ Page {
                 }
             }
 
+            SectionHeader { text: qsTr("General") }
+
+            TextSwitch {
+                id: autosaveT
+                anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
+                text: qsTr("Autosave")
+                description: qsTr("If enabled text will be stored in files with postfix ~")
+                checked: autosave
+                onCheckedChanged: autosave = autosaveT.checked;
+            }
 
             SectionHeader { text: qsTr("File browser") }
 
@@ -254,6 +264,8 @@ Page {
 
         py2.call('editFile.setValue', ["showHiddenFiles", showHiddenFiles], function(result) {});
         py2.call('editFile.setValue', ["darkTheme", darkTheme], function(result) {});
+
+        py2.call('editFile.setValue', ["autosave", autosave], function(result) {});
 
     }
 }

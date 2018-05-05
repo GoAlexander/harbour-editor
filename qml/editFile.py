@@ -32,7 +32,6 @@ def autosave(filepath, text):
         file = open(filepath+"~", 'w')
     file.write(text)
     file.close()
-    return
 
 def isSaved(filepath):
     if os.path.exists(filepath + "~"):
@@ -43,7 +42,7 @@ def isSaved(filepath):
 #----------------------------------------
 
 PATH_TO_FOLDER = os.environ['HOME'] + "/.local/share/harbour-editor"
-PATH_TO_SETTINGS = PATH_TO_FOLDER + "/settings.json"
+PATH_TO_SETTINGS = PATH_TO_FOLDER + "/settings2.json"
 PATH_TO_HISTORY = PATH_TO_FOLDER + "/history.json"
 
 def _getFromJson(path, type, key):
@@ -84,7 +83,7 @@ def setHistory(key, value):
 def createSettingsJson():
     if not os.path.exists(PATH_TO_FOLDER):
         os.mkdir(PATH_TO_FOLDER)
-    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"tabType": "    ", ' + '"showHiddenFiles": false, ' + '"darkTheme": "false" ' + '}'
+    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"tabType": "    ", ' + '"showHiddenFiles": false, ' + '"darkTheme": "false", ' + '"autosave": true ' + '}'
     file = open(PATH_TO_SETTINGS, 'w')
     file.write(str)
     file.close()

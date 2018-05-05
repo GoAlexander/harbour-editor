@@ -309,8 +309,10 @@ Page {
                         fileName = getName(filePath);
 
                         //Autosave
-                        if (filePath!=="" && documentHandler.text !== "") {
-                            py.call('editFile.autosave', [filePath, myTextArea.text], function(result) {}); // written myTextArea.text to fix autosaving
+                        if (autosave) {
+                            if (filePath!=="" && documentHandler.text !== "") {
+                                py.call('editFile.autosave', [filePath, myTextArea.text], function(result) {}); // written myTextArea.text to fix autosaving
+                            }
                         }
                     }
 

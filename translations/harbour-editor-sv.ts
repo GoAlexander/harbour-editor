@@ -398,5 +398,17 @@
         <source>Turn off to enable default notes</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Autosave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>General</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If enabled text will be stored in files with postfix ~</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
