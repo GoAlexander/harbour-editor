@@ -133,11 +133,11 @@
     </message>
     <message>
         <source>Paypal donation - RUB</source>
-        <translation type="unfinished"></translation>
+        <translation>Paypal пожертвование - РУБ</translation>
     </message>
     <message>
         <source>Paypal donation - EURO</source>
-        <translation type="unfinished"></translation>
+        <translation>Paypal пожертвование - ЕВРО</translation>
     </message>
 </context>
 <context>
@@ -190,39 +190,39 @@
     <name>FirstPage</name>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished"></translation>
+        <translation>Документ сохранен!</translation>
     </message>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Путь сохранен в буфер обмена</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished"></translation>
+        <translation>Чтение</translation>
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished">Быстрая записка</translation>
+        <translation>Быстрая записка</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсветка</translation>
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Подстветка включена</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсветка отключена</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished">Настройки</translation>
+        <translation>Настройки</translation>
     </message>
     <message>
         <source>Error while opening/saving the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка во время открытия/сохранения файла</translation>
     </message>
 </context>
 <context>
@@ -294,7 +294,7 @@
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Поиск</translation>
+        <translation>Поиск</translation>
     </message>
 </context>
 <context>
@@ -368,51 +368,51 @@
     </message>
     <message>
         <source>Medium (default)</source>
-        <translation type="unfinished"></translation>
+        <translation>Средний (стандарт)</translation>
     </message>
     <message>
         <source>Tiny</source>
-        <translation type="unfinished"></translation>
+        <translation>Крошечный</translation>
     </message>
     <message>
         <source>Extra small</source>
-        <translation type="unfinished"></translation>
+        <translation>Очень маленький</translation>
     </message>
     <message>
         <source>Small</source>
-        <translation type="unfinished"></translation>
+        <translation>Маленький</translation>
     </message>
     <message>
         <source>Large</source>
-        <translation type="unfinished"></translation>
+        <translation>Большой</translation>
     </message>
     <message>
         <source>Extra large</source>
-        <translation type="unfinished"></translation>
+        <translation>Очень большой</translation>
     </message>
     <message>
         <source>Huge</source>
-        <translation type="unfinished"></translation>
+        <translation>Огромный</translation>
     </message>
     <message>
         <source>Font size</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер шрифта</translation>
     </message>
     <message>
         <source>Turn off to enable default notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Отключите, чтобы использовать стандартное приложение записок</translation>
     </message>
     <message>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Автосохранение</translation>
     </message>
     <message>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Общее</translation>
     </message>
     <message>
         <source>If enabled text will be stored in files with postfix ~</source>
-        <translation type="unfinished"></translation>
+        <translation>Если включено, то текст будет сохраняться в файлах с постфиксом ~</translation>
     </message>
 </context>
 </TS>
