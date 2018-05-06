@@ -396,19 +396,19 @@
     </message>
     <message>
         <source>Turn off to enable default notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactívar para habilitar las notas predeterminadas</translation>
     </message>
     <message>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Autoguardar</translation>
     </message>
     <message>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>General</translation>
     </message>
     <message>
         <source>If enabled text will be stored in files with postfix ~</source>
-        <translation type="unfinished"></translation>
+        <translation>El texto habilitado, esta guardado en el archivo con sufijo ~</translation>
     </message>
 </context>
 </TS>
