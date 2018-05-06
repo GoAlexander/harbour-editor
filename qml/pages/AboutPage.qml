@@ -32,10 +32,18 @@ Page {
             }
 
             Button {
-                text: qsTr("Paypal donation")
+                text: qsTr("Paypal donation - EURO")
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     Qt.openUrlExternally("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E8CL7QXGEMQEG");
+                }
+            }
+
+            Button {
+                text: qsTr("Paypal donation - RUB")
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {
+                    Qt.openUrlExternally("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B6EWFULGLUZR8");
                 }
             }
 

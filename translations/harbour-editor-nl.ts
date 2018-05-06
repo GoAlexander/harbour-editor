@@ -56,10 +56,6 @@
         <translation>Als je de ontwikkelaar wil ondersteunen:</translation>
     </message>
     <message>
-        <source>Paypal donation</source>
-        <translation>Paypal-donatie</translation>
-    </message>
-    <message>
         <source>Make a donation (button above)</source>
         <translation>Maak een donatie (knop hierboven)</translation>
     </message>
@@ -133,6 +129,14 @@
     </message>
     <message>
         <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paypal donation - RUB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paypal donation - EURO</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

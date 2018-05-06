@@ -226,7 +226,6 @@ Page {
                 }
             }
 
-                //TODO implement the MenuPage!
 //                MenuItem {
 //                    text: qsTr("Menu")
 //                    onClicked: pageStack.push(Qt.resolvedUrl("MenuPage.qml"))

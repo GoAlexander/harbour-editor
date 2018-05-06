@@ -56,10 +56,6 @@
         <translation>Jeśli chcesz wesprzeć programistę:</translation>
     </message>
     <message>
-        <source>Paypal donation</source>
-        <translation>Dotacje Paypal</translation>
-    </message>
-    <message>
         <source>Make a donation (button above)</source>
         <translation>Wspomóż (przycisk powyżej)</translation>
     </message>
@@ -133,6 +129,14 @@
     </message>
     <message>
         <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paypal donation - RUB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paypal donation - EURO</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
