@@ -133,11 +133,11 @@
     </message>
     <message>
         <source>Paypal donation - RUB</source>
-        <translation type="unfinished"></translation>
+        <translation>Paypal-donation - RUB</translation>
     </message>
     <message>
         <source>Paypal donation - EURO</source>
-        <translation type="unfinished"></translation>
+        <translation>Paypal-donation - EURO</translation>
     </message>
 </context>
 <context>
@@ -183,46 +183,46 @@
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Sök</translation>
+        <translation>Sök</translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokument sparat</translation>
     </message>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Filsökväg kopierad till urklipp</translation>
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished"></translation>
+        <translation>R-only</translation>
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished">Snabbnotis</translation>
+        <translation>Snabbnotis</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"></translation>
+        <translation>Färgmarkera</translation>
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Färgmarkering aktiverad</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Färgmarkering inaktiverad</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished">Inställningar</translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <source>Error while opening/saving the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Fel vid öppna/spara filen</translation>
     </message>
 </context>
 <context>
@@ -368,51 +368,51 @@
     </message>
     <message>
         <source>Medium (default)</source>
-        <translation type="unfinished"></translation>
+        <translation>Medium (standard)</translation>
     </message>
     <message>
         <source>Tiny</source>
-        <translation type="unfinished"></translation>
+        <translation>Pytteliten</translation>
     </message>
     <message>
         <source>Extra small</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra liten></translation>
     </message>
     <message>
         <source>Small</source>
-        <translation type="unfinished"></translation>
+        <translation>Liten</translation>
     </message>
     <message>
         <source>Large</source>
-        <translation type="unfinished"></translation>
+        <translation>Stor</translation>
     </message>
     <message>
         <source>Extra large</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra stor</translation>
     </message>
     <message>
         <source>Huge</source>
-        <translation type="unfinished"></translation>
+        <translation>Jättestor</translation>
     </message>
     <message>
         <source>Font size</source>
-        <translation type="unfinished"></translation>
+        <translation>Teckenstorlek</translation>
     </message>
     <message>
         <source>Turn off to enable default notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Stäng av för att aktivera standardnotiser</translation>
     </message>
     <message>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Spara automatiskt</translation>
     </message>
     <message>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Allmänt</translation>
     </message>
     <message>
         <source>If enabled text will be stored in files with postfix ~</source>
-        <translation type="unfinished"></translation>
+        <translation>Vid aktivering lagras text i filer med postfixet ~</translation>
     </message>
 </context>
 </TS>
