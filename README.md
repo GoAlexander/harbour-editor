@@ -13,7 +13,13 @@ Screenshot: https://cloud.githubusercontent.com/assets/1159508/22174835/1e7fa1e2
 
 Public To Do
 ------------
-https://trello.com/b/Gyu7pPqi/harbour-editor
+[Trello](https://trello.com/b/Gyu7pPqi/harbour-editor)
+
+Markets
+-------
+Application published in the following repositories:
+- Official Jolla Store
+- [openrepos.net](https://openrepos.net/content/goalexander/editor)
 
 Important notes
 ---------------
