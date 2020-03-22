@@ -1,6 +1,6 @@
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
-import io.thp.pyotherside 1.3
+import io.thp.pyotherside 1.5
 import harbour.editor.generallogic 1.0
 import "../components"
 import "../components/pullMenus/rows"
@@ -126,7 +126,7 @@ Page {
 
                         //Autosave
                         if (filePath!=="" && myTextArea.text !== "") {
-                            py.call('editFile.savings', [filePath,myTextArea.text], function() {});
+                            py.call('editFile.savings', [filePath,myTextArea.text,""], function() {});
                         }
                     }
                 }

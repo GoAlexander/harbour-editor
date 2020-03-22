@@ -3,57 +3,219 @@
 *  Thanks coderus!
 */
 
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 ;import Nemo.FileManager 1.0
 ;import Sailfish.FileManager 1.0
+import io.thp.pyotherside 1.5
+import "../pages"
 
 Page {
     id: page
     allowedOrientations: Orientation.All
 
+    property int txtfldwdth
     property alias path: fileModel.path
     property string homePath
     property string title
     property bool showFormat
-    property alias includeHiddenFiles: fileModel.includeHiddenFiles
-    property bool showHiddenFiles
+    property bool inclHiddenFiles
 
     signal formatClicked
 
     property var callback
 
+    function onManual(){
+    //    console.log(inclHiddenFiles);
+        var query
+        query=py3.call_sync('editFile.tryPath',[id_textfield.text]);
+        if(query == "Dir"){
+            pageStack.push(Qt.resolvedUrl("FileChooserPage.qml"),
+                           { path: fileModel.appendPath(id_textfield.text), inclHiddenFiles: inclHiddenFiles, homePath: page.homePath, callback: page.callback })
+           id_textfield.text=path;
+        }
+        else if(query == "File"){
+            var textstring = id_textfield.text + "";
+
+            if (typeof callback == "function") {
+                callback(textstring); //return to the page from which this page was called
+            }
+        }
+    }
+
+    Python {
+        id: py3 //TODO rename!
+        Component.onCompleted: {
+            addImportPath(Qt.resolvedUrl("."));
+            importModule('editFile', function () {});
+        }
+    }
+
     backNavigation: !FileEngine.busy
+
+    Rectangle {
+        id: rect_path
+        color: Theme.highlightDimmerColor
+        opacity: 0.7
+        height: Theme.itemSizeSmall
+        anchors {left: parent.left; right: parent.right; top: parent.top}
+
+        TextField {
+            id: id_textfield
+            anchors {left:parent.left; right: ret.left; top: parent.top; bottom: parent.bottom; topMargin: Theme.paddingSmall; leftMargin: Theme.itemSizeSmall}
+            text: path
+            labelVisible: false
+            font.pixelSize: Theme.fontSizeLarge 
+            Keys.onReturnPressed: {
+                onManual();
+               }
+            }
+
+        Row{
+           id: ret
+           anchors {right: parent.right;top: parent.top; bottom: parent.bottom;}
+           width: Theme.itemSizeExtraLarge
+          Button{
+            width: ret.width /2
+            Image{
+                anchors.fill: parent
+                source: "image://theme/icon-m-forward"
+                fillMode: Image.PreserveAspectFit
+            }
+            onClicked: {onManual()}
+          }
+
+          Button{
+            width: ret.width /2
+            Image{
+                id: butt_nav
+                anchors.fill: parent
+                source: "image://theme/icon-m-down"
+                fillMode: Image.PreserveAspectFit
+            }
+            onClicked: {
+                files_quick.visible = !files_quick.visible;
+                if(files_quick.visible){
+                    files_quick.height=ret.width * 2.5;
+                    butt_nav.source="image://theme/icon-m-up"
+                }
+                else{
+                    files_quick.height=0;
+                    butt_nav.source="image://theme/icon-m-down"
+                }
+            }
+          }
+        }
+    }
+
+    Column {
+        id: files_quick
+        visible: false
+        anchors {top: rect_path.bottom; left: parent.left; right: parent.right}
+        height: 0 //ret.width * 3
+    Behavior on height {
+            PropertyAnimation { duration: 150; easing.type: Easing.Linear }
+    }
+        ListItem {
+          Label{
+            anchors {centerIn: parent}
+            text: "/"
+            font.pixelSize: Theme.fontSizeMedium
+            font.bold: true
+          }
+          MouseArea{
+            anchors.fill: parent
+            onClicked: {
+              if(id_textfield.text!="/"){
+                id_textfield.text="/"; onManual();
+              }
+            }
+          }
+        }
+        ListItem {
+          Label{
+            anchors {centerIn: parent}
+            text: "/home/nemo"
+            font.pixelSize: Theme.fontSizeMedium
+            font.bold: true
+          }
+          MouseArea{
+            anchors.fill: parent
+            onClicked: {
+              if(id_textfield.text!="/home/nemo"){
+                id_textfield.text="/home/nemo"; onManual();
+              }
+            }
+          }
+        }
+        ListItem {
+          Label{
+            anchors {centerIn: parent}
+            text: "/usr/share"
+            font.pixelSize: Theme.fontSizeMedium
+            font.bold: true
+          }
+          MouseArea{
+            anchors.fill: parent
+            onClicked: {
+              if(id_textfield.text!="/usr/share"){
+                id_textfield.text="/usr/share"; onManual();
+              }
+            }
+          }
+        }
+
+        Rectangle {width: parent.width; height: 2}
+        ListItem {
+          Label{
+            anchors {centerIn: parent}
+            text: "History"
+            font.pixelSize: Theme.fontSizeMedium
+            font.bold: true
+          }
+          MouseArea{
+            anchors.fill: parent
+            onClicked: {
+                pageStack.push(Qt.resolvedUrl("../pages/HistoryPage.qml"));
+              }
+            }
+          }
+    //    Label {
+    //        text: "Custom"
+    //        font.pixelSize: Theme.fontSizeExtraSmall
+            //font.bold: true
+    //    }
+    //    Rectangle {width: parent.width; height: 2}
+    }
 
     FileModel {
         id: fileModel
-
-        path: homePath
+        includeHiddenFiles: inclHiddenFiles
+        path: "/home/nemo"
         active: page.status === PageStatus.Active
-        includeHiddenFiles: showHiddenFiles
+        directorySort: FileModel.SortDirectoriesBeforeFiles
+        onPathChanged: {if (path == "/"){
+                inclHiddenFiles=inclHiddenFiles;
+            }}
         onError: {
             console.log("###", fileName, error)
         }
     }
+
     SilicaListView {
         id: fileList
 
         opacity: FileEngine.busy ? 0.6 : 1.0
         Behavior on opacity { FadeAnimator {} }
 
-        anchors.fill: parent
-        model: fileModel
-
-        header: PageHeader {
-            title: path == homePath && page.title.length > 0 ? page.title
-                                                             : page.path.split("/").pop()
-        }
+        anchors {left: parent.left; right: parent.right; bottom: parent.bottom; top: files_quick.bottom}
+        model: fileModel 
 
         delegate: ListItem {
             id: fileItem
 
             width: ListView.view.width
-            contentHeight: Theme.itemSizeMedium
+            contentHeight: Theme.itemSizeSmall
             Row {
                 anchors.fill: parent
                 spacing: Theme.paddingLarge
@@ -139,7 +301,7 @@ Page {
                     Label {
                         text: model.fileName
                         width: parent.width
-                        font.pixelSize: Theme.fontSizeLarge
+                        font.pixelSize: Theme.fontSizeMedium
                         truncationMode: TruncationMode.Fade
                         color: highlighted ? Theme.highlightColor : Theme.primaryColor
                     }
@@ -158,22 +320,13 @@ Page {
             }
 
             onClicked: {
+             //   console.log(inclHiddenFiles);
                 if (model.isDir) {
                     pageStack.push(Qt.resolvedUrl("FileChooserPage.qml"),
-                                   { path: fileModel.appendPath(model.fileName), homePath: page.homePath, callback: page.callback })
+                                   { path: fileModel.appendPath(model.fileName), inclHiddenFiles: inclHiddenFiles, homePath: page.homePath, callback: page.callback });
                 } else {
                     var filePath = fileModel.path + "/" + model.fileName;
                     console.log("###", mimeType, filePath);
-
-                    //add new unique path to history (json)
-                    py2.call('editFile.getHistory', ["history"], function(result) {
-                        var openedFiles = [];
-                        openedFiles = result;
-                        if (openedFiles.indexOf(filePath) === -1) { // haha :) it is like //if (!openedFiles.contains(filePath)) {
-                            openedFiles.push(filePath);
-                            py2.call('editFile.setHistory', ["history", openedFiles], function(result) {});
-                        }
-                    });
 
                     if (typeof callback == "function") {
                         callback(filePath); //return to the page from which this page was called

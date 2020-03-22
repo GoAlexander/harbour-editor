@@ -102,7 +102,8 @@ void DocumentHandler::setTarget(QQuickItem *target)
             m_doc = qqdoc->textDocument();
         m_realhighlighter = new RealHighlighter(m_doc);
     }
-    connect(m_doc, SIGNAL(blockCountChanged()), this, SLOT(lines()));
+    //opravit blockCountChanged
+//    connect(m_doc, SIGNAL(blockCountChanged()), this, SLOT(lines()));
     emit targetChanged();
 }
 

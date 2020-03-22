@@ -189,40 +189,28 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Document saved!</source>
-        <translation>Dokument sparat</translation>
-    </message>
-    <message>
         <source>File path copied to the clipboard</source>
-        <translation>Filsökväg kopierad till urklipp</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>R-only</source>
-        <translation>R-only</translation>
-    </message>
-    <message>
-        <source>Quick note</source>
-        <translation>Snabbnotis</translation>
-    </message>
-    <message>
-        <source>Highlight</source>
-        <translation>Färgmarkera</translation>
-    </message>
-    <message>
-        <source>Highlighting enabled</source>
-        <translation>Färgmarkering aktiverad</translation>
-    </message>
-    <message>
-        <source>Highlighting disabled</source>
-        <translation>Färgmarkering inaktiverad</translation>
+        <source>Document saved!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation type="unfinished">Inställningar</translation>
     </message>
     <message>
         <source>Error while opening/saving the file</source>
-        <translation>Fel vid öppna/spara filen</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlighting enabled</source>
+        <translation type="unfinished">Färgmarkering aktiverad</translation>
+    </message>
+    <message>
+        <source>Highlighting disabled</source>
+        <translation type="unfinished">Färgmarkering inaktiverad</translation>
     </message>
 </context>
 <context>
@@ -243,6 +231,10 @@
         <source>Documents are in order of first opening</source>
         <translation>Dokument ordnas efter först öppnat</translation>
     </message>
+    <message>
+        <source>Delete history</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainRow</name>
@@ -262,12 +254,17 @@
         <source>History</source>
         <translation>Historik</translation>
     </message>
-</context>
-<context>
-    <name>MenuPage</name>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">R-only</translation>
+    </message>
     <message>
         <source>Quick note</source>
         <translation type="unfinished">Snabbnotis</translation>
+    </message>
+    <message>
+        <source>Highlight</source>
+        <translation type="unfinished">Färgmarkera</translation>
     </message>
 </context>
 <context>
@@ -307,112 +304,128 @@
 <context>
     <name>SettingsPage</name>
     <message>
+        <source>About</source>
+        <translation type="unfinished">Om</translation>
+    </message>
+    <message>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation type="unfinished">Inställningar</translation>
     </message>
     <message>
         <source>Appearance</source>
-        <translation>Utseende</translation>
-    </message>
-    <message>
-        <source>About</source>
-        <translation>Om</translation>
-    </message>
-    <message>
-        <source>Quick menu enabled</source>
-        <translation>Aktivera snabbmeny</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
-        <translation>Aktivera radnumrering</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fonts and size</source>
-        <translation>Teckensnitt och storlek</translation>
-    </message>
-    <message>
-        <source>Use it to get more space for text</source>
-        <translation>Inaktivera för att få mer plats för text</translation>
-    </message>
-    <message>
-        <source>Font:</source>
-        <translation>Teckensnitt&gt;</translation>
-    </message>
-    <message>
-        <source>File browser</source>
-        <translation>Filhanterare</translation>
-    </message>
-    <message>
-        <source>Show hidden files</source>
-        <translation>Visa dolda filer</translation>
-    </message>
-    <message>
-        <source>Be careful to enable this option!</source>
-        <translation>Var försiktig vid aktivering av detta alternativ!</translation>
-    </message>
-    <message>
-        <source>Type of tab:</source>
-        <translation>Fliktyp:</translation>
+        <source>Line numeration disabled</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Dark Theme</source>
-        <translation>Mörkt tema</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Ambience Theme</source>
-        <translation>Atmosfär-tema</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Default text editor</source>
-        <translation>Standardtextredigerare</translation>
+        <source>Custom button color</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Medium (default)</source>
-        <translation>Medium (standard)</translation>
-    </message>
-    <message>
-        <source>Tiny</source>
-        <translation>Pytteliten</translation>
-    </message>
-    <message>
-        <source>Extra small</source>
-        <translation>Extra liten></translation>
-    </message>
-    <message>
-        <source>Small</source>
-        <translation>Liten</translation>
-    </message>
-    <message>
-        <source>Large</source>
-        <translation>Stor</translation>
-    </message>
-    <message>
-        <source>Extra large</source>
-        <translation>Extra stor</translation>
-    </message>
-    <message>
-        <source>Huge</source>
-        <translation>Jättestor</translation>
+        <source>Fonts and size</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Font size</source>
-        <translation>Teckenstorlek</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tiny</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Medium (default)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Huge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type of tab:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default text editor</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Turn off to enable default notes</source>
-        <translation>Stäng av för att aktivera standardnotiser</translation>
-    </message>
-    <message>
-        <source>Autosave</source>
-        <translation>Spara automatiskt</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>General</source>
-        <translation>Allmänt</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Autosave</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>If enabled text will be stored in files with postfix ~</source>
-        <translation>Vid aktivering lagras text i filer med postfixet ~</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show hidden files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Be careful to enable this option!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Region:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save settings</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

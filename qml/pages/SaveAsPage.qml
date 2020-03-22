@@ -3,7 +3,7 @@
 *  Thanks coderus!
 */
 
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 ;import Nemo.FileManager 1.0
 ;import Sailfish.FileManager 1.0
@@ -17,19 +17,36 @@ Page {
     property string title
     property bool showFormat
     property string filePath
-    property alias includeHiddenFiles: fileModel.includeHiddenFiles
+    property string docencoding
     property bool showHiddenFiles
 
     signal formatClicked
 
     property var callback
 
+    function savefile (){
+        filePath = nameField.text;
+        if (typeof callback == "function") {
+            callback(filePath,docencoding); //return to the page from which this page was called
+               }
+    }
+
+    SequentialAnimation {
+      id: anim_butt_click
+      alwaysRunToEnd: true
+      ColorAnimation{target: ret_butt ; property: "color"; to: Theme.highlightColor; duration: 150}
+      ColorAnimation{target: ret_butt ; property: "color"; to: Theme.highlightDimmerColor; duration: 150}
+      onStopped: {
+          savefile();
+      }
+    }
+
     backNavigation: !FileEngine.busy
 
     FileModel {
         id: fileModel
 
-        path: homePath
+        path: filePath != "" ? filePath.replace((filePath.split("/")[(filePath.split("/").length)-1]),"") : "/"
         active: page.status === PageStatus.Active
         includeHiddenFiles: showHiddenFiles
         onError: {
@@ -40,43 +57,53 @@ Page {
     PageHeader {
          id: header
          width: parent.width
-         height: nameField.height
+         height: nameField.height + encodeField.height + Theme.paddingLarge
 
-         Rectangle {
-             color: Theme.rgba(Theme.highlightColor, 0.5)
+         Column {
+             anchors.topMargin: Theme.paddingMedium
              anchors.fill: parent
-
-             TextField {
+           TextField {
                  id: nameField
-
                  width: parent.width
-                 placeholderText: "Enter full path to file"
-                 label: placeholderText
-                 text: fileModel.path + "/"
+                 labelVisible: false
+                 text: filePath != "" ? filePath : "/"
 
                  EnterKey.enabled: text.length > 0
-                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
                  EnterKey.onClicked: {
-                     filePath = nameField.text;
+                     savefile();
+                      }
+                  }
+           Row {
+               width: parent.width
 
-                     //add new unique path to history (json)
-                     py2.call('editFile.getValue', ["history"], function(result) {
-                         var openedFiles = [];
-                         openedFiles = result;
-
-                         if (openedFiles.indexOf(filePath) === -1) { // haha :) it is like //if (!openedFiles.contains(filePath)) {
-                             openedFiles.push(filePath);
-                             py2.call('editFile.setValue', ["history", openedFiles], function(result) {});
-                         }
-                     });
-
-                     if (typeof callback == "function") {
-                         callback(filePath); //return to the page from which this page was called
-                     }
-                 }
+             TextField {
+                 id: encodeField
+                 width: parent.width - ret_butt.width
+                 height: nameField.height
+                 label: "Encoding"
+                 labelVisible: false
+                 text: docencoding
+                 onTextChanged: {docencoding = text;}
+                }
+             Rectangle{
+                 id: ret_butt
+                 color: Theme.highlightDimmerColor;
+                 width: header.height
+                 height: nameField.height
+               Image{
+                 anchors.fill: parent;
+                 source: "image://theme/icon-m-forward"
+                 fillMode: Image.PreserveAspectFit
+                }
+               MouseArea{
+                  anchors.fill: parent;
+                  onClicked: {
+                      anim_butt_click.start();
+                  }
+                }
              }
-         }
-
+          }
+       }
     }
 
 
@@ -99,7 +126,7 @@ Page {
             id: fileItem
 
             width: ListView.view.width
-            contentHeight: Theme.itemSizeMedium
+            contentHeight: Theme.itemSizeSmall
             Row {
                 anchors.fill: parent
                 spacing: Theme.paddingLarge

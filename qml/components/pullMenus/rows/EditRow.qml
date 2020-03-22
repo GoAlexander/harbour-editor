@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 import "../../" //for import of MenuButton
 import "../../../pages" //for import of SaveAsPage.qml + to do visible functions
@@ -9,25 +9,25 @@ import "../../../pages" //for import of SaveAsPage.qml + to do visible functions
 //-filePath
 //-outputNotifications
 //-myTextArea.*
-
 Row {
     property int myMenuButtonWidth
 
     MenuButton {
         //width: sizeBackgroundItemMainMenu
         width: myMenuButtonWidth
-        mySource: "../img/icon-m-save.svg";
+        mySource: "image://theme/icon-m-sd-card"
         myText: qsTr("Save")
         enabled: !saved
         onClicked: {
+            console.log(filePath + " [" + docencoding +"]\n" + myTextArea.text);
             if (filePath!=="") {
-                py.call('editFile.savings', [filePath,myTextArea.text], function() {
+                py.call_sync('editFile.savings', [filePath,myTextArea.text,docencoding]);
                     //this code is inside to fix problem with async nature of python
                     outputNotifications.close()
                     outputNotifications.previewBody = qsTr("Document saved")
                     outputNotifications.publish()
                     saved = true;
-                }); //filePath is path where you want to save!
+                //filePath is path where you want to save!
             }
 
             if (filePath==="") {
@@ -74,8 +74,9 @@ Row {
 
     MenuButton {
         width: myMenuButtonWidth
-        mySource: "../img/icon-m-tab.svg";
+        mySource: "image://theme/icon-m-transfer"
         myText: qsTr("Tab")
+        myRotation: 90
         onClicked: {
             var previousCursorPosition = myTextArea.cursorPosition;
             myTextArea.text = myTextArea.text.slice(0, myTextArea.cursorPosition) + tabType + myTextArea.text.slice(myTextArea.cursorPosition, myTextArea.text.length);

@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 import "../pages"
 
@@ -46,8 +46,8 @@ CoverBackground {
         }
     }
 
-    CoverActionList {
-        id: coverAction
+//    CoverActionList {
+//        id: coverAction
 
 //        CoverAction {
 //            iconSource: "../img/icon-m-open.svg"
@@ -63,12 +63,12 @@ CoverBackground {
 //            }
 //        }
 
-        CoverAction {
-            iconSource: "../img/icon-m-qnote.svg"
-            onTriggered: {
-                pageStack.replace(Qt.resolvedUrl("../pages/QuickNotePage.qml"))
-                mainwindow.activate();
-            }
-        }
-    }
+//        CoverAction {
+//            iconSource: "../img/icon-m-qnote.svg"
+//            onTriggered: {
+//                pageStack.replace(Qt.resolvedUrl("../pages/QuickNotePage.qml"))
+//                mainwindow.activate();
+//            }
+//        }
+//    }
 }

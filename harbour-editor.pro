@@ -22,6 +22,7 @@ SOURCES += src/harbour-editor.cpp \
     src/generallogic.cpp
 
 OTHER_FILES += qml/harbour-editor.qml \
+    qml/scripts/RecalcLines.js \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
     rpm/harbour-editor.changes.in \
@@ -30,7 +31,7 @@ OTHER_FILES += qml/harbour-editor.qml \
     harbour-editor.desktop \
     qml/editFile.py #You can find better place :)
 
-SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
+SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 256x256
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -49,6 +50,7 @@ TRANSLATIONS += translations/harbour-editor-de.ts \
         translations/harbour-editor-pl.ts
 
 DISTFILES += \
+    icons/172x172/harbour-editor.png \
     qml/pages/AboutPage.qml \
     qml/pages/SettingsPage.qml \
     qml/pages/FileChooserPage.qml \
@@ -59,8 +61,7 @@ DISTFILES += \
     qml/components/pullMenus/rows/SearchRow.qml \
     qml/components/pullMenus/rows/MainRow.qml \
     qml/components/pullMenus/rows/EditRow.qml \
-    qml/pages/QuickNotePage.qml \
-    qml/pages/MenuPage.qml
+    qml/pages/QuickNotePage.qml
 
 HEADERS += \
     src/documenthandler.h \

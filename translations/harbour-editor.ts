@@ -189,31 +189,11 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Document saved!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>File path copied to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>R-only</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Quick note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Highlight</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Highlighting disabled</source>
+        <source>Document saved!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -222,6 +202,14 @@
     </message>
     <message>
         <source>Error while opening/saving the file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlighting enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlighting disabled</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -243,6 +231,10 @@
         <source>Documents are in order of first opening</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Delete history</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainRow</name>
@@ -262,11 +254,16 @@
         <source>History</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>MenuPage</name>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <source>Quick note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlight</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -307,6 +304,10 @@
 <context>
     <name>SettingsPage</name>
     <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -315,43 +316,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>About</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Quick menu enabled</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Line numeration enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fonts and size</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Use it to get more space for text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Font:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>File browser</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Be careful to enable this option!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Type of tab:</source>
+        <source>Line numeration disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -363,11 +332,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Default text editor</source>
+        <source>Custom button color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Medium (default)</source>
+        <source>Fonts and size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Font size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -383,6 +356,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Medium (default)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Large</source>
         <translation type="unfinished"></translation>
     </message>
@@ -395,7 +372,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Font size</source>
+        <source>Font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type of tab:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default text editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -403,15 +388,43 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Autosave</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>General</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Autosave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>If enabled text will be stored in files with postfix ~</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show hidden files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Be careful to enable this option!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Region:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
