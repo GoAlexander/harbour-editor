@@ -45,6 +45,21 @@ PATH_TO_FOLDER = os.environ['HOME'] + "/.local/share/harbour-editor"
 PATH_TO_SETTINGS = PATH_TO_FOLDER + "/settings2.json"
 PATH_TO_HISTORY = PATH_TO_FOLDER + "/history.json"
 
+DEFAULT_SETTINGS_JSON = {
+    "headerVisible": true,
+    "lineNumbersVisible": false,
+    "fontType": "Sail Sans Pro Light",
+    "fontSize": 40,
+    "tabType": "    ",
+    "showHiddenFiles": false,
+    "darkTheme": "false", #TODO: test why string
+    "autosave": true,
+}
+
+DEFAULT_HISTORY_JSON = {
+    "history": [],
+}
+
 def _getFromJson(path, type, key):
     try:
         with open(path, "r") as data_file:
@@ -80,15 +95,21 @@ def setHistory(key, value):
     return _setToJson(PATH_TO_HISTORY, key, value)
 
 
+#def createSettingsJson():
+#    if not os.path.exists(PATH_TO_FOLDER):
+#        os.mkdir(PATH_TO_FOLDER)
+#    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"tabType": "    ", ' + '"showHiddenFiles": false, ' + '"darkTheme": "false", ' + '"autosave": true ' + '}'
+#    file = open(PATH_TO_SETTINGS, 'w')
+#    file.write(str)
+#    file.close()
+#    return
 def createSettingsJson():
     if not os.path.exists(PATH_TO_FOLDER):
         os.mkdir(PATH_TO_FOLDER)
-    str = '{' + '"headerVisible": true, ' + '"lineNumbersVisible": false, ' + '"fontType": "Sail Sans Pro Light", ' + '"fontSize": 40, ' + '"tabType": "    ", ' + '"showHiddenFiles": false, ' + '"darkTheme": "false", ' + '"autosave": true ' + '}'
-    file = open(PATH_TO_SETTINGS, 'w')
-    file.write(str)
-    file.close()
-    return
+    json.dump(DEFAULT_SETTINGS_JSON) #?
+    #TODO: save to the path
 
+#TODO: Here is the same
 def createHistoryJson():
     if not os.path.exists(PATH_TO_FOLDER):
         os.mkdir(PATH_TO_FOLDER)

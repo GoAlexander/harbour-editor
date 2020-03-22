@@ -5,6 +5,11 @@ import "../components/pullMenus/rows"
 
 
 Page {
+    id: page
+
+    property bool readOnly
+    property var callback
+
 
     Rectangle {
         color: Theme.highlightBackgroundColor //"transparent"
@@ -28,13 +33,13 @@ Page {
                 Switch {
                     width: parent.width / 2
                     icon.source: "image://theme/icon-m-keyboard"
-                    checked: myTextArea.readOnly
+                    checked: !page.readOnly
                     onCheckedChanged:{
-                        if (!myTextArea.readOnly) {
-                            myTextArea.readOnly = true;
+                        if (!page.readOnly) {
+                            page.readOnly = true;
                         }
                         else {
-                            myTextArea.readOnly = false;
+                            page.readOnly = false;
                         }
                     }
                 }
@@ -106,6 +111,12 @@ Page {
 //                }
             }
 
+        }
+    }
+
+    Component.onDestruction: {
+        if (typeof callback == "function") {
+            callback(readOnly); //return to the page from which this page was called
         }
     }
 }
