@@ -210,10 +210,11 @@ Page {
 
     Rectangle {
         id: background
-        color: bgColor
+        color: "#1e1e27"//bgColor
+        opacity: 0.6
         anchors.fill: parent
         visible: true
-
+    }
         SilicaFlickable {
             id: view
             anchors.fill: parent
@@ -224,8 +225,9 @@ Page {
                     onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
                 }
             }
-
+            Rectangle{anchors.fill: header; color: "#1e1e27"; opacity: 0.6}
             Row {
+
                 id: header
                 height: hotActionsMenu.height
                 width: isPortrait ? Screen.width : Screen.height
@@ -249,7 +251,7 @@ Page {
 
             Rectangle{
                 id: extrabutton
-                opacity: 0.4
+                opacity: 0.6
                 anchors {bottom: id_mainrow.top; right: parent.right}
                 height: Theme.itemSizeExtraSmall
                 width: Theme.itemSizeExtraSmall
@@ -257,6 +259,8 @@ Page {
                 z: parent.z + 1
              Image {
                 source:  extendedMenuSource
+                width: parent.width
+                height: parent.height
                 layer {
                         enabled: true
                         effect:
@@ -272,8 +276,8 @@ Page {
                     mainRowVisible=!mainRowVisible;
                     id_ret_lbl.visible=!id_ret_lbl.visible
                     id_lblinfo.visible=!id_lblinfo.visible
-                    if(mainRowVisible){extrabutton.opacity = 1.0;extendedMenuSource = "image://theme/icon-m-down";}
-                    else{extrabutton.opacity = 0.4;extendedMenuSource = "image://theme/icon-m-up";}
+                    if(mainRowVisible){extrabutton.opacity = 0.6;extendedMenuSource = "image://theme/icon-m-down";}//extrabutton.color="#1e1e27"}
+                    else{extrabutton.opacity = 0.4;extendedMenuSource = "image://theme/icon-m-up";}//extrabutton.color=bgColor}
               }
              }
             }
@@ -322,11 +326,11 @@ Page {
             Rectangle{
                 id: id_ret_lbl
                 visible: false
-                opacity: 0.9
+                opacity: 0.6
                 anchors {bottom: extrabutton.top; right: parent.right}
                 height: Screen.height
                 width: Theme.itemSizeExtraSmall
-                color: bgColor
+                color: "#1e1e27"//bgColor
                 z: parent.z + 1
 
                 MouseArea {
@@ -361,9 +365,10 @@ Page {
                     verticalAlignment: Text.AlignBottom
                     font.pixelSize: Theme.fontSizeExtraSmall * 0.9
                     font.bold: true
-                    color: Qt.darker(buttonsColor)
+                    color: Qt.darker(buttonsColor,1.3)
                     elide: "ElideRight"
                     text: "FileName"
+                    leftPadding: Theme.fontSizeTiny
                 }
                 Label{
                     id: id_lblencoding
@@ -374,6 +379,7 @@ Page {
                     font.italic: true
                     color: Qt.lighter(buttonsColor)
                     text: "Encoding"
+                    leftPadding: Theme.fontSizeTiny
                 }
             }
 
@@ -459,6 +465,7 @@ Page {
                     horizontalAlignment: TextEdit.AlignLeft
                     width: fontSize * 2
                     color: Theme.secondaryHighlightColor
+                    font.family: fontType
                     font.pixelSize: fontSize
                     visible: lineNumbersVisible
                     z:myTextArea.z +1
@@ -526,7 +533,7 @@ Page {
 
 
         }
-    }
+   // }
 
     onStatusChanged: {
         busy.running=true;
@@ -550,6 +557,7 @@ Page {
                     }
                 }
                 openFile(filePath,docencoding);
+                recalculateLineNumber();
             }
         }
         busy.running=false;

@@ -12,6 +12,20 @@ Page {
     }
 
     property bool editorDefault: myGeneralLogic.isDefaultApp();
+    property real sizeIndex: getSizeIndex()
+    property real typeIndex: getTypeIndex()
+
+    function getSizeIndex(){
+        var sizes = [ Theme.fontSizeTiny, Theme.fontSizeExtraSmall, Theme.fontSizeSmall, Theme.fontSizeMedium, Theme.fontSizeLarge, Theme.fontSizeExtraLarge, Theme.fontSizeHuge ]
+        var index = sizes.indexOf(fontSize);
+        return index
+    }
+
+    function getTypeIndex(){
+        var types = [ Theme.fontFamily, "Open Sans", "Helvetica", "Droid Sans Mono", "Comic Sans", "Ubuntu", "DejaVu Sans Mono" ]
+        var index = types.indexOf(fontType);
+        return index
+    }
 
     function resetSettings(){
          py2.call('editFile.resetSettings', [], function(result) {});
@@ -120,7 +134,6 @@ Page {
                     text: customButtColor
                     onTextChanged: {
                         customButtColor=customcolortxt.text;
-                    //    mainwindow.actualButtonColor();
                     }
                 }
                 LinkedLabel{
@@ -131,38 +144,43 @@ Page {
 
             SectionHeader { text: qsTr("Fonts and size") }
 
+            TextField{
+                text: "Test your text here"
+                color: "white"
+                font.family: fontType
+                font.pixelSize: fontSize
+            }
             ComboBox {
                 label: qsTr("Font size")
-                value: fontSize
-
+                currentIndex: sizeIndex
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("Tiny")
-                        onClicked: fontSize = Theme.fontSizeTiny;
+                        text: "(" + Theme.fontSizeTiny + ") " + qsTr("Tiny")
+                        onClicked: {fontSize = Theme.fontSizeTiny;}
                     }
                     MenuItem {
-                        text: qsTr("Extra small")
-                        onClicked: fontSize = Theme.fontSizeExtraSmall;
+                        text: "(" + Theme.fontSizeExtraSmall + ") " + qsTr("Extra small")
+                        onClicked: {fontSize = Theme.fontSizeExtraSmall;}
                     }
                     MenuItem {
-                        text: qsTr("Small")
-                        onClicked: fontSize = Theme.fontSizeSmall;
+                        text: "(" + Theme.fontSizeSmall + ") " + qsTr("Small")
+                        onClicked: {fontSize = Theme.fontSizeSmall;}
                     }
                     MenuItem {
-                        text: qsTr("Medium (default)")
-                        onClicked: fontSize = Theme.fontSizeMedium;
+                        text: "(" + Theme.fontSizeMedium + ") " + qsTr("Medium (default)")
+                        onClicked: {fontSize = Theme.fontSizeMedium;}
                     }
                     MenuItem {
-                        text: qsTr("Large")
-                        onClicked: fontSize = Theme.fontSizeLarge;
+                        text: "(" + Theme.fontSizeLarge + ") " + qsTr("Large")
+                        onClicked: {fontSize = Theme.fontSizeLarge;}
                     }
                     MenuItem {
-                        text: qsTr("Extra large")
-                        onClicked: fontSize = Theme.fontSizeExtraLarge;
+                        text: "(" + Theme.fontSizeExtraLarge + ") " + qsTr("Extra large")
+                        onClicked: {fontSize = Theme.fontSizeExtraLarge;}
                     }
                     MenuItem {
-                        text: qsTr("Huge")
-                        onClicked: fontSize = Theme.fontSizeHuge;
+                        text: "(" + Theme.fontSizeHuge + ") " + qsTr("Huge")
+                        onClicked: {fontSize = Theme.fontSizeHuge;}
                     }
                 }
             }
@@ -170,39 +188,38 @@ Page {
             ComboBox {
                 label: qsTr("Font:")
                 value: fontType
-
-                menu: ContextMenu {
-                    MenuItem {
-                        text: "Sail Sans Pro Light (default)"
-                        onClicked: fontType = Theme.fontFamily;
-                    }
-                    MenuItem {
-                        text: "Open Sans"
-                        onClicked: fontType = "Open Sans";
-                    }
-                    MenuItem {
-                        text: "Helvetica"
-                        onClicked: fontType = "Helvetica";
-                    }
-                    MenuItem {
-                        text: "Droid Sans Mono"
-                        onClicked: fontType = "Droid Sans Mono";
-                    }
-                    MenuItem {
-                        text: "Comic Sans"
-                        onClicked: fontType = "Comic Sans";
-                    }
-                    MenuItem {
-                        text: "Ubuntu"
-                        onClicked: fontType = "Ubuntu";
-                    }
-                    MenuItem {
-                        text: "DejaVu Sans Mono"
-                        onClicked: fontType = "DejaVu Sans Mono";
-                   }
-                }
+                currentIndex: typeIndex
+                    menu: ContextMenu {
+                        MenuItem {
+                            text: "Sail Sans Pro Light (default)"
+                            onClicked: {fontType = Theme.fontFamily;}
+                        }
+                        MenuItem {
+                            text: "Open Sans"
+                            onClicked: {fontType = text;}
+                        }
+                        MenuItem {
+                            text: "Helvetica"
+                            onClicked: {fontType = text;}
+                        }
+                        MenuItem {
+                            text: "Droid Sans Mono"
+                            onClicked: {fontType = text;}
+                        }
+                        MenuItem {
+                            text: "Comic Sans"
+                            onClicked: {fontType = text;}
+                        }
+                        MenuItem {
+                            text: "Ubuntu"
+                            onClicked: {fontType = text;}
+                        }
+                        MenuItem {
+                            text: "DejaVu Sans Mono"
+                            onClicked: {fontType = text;}
+                       }
+                  }
             }
-
             ComboBox {
                 label: qsTr("Type of tab:")
                 value: {

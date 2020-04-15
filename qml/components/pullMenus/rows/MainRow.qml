@@ -11,8 +11,8 @@ SilicaFlickable
     property int mainRowButtonWidth2: isPortrait ? Screen.width / 3.5 : Screen.height / 3.5
     Rectangle {
         anchors.fill: parent
-        color: bgColor
-        opacity: 0.9
+        color: "#1e1e27"//bgColor
+        opacity: 0.6
     }
     Row {
     id: row1
@@ -114,6 +114,7 @@ Row {
         mySource: "image://theme/icon-m-text-input?" + (myTextArea.readOnly ? Theme.highlightColor : Theme.primaryColor);
         myText: qsTr("R-only")
         onClicked: {
+            myHighlighted = !myHighlighted;
             if (!myTextArea.readOnly) {
                 myTextArea.readOnly = true;
             }
@@ -128,7 +129,7 @@ Row {
         mySource:  "image://theme/icon-m-note"
         myText: qsTr("Quick note")
         onClicked: {
-            pageStack.push(Qt.resolvedUrl("QuickNotePage.qml"))
+            pageStack.push(Qt.resolvedUrl("../../../pages/QuickNotePage.qml"))
         }
     }
 

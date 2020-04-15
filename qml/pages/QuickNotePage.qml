@@ -122,11 +122,11 @@ Page {
                     focus: true
 
                     onTextChanged: {
-                        console.log("filePath = " + filePath, fontSize, font.family);
+                    //    console.log("filePath = " + filePath, fontSize, font.family);
 
                         //Autosave
                         if (filePath!=="" && myTextArea.text !== "") {
-                            py.call('editFile.savings', [filePath,myTextArea.text,""], function() {});
+                            py.call('editFile.savings', [filePath,myTextArea.text,'utf-8'], function() {});
                         }
                     }
                 }
@@ -141,8 +141,8 @@ Page {
         } else {
             console.log(filePath)
             if (filePath!=="") {
-                py.call('editFile.openings', [filePath], function(result) {
-                    myTextArea.text = result;
+                py.call('editFile.openings', [filePath,'utf-8'], function(result) {
+                    myTextArea.text = result[0];
                 });
             }
         }

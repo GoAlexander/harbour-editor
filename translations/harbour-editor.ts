@@ -147,11 +147,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Chars: </source>
+        <source>Words: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Words: </source>
+        <source>Chars: </source>
         <translation type="unfinished"></translation>
     </message>
 </context>

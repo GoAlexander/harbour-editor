@@ -144,14 +144,14 @@
     <name>CoverPage</name>
     <message>
         <source>Lines: </source>
-        <translation>Linie:</translation>
-    </message>
-    <message>
-        <source>Chars: </source>
-        <translation>Znaki:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Words: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chars: </source>
         <translation type="unfinished"></translation>
     </message>
 </context>

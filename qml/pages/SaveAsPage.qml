@@ -28,7 +28,7 @@ Page {
         filePath = nameField.text;
         if (typeof callback == "function") {
             callback(filePath,docencoding); //return to the page from which this page was called
-               }
+        }
     }
 
     SequentialAnimation {

@@ -83,7 +83,7 @@ def openings(filepath, encoding_type):
    return txt,encoding_type
 
 def savings(filepath, text, encoding_type):
-    if encoding_type == ('' or None):
+    if encoding_type == '' or encoding_type == None:
         encoding_type='utf-8'
     if os.path.exists(filepath+"~"):
         os.remove(filepath+"~")

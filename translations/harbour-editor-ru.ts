@@ -144,15 +144,15 @@
     <name>CoverPage</name>
     <message>
         <source>Lines: </source>
-        <translation>Строк:</translation>
-    </message>
-    <message>
-        <source>Chars: </source>
-        <translation>Символов:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Words: </source>
-        <translation>Слова</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chars: </source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
