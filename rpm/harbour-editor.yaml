@@ -1,6 +1,6 @@
 Name: harbour-editor
-Summary: My Sailfish OS Application
-Version: 0.8.5
+Summary: Editor
+Version: 0.9.0
 Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
@@ -34,10 +34,12 @@ PkgConfigBR:
 Requires:
   - sailfishsilica-qt5 >= 0.10.9 
   - libsailfishapp
-  - pyotherside-qml-plugin-python3-qt5 >= 1.3
+  - pyotherside-qml-plugin-python3-qt5 >= 1.5
 
 # All installed files
 Files:
+  - '%defattr(644,root,root,-)'
+  - '%attr(755,-,-) %{_bindir}/%{name}'
   - '%{_bindir}'
   - '%{_datadir}/%{name}'
   - '%{_datadir}/applications/%{name}.desktop'

@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 import "../../../pages" //to do visible some variables
 
@@ -33,7 +33,7 @@ Row {
     SearchField {
         id:searchField
         //width: parent.width / 1.5
-        width: parent.width / 1.8
+        width: isPortrait ? Screen.width / 1.8 : Screen.height / 1.8
         height: Theme.itemSizeSmall
 
         font.pixelSize: Theme.fontSizeMedium

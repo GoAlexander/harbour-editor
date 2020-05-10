@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 import "../components"
 
@@ -86,6 +86,7 @@ Page {
                       "<br/>" + qsTr("-Russian community for feedback and help") +
                       "<br/>" + qsTr("-Ancelad for tab icon, testing and help") +
                       "<br/>" + qsTr("-gri4994 for the wonderful app icon") +
+                      "<br/>" + qsTr("-bobsik for the contributions for version 0.9") +
                       "<br/>" + qsTr("-the team of GtkSourceView for the basis for .sh dictionary") +
                       "<br/>" +
                       "<br/>" +

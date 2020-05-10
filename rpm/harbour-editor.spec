@@ -12,17 +12,16 @@ Name:       harbour-editor
 %{!?qtc_qmake5:%define qtc_qmake5 %qmake5}
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
-Summary:    My Sailfish OS Application
-Version:    0.8.5
+Summary:    Editor
+Version:    0.9.0
 Release:    1
 Group:      Qt/Qt
 License:    LICENSE
-URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-editor.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   libsailfishapp
-Requires:   pyotherside-qml-plugin-python3-qt5 >= 1.3
+Requires:   pyotherside-qml-plugin-python3-qt5 >= 1.5
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
@@ -66,6 +65,8 @@ desktop-file-install --delete-original       \
 
 %files
 %defattr(-,root,root,-)
+%defattr(644,root,root,-)
+%attr(755,-,-) %{_bindir}/%{name}
 %{_bindir}
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop

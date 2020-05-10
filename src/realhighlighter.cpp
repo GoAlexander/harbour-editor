@@ -62,7 +62,57 @@ void RealHighlighter::ruleUpdate()
     rule.format = functionFormat;
     highlightingRules.append(rule);
 
-    if (m_dictionary=="qml") {
+    if (m_dictionary=="plain") {
+        jsFormat.setForeground(QColor(m_secondaryHighlightColor));
+        //jsFormat.setFontItalic(true);
+        QStringList jsPatterns;
+        loadDict(":/dictionaries/javascript.txt",jsPatterns);
+
+        foreach (const QString &pattern, jsPatterns) {
+            rule.pattern = QRegExp(pattern);
+            rule.format = jsFormat;
+            highlightingRules.append(rule);
+        }
+
+        qmlFormat.setForeground(QColor(m_highlightColor));
+        qmlFormat.setFontWeight(QFont::Normal);
+        QStringList qmlPatterns;
+        loadDict(":/dictionaries/qml.txt",qmlPatterns);
+
+        foreach (const QString &pattern, qmlPatterns) {
+            rule.pattern = QRegExp(pattern);
+            rule.format = qmlFormat;
+            highlightingRules.append(rule);
+        }
+
+        keywordFormat.setForeground(QColor(m_highlightDimmerColor));
+        keywordFormat.setFontWeight(QFont::Normal);
+
+        loadDict(":/dictionaries/keywords.txt",keywordPatterns);
+
+        foreach (const QString &pattern, keywordPatterns) {
+            rule.pattern = QRegExp(pattern);
+            rule.format = keywordFormat;
+            highlightingRules.append(rule);
+        }
+        propertiesFormat.setForeground(QColor(m_primaryColor));
+        propertiesFormat.setFontWeight(QFont::Normal);
+
+        loadDict(":/dictionaries/properties.txt",propertiesPatterns);
+
+        foreach (const QString &pattern, propertiesPatterns) {
+            rule.pattern = QRegExp(pattern);
+            rule.format = propertiesFormat;
+            highlightingRules.append(rule);
+        }
+        //singleLineCommentFormat.setFontItalic(true);
+        singleLineCommentFormat.setForeground(QColor(m_highlightBackgroundColor));
+        rule.pattern = QRegExp("//[^\n]*");
+        rule.format = singleLineCommentFormat;
+        highlightingRules.append(rule);
+
+    }
+    else if (m_dictionary=="qml") {
         jsFormat.setForeground(QColor(m_secondaryHighlightColor));
         //jsFormat.setFontItalic(true);
         QStringList jsPatterns;
@@ -87,7 +137,7 @@ void RealHighlighter::ruleUpdate()
 
         keywordFormat.setForeground(QColor(m_highlightDimmerColor));
         keywordFormat.setFontWeight(QFont::Bold);
-
+        QStringList keywordPatterns;
         loadDict(":/dictionaries/keywords.txt",keywordPatterns);
 
         foreach (const QString &pattern, keywordPatterns) {
@@ -288,7 +338,7 @@ void RealHighlighter::setStyle(QString primaryColor, QString secondaryColor, QSt
     m_highlightDimmerColor = QString(highlightDimmerColor);
     m_baseFontPointSize = baseFontPointSize;
     this->ruleUpdate();
-    this->rehighlight();
+ //   this->rehighlight();
 }
 
 void RealHighlighter::setDictionary(QString dictionary)

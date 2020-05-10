@@ -144,15 +144,15 @@
     <name>CoverPage</name>
     <message>
         <source>Lines: </source>
-        <translation>Строк:</translation>
-    </message>
-    <message>
-        <source>Chars: </source>
-        <translation>Символов:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Words: </source>
-        <translation>Слова</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chars: </source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -189,40 +189,28 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Document saved!</source>
-        <translation>Документ сохранен!</translation>
-    </message>
-    <message>
         <source>File path copied to the clipboard</source>
-        <translation>Путь сохранен в буфер обмена</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>R-only</source>
-        <translation>Чтение</translation>
-    </message>
-    <message>
-        <source>Quick note</source>
-        <translation>Быстрая записка</translation>
-    </message>
-    <message>
-        <source>Highlight</source>
-        <translation>Подсветка</translation>
-    </message>
-    <message>
-        <source>Highlighting enabled</source>
-        <translation>Подстветка включена</translation>
-    </message>
-    <message>
-        <source>Highlighting disabled</source>
-        <translation>Подсветка отключена</translation>
+        <source>Document saved!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Настройки</translation>
+        <translation type="unfinished">Настройки</translation>
     </message>
     <message>
         <source>Error while opening/saving the file</source>
-        <translation>Ошибка во время открытия/сохранения файла</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highlighting enabled</source>
+        <translation type="unfinished">Подстветка включена</translation>
+    </message>
+    <message>
+        <source>Highlighting disabled</source>
+        <translation type="unfinished">Подсветка отключена</translation>
     </message>
 </context>
 <context>
@@ -243,6 +231,10 @@
         <source>Documents are in order of first opening</source>
         <translation>Документы расположены в порядке их первого открытия</translation>
     </message>
+    <message>
+        <source>Delete history</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainRow</name>
@@ -262,12 +254,17 @@
         <source>History</source>
         <translation>История</translation>
     </message>
-</context>
-<context>
-    <name>MenuPage</name>
+    <message>
+        <source>R-only</source>
+        <translation type="unfinished">Чтение</translation>
+    </message>
     <message>
         <source>Quick note</source>
-        <translation>Быстрая записка</translation>
+        <translation type="unfinished">Быстрая записка</translation>
+    </message>
+    <message>
+        <source>Highlight</source>
+        <translation type="unfinished">Подсветка</translation>
     </message>
 </context>
 <context>
@@ -307,112 +304,128 @@
 <context>
     <name>SettingsPage</name>
     <message>
+        <source>About</source>
+        <translation type="unfinished">О программе</translation>
+    </message>
+    <message>
         <source>Settings</source>
-        <translation>Настройки</translation>
+        <translation type="unfinished">Настройки</translation>
     </message>
     <message>
         <source>Appearance</source>
-        <translation>Внешний вид</translation>
-    </message>
-    <message>
-        <source>About</source>
-        <translation>О программе</translation>
-    </message>
-    <message>
-        <source>Quick menu enabled</source>
-        <translation>Быстрое меню включено</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
-        <translation>Нумерация строк включена</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fonts and size</source>
-        <translation>Шрифт и размер</translation>
-    </message>
-    <message>
-        <source>Use it to get more space for text</source>
-        <translation>Используйте, чтобы получить больше места для текста</translation>
-    </message>
-    <message>
-        <source>Font:</source>
-        <translation>Шрифт:</translation>
-    </message>
-    <message>
-        <source>File browser</source>
-        <translation>Файловый браузер</translation>
-    </message>
-    <message>
-        <source>Show hidden files</source>
-        <translation>Показывать скрытые файлы</translation>
-    </message>
-    <message>
-        <source>Be careful to enable this option!</source>
-        <translation>Будьте осторожны, активируя эту функцию!</translation>
-    </message>
-    <message>
-        <source>Type of tab:</source>
-        <translation>Тип табуляции</translation>
+        <source>Line numeration disabled</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Dark Theme</source>
-        <translation>Темная тема</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Ambience Theme</source>
-        <translation>Тема атмосферы</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Default text editor</source>
-        <translation>Текстовый редактор по-умолчанию</translation>
+        <source>Custom button color</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Medium (default)</source>
-        <translation>Средний (стандарт)</translation>
-    </message>
-    <message>
-        <source>Tiny</source>
-        <translation>Крошечный</translation>
-    </message>
-    <message>
-        <source>Extra small</source>
-        <translation>Очень маленький</translation>
-    </message>
-    <message>
-        <source>Small</source>
-        <translation>Маленький</translation>
-    </message>
-    <message>
-        <source>Large</source>
-        <translation>Большой</translation>
-    </message>
-    <message>
-        <source>Extra large</source>
-        <translation>Очень большой</translation>
-    </message>
-    <message>
-        <source>Huge</source>
-        <translation>Огромный</translation>
+        <source>Fonts and size</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Font size</source>
-        <translation>Размер шрифта</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tiny</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Medium (default)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Extra large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Huge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type of tab:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default text editor</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Turn off to enable default notes</source>
-        <translation>Отключите, чтобы использовать стандартное приложение записок</translation>
-    </message>
-    <message>
-        <source>Autosave</source>
-        <translation>Автосохранение</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>General</source>
-        <translation>Общее</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Autosave</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>If enabled text will be stored in files with postfix ~</source>
-        <translation>Если включено, то текст будет сохраняться в файлах с постфиксом ~</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show hidden files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Be careful to enable this option!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encoding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Region:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save settings</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

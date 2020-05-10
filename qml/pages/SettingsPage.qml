@@ -1,6 +1,7 @@
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 import harbour.editor.generallogic 1.0
+//import "../harbour-editor.qml"
 
 Page {
     id: page
@@ -11,6 +12,50 @@ Page {
     }
 
     property bool editorDefault: myGeneralLogic.isDefaultApp();
+    property real sizeIndex: getSizeIndex()
+    property real typeIndex: getTypeIndex()
+
+    function getSizeIndex(){
+        var sizes = [ Theme.fontSizeTiny, Theme.fontSizeExtraSmall, Theme.fontSizeSmall, Theme.fontSizeMedium, Theme.fontSizeLarge, Theme.fontSizeExtraLarge, Theme.fontSizeHuge ]
+        var index = sizes.indexOf(fontSize);
+        return index
+    }
+
+    function getTypeIndex(){
+        var types = [ Theme.fontFamily, "Open Sans", "Helvetica", "Droid Sans Mono", "Comic Sans", "Ubuntu", "DejaVu Sans Mono" ]
+        var index = types.indexOf(fontType);
+        return index
+    }
+
+    function resetSettings(){
+         py2.call('editFile.resetSettings', [], function(result) {});
+    }
+    
+    function saveSettings(){
+        if(customcolortxt.text === "" || !customcolorsw.checked){
+            customButtColor="";
+           }
+        else
+           {
+            customButtColor=customcolortxt.text;
+           }
+        py2.call('editFile.setValue', ["headerVisible", headerVisible], function(result) {});
+        py2.call('editFile.setValue', ["lineNumbersVisible", lineNumbersVisible], function(result) {});
+
+        py2.call('editFile.setValue', ["fontType", fontType], function(result) {});
+        py2.call('editFile.setValue', ["fontSize", fontSize], function(result) {});
+        py2.call('editFile.setValue', ["tabType", tabType], function(result) {});
+
+        py2.call('editFile.setValue', ["showHiddenFiles", inclHiddenFiles], function(result) {});
+        py2.call('editFile.setValue', ["darkTheme", darkTheme], function(result) {});
+
+        py2.call('editFile.setValue', ["encRegion", encRegion], function(result) {});
+        py2.call('editFile.setValue', ["encPreferred", encPreferred], function(result) {});
+
+        py2.call('editFile.setValue', ["customButtColor", customButtColor], function(result) {});
+        py2.call('editFile.setValue', ["autosave", autosave], function(result) {});
+       console.log("Manual Save");
+    }
 
     SilicaFlickable {
         id: view
@@ -38,18 +83,9 @@ Page {
             SectionHeader { text: qsTr("Appearance") }
 
             TextSwitch {
-                id: headerVisibleSwitch
-                anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
-                text: qsTr("Quick menu enabled")
-                description: qsTr("Use it to get more space for text")
-                checked: headerVisible
-                onCheckedChanged: headerVisible = headerVisibleSwitch.checked;
-            }
-
-            TextSwitch {
                 id: lineNumbersVisibleSwitch
                 anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
-                text: qsTr("Line numeration enabled") + "\n" + "(experimental, broken)"
+                text: checked ? qsTr("Line numeration enabled") : qsTr("Line numeration disabled")
                 checked: lineNumbersVisible
                 onCheckedChanged: lineNumbersVisible = lineNumbersVisibleSwitch.checked;
             }
@@ -63,26 +99,8 @@ Page {
                     width: parent.width/2
                     onCheckedChanged: {
                         darkTheme = checked
-                        lightT.checked = !checked
-                        if (darkTheme) {
-                            textColor="#cfbfad"
-                            qmlHighlightColor="#ff8bff"
-                            keywordsHighlightColor="#808bed"
-                            propertiesHighlightColor="#ff5555"
-                            javascriptHighlightColor="#8888ff"
-                            stringHighlightColor="#ffcd8b"
-                            commentHighlightColor="#cd8b00"
-                            bgColor="#1e1e27"
-                        } else {
-                            textColor=Theme.highlightColor
-                            qmlHighlightColor=Theme.highlightColor
-                            keywordsHighlightColor=Theme.highlightDimmerColor
-                            propertiesHighlightColor=Theme.primaryColor
-                            javascriptHighlightColor=Theme.secondaryHighlightColor
-                            stringHighlightColor=Theme.secondaryColor
-                            commentHighlightColor= Theme.highlightBackgroundColor
-                            bgColor="transparent"
-                        }
+                        lightT.checked = !checked;
+                        mainwindow.applyThemeColors();
                     }
                 }
 
@@ -92,45 +110,77 @@ Page {
                     text: qsTr("Ambience Theme")
                     width: parent.width/2
                     onCheckedChanged: {
-                        darkT.checked = !checked
+                        darkT.checked = !checked;
                     }
+                }
+            }
+
+            Column{
+                anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
+                TextSwitch {
+                    id: customcolorsw
+                    enabled: darkTheme ? 0 : 1
+                    checked: customButtColor != "" ? true : false
+                    text: qsTr("Custom button color")
+                    width: parent.width
+                }
+
+                TextField{
+                    id:customcolortxt
+                    width: parent.width
+                    enabled: darkTheme ? 0 : customcolorsw.checked
+                    labelVisible: enabled
+                    color: buttonsColor
+                    text: customButtColor
+                    onTextChanged: {
+                        customButtColor=customcolortxt.text;
+                    }
+                }
+                LinkedLabel{
+                    plainText: "Please use standard QML representation of color, see more here\nhttps://doc.qt.io/qt-5/qml-color.html"
+                    width: parent.width
                 }
             }
 
             SectionHeader { text: qsTr("Fonts and size") }
 
+            TextField{
+                text: "Test your text here"
+                color: "white"
+                font.family: fontType
+                font.pixelSize: fontSize
+            }
             ComboBox {
                 label: qsTr("Font size")
-                value: fontSize
-
+                currentIndex: sizeIndex
                 menu: ContextMenu {
                     MenuItem {
-                        text: qsTr("Tiny")
-                        onClicked: fontSize = Theme.fontSizeTiny;
+                        text: "(" + Theme.fontSizeTiny + ") " + qsTr("Tiny")
+                        onClicked: {fontSize = Theme.fontSizeTiny;}
                     }
                     MenuItem {
-                        text: qsTr("Extra small")
-                        onClicked: fontSize = Theme.fontSizeExtraSmall;
+                        text: "(" + Theme.fontSizeExtraSmall + ") " + qsTr("Extra small")
+                        onClicked: {fontSize = Theme.fontSizeExtraSmall;}
                     }
                     MenuItem {
-                        text: qsTr("Small")
-                        onClicked: fontSize = Theme.fontSizeSmall;
+                        text: "(" + Theme.fontSizeSmall + ") " + qsTr("Small")
+                        onClicked: {fontSize = Theme.fontSizeSmall;}
                     }
                     MenuItem {
-                        text: qsTr("Medium (default)")
-                        onClicked: fontSize = Theme.fontSizeMedium;
+                        text: "(" + Theme.fontSizeMedium + ") " + qsTr("Medium (default)")
+                        onClicked: {fontSize = Theme.fontSizeMedium;}
                     }
                     MenuItem {
-                        text: qsTr("Large")
-                        onClicked: fontSize = Theme.fontSizeLarge;
+                        text: "(" + Theme.fontSizeLarge + ") " + qsTr("Large")
+                        onClicked: {fontSize = Theme.fontSizeLarge;}
                     }
                     MenuItem {
-                        text: qsTr("Extra large")
-                        onClicked: fontSize = Theme.fontSizeExtraLarge;
+                        text: "(" + Theme.fontSizeExtraLarge + ") " + qsTr("Extra large")
+                        onClicked: {fontSize = Theme.fontSizeExtraLarge;}
                     }
                     MenuItem {
-                        text: qsTr("Huge")
-                        onClicked: fontSize = Theme.fontSizeHuge;
+                        text: "(" + Theme.fontSizeHuge + ") " + qsTr("Huge")
+                        onClicked: {fontSize = Theme.fontSizeHuge;}
                     }
                 }
             }
@@ -138,39 +188,38 @@ Page {
             ComboBox {
                 label: qsTr("Font:")
                 value: fontType
-
-                menu: ContextMenu {
-                    MenuItem {
-                        text: "Sail Sans Pro Light (default)"
-                        onClicked: fontType = Theme.fontFamily;
-                    }
-                    MenuItem {
-                        text: "Open Sans"
-                        onClicked: fontType = "Open Sans";
-                    }
-                    MenuItem {
-                        text: "Helvetica"
-                        onClicked: fontType = "Helvetica";
-                    }
-                    MenuItem {
-                        text: "Droid Sans Mono"
-                        onClicked: fontType = "Droid Sans Mono";
-                    }
-                    MenuItem {
-                        text: "Comic Sans"
-                        onClicked: fontType = "Comic Sans";
-                    }
-                    MenuItem {
-                        text: "Ubuntu"
-                        onClicked: fontType = "Ubuntu";
-                    }
-                    MenuItem {
-                        text: "DejaVu Sans Mono"
-                        onClicked: fontType = "DejaVu Sans Mono";
-                   }
-                }
+                currentIndex: typeIndex
+                    menu: ContextMenu {
+                        MenuItem {
+                            text: "Sail Sans Pro Light (default)"
+                            onClicked: {fontType = Theme.fontFamily;}
+                        }
+                        MenuItem {
+                            text: "Open Sans"
+                            onClicked: {fontType = text;}
+                        }
+                        MenuItem {
+                            text: "Helvetica"
+                            onClicked: {fontType = text;}
+                        }
+                        MenuItem {
+                            text: "Droid Sans Mono"
+                            onClicked: {fontType = text;}
+                        }
+                        MenuItem {
+                            text: "Comic Sans"
+                            onClicked: {fontType = text;}
+                        }
+                        MenuItem {
+                            text: "Ubuntu"
+                            onClicked: {fontType = text;}
+                        }
+                        MenuItem {
+                            text: "DejaVu Sans Mono"
+                            onClicked: {fontType = text;}
+                       }
+                  }
             }
-
             ComboBox {
                 label: qsTr("Type of tab:")
                 value: {
@@ -245,27 +294,124 @@ Page {
                 anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
                 text: qsTr("Show hidden files")
                 description: qsTr("Be careful to enable this option!")
-                checked: showHiddenFiles
-                onCheckedChanged: showHiddenFiles = showHiddenFilesSwitch.checked;
+                checked: inclHiddenFiles
+                onCheckedChanged: inclHiddenFiles = showHiddenFilesSwitch.checked;
             }
 
+            SectionHeader { text: qsTr("Encoding") }
+
+            ComboBox {
+                id: comb_encRegion
+                label: qsTr("Region:")
+                value: encRegion
+                description: ""
+
+                menu: ContextMenu {
+                    MenuItem {
+                        text: "Auto"
+                        onClicked: {
+                            encRegion = text;
+                            comb_encRegion.description="Automatic";
+                        }
+                    }
+                    MenuItem {
+                        text: "Manual"
+                        onClicked: {
+                            encRegion = text;
+                            comb_encRegion.description="";
+                        }
+                    }
+                    MenuItem {
+                        text: "Unicode"
+                        onClicked: {
+                            encRegion = text;
+                            comb_encRegion.description="utf-8, utf-16, utf-32"}
+                    // utf-8,utf-16,utf-32
+                   }
+                    MenuItem {
+                        text: "Western Europe"
+                        onClicked: {
+                            encRegion = text;
+                            comb_encRegion.description="windows-1252,iso8859-1"}
+                    // 1252,iso8859-1
+                    }
+
+                    MenuItem {
+                        text: "Central Europe"
+                        onClicked: {
+                            encRegion = text;
+                            comb_encRegion.description="windows-1250,iso8859-2"}
+                    // 1250,iso8859-2
+                    }
+
+                    MenuItem {
+                        text: "Baltic"
+                        onClicked: {
+                            encRegion = text;
+                            comb_encRegion.description="windows-1257,iso8859-4"}
+                    // 1257,iso8859-4
+                    }
+                    MenuItem {
+                        text: "Middle East"
+                        onClicked: {
+                            encRegion = text;
+                            comb_encRegion.description="windows-1254,1255,1256"}
+                    // 1254,1255,1256
+                    }
+             //       MenuItem {
+             //           text: "Chinese"
+             //           onClicked: {
+             //               encRegion = text;
+             //               comb_encRegion.description="GB 2312,18030"}
+             //       // GB 2312,18030
+             //       }
+             //       MenuItem {
+             //           text: "Taiwan"
+             //           onClicked: {
+             //               encRegion = text;
+             //               comb_encRegion.description="HKSCS"}
+             //       // HKSCS
+             //       }
+             //       MenuItem {
+             //           text: "Korean"
+             //           onClicked: {
+             //               encRegion = text;
+             //               comb_encRegion.description="KS X 1001"}
+             //       // KS X 1001
+             //       }
+                }
+            }
+            TextField{
+                id: encManual
+                anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
+                enabled: comb_encRegion.value == "Manual" ? true : false
+                text: encPreferred
+                label: "Only on Manual"
+                onTextChanged: encPreferred = encManual.text;
+            }
+        //    Rectangle{
+            //    color: "transparent"
+Row {
+                anchors { horizontalCenter: parent.horizontalCenter;}// leftMargin: Theme.paddingLarge; rightMargin: Theme.paddingSmall }
+                height: Theme.itemSizeMedium
+                spacing: Theme.paddingSmall
+             Button{
+                text: qsTr("Reset settings")
+                anchors{ verticalCenter: parent.verticalCenter; bottomMargin: Theme.paddingSmall}
+                onClicked: resetSettings();
+             }
+         Button{
+                text: qsTr("Save settings")
+                anchors{ verticalCenter: parent.verticalCenter; bottomMargin: Theme.paddingSmall}
+                onClicked: saveSettings();
+             }
+            }
 
              VerticalScrollDecorator {}
         }
     }
 
     Component.onDestruction: {
-        py2.call('editFile.setValue', ["headerVisible", headerVisible], function(result) {});
-        py2.call('editFile.setValue', ["lineNumbersVisible", lineNumbersVisible], function(result) {});
-
-        py2.call('editFile.setValue', ["fontType", fontType], function(result) {});
-        py2.call('editFile.setValue', ["fontSize", fontSize], function(result) {});
-        py2.call('editFile.setValue', ["tabType", tabType], function(result) {});
-
-        py2.call('editFile.setValue', ["showHiddenFiles", showHiddenFiles], function(result) {});
-        py2.call('editFile.setValue', ["darkTheme", darkTheme], function(result) {});
-
-        py2.call('editFile.setValue', ["autosave", autosave], function(result) {});
-
+        saveSettings();
     }
 }
