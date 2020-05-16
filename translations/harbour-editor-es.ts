@@ -41,11 +41,11 @@
     </message>
     <message>
         <source>-To &apos;Select all text&apos; hold your finger until 3 vibrations</source>
-        <translation>-Para seleccionar todo el texto; sostenga su dedo hasta 3 vibraciones</translation>
+        <translation>-Para seleccionar todo el texto; sostenga el dedo hasta 3 vibraciones</translation>
     </message>
     <message>
         <source>-osanwe for very often consultations about qml code</source>
-        <translation>-osanwe Por consultas sobre código qml</translation>
+        <translation>-osanwe por consultas sobre código qml</translation>
     </message>
     <message>
         <source>or</source>
@@ -57,7 +57,7 @@
     </message>
     <message>
         <source>Make a donation (button above)</source>
-        <translation>Haz una donación (boton de arriba)</translation>
+        <translation>Has una donación (boton de arriba)</translation>
     </message>
     <message>
         <source>-Russian community for feedback and help</source>
@@ -65,11 +65,11 @@
     </message>
     <message>
         <source>-Unsaved changes are saved in the file with ending &apos;~&apos; in the same dir where you placed your original file</source>
-        <translation>Cambios no guardados se guardan en el archivo final ~; en el mismo directorio donde colocó su archivo original</translation>
+        <translation>Cambios no guardados se guardan en el archivo final ~ en el mismo directorio donde colocó su archivo original</translation>
     </message>
     <message>
         <source>Star the repository at the github ☺ </source>
-        <translation>Contribuir en el repositorio github ☺</translation>
+        <translation>Contribuir en el repositorio github ☺ </translation>
     </message>
     <message>
         <source>Translators</source>
@@ -101,7 +101,7 @@
     </message>
     <message>
         <source>-Ancelad for tab icon, testing and help</source>
-        <translation>-Ancelad por el tab icono, pruebas y ayuda</translation>
+        <translation>-Ancelad por el icono tab, pruebas y ayuda</translation>
     </message>
     <message>
         <source> - German translation</source>
@@ -133,26 +133,26 @@
     </message>
     <message>
         <source>Paypal donation - RUB</source>
-        <translation type="unfinished"></translation>
+        <translation>Donación - RUB</translation>
     </message>
     <message>
         <source>Paypal donation - EURO</source>
-        <translation type="unfinished"></translation>
+        <translation>Donación paypal - EURO</translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
         <source>Lines: </source>
-        <translation type="unfinished"></translation>
+        <translation>Lineas: </translation>
     </message>
     <message>
         <source>Words: </source>
-        <translation type="unfinished"></translation>
+        <translation>Palabras: </translation>
     </message>
     <message>
         <source>Chars: </source>
-        <translation type="unfinished"></translation>
+        <translation>Letras: </translation>
     </message>
 </context>
 <context>
@@ -190,27 +190,27 @@
     <name>FirstPage</name>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta de archivo copiada al portapapeles</translation>
     </message>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished"></translation>
+        <translation>Documento guardado!</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished">Ajustes</translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <source>Error while opening/saving the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al abrir/guardar el archivo</translation>
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation type="unfinished">Realzando activado</translation>
+        <translation>Realzando activado</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation type="unfinished">Realzado desactivado</translation>
+        <translatio>Realzado desactivado</translation>
     </message>
 </context>
 <context>
