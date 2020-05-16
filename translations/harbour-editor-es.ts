@@ -206,11 +206,11 @@
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation>Realzando activado</translation>
+        <translation>Resaltado activado</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translatio>Realzado desactivado</translation>
+        <translatio>Resaltado desactivado</translation>
     </message>
 </context>
 <context>
@@ -233,7 +233,7 @@
     </message>
     <message>
         <source>Delete history</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar historia</translation>
     </message>
 </context>
 <context>
@@ -256,15 +256,15 @@
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished">Leer</translation>
+        <translation>S-leer</translation>
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished">Nota rápida</translation>
+        <translation>Nota rápida</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished">Realzar</translation>
+        <translation>Resaltar</translation>
     </message>
 </context>
 <context>
@@ -283,7 +283,7 @@
     </message>
     <message>
         <source>Text auto-saved in:</source>
-        <translation>Texto auto guardado en:</translation>
+        <translation>Texto autoguardado en:</translation>
     </message>
     <message>
         <source>Quick note.</source>
@@ -305,127 +305,127 @@
     <name>SettingsPage</name>
     <message>
         <source>About</source>
-        <translation type="unfinished">Acerca de</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished">Ajustes</translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Apariencia</translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Numeración de línea habilitada</translation>
     </message>
     <message>
         <source>Line numeration disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Numeración de línea deshabilitada</translation>
     </message>
     <message>
         <source>Dark Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema oscuro</translation>
     </message>
     <message>
         <source>Ambience Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema ambiente</translation>
     </message>
     <message>
         <source>Custom button color</source>
-        <translation type="unfinished"></translation>
+        <translation>Personalizar color</translation>
     </message>
     <message>
         <source>Fonts and size</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuentes y tamaño</translation>
     </message>
     <message>
         <source>Font size</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño de fuente</translation>
     </message>
     <message>
         <source>Tiny</source>
-        <translation type="unfinished"></translation>
+        <translation>Diminuto</translation>
     </message>
     <message>
         <source>Extra small</source>
-        <translation type="unfinished"></translation>
+        <translation>Muy pequeño</translation>
     </message>
     <message>
         <source>Small</source>
-        <translation type="unfinished"></translation>
+        <translation>Pequeño</translation>
     </message>
     <message>
         <source>Medium (default)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mediano</translation>
     </message>
     <message>
         <source>Large</source>
-        <translation type="unfinished"></translation>
+        <translation>Grande</translation>
     </message>
     <message>
         <source>Extra large</source>
-        <translation type="unfinished"></translation>
+        <translation>Muy grande</translation>
     </message>
     <message>
         <source>Huge</source>
-        <translation type="unfinished"></translation>
+        <translation>Inmenso</translation>
     </message>
     <message>
         <source>Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuente:</translation>
     </message>
     <message>
         <source>Type of tab:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo de pestaña:</translation>
     </message>
     <message>
         <source>Default text editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor de texto predeterminado</translation>
     </message>
     <message>
         <source>Turn off to enable default notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactivar para habilitar notas predeterminadas</translation>
     </message>
     <message>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>General</translation>
     </message>
     <message>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Autoguardar</translation>
     </message>
     <message>
         <source>If enabled text will be stored in files with postfix ~</source>
-        <translation type="unfinished"></translation>
+        <translation>Si el texto es habilitado se almacenará en archivos con surfijo ~</translation>
     </message>
     <message>
         <source>File browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Explorador de archivos</translation>
     </message>
     <message>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar archivos ocultos</translation>
     </message>
     <message>
         <source>Be careful to enable this option!</source>
-        <translation type="unfinished"></translation>
+        <translation>¡Tener cuidado de habilitar esta opción!</translation>
     </message>
     <message>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Codificación</translation>
     </message>
     <message>
         <source>Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>Región:</translation>
     </message>
     <message>
         <source>Reset settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Reiniciar ajustes</translation>
     </message>
     <message>
         <source>Save settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar ajustes</translation>
     </message>
 </context>
 </TS>
