@@ -112,7 +112,7 @@ Page {
             }
 
             AuthorRow {
-                author: "Caballlero"
+                author: "carlosgonz"
                 myText: qsTr(" - Spanish translation")
             }
 
