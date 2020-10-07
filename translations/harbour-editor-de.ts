@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="de_DE">
 <context>
     <name></name>
     <message id="filemanager-la-file_details">
         <source>%1, %2</source>
         <extracomment>Shows size and modification date, e.g. &quot;15.5MB, 02/03/2016&quot;</extracomment>
-        <translation>Zeige Größe und Modifikationsdatum, z.B. &quot;15.5MB, 02/03/2016&quot;</translation>
+        <translatorcomment>Zeige Größe und Modifikationsdatum, z.B. &quot;15.5MB, 02/03/2016&quot;</translatorcomment>
+        <translation>%1, %2</translation>
     </message>
     <message id="filemanager-la-no_files">
         <source>No files</source>
@@ -17,7 +18,7 @@
     <name>AboutPage</name>
     <message>
         <source>&quot;Editor.&quot; is feature-rich text/code editor!</source>
-        <translation>&quot;Editor.&quot; ist ein funktionsreicher Text- und Code-Editor</translation>
+        <translation>&quot;Editor.&quot; ist ein funktionsreicher Text- und Code-Editor!</translation>
     </message>
     <message>
         <source>License: GPLv3</source>
@@ -41,7 +42,7 @@
     </message>
     <message>
         <source>-To &apos;Select all text&apos; hold your finger until 3 vibrations</source>
-        <translation>• Berühre Text bis zur dritte Vibration, um gesamten Text auszuwählen.</translation>
+        <translation>• Berühre Text bis zur dritte Vibration, um gesamten Text auszuwählen</translation>
     </message>
     <message>
         <source>-osanwe for very often consultations about qml code</source>
@@ -65,7 +66,7 @@
     </message>
     <message>
         <source>-Unsaved changes are saved in the file with ending &apos;~&apos; in the same dir where you placed your original file</source>
-        <translation>• Ungesicherte Änderungen werden in auf &apos;~&apos; endende Datei im Verzeichnis der Originaldatei gespeichert.</translation>
+        <translation>• Ungesicherte Änderungen werden in auf &apos;~&apos; endende Datei im Verzeichnis der Originaldatei gespeichert</translation>
     </message>
     <message>
         <source>Star the repository at the github ☺ </source>
@@ -101,7 +102,7 @@
     </message>
     <message>
         <source>-You can copy the file path to the clipboard by selecting appropriate MenuItem in pulley menu</source>
-        <translation>• Der Dateiname kann durch Wahl des entsprechenden Menüpunktes im Zugmenü in die Zwischenablage kopiert werden.</translation>
+        <translation>• Der Dateiname kann durch Wahl des entsprechenden Menüpunktes im Zugmenü in die Zwischenablage kopiert werden</translation>
     </message>
     <message>
         <source>-Ancelad for tab icon, testing and help</source>
@@ -109,108 +110,108 @@
     </message>
     <message>
         <source> - Dutch translation</source>
-        <translation type="unfinished"></translation>
+        <translation> - Niederländische Übersetzung</translation>
     </message>
     <message>
         <source>-gri4994 for the wonderful app icon</source>
-        <translation type="unfinished"></translation>
+        <translation>- gri4994 für den wundervollen App Icon</translation>
     </message>
     <message>
         <source>-eekkelund for save/load/autosave functions, source code and some dictionaries for syntax highlighting and feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>-eekkelung für die Speichern/Öffnen/Autospeichern Funktionen, Quellcode und eine Bilbliothek für Syntaxhervorhebung und Feedback</translation>
     </message>
     <message>
         <source>-the team of GtkSourceView for the basis for .sh dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>-dem Team von GtkSourceView für die Basis der .sh Wörterbuchs</translation>
     </message>
     <message>
         <source>Source code</source>
-        <translation type="unfinished"></translation>
+        <translation>Quellcode</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version</translation>
     </message>
     <message>
         <source>Paypal donation - RUB</source>
-        <translation type="unfinished"></translation>
+        <translation>Paypal Spende -RUB</translation>
     </message>
     <message>
         <source>Paypal donation - EURO</source>
-        <translation type="unfinished"></translation>
+        <translation>Paypal Spende - EURO</translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
         <source>Lines: </source>
-        <translation type="unfinished"></translation>
+        <translation>Zeilen: </translation>
     </message>
     <message>
         <source>Words: </source>
-        <translation type="unfinished"></translation>
+        <translation>Wörter: </translation>
     </message>
     <message>
         <source>Chars: </source>
-        <translation type="unfinished"></translation>
+        <translation>Zeichen: </translation>
     </message>
 </context>
 <context>
     <name>EditRow</name>
     <message>
         <source>Save</source>
-        <translation> </translation>
+        <translation>Speichern</translation>
     </message>
     <message>
         <source>Document can&apos;t be saved!</source>
-        <translation>Dokument kann nicht gesichert werden!</translation>
+        <translation>Dokument kann nicht gespeichert werden!</translation>
     </message>
     <message>
         <source>Undo</source>
-        <translation> </translation>
+        <translation>Rückgängig</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation> </translation>
+        <translation>Wiederholen</translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation> </translation>
+        <translation>Tab</translation>
     </message>
     <message>
         <source>Document saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokument gespeichert</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Suche</translation>
+        <translation>Suche</translation>
     </message>
 </context>
 <context>
     <name>FirstPage</name>
     <message>
         <source>File path copied to the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateipfad wurde in die Zwischenablage kopiert</translation>
     </message>
     <message>
         <source>Document saved!</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokument gespeichert!</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished">Einstellungen</translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <source>Error while opening/saving the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Öffnen/Speichern der Datei</translation>
     </message>
     <message>
         <source>Highlighting enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Hervorhebung aktiviert</translation>
     </message>
     <message>
         <source>Highlighting disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Hervorhebung deaktiviert</translation>
     </message>
 </context>
 <context>
@@ -221,30 +222,30 @@
     </message>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Löschen</translation>
     </message>
     <message>
         <source>Move to top</source>
-        <translation type="unfinished"></translation>
+        <translation>Nach oben schieben</translation>
     </message>
     <message>
         <source>Documents are in order of first opening</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumente sind in der Reihenfolge des ersten Öffnens</translation>
     </message>
     <message>
         <source>Delete history</source>
-        <translation type="unfinished"></translation>
+        <translation>Chronik löschen</translation>
     </message>
 </context>
 <context>
     <name>MainRow</name>
     <message>
         <source>Save as</source>
-        <translation>Sichern als</translation>
+        <translation>Speichern als</translation>
     </message>
     <message>
         <source>Open</source>
-        <translation>Öffne</translation>
+        <translation>Öffnen</translation>
     </message>
     <message>
         <source>New</source>
@@ -256,42 +257,42 @@
     </message>
     <message>
         <source>R-only</source>
-        <translation type="unfinished"></translation>
+        <translation>Nur lesen</translation>
     </message>
     <message>
         <source>Quick note</source>
-        <translation type="unfinished"></translation>
+        <translation>Schnelle Notiz</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>QuickNotePage</name>
     <message>
         <source>Undo</source>
-        <translation type="unfinished"> </translation>
+        <translation>Rückgängig</translation>
     </message>
     <message>
         <source>Redo</source>
-        <translation type="unfinished"> </translation>
+        <translation>Wiederholen</translation>
     </message>
     <message>
         <source>Tab</source>
-        <translation type="unfinished"> </translation>
+        <translation>Tab</translation>
     </message>
     <message>
         <source>Text auto-saved in:</source>
-        <translation type="unfinished"></translation>
+        <translation>Text automatisch gespeichert in:</translation>
     </message>
     <message>
         <source>Quick note.</source>
-        <translation type="unfinished"></translation>
+        <translation>Schnelle Notiz.</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Suche</translation>
+        <translation>Suche</translation>
     </message>
 </context>
 <context>
@@ -305,127 +306,127 @@
     <name>SettingsPage</name>
     <message>
         <source>About</source>
-        <translation type="unfinished">Über</translation>
+        <translation>Über</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished">Einstellungen</translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Aussehen</translation>
     </message>
     <message>
         <source>Line numeration enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeilennummerierung aktivieren</translation>
     </message>
     <message>
         <source>Line numeration disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeilennummerierung deaktivieren</translation>
     </message>
     <message>
         <source>Dark Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Dunkles Thema</translation>
     </message>
     <message>
         <source>Ambience Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambience Thema</translation>
     </message>
     <message>
         <source>Custom button color</source>
-        <translation type="unfinished"></translation>
+        <translation>Benutzerdefinierte Schaltflächenfarbe</translation>
     </message>
     <message>
         <source>Fonts and size</source>
-        <translation type="unfinished"></translation>
+        <translation>Schriftart und Größe</translation>
     </message>
     <message>
         <source>Font size</source>
-        <translation type="unfinished"></translation>
+        <translation>Schriftgröße</translation>
     </message>
     <message>
         <source>Tiny</source>
-        <translation type="unfinished"></translation>
+        <translation>Winzig</translation>
     </message>
     <message>
         <source>Extra small</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra klein</translation>
     </message>
     <message>
         <source>Small</source>
-        <translation type="unfinished"></translation>
+        <translation>Klein</translation>
     </message>
     <message>
         <source>Medium (default)</source>
-        <translation type="unfinished"></translation>
+        <translation>Medium (Standard)</translation>
     </message>
     <message>
         <source>Large</source>
-        <translation type="unfinished"></translation>
+        <translation>Groß</translation>
     </message>
     <message>
         <source>Extra large</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra groß</translation>
     </message>
     <message>
         <source>Huge</source>
-        <translation type="unfinished"></translation>
+        <translation>Riesig</translation>
     </message>
     <message>
         <source>Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Schriftart:</translation>
     </message>
     <message>
         <source>Type of tab:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tap Art:</translation>
     </message>
     <message>
         <source>Default text editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard Text Editor</translation>
     </message>
     <message>
         <source>Turn off to enable default notes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausschalten um Standardnotizen zu aktivieren</translation>
     </message>
     <message>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Allgemein</translation>
     </message>
     <message>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisches Speichern</translation>
     </message>
     <message>
         <source>If enabled text will be stored in files with postfix ~</source>
-        <translation type="unfinished"></translation>
+        <translation>Wenn aktiviert werden die Texte in Dateien mit dem Postfix &quot;~&quot; gespeichert</translation>
     </message>
     <message>
         <source>File browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateibrowser</translation>
     </message>
     <message>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Versteckte Dateien anzeigen</translation>
     </message>
     <message>
         <source>Be careful to enable this option!</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorsicht beim Aktivieren dieser Option!</translation>
     </message>
     <message>
         <source>Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Encoding</translation>
     </message>
     <message>
         <source>Region:</source>
-        <translation type="unfinished"></translation>
+        <translation>Region:</translation>
     </message>
     <message>
         <source>Reset settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen zurücksetzen</translation>
     </message>
     <message>
         <source>Save settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen speichern</translation>
     </message>
 </context>
 </TS>
