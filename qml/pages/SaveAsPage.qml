@@ -46,12 +46,9 @@ Page {
     FileModel {
         id: fileModel
 
-        path: filePath != "" ? filePath.replace((filePath.split("/")[(filePath.split("/").length)-1]),"") : "/"
+         path: filePath != "" ? filePath.replace((filePath.split("/")[(filePath.split("/").length)-1]),"") : StandardPaths.home
         active: page.status === PageStatus.Active
         includeHiddenFiles: showHiddenFiles
-        onError: {
-            console.log("###", fileName, error)
-        }
     }
 
     PageHeader {
@@ -66,7 +63,7 @@ Page {
                  id: nameField
                  width: parent.width
                  labelVisible: false
-                 text: filePath != "" ? filePath : "/"
+                 text: filePath != "" ? filePath : StandardPaths.home + "/"
 
                  EnterKey.enabled: text.length > 0
                  EnterKey.onClicked: {

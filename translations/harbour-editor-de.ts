@@ -140,6 +140,10 @@
         <source>Paypal donation - EURO</source>
         <translation>Paypal Spende - EURO</translation>
     </message>
+    <message>
+        <source>-bobsik for the contributions for version 0.9</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>

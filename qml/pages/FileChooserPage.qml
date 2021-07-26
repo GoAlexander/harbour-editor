@@ -135,15 +135,15 @@ Page {
         ListItem {
           Label{
             anchors {centerIn: parent}
-            text: "/home/nemo"
+            text: StandardPaths.home
             font.pixelSize: Theme.fontSizeMedium
             font.bold: true
           }
           MouseArea{
             anchors.fill: parent
             onClicked: {
-              if(id_textfield.text!="/home/nemo"){
-                id_textfield.text="/home/nemo"; onManual();
+              if(id_textfield.text!=StandardPaths.home){
+                id_textfield.text=StandardPaths.home; onManual();
               }
             }
           }
@@ -191,15 +191,12 @@ Page {
     FileModel {
         id: fileModel
         includeHiddenFiles: inclHiddenFiles
-        path: "/home/nemo"
+        path: StandardPaths.home
         active: page.status === PageStatus.Active
         directorySort: FileModel.SortDirectoriesBeforeFiles
         onPathChanged: {if (path == "/"){
                 inclHiddenFiles=inclHiddenFiles;
             }}
-        onError: {
-            console.log("###", fileName, error)
-        }
     }
 
     SilicaListView {
