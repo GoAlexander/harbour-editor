@@ -381,7 +381,7 @@
     </message>
     <message>
         <source>Type of tab:</source>
-        <translation>Druh tabulátora</translation>
+        <translation>Druh tabulátora:</translation>
     </message>
     <message>
         <source>Default text editor</source>
